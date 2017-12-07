@@ -31,8 +31,8 @@ public interface IDataMediator {
 
     /**
      * Saves grid to the datasource, using a gridname for reference
-     * @param grid
-     * @param gridName
+     * @param grid The instance of the IGrid that has to be saved
+     * @param gridName The name used to reference the IGrid
      */
     public void saveGrid(IGrid grid, String gridName);
 
