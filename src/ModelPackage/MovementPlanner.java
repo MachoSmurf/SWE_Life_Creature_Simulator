@@ -1,5 +1,7 @@
 package ModelPackage;
 
+import java.util.ArrayList;
+
 /**
  * Uses a simplified version of Dijkstra's pathfinding algorithm to find the shortest path to a certain position.
  * Also provides information on where to navigate to.
@@ -7,6 +9,10 @@ package ModelPackage;
 public class MovementPlanner {
 
     public MovementPlanner() {
+    }
+
+    public ArrayList<TargetCoordinate> findPath(int startX, int startY, int targetX, int targetY){
+        return null;
     }
 
     /**
