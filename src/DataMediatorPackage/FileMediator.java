@@ -5,7 +5,15 @@ import ModelPackage.IWorld;
 import ModelPackage.StepResult;
 import UserPackage.User;
 
+/**
+ * Responsible for writing and reading data to and from flatfiles, if necessary using some form of encoding
+ */
 public class FileMediator implements IDataMediator {
+
+    public FileMediator(){
+
+    }
+
     @Override
     public User loadUser(String username, String password) {
         return null;

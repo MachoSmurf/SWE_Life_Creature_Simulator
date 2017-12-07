@@ -1,5 +1,9 @@
 package UserPackage;
 
+
+/**
+ * Controls the login/logout procedure and stores the user object
+ */
 public class UserController implements IUserController {
     @Override
     public boolean Login(String username, String password) {

@@ -5,7 +5,15 @@ import ModelPackage.IWorld;
 import ModelPackage.StepResult;
 import UserPackage.User;
 
+/**
+ * Responsible for writing and reading data to and from a MySQL Database
+ */
 public class DatabaseMediator implements IDataMediator {
+
+    public DatabaseMediator(){
+        
+    }
+
     @Override
     public User loadUser(String username, String password) {
         return null;
