@@ -85,40 +85,11 @@ public class MovementPlanner {
      * @param currentPoint point to find the adjacent points of and store them in.
      */
     private void getAdjacentPoints(MotionPoint currentPoint) {
+
         int x = currentPoint.getX();
         int y = currentPoint.getY();
 
-        int xPlusOne;
-        int yPlusOne;
-        int xMinusOne;
-        int yMinusOne;
 
-        //necessary for wrapping around the grid
-        //revert to simple +1 or -1 usage to disable wrapping
-        if (x == simulationGrid.getWidth() - 1){
-            xPlusOne = 0;
-        }
-        else{
-            xPlusOne = x++;
-        }
-        if (x == 0){
-            xMinusOne = simulationGrid.getWidth()- 1;
-        }
-        else{
-            xMinusOne = x--;
-        }
-        if (y == simulationGrid.getHeight() - 1){
-            yPlusOne = 0;
-        }
-        else{
-            yPlusOne = y++;
-        }
-        if (y == 0){
-            yMinusOne = simulationGrid.getHeight() - 1;
-        }
-        else{
-            yMinusOne = y--;
-        }
     }
 
     public ArrayList<TargetCoordinate> findPath(int startX, int startY, int targetX, int targetY){
