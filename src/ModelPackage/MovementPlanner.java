@@ -1,5 +1,6 @@
 package ModelPackage;
 
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -74,6 +75,8 @@ public class MovementPlanner {
             for (MotionPoint currentPoint : plannableGrid){
                 getAdjacentPoints(currentPoint);
             }
+
+            //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
         }
         else{
             throw new NullPointerException("SimulationGrid was not set!");
@@ -89,6 +92,7 @@ public class MovementPlanner {
         int x = currentPoint.getX();
         int y = currentPoint.getY();
 
+        //get point list
 
     }
 
@@ -105,6 +109,7 @@ public class MovementPlanner {
         private GridPoint gridPoint;
         private MotionPoint previousPoint;
         private ArrayList<MotionPoint> adjacentPoints;
+        private Point[] neighbours;
 
         public MotionPoint(GridPoint gridPoint) {
             adjacentPoints = new ArrayList<>();
