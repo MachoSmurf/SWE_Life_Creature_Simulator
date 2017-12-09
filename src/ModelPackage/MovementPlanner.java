@@ -1,7 +1,6 @@
 package ModelPackage;
 
 import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -93,7 +92,29 @@ public class MovementPlanner {
         int y = currentPoint.getY();
 
         //get point list
-
+        for(int xx = -1; xx<2; xx++){
+            for (int yy = -1; yy<2; yy++){
+                int neighbourX = x - xx;
+                int neighbourY = y - yy;
+                if (neighbourX < 0){
+                    //x falls left of grid
+                    neighbourX = simulationGrid.getWidth()-1;
+                }
+                if (neighbourX > simulationGrid.getWidth()-1) {
+                    //x falls of right of grid
+                    neighbourX = 0;
+                }
+                if (neighbourY < 0){
+                    //y falls of below grid
+                    neighbourY = simulationGrid.getHeight()-1;
+                }
+                if (neighbourY > simulationGrid.getHeight()-1){
+                    neighbourY = 0;
+                }
+                //add this point to the adjacentpoints
+                currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
+            }
+        }
     }
 
     public ArrayList<TargetCoordinate> findPath(int startX, int startY, int targetX, int targetY){
@@ -108,8 +129,8 @@ public class MovementPlanner {
 
         private GridPoint gridPoint;
         private MotionPoint previousPoint;
-        private ArrayList<MotionPoint> adjacentPoints;
-        private Point[] neighbours;
+        //private ArrayList<MotionPoint> adjacentPoints;
+        private ArrayList<Point> adjacentPoints;
 
         public MotionPoint(GridPoint gridPoint) {
             adjacentPoints = new ArrayList<>();
@@ -133,16 +154,16 @@ public class MovementPlanner {
         }
 
         /** Adds an adjacent point in the plannable grid
-         * @param motionPoint a motionpoint instance in the plannable grid
+         * @param point a motionpoint instance in the plannable grid
          */
-        public void addAdjacentPoint(MotionPoint motionPoint){
-            adjacentPoints.add(motionPoint);
+        public void addAdjacentPoint(Point point){
+            adjacentPoints.add(point);
         }
 
         /** Fetch a list with all adjacent points in the plannable grid
          * @return ArrayList containing MotionPoints
          */
-        public ArrayList<MotionPoint> getAdjacentPoints(){
+        public ArrayList<Point> getAdjacentPoints(){
             return adjacentPoints;
         }
 
