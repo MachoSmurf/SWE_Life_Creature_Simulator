@@ -7,9 +7,6 @@ import java.io.Serializable;
  */
 public class GridPoint implements Cloneable, Serializable {
 
-    public GridPoint() {
-    }
-
     private int x;
     private int y;
 

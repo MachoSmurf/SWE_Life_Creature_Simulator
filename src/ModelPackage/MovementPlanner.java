@@ -16,6 +16,9 @@ public class MovementPlanner {
     private ArrayList<SimObject> plantList;
     private ArrayList<SimObject> creatureList;
 
+    private int totalMotionPoints;
+    private int totalAdjacentCount;
+
 
     public MovementPlanner() {
     }
@@ -74,12 +77,23 @@ public class MovementPlanner {
             for (MotionPoint currentPoint : plannableGrid){
                 getAdjacentPoints(currentPoint);
             }
-
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
         }
         else{
             throw new NullPointerException("SimulationGrid was not set!");
         }
+    }
+
+    public int getTotalMotionPoints(){
+        return plannableGrid.size();
+    }
+
+    public int getTotalAdjacentCount(){
+        int counter = 0;
+        for (MotionPoint mp : plannableGrid){
+            counter += mp.adjacentPoints.size();
+        }
+        return counter;
     }
 
     /**
