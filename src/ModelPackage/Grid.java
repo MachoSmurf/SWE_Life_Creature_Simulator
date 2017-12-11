@@ -43,6 +43,6 @@ public class Grid implements Cloneable, IGrid {
 
     @Override
     public ArrayList<GridPoint> getPointList() {
-        return null;
+        return pointList;
     }
 }

@@ -11,14 +11,7 @@ public class MovementPlanner {
 
     private IGrid simulationGrid;
     private ArrayList<MotionPoint> plannableGrid;
-
-    private ArrayList<SimObject> obstacleList;
-    private ArrayList<SimObject> plantList;
-    private ArrayList<SimObject> creatureList;
-
-    private int totalMotionPoints;
-    private int totalAdjacentCount;
-
+    private ArrayList<Obstacle> obstacleList;
 
     public MovementPlanner() {
     }
@@ -27,16 +20,13 @@ public class MovementPlanner {
      * Initializes the planner with the correct data and triggers the generation of a complete plannable grid. Do not
      * use this function to update the plant and creature lists. Use setPlantList() and setCreatureList() instead!
      * @param obstacles ArrayList containing obstacles. Can't change once the simulation has started!
-     * @param plants ArrayList of plants
-     * @param creatures ArrayList of creatures
      * @param simulationGrid The simulation Grid used to generate a plannable grid
      * @return true if the generation of the plannable grid was successful, false otherwise.
      */
-    public boolean initializePlanner(ArrayList<SimObject> obstacles, ArrayList<SimObject> plants, ArrayList<SimObject> creatures, IGrid simulationGrid){
+    public boolean initializePlanner(ArrayList<Obstacle> obstacles, IGrid simulationGrid){
         this.obstacleList = obstacles;
-        this.creatureList = creatures;
-        this.plantList = plants;
         this.simulationGrid = simulationGrid;
+        this.plannableGrid = new ArrayList<>();
 
         try{
             generatePlannableGrid();
@@ -49,29 +39,22 @@ public class MovementPlanner {
     }
 
     /**
-     * Update the plant list
-     * @param plantList ArrayList of plants
-     */
-    public void setPlantList(ArrayList<SimObject> plantList) {
-        this.plantList = plantList;
-    }
-
-    /**
-     * Update the creature list
-     * @param creatureList ArrayList of creatures
-     */
-    public void setCreatureList(ArrayList<SimObject> creatureList) {
-        this.creatureList = creatureList;
-    }
-
-    /**
      * used to generate the plannable grid. If this fails the motionplanner can't properly function.
      */
     private void generatePlannableGrid(){
         if (simulationGrid != null){
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
-                plannableGrid.add(new MotionPoint(gridPoint));
+                boolean newMotionPoint = true;
+                for (Obstacle o : obstacleList){
+                    //check if this gridpoint is an obstacle. If so this won't be a motionpoint
+                    if (((o.getX() == gridPoint.getX()) && (o.getY() == gridPoint.getY()))){
+                        newMotionPoint = false;
+                    }
+                }
+                if (newMotionPoint){
+                    plannableGrid.add(new MotionPoint(gridPoint));
+                }
             }
 
             for (MotionPoint currentPoint : plannableGrid){
@@ -126,12 +109,14 @@ public class MovementPlanner {
                     neighbourY = 0;
                 }
                 //add this point to the adjacentpoints
-                currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
+                if (!((neighbourX == x) && (neighbourY == y))){
+                    currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
+                }
             }
         }
     }
 
-    public ArrayList<TargetCoordinate> findPath(int startX, int startY, int targetX, int targetY){
+    public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY){
         return null;
     }
 
