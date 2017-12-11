@@ -17,8 +17,7 @@ public class MovementPlanner {
     }
 
     /**
-     * Initializes the planner with the correct data and triggers the generation of a complete plannable grid. Do not
-     * use this function to update the plant and creature lists. Use setPlantList() and setCreatureList() instead!
+     * Initializes the planner with the correct data and triggers the generation of a complete plannable grid.
      * @param obstacles ArrayList containing obstacles. Can't change once the simulation has started!
      * @param simulationGrid The simulation Grid used to generate a plannable grid
      * @return true if the generation of the plannable grid was successful, false otherwise.
@@ -60,7 +59,6 @@ public class MovementPlanner {
             for (MotionPoint currentPoint : plannableGrid){
                 getAdjacentPoints(currentPoint);
             }
-            //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
         }
         else{
             throw new NullPointerException("SimulationGrid was not set!");
@@ -108,7 +106,7 @@ public class MovementPlanner {
                 if (neighbourY > simulationGrid.getHeight()-1){
                     neighbourY = 0;
                 }
-                //add this point to the adjacentpoints
+                //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
                     currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                 }
@@ -116,8 +114,57 @@ public class MovementPlanner {
         }
     }
 
+
+    /**
+     * Generate a path towards the endpoint
+     * @param startX X-coordinate of startpoint
+     * @param startY Y-coordinate of startpoint
+     * @param targetX X-coordinate of endpoint
+     * @param targetY Y-coordinate of endpoint
+     * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
+     * the startpoint was the endpoint
+     */
     public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY){
+        if ((startX == targetX) && (startY == targetY)){
+            return null;
+        }
+
+        long startTime = System.nanoTime();
+
+        ArrayList<MotionPoint> openPoints = new ArrayList<>();
+        //move the starting point into the open points list
+        openPoints.add(getMotionPointByCoordinates(startX, startY));
+
+        MotionPoint endPoint = null;
+        while (endPoint == null){
+
+            //no more points to use in planning. Route can't be found
+            if (openPoints.size() == 0){
+                break;
+            }
+
+            ArrayList<Point> pointsToCheck = null;
+            //get points to check this step
+            for (MotionPoint motionPoint : openPoints){
+
+            }
+        }
+
+        long endTime = System.nanoTime();
+        System.out.println("Pathfinding completed in " + ((endTime - startTime) * 100000) + "ms");
+
         return null;
+    }
+
+    private MotionPoint getMotionPointByCoordinates(int x, int y){
+        if (plannableGrid!=null){
+            //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
+            return plannableGrid.get((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth()));
+        }
+        else
+        {
+            throw new NullPointerException("No Plannable Grid to fetch points from!");
+        }
     }
 
     /**
@@ -127,7 +174,8 @@ public class MovementPlanner {
     private class MotionPoint{
 
         private GridPoint gridPoint;
-        private MotionPoint previousPoint;
+        private Point previousPoint;
+        //private MotionPoint previousPoint;
         //private ArrayList<MotionPoint> adjacentPoints;
         private ArrayList<Point> adjacentPoints;
 
@@ -138,17 +186,17 @@ public class MovementPlanner {
 
         /**
          * Sets the previous point in the used path when generating a path
-         * @param motionPoint A point in the plannable grid
+         * @param point A point in the plannable grid
          */
-        public void setPreviousPoint(MotionPoint motionPoint){
-            this.previousPoint = motionPoint;
+        public void setPreviousPoint(Point point){
+            this.previousPoint = point;
         }
 
         /**
          * Gets the previous point in the used path when generating a path
          * @return Returns the previous point in the plannable grid
          */
-        public MotionPoint getPreviousPoint(){
+        public Point getPreviousPoint(){
             return previousPoint;
         }
 

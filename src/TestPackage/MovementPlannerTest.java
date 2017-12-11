@@ -191,4 +191,36 @@ class MovementPlannerTest {
             fail("Path 16 failed. Expected 4 steps, found " + resultList.size());
         }
     }
+
+    //TODO: write test for unplanable route
+    @Test
+    public void testUnplanable(){
+        //Testpath 17
+        int testGridWidth = 10;
+        int testGridHeight = 10;
+        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        //load edges (obstacle pattern like TP12)
+        for (int x=0; x<10; x++){
+            for (int y=0; y<10; y++){
+                if ((y==0) || (x==0) || (x==10) || (y==10)){
+                    obstacleList.add(new Obstacle(x, y, 0));
+                }
+            }
+        }
+        //create line like in TP 13
+        int x = 3;
+        for (int y=1; y<9; y++){
+            obstacleList.add(new Obstacle(x, y, 0));
+        }
+        MovementPlanner planner = new MovementPlanner();
+        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        //TestPath1
+        ArrayList<Point> resultList = planner.findPath(2, 5, 6, 5);
+        //path11
+        if (resultList != null){
+            fail("Path 17 failed. Expected unplannable");
+        }
+    }
+
+    //TODO: write test for startPoint == endPoint
 }
