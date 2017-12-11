@@ -12,6 +12,7 @@ public class MovementPlanner {
     private IGrid simulationGrid;
     private ArrayList<MotionPoint> plannableGrid;
     private ArrayList<Obstacle> obstacleList;
+    private ArrayList<Point> pathFound;
 
     public MovementPlanner() {
     }
@@ -26,6 +27,7 @@ public class MovementPlanner {
         this.obstacleList = obstacles;
         this.simulationGrid = simulationGrid;
         this.plannableGrid = new ArrayList<>();
+        this.pathFound = new ArrayList<>();
 
         try{
             generatePlannableGrid();
@@ -124,7 +126,7 @@ public class MovementPlanner {
      * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
      * the startpoint was the endpoint
      */
-    public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY){
+    public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY) throws Exception {
         if ((startX == targetX) && (startY == targetY)){
             return null;
         }
@@ -132,28 +134,96 @@ public class MovementPlanner {
         long startTime = System.nanoTime();
 
         ArrayList<MotionPoint> openPoints = new ArrayList<>();
-        //move the starting point into the open points list
-        openPoints.add(getMotionPointByCoordinates(startX, startY));
+        ArrayList<MotionPoint> pointBuffer = new ArrayList<>();
+        ArrayList<MotionPoint> closedPoints = new ArrayList<>();
+        //fetch the first set of adjacent points to the startpoint
+        for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
+            MotionPoint mp = getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY());
+            mp.setPreviousPoint(new Point(startX, startY));
+            openPoints.add(mp);
+        }
+        //reset previouspoint for startpoint (DEBUG)
+        getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
 
+        int distanceCounter = 1;
         MotionPoint endPoint = null;
         while (endPoint == null){
-
-            //no more points to use in planning. Route can't be found
+            //start counting loops for debug
             if (openPoints.size() == 0){
-                break;
+                return null;
             }
 
-            ArrayList<Point> pointsToCheck = null;
-            //get points to check this step
-            for (MotionPoint motionPoint : openPoints){
-
+            //test if the current open points contain the endpoint
+            for (MotionPoint testPoint : openPoints){
+                if ((testPoint.getX() == targetX) && (testPoint.getY() == targetY)){
+                    System.out.println("Target found: " + testPoint.getX() + ", " + testPoint.getY() + "(target was: " + targetX + ", " +targetY + ")");
+                    endPoint = testPoint;
+                }
+                else{
+                    //move to closed points and put the points adjacent points into the buffer for the next step
+                    for (Point adjacentPoint : testPoint.getAdjacentPoints()){
+                        MotionPoint mp = getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY());
+                        if (mp.previousPoint == null){
+                            mp.setPreviousPoint(new Point(testPoint.getX(), testPoint.getY()));
+                        }
+                        if (!pointBuffer.contains(mp)){
+                            pointBuffer.add(mp);
+                        }
+                    }
+                }
             }
+
+            //target not found, move all open points to closed points and move the buffer into the open points
+            for(MotionPoint openPoint : openPoints){
+                if (!closedPoints.contains(openPoint)){
+                    closedPoints.add(openPoint);
+                }
+            }
+            openPoints.clear();
+            openPoints = (ArrayList<MotionPoint>)pointBuffer.clone();
+            pointBuffer.clear();
+            distanceCounter++;
         }
 
         long endTime = System.nanoTime();
-        System.out.println("Pathfinding completed in " + ((endTime - startTime) * 100000) + "ms");
+        System.out.println("Pathfinding completed in " + ((endTime - startTime) / 100000) + "ms");
 
-        return null;
+        //Get the path backwards
+        /*{ OLD CODE
+
+            MotionPoint parentPoint = endPoint;
+            MotionPoint previousPoint;
+            int failsafeCounter = 0;
+
+            while (true) {
+
+                Point step = new Point(parentPoint.getX(), parentPoint.getY());
+                pathFound.add(step);
+                if ((parentPoint.previousPoint.getY() == startY) && (parentPoint.previousPoint.getX() == startX)) {
+                    //last point
+                    Point lastStep = new Point((int) parentPoint.previousPoint.getX(), (int) parentPoint.previousPoint.getY());
+                    pathFound.add(lastStep);
+                    break;
+                } else {
+                    parentPoint = getMotionPointByCoordinates((int) parentPoint.previousPoint.getX(), (int) parentPoint.previousPoint.getY());
+                }
+                //previousPoint = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
+
+                if (failsafeCounter >= simulationGrid.getPointList().size()) {
+                    return null;
+                }
+                failsafeCounter++;
+            }
+        }*/
+
+        MotionPoint parentPoint = endPoint;
+        for (int i = 0; i<distanceCounter; i++){
+            pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
+            System.out.println(parentPoint.getX() + "," + parentPoint.getY());
+            parentPoint = getMotionPointByCoordinates((int)parentPoint.previousPoint.getX(), (int)parentPoint.previousPoint.getY());
+        }
+
+        return pathFound;
     }
 
     private MotionPoint getMotionPointByCoordinates(int x, int y){
