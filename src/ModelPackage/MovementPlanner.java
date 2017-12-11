@@ -47,12 +47,13 @@ public class MovementPlanner {
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
                 boolean newMotionPoint = true;
-                for (Obstacle o : obstacleList){
+                //TODO: Implement obstacles correctly, maintaining the point location formula
+                /*for (Obstacle o : obstacleList){
                     //check if this gridpoint is an obstacle. If so this won't be a motionpoint
                     if (((o.getX() == gridPoint.getX()) && (o.getY() == gridPoint.getY()))){
                         newMotionPoint = false;
                     }
-                }
+                }*/
                 if (newMotionPoint){
                     plannableGrid.add(new MotionPoint(gridPoint));
                 }
@@ -114,6 +115,10 @@ public class MovementPlanner {
                 }
             }
         }
+        /*System.out.println("Adjacent points for " + currentPoint.getX() + ", " + currentPoint.getY() + ": ");
+        for (Point p : currentPoint.getAdjacentPoints()){
+            System.out.println("\t " + p.getX() + ", " + p.getY());
+        }*/
     }
 
 
@@ -155,19 +160,29 @@ public class MovementPlanner {
 
             //test if the current open points contain the endpoint
             for (MotionPoint testPoint : openPoints){
+                //System.out.println("Testing point: " + testPoint.getX() +"," + testPoint.getY());
                 if ((testPoint.getX() == targetX) && (testPoint.getY() == targetY)){
-                    System.out.println("Target found: " + testPoint.getX() + ", " + testPoint.getY() + "(target was: " + targetX + ", " +targetY + ")");
+                    System.out.println("Target found: " + testPoint.getX() + ", " + testPoint.getY() + "(target was: " + targetX + ", " +targetY + "). using previous point: " + testPoint.previousPoint.getX() + ", " + testPoint.previousPoint.getY());
                     endPoint = testPoint;
                 }
                 else{
                     //move to closed points and put the points adjacent points into the buffer for the next step
                     for (Point adjacentPoint : testPoint.getAdjacentPoints()){
-                        MotionPoint mp = getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY());
-                        if (mp.previousPoint == null){
-                            mp.setPreviousPoint(new Point(testPoint.getX(), testPoint.getY()));
+
+
+
+
+                        if ((!closedPoints.contains(adjacentPoint)) || (!pointBuffer.contains(adjacentPoint))){
+                            MotionPoint mp = getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY());
+                            if (mp.previousPoint == null){
+                                mp.setPreviousPoint(new Point(testPoint.getX(), testPoint.getY()));
+                            }
+                            if (!pointBuffer.contains(mp)){
+                                pointBuffer.add(mp);
+                            }
                         }
-                        if (!pointBuffer.contains(mp)){
-                            pointBuffer.add(mp);
+                        else{
+                            System.out.println("Found old point...");
                         }
                     }
                 }

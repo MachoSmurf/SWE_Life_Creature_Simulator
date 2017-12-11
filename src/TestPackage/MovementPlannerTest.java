@@ -34,6 +34,13 @@ class MovementPlannerTest {
         }
     }
 
+    /*
+    @Test
+    public void testSimpleGrid(){
+        MovementPlanner planner = new MovementPlanner();
+        planner.initializePlanner(new ArrayList<>(), new Grid(4, 4));
+    }*/
+
     @Test
     void testObstacleGrid(){
         int testGridWidth = 10;
