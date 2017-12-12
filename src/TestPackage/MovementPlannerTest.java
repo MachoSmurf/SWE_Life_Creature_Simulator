@@ -61,6 +61,26 @@ class MovementPlannerTest {
     }
 
     @Test
+    void testPathNoObstacle0() {
+        int testGridWidth = 10;
+        int testGridHeight = 10;
+        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        MovementPlanner planner = new MovementPlanner();
+        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        //TestPath1
+        ArrayList<Point> resultList = null;
+        try {
+            resultList = planner.findPath(5, 5, 6, 5);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("TP1 completed");
+        if (resultList.size() != 1) {
+            fail("Path 0 failed. Expected 1 steps, found " + resultList.size());
+        }
+    }
+
+    @Test
     void testPathNoObstacle1() {
         int testGridWidth = 10;
         int testGridHeight = 10;

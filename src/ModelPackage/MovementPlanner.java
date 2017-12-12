@@ -90,8 +90,8 @@ public class MovementPlanner {
         int y = currentPoint.getY();
 
         //get point list
-        for(int xx = -1; xx<2; xx++){
-            for (int yy = -1; yy<2; yy++){
+        for(int xx = 1; xx>=-1; xx--){
+            for (int yy = 1; yy>=-1; yy--){
                 int neighbourX = x - xx;
                 int neighbourY = y - yy;
                 if (neighbourX < 0){
@@ -115,6 +115,7 @@ public class MovementPlanner {
                 }
             }
         }
+        System.out.println("");
         /*System.out.println("Adjacent points for " + currentPoint.getX() + ", " + currentPoint.getY() + ": ");
         for (Point p : currentPoint.getAdjacentPoints()){
             System.out.println("\t " + p.getX() + ", " + p.getY());
@@ -145,13 +146,13 @@ public class MovementPlanner {
         Point startPoint = new Point(startX, startY);
         closedPoints.add(startPoint);
         for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
-            openPoints.add(adjacentPoint);
             getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
+            openPoints.add(adjacentPoint);
         }
         //reset previouspoint for startpoint (DEBUG)
         getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
 
-        int distanceCounter =1;
+        int distanceCounter = 0;
         MotionPoint endPoint = null;
         while (endPoint == null){
             //start counting loops for debug
@@ -168,26 +169,28 @@ public class MovementPlanner {
                 }
             }
 
-            //point not found, move current points into closed points and fill buffer with new points
-            for (Point currentPoint : openPoints){
-                MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
-                for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
+            if (endPoint == null){
+                //point not found, move current points into closed points and fill buffer with new points
+                for (Point currentPoint : openPoints){
+                    MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
+                    for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
 
-                    if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint))){
-                        MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
-                        if ((freshMP.getPreviousPoint() == null)) {
-                            /*if ((freshMP.getX() == 5) && (freshMP.getY() == 7))
-                            {
-                                System.out.println("Hier stoppen...");
-                            }*/
-                            freshMP.setPreviousPoint(new Point(motionPoint.getX(), motionPoint.getY()));
-                            try{
-                                plannableGrid.set(getPointNumber(freshOpenPoint), freshMP);
+                        if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
+                            MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
+                            if ((freshMP.getPreviousPoint() == null)) {
+                                /*if (((freshMP.getX() == 5) && (freshMP.getY() == 7) && (freshMP.getPreviousPoint() == null)))
+                                {
+                                    System.out.println("5,7 is null");
+                                }*/
+                                freshMP.setPreviousPoint(currentPoint);
+                                /*try{
+                                    plannableGrid.set(getPointNumber(freshOpenPoint), freshMP);
+                                }
+                                catch(Exception e){
+                                    System.out.println("Exception getting point index");
+                                }*/
+                                pointBuffer.add(freshOpenPoint);
                             }
-                            catch(Exception e){
-                                System.out.println("Hier stoppen...");
-                            }
-                            pointBuffer.add(freshOpenPoint);
                         }
                     }
                 }
@@ -249,8 +252,22 @@ public class MovementPlanner {
             infiniteProtection++;
 
             pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
-            MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
-            parentPoint = newParent;
+            if (parentPoint.getPreviousPoint() != null){
+                MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
+                parentPoint = newParent;
+            }
+            else
+            {
+                break;
+            }
+
+            /*if(getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY()) == null){
+                break;
+            }
+            else{
+                MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
+                parentPoint = newParent;
+            }*/
         }
 
 
@@ -259,13 +276,25 @@ public class MovementPlanner {
     }
 
     private int getPointNumber(Point p){
-        return ((int)(p.getY()+1)) + (int)(p.getX() - simulationGrid.getWidth());
+        /*if ((p.getX() < 0) | (p.getX() < 0) | p == null){
+            System.out.println("FOUT!");
+        }*/
+        int gridWidth = simulationGrid.getWidth();
+        int x = (int)p.getX();
+        int y = (int)p.getY();
+        int number = (gridWidth * (y+1)) + (x-gridWidth);
+        //System.out.println(number);
+        return number;
     }
 
     private MotionPoint getMotionPointByCoordinates(int x, int y){
+        if ((x== 5) && (y==7)){
+            System.out.println("");
+        }
+
         if (plannableGrid!=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
-            return plannableGrid.get((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth()));
+            return plannableGrid.get(((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth())));
         }
         else
         {
