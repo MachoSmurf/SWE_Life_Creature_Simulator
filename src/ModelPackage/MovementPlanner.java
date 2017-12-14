@@ -1,6 +1,10 @@
 package ModelPackage;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 /**
@@ -153,6 +157,7 @@ public class MovementPlanner {
         getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
 
         int distanceCounter = 0;
+        debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
         MotionPoint endPoint = null;
         while (endPoint == null){
             //start counting loops for debug
@@ -205,7 +210,11 @@ public class MovementPlanner {
             }
             openPoints = new ArrayList<>(pointBuffer);
             pointBuffer.clear();
+
+
             distanceCounter++;
+            debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+
         }
 
         long endTime = System.nanoTime();
@@ -299,6 +308,54 @@ public class MovementPlanner {
         else
         {
             throw new NullPointerException("No Plannable Grid to fetch points from!");
+        }
+    }
+
+    private void debugGrid(int stepNumber,Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
+        int factor = 20;
+        int size = 5;
+
+        int canvasWidth = simulationGrid.getWidth() * factor;
+        int canvasHeight = simulationGrid.getHeight() * factor;
+
+        BufferedImage img = new BufferedImage(canvasWidth, canvasHeight, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = img.createGraphics();
+
+        //draw grid
+
+        for (int i = 0; i<10; i++){
+            for (int j = 0; j<10; j++){
+                g2.setColor(Color.WHITE);
+                g2.drawOval(i*factor, j*factor, size, size);
+            }
+        }
+
+        //draw endpoint
+        g2.setColor(Color.RED);
+        g2.drawOval((int)endPoint.getX()*factor, (int)endPoint.getX()*factor, size, size);
+        //draw open points
+        for (Point openPoint : openPoints){
+            g2.setColor(Color.GREEN);
+            g2.drawOval((int)openPoint.getX()*factor, (int)openPoint.getY()*factor, size, size);
+        }
+
+        //draw closed points
+        for (Point closedPoint : closedPoints){
+            g2.setColor(Color.ORANGE);
+            g2.drawOval((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, size, size);
+            g2.setColor(Color.BLUE);
+            if ((closedPoint.getX() != (int)startPoint.getX() ) && (closedPoint.getY() != (int)startPoint.getY())){
+                Point previousPoint = getMotionPointByCoordinates((int)closedPoint.getX(), (int)closedPoint.getY()).getPreviousPoint();
+                g2.drawLine((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, (int)previousPoint.getX() * factor, (int)previousPoint.getY()*factor);
+            }
+        }
+
+        try{
+            ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
+            System.out.println("Wrote img to disk");
+        }
+        catch(Exception e){
+            System.out.println(e);
         }
     }
 
