@@ -69,6 +69,11 @@ public class MovementPlanner {
                         currentPoint.setObstacle(true);
                     }
                 }
+               // getAdjacentPoints(currentPoint);
+            }
+
+            for (MotionPoint currentPoint : plannableGrid){
+
                 getAdjacentPoints(currentPoint);
             }
         }
@@ -121,7 +126,7 @@ public class MovementPlanner {
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
                     //TODO: Check why X and Y are reversed?
-                    if (!getMotionPointByCoordinates(neighbourY, neighbourX).getObstacle()){
+                    if (!getMotionPointByCoordinates(neighbourX, neighbourY).getObstacle()){
                         currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
                     }
                 }

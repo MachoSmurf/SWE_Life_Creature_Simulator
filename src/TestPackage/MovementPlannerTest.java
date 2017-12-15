@@ -287,8 +287,6 @@ class MovementPlannerTest {
     }
 
 
-    /*
-
     @Test
     void testPathObstacleCase11And12(){
         int testGridWidth = 10;
@@ -328,6 +326,7 @@ class MovementPlannerTest {
         }
     }
 
+    /*
     @Test
     void testPathObstacleCase13And14(){
         int testGridWidth = 10;
@@ -414,7 +413,7 @@ class MovementPlannerTest {
         //load edges (obstacle pattern like TP12)
         for (int x=0; x<10; x++){
             for (int y=0; y<10; y++){
-                if ((y==0) || (x==0) || (x==10) || (y==10)){
+                if ((y==0) || (x==0) || (x==9) || (y==9)){
                     obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
@@ -422,7 +421,7 @@ class MovementPlannerTest {
         //create line like in TP 13
         int x = 3;
         for (int y=1; y<9; y++){
-            obstacleList.add(new Obstacle(x, y, 0));
+            obstacleList.add(new Obstacle(y, x, 0));
         }
         MovementPlanner planner = new MovementPlanner();
         planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
