@@ -64,6 +64,11 @@ public class MovementPlanner {
             }
 
             for (MotionPoint currentPoint : plannableGrid){
+                for (Obstacle o : obstacleList){
+                    if ((o.getX() == currentPoint.getX()) && (o.getY() == currentPoint.getY())) {
+                        currentPoint.setObstacle(true);
+                    }
+                }
                 getAdjacentPoints(currentPoint);
             }
         }
@@ -116,7 +121,9 @@ public class MovementPlanner {
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
                     //TODO: Check why X and Y are reversed?
-                    currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
+                    if (!getMotionPointByCoordinates(neighbourY, neighbourX).getObstacle()){
+                        currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
+                    }
                 }
             }
         }
@@ -330,8 +337,15 @@ public class MovementPlanner {
 
         for (int i = 0; i<10; i++){
             for (int j = 0; j<10; j++){
-                g2.setColor(Color.WHITE);
-                g2.drawOval(i*factor, j*factor, size, size);
+
+                if (getMotionPointByCoordinates(i, j).getObstacle()){
+                    g2.setColor(Color.MAGENTA);
+                    g2.fillOval(i*factor, j*factor, size, size);
+                }
+                else{
+                    g2.setColor(Color.WHITE);
+                    g2.drawOval(i*factor, j*factor, size, size);
+                }
             }
         }
 
@@ -370,6 +384,8 @@ public class MovementPlanner {
      */
     private class MotionPoint{
 
+        private boolean isObstacle;
+
         private GridPoint gridPoint;
         private Point previousPoint;
         //private MotionPoint previousPoint;
@@ -379,7 +395,24 @@ public class MovementPlanner {
         public MotionPoint(GridPoint gridPoint) {
             previousPoint = null;
             adjacentPoints = new ArrayList<>();
+            isObstacle = false;
             this.gridPoint = gridPoint;
+        }
+
+        /**
+         * Sets whether or not the point is an obstacle
+         * @param isObstacle boolean true or false
+         */
+        public void setObstacle(boolean isObstacle){
+            this.isObstacle = isObstacle;
+        }
+
+        /**
+         * returns whether or not the point is an obstacle
+         * @return boolean whether or not this is an obstacle
+         */
+        public boolean getObstacle(){
+            return this.isObstacle;
         }
 
         /**
