@@ -74,9 +74,9 @@ class MovementPlannerTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("TP1 completed");
-        if (resultList.size() != 1) {
-            fail("Path 0 failed. Expected 1 steps, found " + resultList.size());
+        System.out.println("TP0 completed");
+        if (resultList.size() != 2) {
+            fail("Path 0 failed. Expected 2 steps, found " + resultList.size());
         }
     }
 
@@ -95,8 +95,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP1 completed");
-        if (resultList.size() != 3) {
-            fail("Path 1 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 1 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -117,8 +117,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP2 completed");
-        if (resultList.size() != 3){
-            fail("Path 2 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4){
+            fail("Path 2 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -139,8 +139,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP3 completed");
-        if (resultList.size() != 3){
-            fail("Path 3 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4){
+            fail("Path 3 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -161,8 +161,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP4 completed");
-        if (resultList.size() != 3) {
-            fail("Path 4 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 4 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -181,8 +181,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP5 completed");
-        if (resultList.size() != 3) {
-            fail("Path 5 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 5 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -201,8 +201,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP6 completed");
-        if (resultList.size() != 3) {
-            fail("Path 6 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 6 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -221,8 +221,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP7 completed");
-        if (resultList.size() != 3) {
-            fail("Path 7 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 7 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -241,8 +241,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP8 completed");
-        if (resultList.size() != 3) {
-            fail("Path 8 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 8 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -261,8 +261,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP9 completed");
-        if (resultList.size() != 3) {
-            fail("Path 9 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4) {
+            fail("Path 9 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
@@ -281,8 +281,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP10 completed");
-        if (resultList.size() != 3){
-            fail("Path 10 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4){
+            fail("Path 10 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 

@@ -115,7 +115,8 @@ public class MovementPlanner {
                 }
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
-                    currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
+                    //TODO: Check why X and Y are reversed?
+                    currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
                 }
             }
         }
@@ -170,6 +171,7 @@ public class MovementPlanner {
                 if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
                     endPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
                     System.out.println("Found target. Steps required: " + distanceCounter);
+                    debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
                     break;
                 }
             }
@@ -280,6 +282,9 @@ public class MovementPlanner {
         }
 
 
+        for (Point step : pathFound){
+            System.out.println("(" + step.getX() + "," + step.getY() + ")");
+        }
 
         return pathFound;
     }
@@ -330,9 +335,6 @@ public class MovementPlanner {
             }
         }
 
-        //draw endpoint
-        g2.setColor(Color.RED);
-        g2.drawOval((int)endPoint.getX()*factor, (int)endPoint.getX()*factor, size, size);
         //draw open points
         for (Point openPoint : openPoints){
             g2.setColor(Color.GREEN);
@@ -349,6 +351,9 @@ public class MovementPlanner {
                 g2.drawLine((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, (int)previousPoint.getX() * factor, (int)previousPoint.getY()*factor);
             }
         }
+        //draw endpoint
+        g2.setColor(Color.RED);
+        g2.drawOval((int)endPoint.getX()*factor, (int)endPoint.getY()*factor, size, size);
 
         try{
             ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
