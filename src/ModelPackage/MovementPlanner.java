@@ -48,8 +48,16 @@ public class MovementPlanner {
      */
     private void generatePlannableGrid(){
         if (simulationGrid != null){
+            int pointCount = simulationGrid.getWidth() * simulationGrid.getHeight();
+            for(int i=0; i<pointCount; i++){
+                plannableGrid.add(null);
+            }
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
+                int gridPointNumber = getPointNumber(new Point(gridPoint.getX(), gridPoint.getY()));
+                plannableGrid.set(gridPointNumber, new MotionPoint(gridPoint));
+
+                /*
                 boolean newMotionPoint = true;
                 //TODO: Implement obstacles correctly, maintaining the point location formula
                 /*for (Obstacle o : obstacleList){
@@ -57,10 +65,10 @@ public class MovementPlanner {
                     if (((o.getX() == gridPoint.getX()) && (o.getY() == gridPoint.getY()))){
                         newMotionPoint = false;
                     }
-                }*/
+                }*//*
                 if (newMotionPoint){
                     plannableGrid.add(new MotionPoint(gridPoint));
-                }
+                }*/
             }
 
             for (MotionPoint currentPoint : plannableGrid){
@@ -125,9 +133,9 @@ public class MovementPlanner {
                 }
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
-                    //TODO: Check why X and Y are reversed?
                     if (!getMotionPointByCoordinates(neighbourX, neighbourY).getObstacle()){
-                        currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
+                        //currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
+                        currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                     }
                 }
             }
@@ -165,6 +173,7 @@ public class MovementPlanner {
         for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
             getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
             openPoints.add(adjacentPoint);
+            System.out.println("Point " + adjacentPoint.getX() + "," + adjacentPoint.getY() + " is adjacent");
         }
         //reset previouspoint for startpoint (DEBUG)
         getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
@@ -302,9 +311,6 @@ public class MovementPlanner {
     }
 
     private int getPointNumber(Point p){
-        /*if ((p.getX() < 0) | (p.getX() < 0) | p == null){
-            System.out.println("FOUT!");
-        }*/
         int gridWidth = simulationGrid.getWidth();
         int x = (int)p.getX();
         int y = (int)p.getY();
@@ -329,7 +335,7 @@ public class MovementPlanner {
     }
 
     private void debugGrid(int stepNumber,Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
-        int factor = 20;
+        int factor = 40;
         int size = 5;
 
         int canvasWidth = simulationGrid.getWidth() * factor;
@@ -338,10 +344,13 @@ public class MovementPlanner {
         BufferedImage img = new BufferedImage(canvasWidth, canvasHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = img.createGraphics();
 
+
         //draw grid
 
         for (int i = 0; i<10; i++){
             for (int j = 0; j<10; j++){
+                MotionPoint mp = getMotionPointByCoordinates(i, j);
+
 
                 if (getMotionPointByCoordinates(i, j).getObstacle()){
                     g2.setColor(Color.MAGENTA);
@@ -353,6 +362,7 @@ public class MovementPlanner {
                 }
             }
         }
+
 
         //draw open points
         for (Point openPoint : openPoints){
@@ -373,6 +383,7 @@ public class MovementPlanner {
         //draw endpoint
         g2.setColor(Color.RED);
         g2.drawOval((int)endPoint.getX()*factor, (int)endPoint.getY()*factor, size, size);
+
 
         try{
             ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
