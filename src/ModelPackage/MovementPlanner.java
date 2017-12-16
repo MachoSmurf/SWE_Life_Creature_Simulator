@@ -201,17 +201,7 @@ public class MovementPlanner {
                         if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
                             MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
                             if ((freshMP.getPreviousPoint() == null)) {
-                                /*if (((freshMP.getX() == 5) && (freshMP.getY() == 7) && (freshMP.getPreviousPoint() == null)))
-                                {
-                                    System.out.println("5,7 is null");
-                                }*/
                                 freshMP.setPreviousPoint(currentPoint);
-                                /*try{
-                                    plannableGrid.set(getPointNumber(freshOpenPoint), freshMP);
-                                }
-                                catch(Exception e){
-                                    System.out.println("Exception getting point index");
-                                }*/
                                 pointBuffer.add(freshOpenPoint);
                             }
                         }
@@ -231,12 +221,11 @@ public class MovementPlanner {
 
 
             distanceCounter++;
-            debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
-
+            //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
         }
 
         long endTime = System.nanoTime();
-        System.out.println("Pathfinding completed in " + ((endTime - startTime) / 100000) + "ms");
+        System.out.println("Pathfinding completed in " + ((endTime - startTime) / 1000000) + "ms");
 
         MotionPoint parentPoint = endPoint;
         int infiniteProtection = 0;
@@ -281,11 +270,7 @@ public class MovementPlanner {
     }
 
     private MotionPoint getMotionPointByCoordinates(int x, int y){
-        if ((x== 5) && (y==7)){
-            System.out.println("");
-        }
-
-        if (plannableGrid!=null){
+       if (plannableGrid!=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
             return plannableGrid.get(((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth())));
         }
@@ -296,7 +281,7 @@ public class MovementPlanner {
     }
 
     private void debugGrid(int stepNumber,Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
-        int factor = 40;
+        int factor = 20;
         int size = 5;
 
         int canvasWidth = simulationGrid.getWidth() * factor;
@@ -307,9 +292,10 @@ public class MovementPlanner {
 
 
         //draw grid
-
-        for (int i = 0; i<10; i++){
-            for (int j = 0; j<10; j++){
+        int gridWidth = simulationGrid.getWidth();
+        int gridHeight = simulationGrid.getHeight();
+        for (int i = 0; i<gridWidth; i++){
+            for (int j = 0; j<gridHeight; j++){
                 //MotionPoint mp = getMotionPointByCoordinates(i, j);
 
 
@@ -336,9 +322,13 @@ public class MovementPlanner {
             g2.setColor(Color.ORANGE);
             g2.drawOval((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, size, size);
             g2.setColor(Color.BLUE);
-            if ((closedPoint.getX() != (int)startPoint.getX() ) && (closedPoint.getY() != (int)startPoint.getY())){
+            //if ((closedPoint.getX() != (int)startPoint.getX()) && (closedPoint.getY() != (int)startPoint.getY())){
+            try{
                 Point previousPoint = getMotionPointByCoordinates((int)closedPoint.getX(), (int)closedPoint.getY()).getPreviousPoint();
                 g2.drawLine((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, (int)previousPoint.getX() * factor, (int)previousPoint.getY()*factor);
+            }
+            catch(NullPointerException ne){
+
             }
         }
         //draw endpoint

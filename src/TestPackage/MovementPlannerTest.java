@@ -432,4 +432,40 @@ class MovementPlannerTest {
             fail("Path 18 failed. Expected unplannable");
         }
     }
+
+    @Test
+    void testDemoGrid() {
+        int testGridWidth = 50;
+        int testGridHeight = 50;
+        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+
+        obstacleList.add(new Obstacle(15, 25, 0));
+        obstacleList.add(new Obstacle(16, 22, 0));
+
+        obstacleList.add(new Obstacle(19, 25, 0));
+        obstacleList.add(new Obstacle(20, 25, 0));
+        obstacleList.add(new Obstacle(21, 25, 0));
+        obstacleList.add(new Obstacle(22, 25, 0));
+        obstacleList.add(new Obstacle(23, 25, 0));
+        obstacleList.add(new Obstacle(24, 25, 0));
+        obstacleList.add(new Obstacle(25, 25, 0));
+        obstacleList.add(new Obstacle(26, 25, 0));
+        obstacleList.add(new Obstacle(27, 25, 0));
+        obstacleList.add(new Obstacle(28, 25, 0));
+        obstacleList.add(new Obstacle(30, 25, 0));
+        obstacleList.add(new Obstacle(31, 25, 0));
+        obstacleList.add(new Obstacle(32, 25, 0));
+        obstacleList.add(new Obstacle(33, 25, 0));
+
+        MovementPlanner planner = new MovementPlanner();
+        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        //TestPath1
+        ArrayList<Point> resultList = null;
+        try {
+            resultList = planner.findPath(20, 20, 30, 30);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("TP11 completed");
+    }
 }
