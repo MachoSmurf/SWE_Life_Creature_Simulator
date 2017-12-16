@@ -77,11 +77,9 @@ public class MovementPlanner {
                         currentPoint.setObstacle(true);
                     }
                 }
-               // getAdjacentPoints(currentPoint);
             }
 
             for (MotionPoint currentPoint : plannableGrid){
-
                 getAdjacentPoints(currentPoint);
             }
         }
@@ -140,11 +138,6 @@ public class MovementPlanner {
                 }
             }
         }
-        System.out.println("");
-        /*System.out.println("Adjacent points for " + currentPoint.getX() + ", " + currentPoint.getY() + ": ");
-        for (Point p : currentPoint.getAdjacentPoints()){
-            System.out.println("\t " + p.getX() + ", " + p.getY());
-        }*/
     }
 
 
@@ -158,6 +151,9 @@ public class MovementPlanner {
      * the startpoint was the endpoint
      */
     public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY) throws Exception {
+        //reset the grid, clearing all previous points
+        resetPlannableGrid();
+
         if ((startX == targetX) && (startY == targetY)){
             return null;
         }
@@ -173,7 +169,6 @@ public class MovementPlanner {
         for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
             getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
             openPoints.add(adjacentPoint);
-            System.out.println("Point " + adjacentPoint.getX() + "," + adjacentPoint.getY() + " is adjacent");
         }
         //reset previouspoint for startpoint (DEBUG)
         getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
@@ -243,41 +238,6 @@ public class MovementPlanner {
         long endTime = System.nanoTime();
         System.out.println("Pathfinding completed in " + ((endTime - startTime) / 100000) + "ms");
 
-        //Get the path backwards
-        /*{ OLD CODE
-
-            MotionPoint parentPoint = endPoint;
-            MotionPoint previousPoint;
-            int failsafeCounter = 0;
-
-            while (true) {
-
-                Point step = new Point(parentPoint.getX(), parentPoint.getY());
-                pathFound.add(step);
-                if ((parentPoint.previousPoint.getY() == startY) && (parentPoint.previousPoint.getX() == startX)) {
-                    //last point
-                    Point lastStep = new Point((int) parentPoint.previousPoint.getX(), (int) parentPoint.previousPoint.getY());
-                    pathFound.add(lastStep);
-                    break;
-                } else {
-                    parentPoint = getMotionPointByCoordinates((int) parentPoint.previousPoint.getX(), (int) parentPoint.previousPoint.getY());
-                }
-                //previousPoint = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
-
-                if (failsafeCounter >= simulationGrid.getPointList().size()) {
-                    return null;
-                }
-                failsafeCounter++;
-            }
-        }
-
-
-        /*for (int i = 0; i<distanceCounter; i++){
-            pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
-            System.out.println(parentPoint.getX() + "," + parentPoint.getY());
-            parentPoint = getMotionPointByCoordinates((int)parentPoint.previousPoint.getX(), (int)parentPoint.previousPoint.getY());
-        }*/
-
         MotionPoint parentPoint = endPoint;
         int infiniteProtection = 0;
         while((parentPoint != null) && (infiniteProtection < 100)){
@@ -292,22 +252,23 @@ public class MovementPlanner {
             {
                 break;
             }
-
-            /*if(getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY()) == null){
-                break;
-            }
-            else{
-                MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
-                parentPoint = newParent;
-            }*/
         }
 
 
+        /*
         for (Point step : pathFound){
             System.out.println("(" + step.getX() + "," + step.getY() + ")");
         }
+        */
 
         return pathFound;
+    }
+
+    private void resetPlannableGrid() {
+        pathFound.clear();
+        for (MotionPoint mp : plannableGrid){
+            mp.setPreviousPoint(null);
+        }
     }
 
     private int getPointNumber(Point p){
@@ -349,7 +310,7 @@ public class MovementPlanner {
 
         for (int i = 0; i<10; i++){
             for (int j = 0; j<10; j++){
-                MotionPoint mp = getMotionPointByCoordinates(i, j);
+                //MotionPoint mp = getMotionPointByCoordinates(i, j);
 
 
                 if (getMotionPointByCoordinates(i, j).getObstacle()){
@@ -387,7 +348,7 @@ public class MovementPlanner {
 
         try{
             ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
-            System.out.println("Wrote img to disk");
+            //System.out.println("Wrote img to disk");
         }
         catch(Exception e){
             System.out.println(e);

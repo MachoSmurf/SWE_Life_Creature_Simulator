@@ -34,32 +34,6 @@ class MovementPlannerTest {
         }
     }
 
-    /*
-    @Test
-    public void testSimpleGrid(){
-        MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(new ArrayList<>(), new Grid(4, 4));
-    }*/
-
-    @Test
-    void testObstacleGrid(){
-        int testGridWidth = 10;
-        int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
-        obstacleList.add(new Obstacle(5,5,0));
-
-        MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
-        int expectedPointCount = ((testGridHeight * testGridWidth)-1);
-        if (planner.getTotalMotionPoints() != expectedPointCount){
-            fail("MotionPoint count does not match grid minus obstacles " + planner.getTotalMotionPoints() + " points found, expected: " + expectedPointCount);
-        }
-        expectedPointCount = (testGridHeight * testGridWidth * 8) - 8;
-        if (planner.getTotalAdjacentCount() != expectedPointCount){
-            fail("Not all correct adjacent points generated. Found " + planner.getTotalAdjacentCount() + ", expected: " + expectedPointCount);
-        }
-    }
-
     @Test
     void testPathNoObstacle0() {
         int testGridWidth = 10;
@@ -295,7 +269,7 @@ class MovementPlannerTest {
         //load edges (obstacle pattern for TP 11 & 12)
         for (int x=0; x<10; x++){
             for (int y=0; y<10; y++){
-                if ((y==0) || (x==0) || (x==10) || (y==10)){
+                if ((y==0) || (x==0) || (x==9) || (y==9)){
                     obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
@@ -304,16 +278,17 @@ class MovementPlannerTest {
         planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point> resultList = null;
-        try {
+        try{
             resultList = planner.findPath(3, 5, 6, 5);
         } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("TP11 completed");
         //path11
-        if (resultList.size() != 3){
-            fail("Path 11 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4){
+            fail("Path 11 failed. Expected 4 steps, found " + resultList.size());
         }
+
         //path12
         try {
             resultList = planner.findPath(6, 5, 3, 5);
@@ -321,12 +296,11 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP12 completed");
-        if (resultList.size() != 3){
-            fail("Path 12 failed. Expected 3 steps, found " + resultList.size());
+        if (resultList.size() != 4){
+            fail("Path 12 failed. Expected 4 steps, found " + resultList.size());
         }
     }
 
-    /*
     @Test
     void testPathObstacleCase13And14(){
         int testGridWidth = 10;
@@ -348,8 +322,8 @@ class MovementPlannerTest {
         }
         System.out.println("TP13 completed");
         //path11
-        if (resultList.size() != 5){
-            fail("Path 13 failed. Expected 5 steps, found " + resultList.size());
+        if (resultList.size() != 6){
+            fail("Path 13 failed. Expected 6 steps, found " + resultList.size());
         }
         //path12
         try {
@@ -358,8 +332,8 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP14 completed");
-        if (resultList.size() != 5){
-            fail("Path 14 failed. Expected 5 steps, found " + resultList.size());
+        if (resultList.size() != 6){
+            fail("Path 14 failed. Expected 6 steps, found " + resultList.size());
         }
     }
 
@@ -386,8 +360,8 @@ class MovementPlannerTest {
         }
         System.out.println("TP15 completed");
         //path15
-        if (resultList.size() != 4){
-            fail("Path 15 failed. Expected 4 steps, found " + resultList.size());
+        if (resultList.size() != 5){
+            fail("Path 15 failed. Expected 5 steps, found " + resultList.size());
         }
         //path16
         try {
@@ -396,13 +370,10 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP16 completed");
-        if (resultList.size() != 4){
-            fail("Path 16 failed. Expected 4 steps, found " + resultList.size());
+        if (resultList.size() != 5){
+            fail("Path 16 failed. Expected 5 steps, found " + resultList.size());
         }
     }
-
-    */
-
 
     @Test
     public void testUnplanable(){
@@ -421,7 +392,7 @@ class MovementPlannerTest {
         //create line like in TP 13
         int x = 3;
         for (int y=1; y<9; y++){
-            obstacleList.add(new Obstacle(y, x, 0));
+            obstacleList.add(new Obstacle(x, y, 0));
         }
         MovementPlanner planner = new MovementPlanner();
         planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
