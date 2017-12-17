@@ -2,6 +2,7 @@ package ModelPackage;
 
 import java.awt.*;
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -9,17 +10,30 @@ import java.util.ArrayList;
  */
 public class Grid implements Cloneable, IGrid {
 
-    public Grid() {
+    int width;
+    int height;
+    ArrayList<GridPoint> pointList;
+
+    public Grid(int width, int height) {
+        pointList = new ArrayList<>();
+        this.width = width;
+        this.height = height;
+
+        for (int w=0; w<width; w++){
+            for (int h=0; h<height; h++){
+                pointList.add(new GridPoint(w, h));
+            }
+        }
     }
 
     @Override
     public int getWidth() {
-        return 0;
+        return width;
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return height;
     }
 
     @Override
@@ -29,6 +43,23 @@ public class Grid implements Cloneable, IGrid {
 
     @Override
     public ArrayList<GridPoint> getPointList() {
-        return null;
+        return pointList;
+    }
+
+    public void setWater(int x, int y, boolean water){
+        for (GridPoint gp : pointList){
+            if ((gp.getX() == x) && (gp.getY() == y)){
+                gp.setWater(water);
+            }
+        }
+    }
+
+    public boolean getWater(int x, int y){
+        for (GridPoint gp : pointList){
+            if ((gp.getX() == x) && (gp.getY() == y)){
+                return gp.getWater();
+            }
+        }
+        return false;
     }
 }
