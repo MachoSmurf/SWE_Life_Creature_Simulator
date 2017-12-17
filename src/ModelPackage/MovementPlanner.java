@@ -1,6 +1,7 @@
 package ModelPackage;
 
 import javax.imageio.ImageIO;
+import javax.lang.model.type.ArrayType;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,6 +18,8 @@ public class MovementPlanner {
     private ArrayList<MotionPoint> plannableGrid;
     private ArrayList<Obstacle> obstacleList;
     private ArrayList<Point> pathFound;
+
+    private ArrayList<ArrayList<MotionPoint>> subGrids;
 
     public MovementPlanner() {
     }
@@ -40,7 +43,70 @@ public class MovementPlanner {
             System.out.println ("Error while generating plannable grid.");
             return false;
         }
+
+        try{
+            generateSubgrids();
+        }
+        catch (Exception e){
+            System.out.println("Error generating subgrids");
+            return false;
+        }
         return true;
+    }
+
+    /**
+     * Generates subgrids to optimize motionplanning by substracting the water from the islands
+     */
+    private void generateSubgrids() {
+        subGrids = new ArrayList<>();
+
+        ArrayList<MotionPoint> waterList = new ArrayList<>();
+        for (MotionPoint motionPoint : plannableGrid){
+            if (motionPoint.getWater()){
+                waterList.add(motionPoint);
+            }
+            else
+            {
+                //we found a living area, check if we found this one already
+                boolean found = false;
+                for (ArrayList<MotionPoint> area : subGrids){
+                    if (area.contains(motionPoint)){
+                        found = true;
+                    }
+                }
+                if (!found){
+                    //new living area, find adjacent points
+                    ArrayList<MotionPoint> livingArea = new ArrayList<>();
+                    livingArea.add(motionPoint);
+                    ArrayList<Point> openPoints = new ArrayList<>();
+                    for (Point adjacent : motionPoint.getAdjacentPoints()){
+                        openPoints.add(adjacent);
+                    }
+                    ArrayList<Point> pointBuffer = new ArrayList<>();
+                    while (openPoints.size() > 0){
+                        for (Point p : openPoints){
+                            MotionPoint currentPoint = getMotionPointByCoordinates((int)p.getX(), (int)p.getY());
+                            if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
+                                livingArea.add(currentPoint);
+                                for (Point nextPoint : currentPoint.getAdjacentPoints()){
+                                    if (!pointBuffer.contains(nextPoint)){
+                                        pointBuffer.add(nextPoint);
+                                    }
+                                }
+                            }
+                        }
+
+                        openPoints = new ArrayList<>(pointBuffer);
+                        pointBuffer.clear();
+                    }
+                    subGrids.add(livingArea);
+                }
+            }
+        }
+
+
+        System.out.println("Points in water list: " + waterList.size());
+        System.out.println("Subgrids Found: " + subGrids.size());
     }
 
     /**
@@ -431,6 +497,10 @@ public class MovementPlanner {
          */
         public int getY(){
             return gridPoint.getY();
+        }
+
+        public boolean getWater(){
+            return gridPoint.getWater();
         }
     }
 }

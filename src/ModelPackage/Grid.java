@@ -45,4 +45,21 @@ public class Grid implements Cloneable, IGrid {
     public ArrayList<GridPoint> getPointList() {
         return pointList;
     }
+
+    public void setWater(int x, int y, boolean water){
+        for (GridPoint gp : pointList){
+            if ((gp.getX() == x) && (gp.getY() == y)){
+                gp.setWater(water);
+            }
+        }
+    }
+
+    public boolean getWater(int x, int y){
+        for (GridPoint gp : pointList){
+            if ((gp.getX() == x) && (gp.getY() == y)){
+                return gp.getWater();
+            }
+        }
+        return false;
+    }
 }

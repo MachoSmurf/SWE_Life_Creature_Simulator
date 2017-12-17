@@ -1,5 +1,6 @@
 package ModelPackage;
 
+import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -9,10 +10,20 @@ public class GridPoint implements Cloneable, Serializable {
 
     private int x;
     private int y;
+    private boolean water;
+    private Color color;
 
-    public GridPoint(int i, int j) {
-        this.x = i;
-        this.y = j;
+    public GridPoint(int x, int y) {
+        /*this.x = x;
+        this.y = y;
+        water = true;*/
+        this(x, y, true);
+    }
+
+    public GridPoint(int x, int y, boolean water){
+        this.x = x;
+        this.y = y;
+        this.water = water;
     }
 
     /**
@@ -29,5 +40,25 @@ public class GridPoint implements Cloneable, Serializable {
      */
     public int getY(){
         return y;
+    }
+
+    public Color getColor(){
+        return this.color;
+    }
+
+    public void setColor(Color color){
+        this.color = color;
+    }
+
+    public boolean isWater(){
+        return water;
+    }
+
+    public void setWater(boolean water){
+        this.water = water;
+    }
+
+    public boolean getWater(){
+        return water;
     }
 }

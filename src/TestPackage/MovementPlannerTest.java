@@ -434,6 +434,77 @@ class MovementPlannerTest {
     }
 
     @Test
+    public void subGridTest(){
+        int testGridWidth = 20;
+        int testGridHeight = 20;
+
+        Grid grid = new Grid(testGridWidth, testGridHeight);
+
+        //island 1
+        grid.setWater(2,2, false);
+        grid.setWater(2,3, false);
+        grid.setWater(2,4, false);
+        grid.setWater(2,5, false);
+        grid.setWater(3,2, false);
+        grid.setWater(3,3, false);
+        grid.setWater(3,4, false);
+        grid.setWater(3,5, false);
+        grid.setWater(4,2, false);
+        grid.setWater(4,3, false);
+        grid.setWater(4,4, false);
+        grid.setWater(4,5, false);
+        grid.setWater(5,2, false);
+        grid.setWater(5,3, false);
+        grid.setWater(5,4, false);
+        grid.setWater(5,5, false);
+
+        //island 2
+        grid.setWater(10,2, false);
+        grid.setWater(10,3, false);
+        grid.setWater(10,4, false);
+        grid.setWater(10,5, false);
+        grid.setWater(11,2, false);
+        grid.setWater(11,3, false);
+        grid.setWater(11,4, false);
+        grid.setWater(11,5, false);
+        grid.setWater(12,2, false);
+        grid.setWater(12,3, false);
+        grid.setWater(12,4, false);
+        grid.setWater(12,5, false);
+        grid.setWater(13,2, false);
+        grid.setWater(13,3, false);
+        grid.setWater(13,4, false);
+        grid.setWater(13,5, false);
+
+        //island 3
+        grid.setWater(10,10, false);
+        grid.setWater(10,11, false);
+        grid.setWater(10,12, false);
+        grid.setWater(10,13, false);
+        grid.setWater(11,10, false);
+        grid.setWater(11,11, false);
+        grid.setWater(11,12, false);
+        grid.setWater(11,13, false);
+        grid.setWater(12,10, false);
+        grid.setWater(12,11, false);
+        grid.setWater(12,12, false);
+        grid.setWater(12,13, false);
+        grid.setWater(13,10, false);
+        grid.setWater(13,11, false);
+        grid.setWater(13,12, false);
+        grid.setWater(13,13, false);
+
+        MovementPlanner planner = new MovementPlanner();
+        planner.initializePlanner(new ArrayList<>(), grid);
+
+        try {
+            planner.findPath(2,2, 10,11);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     void testDemoGrid() {
         int testGridWidth = 50;
         int testGridHeight = 50;
