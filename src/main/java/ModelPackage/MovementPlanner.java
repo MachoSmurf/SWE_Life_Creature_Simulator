@@ -199,7 +199,6 @@ public class MovementPlanner {
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
                     if (!getMotionPointByCoordinates(neighbourX, neighbourY).getObstacle()){
-                        //currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
                         currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                     }
                 }
@@ -225,6 +224,7 @@ public class MovementPlanner {
             return null;
         }
 
+        //TODO: break up into multiple functions
         long startTime = System.nanoTime();
 
         ArrayList<Point> openPoints = new ArrayList<>();
@@ -237,8 +237,6 @@ public class MovementPlanner {
             getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
             openPoints.add(adjacentPoint);
         }
-        //reset previouspoint for startpoint (DEBUG)
-        getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
 
         int distanceCounter = 0;
         debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
@@ -264,7 +262,7 @@ public class MovementPlanner {
                 for (Point currentPoint : openPoints){
                     MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
                     for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
-
+                        //only add to pointbuffer if not already in other list
                         if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
                             MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
                             if ((freshMP.getPreviousPoint() == null)) {
@@ -309,14 +307,6 @@ public class MovementPlanner {
                 break;
             }
         }
-
-
-        /*
-        for (Point step : pathFound){
-            System.out.println("(" + step.getX() + "," + step.getY() + ")");
-        }
-        */
-
         return pathFound;
     }
 
@@ -446,8 +436,6 @@ public class MovementPlanner {
 
         private GridPoint gridPoint;
         private Point previousPoint;
-        //private MotionPoint previousPoint;
-        //private ArrayList<MotionPoint> adjacentPoints;
         private ArrayList<Point> adjacentPoints;
 
         public MotionPoint(GridPoint gridPoint) {
