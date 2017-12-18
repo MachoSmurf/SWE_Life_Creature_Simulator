@@ -21,7 +21,6 @@ public class MovementPlanner {
     private IGrid simulationGrid;
     private ArrayList<MotionPoint> plannableGrid;
     private ArrayList<Obstacle> obstacleList;
-    private ArrayList<Point> pathFound;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -38,7 +37,6 @@ public class MovementPlanner {
         this.obstacleList = obstacles;
         this.simulationGrid = simulationGrid;
         this.plannableGrid = new ArrayList<>();
-        this.pathFound = new ArrayList<>();
 
         try{
             generatePlannableGrid();
@@ -227,9 +225,13 @@ public class MovementPlanner {
         //TODO: break up into multiple functions
         long startTime = System.nanoTime();
 
+        //points to be checked in this iteration
         ArrayList<Point> openPoints = new ArrayList<>();
+        //points to be checked in the next iteration
         ArrayList<Point> pointBuffer = new ArrayList<>();
+        //points already checked
         ArrayList<Point> closedPoints = new ArrayList<>();
+
         //fetch the first set of adjacent points to the startpoint
         Point startPoint = new Point(startX, startY);
         closedPoints.add(startPoint);
@@ -239,7 +241,8 @@ public class MovementPlanner {
         }
 
         int distanceCounter = 0;
-        debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+        //output debug image for start situation
+        //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
         MotionPoint endPoint = null;
         while (endPoint == null){
             //start counting loops for debug
@@ -252,6 +255,7 @@ public class MovementPlanner {
                 if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
                     endPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
                     System.out.println("Found target. Steps required: " + distanceCounter);
+                    //output debug image for endstate
                     debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
                     break;
                 }
@@ -292,6 +296,16 @@ public class MovementPlanner {
         long endTime = System.nanoTime();
         System.out.println("Pathfinding completed in " + ((endTime - startTime) / 1000000) + "ms");
 
+        return getPathFound(endPoint);
+    }
+
+    /**
+     * calulates the path back from the endpoint to the startpoint
+     * @param endPoint MotionPoint that represents the last point in the pathfinding sequence
+     * @return ArrayList cointainting the path back from the endpoint to the startpoint, including both
+     */
+    private ArrayList<Point> getPathFound(MotionPoint endPoint){
+        ArrayList<Point> pathFound = new ArrayList<>();
         MotionPoint parentPoint = endPoint;
         int infiniteProtection = 0;
         while((parentPoint != null) && (infiniteProtection < 100)){
@@ -299,8 +313,7 @@ public class MovementPlanner {
 
             pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
             if (parentPoint.getPreviousPoint() != null){
-                MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
-                parentPoint = newParent;
+                parentPoint = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
             }
             else
             {
@@ -315,7 +328,6 @@ public class MovementPlanner {
      * for pathfinding
      */
     private void resetPlannableGrid() {
-        pathFound.clear();
         for (MotionPoint mp : plannableGrid){
             mp.setPreviousPoint(null);
         }
