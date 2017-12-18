@@ -1,6 +1,5 @@
-package TestPackage;
+package ModelPackage;
 
-import ModelPackage.*;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
