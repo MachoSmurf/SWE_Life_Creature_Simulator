@@ -251,17 +251,13 @@ public class MovementPlanner {
             }
 
             //check the open points for the endpoint
-            for (Point currentPoint : openPoints){
-                if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
-                    endPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
-                    System.out.println("Found target. Steps required: " + distanceCounter);
-                    //output debug image for endstate
-                    debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
-                    break;
-                }
+            endPoint = checkForTarget(openPoints, targetX, targetY);
+            if (endPoint!=null){
+                System.out.println("Found target. Steps required: " + distanceCounter);
+                //output debug image for endstate
+                debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
             }
-
-            if (endPoint == null){
+            else{
                 //point not found, move current points into closed points and fill buffer with new points
                 for (Point currentPoint : openPoints){
                     MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
@@ -287,8 +283,6 @@ public class MovementPlanner {
             }
             openPoints = new ArrayList<>(pointBuffer);
             pointBuffer.clear();
-
-
             distanceCounter++;
             //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
         }
@@ -297,6 +291,23 @@ public class MovementPlanner {
         System.out.println("Pathfinding completed in " + ((endTime - startTime) / 1000000) + "ms");
 
         return getPathFound(endPoint);
+    }
+
+    /**
+     * check if a certain motionPoint is the target for this motionfinding round
+     * @param openPoints List of points to be checked
+     * @param targetX X-parameter of target coordinate
+     * @param targetY Y-parameter of target coordinate
+     * @return MotionPoint if found, null if not found
+     */
+    private MotionPoint checkForTarget(ArrayList<Point> openPoints, int targetX, int targetY) {
+        for (Point currentPoint : openPoints){
+            if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
+                MotionPoint found = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
+                return found;
+            }
+        }
+        return null;
     }
 
     /**
