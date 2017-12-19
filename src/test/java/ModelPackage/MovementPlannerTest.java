@@ -1,5 +1,6 @@
 package ModelPackage;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
@@ -409,7 +410,6 @@ class MovementPlannerTest {
         }
     }
 
-
     @Test
     public void testStartIsEnd(){
         //Testpath 18
@@ -496,11 +496,22 @@ class MovementPlannerTest {
         MovementPlanner planner = new MovementPlanner();
         planner.initializePlanner(new ArrayList<>(), grid);
 
+        ArrayList<Point> result = null;
         try {
-            planner.findPath(2,2, 10,11);
+            result = planner.findPath(2,2, 10,11);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        assertEquals(10, result.size(), "Failed to find correct number of steps");
+        int livingAreaCount = 0;
+        try{
+            livingAreaCount = planner.getLivingAreas().size();
+        }
+        catch(Exception e){
+            System.out.print("Failed to find livingareas");
+        }
+        assertEquals(4, livingAreaCount);
     }
 
     @Test

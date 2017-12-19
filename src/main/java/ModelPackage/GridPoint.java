@@ -28,24 +28,32 @@ public class GridPoint implements Cloneable, Serializable {
 
     /**
      * Get the X coordinate of this Gridpoint
-     * @return
+     * @return x part of coordinate for this GridPoint
      */
     public int getX(){
         return x;
     }
 
     /**
-     * Get the y coordinate of this GridPoint
-     * @return
+     * Get the Y coordinate of this GridPoint
+     * @return Y part of coordinate for this GridPoint
      */
     public int getY(){
         return y;
     }
 
+    /**
+     * Gets the color of this GridPoint
+     * @return Color of the specified GridPoint
+     */
     public Color getColor(){
         return this.color;
     }
 
+    /**
+     * Sets the color of this GridPoint
+     * @param color that has to be set
+     */
     public void setColor(Color color){
         this.color = color;
     }

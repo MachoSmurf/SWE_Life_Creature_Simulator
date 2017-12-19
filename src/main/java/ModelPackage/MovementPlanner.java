@@ -376,6 +376,28 @@ public class MovementPlanner {
     }
 
     /**
+     * Returns the livingareas found by the motionplanner so the world can randomly place the creatures as defined
+     * in the requirements. Item 0 in the returned list is always the surrounding water.
+     * DO NOT CALL BEFORE CALLING intializePlanner()!
+     * @return
+     */
+    public ArrayList<ArrayList<Point>> getLivingAreas() throws Exception {
+        if (!(subGrids.size() > 0)){
+            throw new Exception("Planner not properly initialized");
+        }
+        ArrayList pointAreas = new ArrayList();
+        for (ArrayList<MotionPoint> area : subGrids){
+            //convert motionpoints to regular points since MotionPoint is an Inner class that World is unaware of
+            ArrayList<Point> pointArea = new ArrayList();
+            for (MotionPoint motionPoint : area){
+                pointArea.add(new Point(motionPoint.getX(), motionPoint.getY()));
+            }
+            pointAreas.add(pointArea);
+        }
+        return pointAreas;
+    }
+
+    /**
      * Debugging method for generating a visual image of the plannableGrid.
      * @param stepNumber int representing the number of steps in the motionplanning so far
      * @param startPoint Point representing the start position of the motionplanning
