@@ -11,10 +11,12 @@ public abstract class SimObject implements Serializable {
     protected int y;
     protected int energy;
 
+
     public SimObject(int x, int y, int energy) {
         this.x = x;
         this.y = y;
         this.energy = energy;
+
     }
 
     public int getX() {
@@ -41,5 +43,9 @@ public abstract class SimObject implements Serializable {
         this.energy = energy;
     }
 
-    public abstract void step ();
+    public void statusObject() {
+
+    }
+
+    public abstract StatusObject step();
 }

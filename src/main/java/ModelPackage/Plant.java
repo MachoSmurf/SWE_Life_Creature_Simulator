@@ -1,11 +1,13 @@
 package ModelPackage;
 
+import javafx.scene.paint.Color;
+
 /**
  * Item in the simulation containing energy for herbivores and carnivores to eat. Also contains logic describing lifecycle for plants.
  */
 public class Plant extends SimObject {
 
-    private int timesKilled;
+    private int deathCounter;
     private int stepsFromTenthTimeKilled;
 
 
@@ -15,14 +17,16 @@ public class Plant extends SimObject {
         super(x, y, energy);
     }
 
-    public void step () {
+    public StatusObject step () {
 
-        if (timesKilled >= 10) {
+        Boolean alive = true;
+        if (deathCounter >= 10) {
             if (stepsFromTenthTimeKilled < 100) {
                 stepsFromTenthTimeKilled ++;
+                alive = false;
             }
             else {
-                timesKilled = 0;
+                deathCounter = 0;
                 energy++;
             }
         }
@@ -30,6 +34,8 @@ public class Plant extends SimObject {
             energy++;
         }
 
+        StatusObject status = new StatusObject(energy, Color.GREEN, alive);
+        return status;
     }
 
     public int eaten (int hunger) {
@@ -38,7 +44,7 @@ public class Plant extends SimObject {
             // plant dies
             resultHunger = hunger - energy;
             energy = 0;
-            timesKilled++;
+            deathCounter++;
         }
         else {
             // Hunger is gone

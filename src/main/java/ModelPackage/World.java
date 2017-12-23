@@ -21,13 +21,7 @@ public class World implements Serializable, IWorld {
         List<SimObject> newCreatureList = new ArrayList<>();
         List<SimObject> newPlantList = new ArrayList<>();
 
-        for (Creature sim : creatureList){
-            sim.step();
-            newCreatureList.add(sim);
-        }
-
-
-        for(SimObject sim1 : newCreatureList) { // compare each creature.
+        for(SimObject sim1 : creatureList) { // compare each creature.
             boolean didThing = false;
             Creature sim = (Creature) sim1;
             for (SimObject simOtherCreature : newCreatureList) { // with each creature.
@@ -35,7 +29,16 @@ public class World implements Serializable, IWorld {
                 if (sim.x == otherCreature.x && sim.y == otherCreature.y) { // if creatures are on the same spot
                     if (sim.digestion != otherCreature.digestion) { //if simEach is a different species as sim.
                         if (sim.digestion == Digestion.Carnivore || sim.digestion == Digestion.Omnivore){ // if sim is a carnivore or omnivore
-                            // eat
+                            int simHunger = sim.getHunger();
+                            int otherSimEnergy = otherCreature.getEnergy();
+                            if (simHunger > otherSimEnergy) {
+                                sim.eat(otherSimEnergy);
+                                otherCreature.eaten(otherSimEnergy);
+                            }
+                            else {
+                                sim.eat(simHunger);
+                                otherCreature.eaten(simHunger);
+                            }
                             didThing = true;
                         }
                     }
@@ -60,22 +63,32 @@ public class World implements Serializable, IWorld {
             for (SimObject simPlant : newPlantList) {
                 Plant plant = (Plant) simPlant;
                 if (sim.x == plant.x && sim.y == plant.y) { // if plant is on the same spot as creature
-                    if (sim.digestion == Digestion.Herbivore || sim.digestion == Digestion.Omnivore)
-                    if (!didThing && plant.isAlive()) {
+                    if (sim.digestion == Digestion.Herbivore || sim.digestion == Digestion.Omnivore) // if creature is a herbivore or omnivore
+
+                        if (!didThing && plant.isAlive() && sim.getHunger() != 0) {
                         plant.eaten(sim.getHunger());
                         didThing = true;
                     }
                 }
             }
             if (!didThing){
-                doStep();
+                sim.step();
+
             }
+            newCreatureList.add(sim);
         }
+
+
 
         for (Plant plant : plantList) {
             plant.step();
             newPlantList.add(plant);
         }
+
+        // fill stepresult
+
         return null;
     }
+
+
 }

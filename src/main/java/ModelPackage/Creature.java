@@ -1,5 +1,8 @@
 package ModelPackage;
 
+
+import javafx.scene.paint.Color;
+
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -55,9 +58,22 @@ public class Creature extends SimObject {
         this.nextSteps = nextSteps;
     }
 
-    public void step() {
-        if (!alive) return;
+    public StatusObject step() {
+        Color point = Color.ORANGE;
+        switch (digestion){
+            case Carnivore: point = Color.RED;
+                break;
+            case Herbivore: point = Color.BROWN;
+                break;
+            case Omnivore: point = Color.YELLOW;
+                break;
+            case Nonivore: point = Color.PURPLE;
+                break;
+        }
+        StatusObject status = new StatusObject(energy, point, alive);
+        if (!alive) return (status);
         //weight
+
         int weightChild;
 
         if (energy < strength) {
@@ -94,6 +110,7 @@ public class Creature extends SimObject {
         x = nextGridPoint.getX();
         y = nextGridPoint.getY();
 
+        return status;
     }
 
     public Creature mate (Creature otherParent) {
@@ -174,6 +191,10 @@ public class Creature extends SimObject {
         if (energy == 0) {
             alive = false;
         }
+    }
+
+    public void eat (int eneryAdded) {
+        energy = energy + eneryAdded;
     }
 
 }
