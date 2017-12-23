@@ -40,4 +40,6 @@ public abstract class SimObject implements Serializable {
     public void setEnergy(int energy) {
         this.energy = energy;
     }
+
+    public abstract void step ();
 }

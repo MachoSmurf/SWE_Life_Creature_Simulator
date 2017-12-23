@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Creature extends SimObject {
 
-    private Digestion digestion;
+    Digestion digestion;
     private int digestionBalance;
     private int stamina;
     private int legs;
@@ -24,10 +24,11 @@ public class Creature extends SimObject {
     private boolean alive;
     private List<TargetCoordinate> nextSteps;
 
-    public Creature(int x, int y, int energy, Digestion digestion, int digestionBalans, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, int speed, int hunger, List<TargetCoordinate> nextSteps) {
+    public Creature(int x, int y, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<TargetCoordinate> nextSteps) {
         super(x, y, energy);
+        alive = true;
         this.digestion = digestion;
-        this.digestionBalance = digestionBalans;
+        this.digestionBalance = digestionBalance;
         this.stamina = stamina;
         this.legs = legs;
         this.reproductionThreshold = reproductionThreshold;
@@ -41,19 +42,34 @@ public class Creature extends SimObject {
         else {
             weight = legs * 10 + (energy - strength);
         }
-        this.speed = speed;
+        int legSpeed;
+        if (legs - 5 >= 0) {
+            legSpeed = legs - 5;
+        }
+        else {
+            legSpeed = 5 - legs;
+        }
+        int minWeight = legs * 10;
+        speed = (100 - (weight - minWeight) - legSpeed) /10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
     }
 
     public void step() {
+        if (!alive) return;
         //weight
+        int weightChild;
+
         if (energy < strength) {
-            weight = legs * 10;
+            weightChild = legs * 10;
         }
         else {
-            weight = legs * 10 + (energy - strength);
+            weightChild = legs * 10 + (energy - strength);
         }
+
+        //move cost
+        energy = energy - weight;
+
 
         //speed
         int legSpeed;
@@ -83,124 +99,81 @@ public class Creature extends SimObject {
     public Creature mate (Creature otherParent) {
 
         //energy
-        int energyChild = 50;  // moet uitzoeken hoe dit gezet wordt de eerste keer.
+        int energyChild;
+        energyChild = getReproductionCost() + otherParent.getReproductionCost();
 
         //Strength
         int diffStrength = Math.abs(strength - otherParent.strength) / 10;
-        int minStrength = strength + otherParent.strength - diffStrength;
-        int maxStrength = strength + otherParent.strength + diffStrength;
+        int minStrength = (strength + otherParent.strength) /2 - diffStrength;
+        int maxStrength = (strength + otherParent.strength) /2 + diffStrength;
         int strengthChild = ThreadLocalRandom.current().nextInt(minStrength, maxStrength +1);
 
 
         //digestion balans
-        int diffDigestionBalance = Math.abs(digestionBalance - digestionBalance) / 10;
+        int diffDigestionBalance = Math.abs(digestionBalance - otherParent.digestionBalance) / 10;
         int minDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 - diffDigestionBalance;
         int maxDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 + diffDigestionBalance;
         int digestionBalanceChild = ThreadLocalRandom.current().nextInt(minDigestionBalance, maxDigestionBalance + 1);
+
+        //Stamina
+        int diffStamina = Math.abs(stamina - otherParent.stamina) / 10;
+        int minStamina = (stamina + otherParent.stamina) /2 - diffStamina;
+        int maxStamina = (stamina + otherParent.stamina) /2 + diffStamina;
+        int staminaChild = ThreadLocalRandom.current().nextInt(minStamina, maxStamina + 1);
 
         int diffReproductionThreshold = Math.abs(reproductionThreshold - otherParent.reproductionThreshold) /10;
         int minReproductionThreshold = reproductionThreshold + otherParent.reproductionThreshold - diffReproductionThreshold;
         int maxReproductionThreshold = reproductionThreshold + otherParent.reproductionThreshold + diffReproductionThreshold;
         int reproductionThresholdChild = ThreadLocalRandom.current().nextInt(minReproductionThreshold, maxReproductionThreshold +1);
 
-        Creature child = new Creature(x, y, energyChild, digestion, digestionBalanceChild, stamina, legs, reproductionThresholdChild, reproductionCost, strengthChild, swimThreshold, motionThreshold, speed, hunger, nextSteps);
-        return child;
+        int diffReproductionCost = Math.abs(reproductionCost - otherParent.reproductionCost) / 10;
+        int minReproductionCost = (reproductionCost + otherParent.reproductionCost) /2 - diffReproductionCost;
+        int maxReproductionCost = (reproductionCost + otherParent.reproductionCost) /2 + diffReproductionCost;
+        int reproductionCostChild = ThreadLocalRandom.current().nextInt(minReproductionCost, maxReproductionCost + 1);
+
+        int diffSwimThreshold = Math.abs(swimThreshold - otherParent.swimThreshold) / 10;
+        int minSwimThreshold = (swimThreshold + otherParent.swimThreshold) /2 - diffSwimThreshold;
+        int maxSwimThreshold = (swimThreshold + otherParent.swimThreshold) /2 + diffSwimThreshold;
+        int swimThresholdChild = ThreadLocalRandom.current().nextInt(minSwimThreshold, maxSwimThreshold + 1);
+
+        int diffMotionThreshold = Math.abs(motionThreshold - otherParent.motionThreshold) / 10;
+        int minMotionThreshold = (motionThreshold + otherParent.motionThreshold) /2 - diffMotionThreshold;
+        int maxMotionThreshold = (motionThreshold + otherParent.motionThreshold) /2 + diffMotionThreshold;
+        int motionThresholdChild = ThreadLocalRandom.current().nextInt(minMotionThreshold, maxMotionThreshold + 1);
+
+        //MovementPlanner move = new MovementPlanner(); => motion planning
+        //nextSteps = move.findPath(x, y,2,5);
+
+        return new Creature(x, y, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
     }
 
-    public int getDigestionBalance() {
-        return digestionBalance;
-    }
-
-    public void setDigestionBalance(int digestionBalance) {
-        this.digestionBalance = digestionBalance;
-    }
-
-    public int getStamina() {
-        return stamina;
-    }
-
-    public void setStamina(int stamina) {
-        this.stamina = stamina;
-    }
-
-    public int getLegs() {
-        return legs;
-    }
-
-    public void setLegs(int legs) {
-        this.legs = legs;
+    private int getReproductionCost () {
+        int costReproduction = stamina / 100 * reproductionCost;
+        energy = energy - costReproduction;
+        return  costReproduction;
     }
 
     public int getReproductionThreshold() {
         return reproductionThreshold;
     }
 
-    public void setReproductionThreshold(int reproductionThreshold) {
-        this.reproductionThreshold = reproductionThreshold;
-    }
-
-    public int getReproductionCost() {
-        return reproductionCost;
-    }
-
-    public void setReproductionCost(int reproductionCost) {
-        this.reproductionCost = reproductionCost;
-    }
-
     public int getStrength() {
         return strength;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getSwimThreshold() {
-        return swimThreshold;
-    }
-
-    public void setSwimThreshold(int swimThreshold) {
-        this.swimThreshold = swimThreshold;
-    }
-
-    public int getMotionThreshold() {
-        return motionThreshold;
-    }
-
-    public void setMotionThreshold(int motionThreshold) {
-        this.motionThreshold = motionThreshold;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
     public int getHunger() {
-        return hunger;
+        return hunger = stamina - energy;
     }
 
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
+    public int getEnegry () {
+        return energy;
     }
 
-    public boolean isAlive() {
-        return alive;
-    }
-
-    public void setAlive(boolean alive) {
-        this.alive = alive;
+    public void eaten (int energyEaten) {
+        energy = energy - energyEaten;
+        if (energy == 0) {
+            alive = false;
+        }
     }
 
 }
