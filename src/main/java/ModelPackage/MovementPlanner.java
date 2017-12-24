@@ -89,7 +89,7 @@ public class MovementPlanner {
                     ArrayList<Point> pointBuffer = new ArrayList<>();
                     while (openPoints.size() > 0){
                         for (Point p : openPoints){
-                            MotionPoint currentPoint = getMotionPointByCoordinates((int)p.getX(), (int)p.getY());
+                            MotionPoint currentPoint = getMotionPointByCoordinates(p);
                             if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
                                 livingArea.add(currentPoint);
                                 for (Point nextPoint : currentPoint.getAdjacentPoints()){
@@ -196,7 +196,7 @@ public class MovementPlanner {
                 }
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
-                    if (!getMotionPointByCoordinates(neighbourX, neighbourY).getObstacle()){
+                    if (!getMotionPointByCoordinates(new Point(neighbourX, neighbourY)).getObstacle()){
                         currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                     }
                 }
@@ -207,18 +207,16 @@ public class MovementPlanner {
 
     /**
      * Generate a path towards the endpoint
-     * @param startX X-coordinate of startpoint
-     * @param startY Y-coordinate of startpoint
-     * @param targetX X-coordinate of endpoint
-     * @param targetY Y-coordinate of endpoint
+     * @param startPoint First point of the path
+     * @param targetPoint Last point of the path
      * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
      * the startpoint was the endpoint
      */
-    public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY) throws Exception {
+    public ArrayList<Point> findPath(Point startPoint, Point targetPoint) throws Exception {
         //reset the grid, clearing all previous points
         resetPlannableGrid();
 
-        if ((startX == targetX) && (startY == targetY)){
+        if ((startPoint.getX() == targetPoint.getX()) && (startPoint.getY() == targetPoint.getY())){
             return null;
         }
 
@@ -233,10 +231,9 @@ public class MovementPlanner {
         ArrayList<Point> closedPoints = new ArrayList<>();
 
         //fetch the first set of adjacent points to the startpoint
-        Point startPoint = new Point(startX, startY);
         closedPoints.add(startPoint);
-        for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
-            getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
+        for (Point adjacentPoint : getMotionPointByCoordinates(startPoint).getAdjacentPoints()){
+            getMotionPointByCoordinates(adjacentPoint).setPreviousPoint(startPoint);
             openPoints.add(adjacentPoint);
         }
 
@@ -251,20 +248,20 @@ public class MovementPlanner {
             }
 
             //check the open points for the endpoint
-            endPoint = checkForTarget(openPoints, targetX, targetY);
+            endPoint = checkForTarget(openPoints, targetPoint);
             if (endPoint!=null){
                 System.out.println("Found target. Steps required: " + distanceCounter);
                 //output debug image for endstate
-                debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+                debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
             }
             else{
                 //point not found, move current points into closed points and fill buffer with new points
                 for (Point currentPoint : openPoints){
-                    MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
+                    MotionPoint motionPoint = getMotionPointByCoordinates(currentPoint);
                     for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
                         //only add to pointbuffer if not already in other list
                         if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
-                            MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
+                            MotionPoint freshMP = getMotionPointByCoordinates(freshOpenPoint);
                             if ((freshMP.getPreviousPoint() == null)) {
                                 freshMP.setPreviousPoint(currentPoint);
                                 pointBuffer.add(freshOpenPoint);
@@ -296,14 +293,13 @@ public class MovementPlanner {
     /**
      * check if a certain motionPoint is the target for this motionfinding round
      * @param openPoints List of points to be checked
-     * @param targetX X-parameter of target coordinate
-     * @param targetY Y-parameter of target coordinate
+     * @param targetPoint target location of the motionplanner
      * @return MotionPoint if found, null if not found
      */
-    private MotionPoint checkForTarget(ArrayList<Point> openPoints, int targetX, int targetY) {
+    private MotionPoint checkForTarget(ArrayList<Point> openPoints, Point targetPoint) {
         for (Point currentPoint : openPoints){
-            if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
-                MotionPoint found = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
+            if ((currentPoint.getX() == targetPoint.getX()) && (currentPoint.getY() == targetPoint.getY())){
+                MotionPoint found = getMotionPointByCoordinates(currentPoint);
                 return found;
             }
         }
@@ -324,7 +320,7 @@ public class MovementPlanner {
 
             pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
             if (parentPoint.getPreviousPoint() != null){
-                parentPoint = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
+                parentPoint = getMotionPointByCoordinates(parentPoint.getPreviousPoint());
             }
             else
             {
@@ -360,14 +356,13 @@ public class MovementPlanner {
 
     /**
      * Gets the MotionPoint corresponding to a coordinate
-     * @param x coordinate of point
-     * @param y coordinate of point
+     * @param p Point to fetch the associated MotionPoint of
      * @return MotionPoint corresponding to the point
      */
-    private MotionPoint getMotionPointByCoordinates(int x, int y){
+    private MotionPoint getMotionPointByCoordinates(Point p){
        if (plannableGrid!=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
-            return plannableGrid.get(((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth())));
+            return plannableGrid.get(((simulationGrid.getWidth() * ((int)p.getY() +1)) + ((int)p.getX() - simulationGrid.getWidth())));
         }
         else
         {
@@ -424,7 +419,7 @@ public class MovementPlanner {
                 //MotionPoint mp = getMotionPointByCoordinates(i, j);
 
 
-                if (getMotionPointByCoordinates(i, j).getObstacle()){
+                if (getMotionPointByCoordinates(new Point(i, j)).getObstacle()){
                     g2.setColor(Color.MAGENTA);
                     g2.fillOval(i*factor, j*factor, size, size);
                 }
@@ -449,7 +444,7 @@ public class MovementPlanner {
             g2.setColor(Color.BLUE);
             //if ((closedPoint.getX() != (int)startPoint.getX()) && (closedPoint.getY() != (int)startPoint.getY())){
             try{
-                Point previousPoint = getMotionPointByCoordinates((int)closedPoint.getX(), (int)closedPoint.getY()).getPreviousPoint();
+                Point previousPoint = getMotionPointByCoordinates(closedPoint).getPreviousPoint();
                 g2.drawLine((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, (int)previousPoint.getX() * factor, (int)previousPoint.getY()*factor);
             }
             catch(NullPointerException ne){

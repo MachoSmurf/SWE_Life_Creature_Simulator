@@ -44,7 +44,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(5, 5, 6, 5);
+            resultList = planner.findPath(new Point(5, 5), new Point( 6, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,7 +64,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(3, 5, 6, 5);
+            resultList = planner.findPath(new Point(3, 5), new Point( 6, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -86,7 +86,7 @@ class MovementPlannerTest {
         //TestPath2
         resultList = null;
         try {
-            resultList = planner.findPath(6, 5, 3, 5);
+            resultList = planner.findPath(new Point(6, 5), new Point( 3, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -108,7 +108,7 @@ class MovementPlannerTest {
         //TestPath3
         resultList = null;
         try {
-            resultList = planner.findPath(1, 0, 8, 0);
+            resultList = planner.findPath(new Point(1, 0), new Point( 8, 0));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -130,7 +130,7 @@ class MovementPlannerTest {
         //TestPath4
         resultList = null;
         try {
-            resultList = planner.findPath(8, 0, 1, 0);
+            resultList = planner.findPath(new Point(8, 0), new Point(1, 0));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -150,7 +150,7 @@ class MovementPlannerTest {
         //TestPath5
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(1, 9, 8, 9);
+            resultList = planner.findPath(new Point(1, 9), new Point(8, 9));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -170,7 +170,7 @@ class MovementPlannerTest {
         //TestPath6
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(8, 9, 1, 9);
+            resultList = planner.findPath(new Point(8, 9), new Point(1, 9));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -190,7 +190,7 @@ class MovementPlannerTest {
         //TestPath7
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(5, 1, 5, 8);
+            resultList = planner.findPath(new Point(5, 1), new Point(5, 8));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -210,7 +210,7 @@ class MovementPlannerTest {
         //TestPath8
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(5, 8, 5, 1);
+            resultList = planner.findPath(new Point(5, 8), new Point(5, 1));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -230,7 +230,7 @@ class MovementPlannerTest {
         //TestPath9
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(1, 8, 8, 1);
+            resultList = planner.findPath(new Point(1, 8), new Point(8, 1));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -250,7 +250,7 @@ class MovementPlannerTest {
         //TestPath10
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(8, 1, 1, 8);
+            resultList = planner.findPath(new Point(8, 1), new Point(1, 8));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -279,7 +279,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try{
-            resultList = planner.findPath(3, 5, 6, 5);
+            resultList = planner.findPath(new Point(3, 5), new Point(6, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -291,7 +291,7 @@ class MovementPlannerTest {
 
         //path12
         try {
-            resultList = planner.findPath(6, 5, 3, 5);
+            resultList = planner.findPath(new Point(6, 5), new Point(3, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -316,7 +316,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(1, 5, 6, 5);
+            resultList = planner.findPath(new Point(1, 5), new Point(6, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -327,7 +327,7 @@ class MovementPlannerTest {
         }
         //path12
         try {
-            resultList = planner.findPath(6, 5, 1, 5);
+            resultList = planner.findPath(new Point(6, 5), new Point(1, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -354,7 +354,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(1, 5, 5, 5);
+            resultList = planner.findPath(new Point(1, 5), new Point(5, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -365,7 +365,7 @@ class MovementPlannerTest {
         }
         //path16
         try {
-            resultList = planner.findPath(5, 5, 1, 5);
+            resultList = planner.findPath(new Point(5, 5), new Point(1, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -399,7 +399,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(2, 5, 6, 5);
+            resultList = planner.findPath(new Point(2, 5), new Point(6, 5));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -421,7 +421,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(2, 2, 2, 2);
+            resultList = planner.findPath(new Point(2, 2), new Point(2, 2));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -498,7 +498,7 @@ class MovementPlannerTest {
 
         ArrayList<Point> result = null;
         try {
-            result = planner.findPath(2,2, 10,11);
+            result = planner.findPath(new Point(2,2), new Point(10,11));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -543,7 +543,7 @@ class MovementPlannerTest {
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
-            resultList = planner.findPath(20, 20, 30, 30);
+            resultList = planner.findPath(new Point(20, 20), new Point(30, 30));
         } catch (Exception e) {
             e.printStackTrace();
         }
