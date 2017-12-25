@@ -15,15 +15,15 @@ public class StatusObject {
 
     }
 
-    public void getEnergy () {
-
+    public int getEnergy () {
+        return energy;
     }
 
-    public void getAlive () {
-
+    public boolean getAlive () {
+        return alive;
     }
 
-    public void getColor () {
-
+    public Color getColor () {
+        return color;
     }
 }

@@ -9,17 +9,31 @@ import java.util.List;
  */
 public class World implements Serializable, IWorld {
 
-    private ArrayList<Plant> plantList;
-    private ArrayList<Creature> creatureList;
+    private ArrayList<SimObject> plantList;
+    private ArrayList<SimObject> creatureList;
     private ArrayList<SimObject> obstacleList;
+    private IGrid iGrid;
+    private int stepCount;
 
-    public World() {
+    public World(){
+        stepCount = 0;
+
     }
 
     @Override
     public StepResult doStep() {
         List<SimObject> newCreatureList = new ArrayList<>();
         List<SimObject> newPlantList = new ArrayList<>();
+        int nonivores = 0;
+        int omnivores = 0;
+        int carnivores = 0;
+        int herbivores = 0;
+        int plants = 0;
+        int energyNonivores = 0;
+        int energyOmnivores = 0;
+        int energyCarnivores = 0;
+        int energyHerbivores = 0;
+        int energyPlants = 0;
 
         for(SimObject sim1 : creatureList) { // compare each creature.
             boolean didThing = false;
@@ -32,11 +46,11 @@ public class World implements Serializable, IWorld {
                             int simHunger = sim.getHunger();
                             int otherSimEnergy = otherCreature.getEnergy();
                             if (simHunger > otherSimEnergy) {
-                                sim.eat(otherSimEnergy);
+                                StatusObject object = sim.eat(otherSimEnergy);
                                 otherCreature.eaten(otherSimEnergy);
                             }
                             else {
-                                sim.eat(simHunger);
+                                StatusObject object = sim.eat(simHunger);
                                 otherCreature.eaten(simHunger);
                             }
                             didThing = true;
@@ -66,13 +80,23 @@ public class World implements Serializable, IWorld {
                     if (sim.digestion == Digestion.Herbivore || sim.digestion == Digestion.Omnivore) // if creature is a herbivore or omnivore
 
                         if (!didThing && plant.isAlive() && sim.getHunger() != 0) {
-                        plant.eaten(sim.getHunger());
+                        if (sim.getHunger() > plant.getEnergy()){
+                            plant.eaten(plant.getEnergy());
+                            StatusObject object = sim.eat(plant.getEnergy());
+                        }
+                        else {
+                            plant.eaten(sim.getHunger());
+                            StatusObject object = sim.eat(sim.getHunger());
+                        }
+
+
                         didThing = true;
                     }
                 }
             }
             if (!didThing){
-                sim.step();
+                StatusObject object = sim.step();
+
 
             }
             newCreatureList.add(sim);
@@ -80,15 +104,45 @@ public class World implements Serializable, IWorld {
 
 
 
-        for (Plant plant : plantList) {
+        for (SimObject sim : plantList) {
+            Plant plant = (Plant) sim;
             plant.step();
             newPlantList.add(plant);
         }
 
-        // fill stepresult
+        // fill stepResult
+        for (SimObject sim : newCreatureList) {
+            Creature creature = (Creature) sim;
+            Digestion digestion = creature.digestion;
+            switch (digestion){
+                case Carnivore: carnivores++;
+                    energyCarnivores = energyCarnivores + creature.getEnergy();
+                    break;
+                case Herbivore: herbivores++;
+                    energyHerbivores = energyHerbivores + creature.getEnergy();
+                    break;
+                case Omnivore: omnivores++;
+                    energyOmnivores = energyOmnivores + creature.getEnergy();
+                    break;
+                case Nonivore: nonivores++;
+                    energyOmnivores = energyNonivores + creature.getEnergy();
+                    break;
+            }
+        }
 
-        return null;
+        for (SimObject sim : newPlantList) {
+            Plant plant = (Plant) sim;
+            plants++;
+            energyPlants = energyPlants + plant.getEnergy();
+        }
+        stepCount++;
+
+
+        StepResult stepResult = new StepResult(iGrid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
+        return stepResult;
     }
 
-
+    public IGrid getGrid () {
+        return iGrid;
+    }
 }

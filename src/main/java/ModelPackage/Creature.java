@@ -27,6 +27,7 @@ public class Creature extends SimObject {
     private boolean alive;
     private List<TargetCoordinate> nextSteps;
 
+
     public Creature(int x, int y, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<TargetCoordinate> nextSteps) {
         super(x, y, energy);
         alive = true;
@@ -56,6 +57,10 @@ public class Creature extends SimObject {
         speed = (100 - (weight - minWeight) - legSpeed) /10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
+
+
+        status = new StatusObject(energy, getColor(), alive);
+
     }
 
     public StatusObject step() {
@@ -182,19 +187,34 @@ public class Creature extends SimObject {
         return hunger = stamina - energy;
     }
 
-    public int getEnegry () {
-        return energy;
-    }
-
-    public void eaten (int energyEaten) {
+    public StatusObject eaten (int energyEaten) {
         energy = energy - energyEaten;
         if (energy == 0) {
             alive = false;
         }
+        status = new StatusObject(energy, getColor(), alive);
+        return status;
     }
 
-    public void eat (int eneryAdded) {
+    public StatusObject eat (int eneryAdded) {
         energy = energy + eneryAdded;
+
+        status = new StatusObject(energy, getColor(), alive);
+        return status;
     }
 
+    private Color getColor() {
+        Color point = Color.ORANGE;
+        switch (digestion){
+            case Carnivore: point = Color.RED;
+                break;
+            case Herbivore: point = Color.BROWN;
+                break;
+            case Omnivore: point = Color.YELLOW;
+                break;
+            case Nonivore: point = Color.PURPLE;
+                break;
+        }
+        return point;
+    };
 }

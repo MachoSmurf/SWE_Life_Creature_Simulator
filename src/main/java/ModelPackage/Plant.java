@@ -10,11 +10,11 @@ public class Plant extends SimObject {
     private int deathCounter;
     private int stepsFromTenthTimeKilled;
 
-
-
-
     public Plant(int x, int y, int energy) {
         super(x, y, energy);
+        status = new StatusObject(energy, Color.GREEN, true);
+        deathCounter = 0;
+        stepsFromTenthTimeKilled = 0;
     }
 
     public StatusObject step () {

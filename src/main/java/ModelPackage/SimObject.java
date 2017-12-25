@@ -10,6 +10,7 @@ public abstract class SimObject implements Serializable {
     protected int x;
     protected int y;
     protected int energy;
+    protected StatusObject status;
 
 
     public SimObject(int x, int y, int energy) {
@@ -43,9 +44,9 @@ public abstract class SimObject implements Serializable {
         this.energy = energy;
     }
 
-    public void statusObject() {
-
-    }
-
     public abstract StatusObject step();
+
+    public StatusObject getStatus() {
+        return status;
+    }
 }
