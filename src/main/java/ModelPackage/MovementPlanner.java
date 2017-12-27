@@ -20,7 +20,7 @@ public class MovementPlanner {
 
     private IGrid simulationGrid;
     private ArrayList<MotionPoint> plannableGrid;
-    private ArrayList<Obstacle> obstacleList;
+    private ArrayList<MotionPoint> obstacleList;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -29,12 +29,11 @@ public class MovementPlanner {
 
     /**
      * Initializes the planner with the correct data and triggers the generation of a complete plannable grid.
-     * @param obstacles ArrayList containing obstacles. Can't change once the simulation has started!
      * @param simulationGrid The simulation Grid used to generate a plannable grid
      * @return true if the generation of the plannable grid was successful, false otherwise.
      */
-    public boolean initializePlanner(ArrayList<Obstacle> obstacles, IGrid simulationGrid){
-        this.obstacleList = obstacles;
+    public boolean initializePlanner(IGrid simulationGrid){
+        this.obstacleList = new ArrayList<>();
         this.simulationGrid = simulationGrid;
         this.plannableGrid = new ArrayList<>();
 
@@ -66,34 +65,41 @@ public class MovementPlanner {
         //waterlist is always element 0 in the subgrid list
         subGrids.add(waterList);
         for (MotionPoint motionPoint : plannableGrid){
-            if (motionPoint.getWater()){
+            if (motionPoint.getType() == GridPointType.Water){
                 waterList.add(motionPoint);
             }
-            else
-            {
+            else{
+                if (motionPoint.getType() == GridPointType.Obstacle){
+                    continue;
+                }
                 //we found a living area, check if we found this one already
                 boolean found = false;
                 for (ArrayList<MotionPoint> area : subGrids){
                     if (area.contains(motionPoint)){
                         found = true;
+                        break;
                     }
                 }
-                if (!found){
-                    //new living area, find adjacent points
+
+                if (!found) {
                     ArrayList<MotionPoint> livingArea = new ArrayList<>();
                     livingArea.add(motionPoint);
                     ArrayList<Point> openPoints = new ArrayList<>();
-                    for (Point adjacent : motionPoint.getAdjacentPoints()){
-                        openPoints.add(adjacent);
+                    for (Point adjacent : motionPoint.getAdjacentPoints()) {
+                        if (getMotionPointByCoordinates(adjacent).getType() != GridPointType.Obstacle) {
+                            openPoints.add(adjacent);
+                        }
                     }
+
                     ArrayList<Point> pointBuffer = new ArrayList<>();
-                    while (openPoints.size() > 0){
-                        for (Point p : openPoints){
+                    while (openPoints.size() > 0) {
+                        for (Point p : openPoints) {
                             MotionPoint currentPoint = getMotionPointByCoordinates(p);
-                            if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
+                            //if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
+                            if ((!livingArea.contains(currentPoint)) && (currentPoint.getType() == GridPointType.Ground)) {
                                 livingArea.add(currentPoint);
-                                for (Point nextPoint : currentPoint.getAdjacentPoints()){
-                                    if (!pointBuffer.contains(nextPoint)){
+                                for (Point nextPoint : currentPoint.getAdjacentPoints()) {
+                                    if (!pointBuffer.contains(nextPoint)) {
                                         pointBuffer.add(nextPoint);
                                     }
                                 }
@@ -125,15 +131,9 @@ public class MovementPlanner {
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
                 int gridPointNumber = getPointNumber(new Point(gridPoint.getX(), gridPoint.getY()));
-                plannableGrid.set(gridPointNumber, new MotionPoint(gridPoint));
-            }
 
-            for (MotionPoint currentPoint : plannableGrid){
-                for (Obstacle o : obstacleList){
-                    if ((o.getX() == currentPoint.getX()) && (o.getY() == currentPoint.getY())) {
-                        currentPoint.setObstacle(true);
-                    }
-                }
+                MotionPoint freshMotionPoint = new MotionPoint(gridPoint);
+                plannableGrid.set(gridPointNumber, freshMotionPoint);
             }
 
             for (MotionPoint currentPoint : plannableGrid){
@@ -196,7 +196,7 @@ public class MovementPlanner {
                 }
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
-                    if (!getMotionPointByCoordinates(new Point(neighbourX, neighbourY)).getObstacle()){
+                    if (getMotionPointByCoordinates(new Point(neighbourX, neighbourY)).getType() != GridPointType.Obstacle){
                         currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                     }
                 }
@@ -239,7 +239,7 @@ public class MovementPlanner {
 
         int distanceCounter = 0;
         //output debug image for start situation
-        //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+        debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
         MotionPoint endPoint = null;
         while (endPoint == null){
             //start counting loops for debug
@@ -281,7 +281,7 @@ public class MovementPlanner {
             openPoints = new ArrayList<>(pointBuffer);
             pointBuffer.clear();
             distanceCounter++;
-            //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+            debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
         }
 
         long endTime = System.nanoTime();
@@ -409,6 +409,7 @@ public class MovementPlanner {
 
         BufferedImage img = new BufferedImage(canvasWidth, canvasHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = img.createGraphics();
+        g2.setBackground(Color.lightGray);
 
 
         //draw grid
@@ -416,17 +417,30 @@ public class MovementPlanner {
         int gridHeight = simulationGrid.getHeight();
         for (int i = 0; i<gridWidth; i++){
             for (int j = 0; j<gridHeight; j++){
-                //MotionPoint mp = getMotionPointByCoordinates(i, j);
+                switch(getMotionPointByCoordinates(new Point(i, j)).getType()){
+                    case Obstacle:
+                        g2.setColor(Color.MAGENTA);
 
+                        break;
+                    case Water:
+                        g2.setColor(Color.CYAN);
+                        break;
+                    case Ground:
+                        g2.setColor(Color.ORANGE);
+                        break;
+                }
+                g2.fillOval(i*factor, j*factor, size, size);
+                /*
+                if (getMotionPointByCoordinates(new Point(i, j)).getType() == GridPointType.Obstacle){
 
-                if (getMotionPointByCoordinates(new Point(i, j)).getObstacle()){
-                    g2.setColor(Color.MAGENTA);
-                    g2.fillOval(i*factor, j*factor, size, size);
+                }
+                if (getMotionPointByCoordinates(new Point(i, j)).getType() == GridPointType.Water){
+
                 }
                 else{
                     g2.setColor(Color.WHITE);
                     g2.drawOval(i*factor, j*factor, size, size);
-                }
+                }*/
             }
         }
 
@@ -497,6 +511,7 @@ public class MovementPlanner {
          * returns whether or not the point is an obstacle
          * @return boolean whether or not this is an obstacle
          */
+        @Deprecated
         public boolean getObstacle(){
             return this.isObstacle;
         }
@@ -556,8 +571,17 @@ public class MovementPlanner {
          * Gets the state of this point (Water or not)
          * @return
          */
+        @Deprecated
         public boolean getWater(){
             return gridPoint.getWater();
+        }
+
+        /**
+         * Gets the type of gridPoint
+         * @return gridPointType enum
+         */
+        public GridPointType getType(){
+            return gridPoint.getType();
         }
     }
 }

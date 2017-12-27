@@ -25,7 +25,7 @@ class MovementPlannerTest {
         int testGridHeight = 100;
 
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(new ArrayList<>(), new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         if (planner.getTotalMotionPoints() != (testGridHeight * testGridWidth)){
             fail("MotionPoint count does not match grid");
         }
@@ -38,9 +38,8 @@ class MovementPlannerTest {
     void testPathNoObstacle0() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
@@ -58,9 +57,8 @@ class MovementPlannerTest {
     void testPathNoObstacle1() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
@@ -78,9 +76,8 @@ class MovementPlannerTest {
     void testPathNoObstacle2() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point>
         //TestPath2
@@ -100,9 +97,8 @@ class MovementPlannerTest {
     void testPathNoObstacle3() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point>
         //TestPath3
@@ -122,9 +118,8 @@ class MovementPlannerTest {
     void testPathNoObstacle4() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath1
         ArrayList<Point>
         //TestPath4
@@ -144,9 +139,8 @@ class MovementPlannerTest {
     void testPathNoObstacle5() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath5
         ArrayList<Point> resultList = null;
         try {
@@ -164,9 +158,8 @@ class MovementPlannerTest {
     void testPathNoObstacle6() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath6
         ArrayList<Point> resultList = null;
         try {
@@ -184,9 +177,8 @@ class MovementPlannerTest {
     void testPathNoObstacle7() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath7
         ArrayList<Point> resultList = null;
         try {
@@ -204,9 +196,8 @@ class MovementPlannerTest {
     void testPathNoObstacle8() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath8
         ArrayList<Point> resultList = null;
         try {
@@ -224,9 +215,8 @@ class MovementPlannerTest {
     void testPathNoObstacle9() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath9
         ArrayList<Point> resultList = null;
         try {
@@ -244,9 +234,8 @@ class MovementPlannerTest {
     void testPathNoObstacle10() {
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(new Grid(testGridWidth, testGridHeight));
         //TestPath10
         ArrayList<Point> resultList = null;
         try {
@@ -265,17 +254,20 @@ class MovementPlannerTest {
     void testPathObstacleCase11And12(){
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
+
         //load edges (obstacle pattern for TP 11 & 12)
         for (int x=0; x<10; x++){
             for (int y=0; y<10; y++){
                 if ((y==0) || (x==0) || (x==9) || (y==9)){
-                    obstacleList.add(new Obstacle(x, y, 0));
+                    testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
+                    //obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
         }
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(testGrid);
         //TestPath1
         ArrayList<Point> resultList = null;
         try{
@@ -305,15 +297,17 @@ class MovementPlannerTest {
     void testPathObstacleCase13And14(){
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
+
         //load edges (obstacle pattern for TP 13 & 14)
         int x = 3;
         for (int y=0; y<10; y++){
-            obstacleList.add(new Obstacle(x, y, 0));
+            testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
+            //obstacleList.add(new Obstacle(x, y, 0));
         }
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
-        //TestPath1
+        planner.initializePlanner(testGrid);
+        //TestPath13
         ArrayList<Point> resultList = null;
         try {
             resultList = planner.findPath(new Point(1, 5), new Point(6, 5));
@@ -321,11 +315,11 @@ class MovementPlannerTest {
             e.printStackTrace();
         }
         System.out.println("TP13 completed");
-        //path11
+        //path1
         if (resultList.size() != 6){
             fail("Path 13 failed. Expected 6 steps, found " + resultList.size());
         }
-        //path12
+        //path14
         try {
             resultList = planner.findPath(new Point(6, 5), new Point(1, 5));
         } catch (Exception e) {
@@ -341,16 +335,17 @@ class MovementPlannerTest {
     void testPathObstacleCase15And16(){
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
         //load edges (obstacle pattern for TP 15 & 16)
         int x = 3;
         for (int y=0; y<10; y++){
             if (y != 6){
-                obstacleList.add(new Obstacle(x, y, 0));
+                testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
+                //obstacleList.add(new Obstacle(x, y, 0));
             }
         }
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(testGrid);
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
@@ -380,22 +375,24 @@ class MovementPlannerTest {
         //TestPath 17
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
         //load edges (obstacle pattern like TP12)
         for (int x=0; x<10; x++){
             for (int y=0; y<10; y++){
                 if ((y==0) || (x==0) || (x==9) || (y==9)){
-                    obstacleList.add(new Obstacle(x, y, 0));
+                    testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
+                    //obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
         }
         //create line like in TP 13
         int x = 3;
         for (int y=1; y<9; y++){
-            obstacleList.add(new Obstacle(x, y, 0));
+            testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
+            //obstacleList.add(new Obstacle(x, y, 0));
         }
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(testGrid);
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
@@ -415,9 +412,9 @@ class MovementPlannerTest {
         //Testpath 18
         int testGridWidth = 10;
         int testGridHeight = 10;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(testGrid);
         //TestPath1
         ArrayList<Point> resultList = null;
         try {
@@ -440,61 +437,61 @@ class MovementPlannerTest {
         Grid grid = new Grid(testGridWidth, testGridHeight);
 
         //island 1
-        grid.setWater(2,2, false);
-        grid.setWater(2,3, false);
-        grid.setWater(2,4, false);
-        grid.setWater(2,5, false);
-        grid.setWater(3,2, false);
-        grid.setWater(3,3, false);
-        grid.setWater(3,4, false);
-        grid.setWater(3,5, false);
-        grid.setWater(4,2, false);
-        grid.setWater(4,3, false);
-        grid.setWater(4,4, false);
-        grid.setWater(4,5, false);
-        grid.setWater(5,2, false);
-        grid.setWater(5,3, false);
-        grid.setWater(5,4, false);
-        grid.setWater(5,5, false);
+        grid.setPointType(new Point(2,2), GridPointType.Ground);
+        grid.setPointType(new Point(2,3), GridPointType.Ground);
+        grid.setPointType(new Point(2,4), GridPointType.Ground);
+        grid.setPointType(new Point(2,5), GridPointType.Ground);
+        grid.setPointType(new Point(3,2), GridPointType.Ground);
+        grid.setPointType(new Point(3,3), GridPointType.Ground);
+        grid.setPointType(new Point(3,4), GridPointType.Ground);
+        grid.setPointType(new Point(3,5), GridPointType.Ground);
+        grid.setPointType(new Point(4,2), GridPointType.Ground);
+        grid.setPointType(new Point(4,3), GridPointType.Ground);
+        grid.setPointType(new Point(4,4), GridPointType.Ground);
+        grid.setPointType(new Point(4,5), GridPointType.Ground);
+        grid.setPointType(new Point(5,2), GridPointType.Ground);
+        grid.setPointType(new Point(5,3), GridPointType.Ground);
+        grid.setPointType(new Point(5,4), GridPointType.Ground);
+        grid.setPointType(new Point(5,5), GridPointType.Ground);
 
         //island 2
-        grid.setWater(10,2, false);
-        grid.setWater(10,3, false);
-        grid.setWater(10,4, false);
-        grid.setWater(10,5, false);
-        grid.setWater(11,2, false);
-        grid.setWater(11,3, false);
-        grid.setWater(11,4, false);
-        grid.setWater(11,5, false);
-        grid.setWater(12,2, false);
-        grid.setWater(12,3, false);
-        grid.setWater(12,4, false);
-        grid.setWater(12,5, false);
-        grid.setWater(13,2, false);
-        grid.setWater(13,3, false);
-        grid.setWater(13,4, false);
-        grid.setWater(13,5, false);
+        grid.setPointType(new Point(10,2), GridPointType.Ground);
+        grid.setPointType(new Point(10,3), GridPointType.Ground);
+        grid.setPointType(new Point(10,4), GridPointType.Ground);
+        grid.setPointType(new Point(10,5), GridPointType.Ground);
+        grid.setPointType(new Point(11,2), GridPointType.Ground);
+        grid.setPointType(new Point(11,3), GridPointType.Ground);
+        grid.setPointType(new Point(11,4), GridPointType.Ground);
+        grid.setPointType(new Point(11,5), GridPointType.Obstacle);
+        grid.setPointType(new Point(12,2), GridPointType.Obstacle);
+        grid.setPointType(new Point(12,3), GridPointType.Ground);
+        grid.setPointType(new Point(12,4), GridPointType.Ground);
+        grid.setPointType(new Point(12,5), GridPointType.Ground);
+        grid.setPointType(new Point(13,2), GridPointType.Ground);
+        grid.setPointType(new Point(13,3), GridPointType.Ground);
+        grid.setPointType(new Point(13,4), GridPointType.Ground);
+        grid.setPointType(new Point(13,5), GridPointType.Ground);
 
         //island 3
-        grid.setWater(10,10, false);
-        grid.setWater(10,11, false);
-        grid.setWater(10,12, false);
-        grid.setWater(10,13, false);
-        grid.setWater(11,10, false);
-        grid.setWater(11,11, false);
-        grid.setWater(11,12, false);
-        grid.setWater(11,13, false);
-        grid.setWater(12,10, false);
-        grid.setWater(12,11, false);
-        grid.setWater(12,12, false);
-        grid.setWater(12,13, false);
-        grid.setWater(13,10, false);
-        grid.setWater(13,11, false);
-        grid.setWater(13,12, false);
-        grid.setWater(13,13, false);
+        grid.setPointType(new Point(10,10), GridPointType.Ground);
+        grid.setPointType(new Point(10,11), GridPointType.Ground);
+        grid.setPointType(new Point(10,12), GridPointType.Ground);
+        grid.setPointType(new Point(10,13), GridPointType.Ground);
+        grid.setPointType(new Point(11,10), GridPointType.Ground);
+        grid.setPointType(new Point(11,11), GridPointType.Ground);
+        grid.setPointType(new Point(11,12), GridPointType.Ground);
+        grid.setPointType(new Point(11,13), GridPointType.Obstacle);
+        grid.setPointType(new Point(12,10), GridPointType.Ground);
+        grid.setPointType(new Point(12,11), GridPointType.Ground);
+        grid.setPointType(new Point(12,12), GridPointType.Ground);
+        grid.setPointType(new Point(12,13), GridPointType.Ground);
+        grid.setPointType(new Point(13,10), GridPointType.Ground);
+        grid.setPointType(new Point(13,11), GridPointType.Ground);
+        grid.setPointType(new Point(13,12), GridPointType.Ground);
+        grid.setPointType(new Point(13,13), GridPointType.Ground);
 
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(new ArrayList<>(), grid);
+        planner.initializePlanner(grid);
 
         ArrayList<Point> result = null;
         try {
@@ -504,42 +501,52 @@ class MovementPlannerTest {
         }
 
         assertEquals(10, result.size(), "Failed to find correct number of steps");
+        ArrayList<ArrayList<Point>> areas = new ArrayList<>();
         int livingAreaCount = 0;
         try{
-            livingAreaCount = planner.getLivingAreas().size();
+            areas = planner.getLivingAreas();
+            livingAreaCount = areas.size();
         }
         catch(Exception e){
             System.out.print("Failed to find livingareas");
         }
         assertEquals(4, livingAreaCount);
+
+        System.out.println("water Size: " + areas.get(0).size());
+        System.out.println("Area 1 Size: " + areas.get(1).size());
+        System.out.println("Area 2 Size: " + areas.get(2).size());
+        System.out.println("Area 3 Size: " + areas.get(3).size());
+
+        assertEquals(16, areas.get(1).size());
+        assertEquals(14, areas.get(2).size());
+        assertEquals(15, areas.get(3).size());
     }
 
     @Test
     void testDemoGrid() {
         int testGridWidth = 50;
         int testGridHeight = 50;
-        ArrayList<Obstacle> obstacleList = new ArrayList<>();
 
-        obstacleList.add(new Obstacle(15, 25, 0));
-        obstacleList.add(new Obstacle(16, 22, 0));
-
-        obstacleList.add(new Obstacle(19, 25, 0));
-        obstacleList.add(new Obstacle(20, 25, 0));
-        obstacleList.add(new Obstacle(21, 25, 0));
-        obstacleList.add(new Obstacle(22, 25, 0));
-        obstacleList.add(new Obstacle(23, 25, 0));
-        obstacleList.add(new Obstacle(24, 25, 0));
-        obstacleList.add(new Obstacle(25, 25, 0));
-        obstacleList.add(new Obstacle(26, 25, 0));
-        obstacleList.add(new Obstacle(27, 25, 0));
-        obstacleList.add(new Obstacle(28, 25, 0));
-        obstacleList.add(new Obstacle(30, 25, 0));
-        obstacleList.add(new Obstacle(31, 25, 0));
-        obstacleList.add(new Obstacle(32, 25, 0));
-        obstacleList.add(new Obstacle(33, 25, 0));
+        Grid testGrid = new Grid(testGridWidth, testGridHeight);
+        testGrid.setPointType(new Point(15, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(16, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(19, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(20, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(21, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(22, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(23, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(24, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(25, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(26, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(27, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(28, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(30, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(31, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(32, 25), GridPointType.Obstacle);
+        testGrid.setPointType(new Point(33, 25), GridPointType.Obstacle);
 
         MovementPlanner planner = new MovementPlanner();
-        planner.initializePlanner(obstacleList, new Grid(testGridWidth, testGridHeight));
+        planner.initializePlanner(testGrid);
         //TestPath1
         ArrayList<Point> resultList = null;
         try {

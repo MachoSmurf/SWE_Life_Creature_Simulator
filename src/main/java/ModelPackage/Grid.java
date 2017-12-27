@@ -95,6 +95,11 @@ public class Grid implements Cloneable, IGrid {
         return pointList.get(getListPosition(p)).getType();
     }
 
+    public void setPointType(Point p, GridPointType gpt){
+        pointList.get(getListPosition(p)).setType(gpt);
+    }
+
+    @Deprecated
     public void setWater(int x, int y, boolean water){
         for (GridPoint gp : pointList){
             if ((gp.getX() == x) && (gp.getY() == y)){
@@ -103,6 +108,7 @@ public class Grid implements Cloneable, IGrid {
         }
     }
 
+    @Deprecated
     public boolean getWater(int x, int y){
         for (GridPoint gp : pointList){
             if ((gp.getX() == x) && (gp.getY() == y)){

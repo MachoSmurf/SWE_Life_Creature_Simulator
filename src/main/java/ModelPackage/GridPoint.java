@@ -15,16 +15,13 @@ public class GridPoint implements Cloneable, Serializable {
     private GridPointType type;
 
     public GridPoint(int x, int y) {
-        /*this.x = x;
-        this.y = y;
-        water = true;*/
-        this(x, y, true);
+        this(x, y, GridPointType.Water);
     }
 
-    public GridPoint(int x, int y, boolean water){
+    public GridPoint(int x, int y, GridPointType gridPointType){
         this.x = x;
         this.y = y;
-        this.water = water;
+        type = gridPointType;
     }
 
     /**
