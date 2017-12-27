@@ -1,5 +1,6 @@
 package ModelPackage;
 
+import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -7,33 +8,19 @@ import java.io.Serializable;
  */
 public abstract class SimObject implements Serializable {
 
-    protected int x;
-    protected int y;
+    protected Point point;
     protected int energy;
     protected StatusObject status;
 
 
-    public SimObject(int x, int y, int energy) {
-        this.x = x;
-        this.y = y;
+    public SimObject(Point point, int energy) {
+        this.point = point;
         this.energy = energy;
 
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+    public Point getPoint() {
+        return point;
     }
 
     public int getEnergy() {

@@ -1,6 +1,8 @@
 package ModelPackage;
 
 
+
+
 import javafx.scene.paint.Color;
 
 import java.util.List;
@@ -28,8 +30,8 @@ public class Creature extends SimObject {
     private List<TargetCoordinate> nextSteps;
 
 
-    public Creature(int x, int y, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<TargetCoordinate> nextSteps) {
-        super(x, y, energy);
+    public Creature(java.awt.Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<TargetCoordinate> nextSteps) {
+        super(point, energy);
         alive = true;
         this.digestion = digestion;
         this.digestionBalance = digestionBalance;
@@ -64,18 +66,18 @@ public class Creature extends SimObject {
     }
 
     public StatusObject step() {
-        Color point = Color.ORANGE;
+        Color gridColor = Color.ORANGE;
         switch (digestion){
-            case Carnivore: point = Color.RED;
+            case Carnivore: gridColor = Color.RED;
                 break;
-            case Herbivore: point = Color.BROWN;
+            case Herbivore: gridColor = Color.BROWN;
                 break;
-            case Omnivore: point = Color.YELLOW;
+            case Omnivore: gridColor = Color.YELLOW;
                 break;
-            case Nonivore: point = Color.PURPLE;
+            case Nonivore: gridColor = Color.PURPLE;
                 break;
         }
-        StatusObject status = new StatusObject(energy, point, alive);
+        StatusObject status = new StatusObject(energy, gridColor, alive);
         if (!alive) return (status);
         //weight
 
@@ -112,8 +114,8 @@ public class Creature extends SimObject {
 
         // next grid location.
         TargetCoordinate nextGridPoint = nextSteps.get(0);
-        x = nextGridPoint.getX();
-        y = nextGridPoint.getY();
+        point.x = nextGridPoint.getX();
+        point.y = nextGridPoint.getY();
 
         return status;
     }
@@ -166,7 +168,7 @@ public class Creature extends SimObject {
         //MovementPlanner move = new MovementPlanner(); => motion planning
         //nextSteps = move.findPath(x, y,2,5);
 
-        return new Creature(x, y, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
+        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
     }
 
     private int getReproductionCost () {
