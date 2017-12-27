@@ -39,19 +39,18 @@ public class Grid implements Cloneable, IGrid {
 
         for (int w=0; w<width; w++){
             for (int h=0; h<height; h++){
-                pointList.set(getListPosition(w, h), new GridPoint(w, h));
+                pointList.set(getListPosition(new Point(w, h)), new GridPoint(w, h));
             }
         }
     }
 
     /**
      * Returns the position in the list according to the formula
-     * @param x x part of coordinate
-     * @param y y part of coordinate
+     * @param p Point representing the x and y
      * @return integer representing the position of the element in the list
      */
-    private int getListPosition(int x, int y){
-        return (width * (y+1)) + (x-width);
+    private int getListPosition(Point p){
+        return (width * ((int)p.getY()+1)) + ((int)p.getX()-width);
     }
 
     /**
@@ -77,8 +76,8 @@ public class Grid implements Cloneable, IGrid {
      * @return Color
      */
     @Override
-    public Color getColor(int x, int y) {
-        int elementNumber = getListPosition(x, y);
+    public Color getColor(Point p) {
+        int elementNumber = getListPosition(p);
         return pointList.get(elementNumber).getColor();
     }
 
@@ -89,6 +88,11 @@ public class Grid implements Cloneable, IGrid {
     @Override
     public ArrayList<GridPoint> getPointList() {
         return pointList;
+    }
+
+    @Override
+    public GridPointType getPointType(Point p) {
+        return pointList.get(getListPosition(p)).getType();
     }
 
     public void setWater(int x, int y, boolean water){
@@ -110,12 +114,11 @@ public class Grid implements Cloneable, IGrid {
 
     /**
      * Sets the color of a specific GridPoint
-     * @param x x part of coordinate defining the GridPoint
-     * @param y y part of coordinate defining the GridPoint
+     * @param p Point representing the GridPoint
      * @param color Color that has to be assigned to the gridPoint
      */
-    public void setColor(int x, int y, Color color){
-        int elementNumber = getListPosition(x, y);
+    public void setColor(Point p, Color color){
+        int elementNumber = getListPosition(p);
         pointList.get(elementNumber).setColor(color);
     }
 }

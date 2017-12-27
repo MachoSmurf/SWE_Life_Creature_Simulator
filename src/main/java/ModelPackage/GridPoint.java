@@ -12,6 +12,7 @@ public class GridPoint implements Cloneable, Serializable {
     private int y;
     private boolean water;
     private Color color;
+    private GridPointType type;
 
     public GridPoint(int x, int y) {
         /*this.x = x;
@@ -68,5 +69,13 @@ public class GridPoint implements Cloneable, Serializable {
 
     public boolean getWater(){
         return water;
+    }
+
+    public GridPointType getType() {
+        return type;
+    }
+
+    public void setType(GridPointType t){
+        this.type = t;
     }
 }

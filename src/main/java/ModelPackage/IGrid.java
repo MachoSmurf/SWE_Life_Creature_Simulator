@@ -19,15 +19,22 @@ public interface IGrid {
 
     /**
      * Get the color that needs to be drawn for a specific point
-     * @param x the X coordinate of the desired gridPoint
-     * @param y the Y coordinate of the desired gridPoint
+     * @param p Point of the grid
      * @return The color of a point in the grid
      */
-    public Color getColor(int x, int y);
+    public Color getColor(Point p);
 
     /**
      * Get a list of all points in the grid
      * @return Returns ArrayList containing GridPoints
      */
     public ArrayList<GridPoint> getPointList();
+
+    /**
+     * Get the type of this specific GridPoint
+     * @param p Point defining the GridPoint
+     * @return GridPointType enum
+     */
+    public GridPointType getPointType(Point p);
+
 }
