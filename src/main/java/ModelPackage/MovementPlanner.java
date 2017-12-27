@@ -1,12 +1,13 @@
 package ModelPackage;
 
 import javax.imageio.ImageIO;
-import javax.lang.model.type.ArrayType;
-import java.awt.*;
+import java.awt.Point;
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Uses a simplified version of Dijkstra's pathfinding algorithm to find the shortest path to a certain position.
@@ -19,8 +20,7 @@ import java.util.ArrayList;
 public class MovementPlanner {
 
     private IGrid simulationGrid;
-    private ArrayList<MotionPoint> plannableGrid;
-    private ArrayList<MotionPoint> obstacleList;
+    private List<MotionPoint> planableGrid;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -33,9 +33,8 @@ public class MovementPlanner {
      * @return true if the generation of the plannable grid was successful, false otherwise.
      */
     public boolean initializePlanner(IGrid simulationGrid){
-        this.obstacleList = new ArrayList<>();
         this.simulationGrid = simulationGrid;
-        this.plannableGrid = new ArrayList<>();
+        this.planableGrid = new ArrayList<>();
 
         try{
             generatePlannableGrid();
@@ -64,7 +63,7 @@ public class MovementPlanner {
         ArrayList<MotionPoint> waterList = new ArrayList<>();
         //waterlist is always element 0 in the subgrid list
         subGrids.add(waterList);
-        for (MotionPoint motionPoint : plannableGrid){
+        for (MotionPoint motionPoint : planableGrid){
             if (motionPoint.getType() == GridPointType.Water){
                 waterList.add(motionPoint);
             }
@@ -126,17 +125,17 @@ public class MovementPlanner {
         if (simulationGrid != null){
             int pointCount = simulationGrid.getWidth() * simulationGrid.getHeight();
             for(int i=0; i<pointCount; i++){
-                plannableGrid.add(null);
+                planableGrid.add(null);
             }
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
                 int gridPointNumber = getPointNumber(new Point(gridPoint.getX(), gridPoint.getY()));
 
                 MotionPoint freshMotionPoint = new MotionPoint(gridPoint);
-                plannableGrid.set(gridPointNumber, freshMotionPoint);
+                planableGrid.set(gridPointNumber, freshMotionPoint);
             }
 
-            for (MotionPoint currentPoint : plannableGrid){
+            for (MotionPoint currentPoint : planableGrid){
                 getAdjacentPoints(currentPoint);
             }
         }
@@ -146,11 +145,11 @@ public class MovementPlanner {
     }
 
     /**
-     * Gets the total count of MotionPoints in the plannableGrid.
+     * Gets the total count of MotionPoints in the planableGrid.
      * @return int containing the MotionPoint count
      */
     public int getTotalMotionPoints(){
-        return plannableGrid.size();
+        return planableGrid.size();
     }
 
     /**
@@ -159,7 +158,7 @@ public class MovementPlanner {
      */
     public int getTotalAdjacentCount(){
         int counter = 0;
-        for (MotionPoint mp : plannableGrid){
+        for (MotionPoint mp : planableGrid){
             counter += mp.adjacentPoints.size();
         }
         return counter;
@@ -335,7 +334,7 @@ public class MovementPlanner {
      * for pathfinding
      */
     private void resetPlannableGrid() {
-        for (MotionPoint mp : plannableGrid){
+        for (MotionPoint mp : planableGrid){
             mp.setPreviousPoint(null);
         }
     }
@@ -360,9 +359,9 @@ public class MovementPlanner {
      * @return MotionPoint corresponding to the point
      */
     private MotionPoint getMotionPointByCoordinates(Point p){
-       if (plannableGrid!=null){
+       if (planableGrid !=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
-            return plannableGrid.get(((simulationGrid.getWidth() * ((int)p.getY() +1)) + ((int)p.getX() - simulationGrid.getWidth())));
+            return planableGrid.get(((simulationGrid.getWidth() * ((int)p.getY() +1)) + ((int)p.getX() - simulationGrid.getWidth())));
         }
         else
         {
@@ -393,7 +392,7 @@ public class MovementPlanner {
     }
 
     /**
-     * Debugging method for generating a visual image of the plannableGrid.
+     * Debugging method for generating a visual image of the planableGrid.
      * @param stepNumber int representing the number of steps in the motionplanning so far
      * @param startPoint Point representing the start position of the motionplanning
      * @param endPoint Point representing the end position (not to be confused with the endpoint used internally in the findPath method!)
@@ -430,17 +429,6 @@ public class MovementPlanner {
                         break;
                 }
                 g2.fillOval(i*factor, j*factor, size, size);
-                /*
-                if (getMotionPointByCoordinates(new Point(i, j)).getType() == GridPointType.Obstacle){
-
-                }
-                if (getMotionPointByCoordinates(new Point(i, j)).getType() == GridPointType.Water){
-
-                }
-                else{
-                    g2.setColor(Color.WHITE);
-                    g2.drawOval(i*factor, j*factor, size, size);
-                }*/
             }
         }
 

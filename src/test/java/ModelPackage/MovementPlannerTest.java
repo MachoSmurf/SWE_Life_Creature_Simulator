@@ -262,7 +262,6 @@ class MovementPlannerTest {
             for (int y=0; y<10; y++){
                 if ((y==0) || (x==0) || (x==9) || (y==9)){
                     testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
-                    //obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
         }
@@ -303,7 +302,6 @@ class MovementPlannerTest {
         int x = 3;
         for (int y=0; y<10; y++){
             testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
-            //obstacleList.add(new Obstacle(x, y, 0));
         }
         MovementPlanner planner = new MovementPlanner();
         planner.initializePlanner(testGrid);
@@ -341,7 +339,6 @@ class MovementPlannerTest {
         for (int y=0; y<10; y++){
             if (y != 6){
                 testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
-                //obstacleList.add(new Obstacle(x, y, 0));
             }
         }
         MovementPlanner planner = new MovementPlanner();
@@ -381,7 +378,6 @@ class MovementPlannerTest {
             for (int y=0; y<10; y++){
                 if ((y==0) || (x==0) || (x==9) || (y==9)){
                     testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
-                    //obstacleList.add(new Obstacle(x, y, 0));
                 }
             }
         }
@@ -389,7 +385,6 @@ class MovementPlannerTest {
         int x = 3;
         for (int y=1; y<9; y++){
             testGrid.setPointType(new Point(x, y), GridPointType.Obstacle);
-            //obstacleList.add(new Obstacle(x, y, 0));
         }
         MovementPlanner planner = new MovementPlanner();
         planner.initializePlanner(testGrid);
