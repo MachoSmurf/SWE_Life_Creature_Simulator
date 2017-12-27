@@ -79,6 +79,7 @@ public class GridPoint implements Cloneable, Serializable {
 
     public void setType(GridPointType t){
         this.type = t;
+        resetColor();
     }
 
     public void resetColor(){
@@ -88,6 +89,9 @@ public class GridPoint implements Cloneable, Serializable {
                 break;
             case Ground:
                 setColor(Color.white);
+                break;
+            case Obstacle:
+                setColor(Color.black);
                 break;
         }
     }
