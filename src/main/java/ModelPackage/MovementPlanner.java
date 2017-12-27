@@ -567,16 +567,7 @@ public class MovementPlanner {
             return gridPoint.getY();
         }
 
-        /**
-         * Gets the state of this point (Water or not)
-         * @return
-         */
-        @Deprecated
-        public boolean getWater(){
-            return gridPoint.getWater();
-        }
-
-        /**
+         /**
          * Gets the type of gridPoint
          * @return gridPointType enum
          */

@@ -22,6 +22,17 @@ public class GridPoint implements Cloneable, Serializable {
         this.x = x;
         this.y = y;
         type = gridPointType;
+        switch(type){
+            case Obstacle:
+                this.setColor(Color.black);
+                break;
+            case Ground:
+                this.setColor(Color.white);
+                break;
+            case Water:
+                this.setColor(Color.blue);
+                break;
+        }
     }
 
     /**
@@ -53,19 +64,13 @@ public class GridPoint implements Cloneable, Serializable {
      * @param color that has to be set
      */
     public void setColor(Color color){
-        this.color = color;
-    }
-
-    public boolean isWater(){
-        return water;
-    }
-
-    public void setWater(boolean water){
-        this.water = water;
-    }
-
-    public boolean getWater(){
-        return water;
+        //cant reset the color on obstacle
+        if(this.getType() != GridPointType.Obstacle){
+            this.color = color;
+        }
+        else{
+            this.color = Color.black;
+        }
     }
 
     public GridPointType getType() {
@@ -74,5 +79,16 @@ public class GridPoint implements Cloneable, Serializable {
 
     public void setType(GridPointType t){
         this.type = t;
+    }
+
+    public void resetColor(){
+        switch (type){
+            case Water:
+                setColor(Color.blue);
+                break;
+            case Ground:
+                setColor(Color.white);
+                break;
+        }
     }
 }

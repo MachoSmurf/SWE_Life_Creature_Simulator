@@ -99,25 +99,6 @@ public class Grid implements Cloneable, IGrid {
         pointList.get(getListPosition(p)).setType(gpt);
     }
 
-    @Deprecated
-    public void setWater(int x, int y, boolean water){
-        for (GridPoint gp : pointList){
-            if ((gp.getX() == x) && (gp.getY() == y)){
-                gp.setWater(water);
-            }
-        }
-    }
-
-    @Deprecated
-    public boolean getWater(int x, int y){
-        for (GridPoint gp : pointList){
-            if ((gp.getX() == x) && (gp.getY() == y)){
-                return gp.getWater();
-            }
-        }
-        return false;
-    }
-
     /**
      * Sets the color of a specific GridPoint
      * @param p Point representing the GridPoint
@@ -126,5 +107,13 @@ public class Grid implements Cloneable, IGrid {
     public void setColor(Point p, Color color){
         int elementNumber = getListPosition(p);
         pointList.get(elementNumber).setColor(color);
+    }
+
+    /**
+     * resets gridPoint p Color to the default value associated to the GridPointType
+     * @param p Point representing this GridPoint
+     */
+    public void resetColor(Point p){
+        pointList.get(getListPosition(p)).resetColor();
     }
 }
