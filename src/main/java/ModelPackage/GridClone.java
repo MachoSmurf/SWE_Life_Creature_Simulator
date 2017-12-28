@@ -9,7 +9,10 @@ import java.util.ArrayList;
  */
 public class GridClone implements Serializable, IGrid {
 
-    public GridClone() {
+    ArrayList<GridPoint> pointList;
+
+    public GridClone(ArrayList<GridPoint> pointList) {
+        this.pointList = pointList;
     }
 
     @Override
@@ -23,12 +26,17 @@ public class GridClone implements Serializable, IGrid {
     }
 
     @Override
-    public Color getColor(int x, int y) {
+    public Color getColor(Point p) {
         return null;
     }
 
     @Override
     public ArrayList<GridPoint> getPointList() {
+        return this.pointList;
+    }
+
+    @Override
+    public GridPointType getPointType(Point p) {
         return null;
     }
 }
