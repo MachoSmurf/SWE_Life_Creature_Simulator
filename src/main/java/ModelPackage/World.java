@@ -3,6 +3,7 @@ package ModelPackage;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Acts as a mediator between the outside of the model and the inside. Keeps track of the motionplanner and communicates it to the simobjects
@@ -11,10 +12,10 @@ public class World implements Serializable, IWorld {
 
     private List<SimObject> plantList; //A List of all plants in this world
     private List<SimObject> creatureList; // A list of all creatures in this world
-    //private ArrayList<SimObject> obstacleList;
     private List<StatusObject> objectList; // A List of all step items in this world.
     private IGrid iGrid;
     private int stepCount;
+    MovementPlanner movement;
 
     public World(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore,int digestionBalanceCarnivore,int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
                  int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
@@ -24,6 +25,18 @@ public class World implements Serializable, IWorld {
         plantList = new ArrayList<>();
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
+        movement = new MovementPlanner();
+        int gridWidth = iGrid.getWidth();
+        int gridHeight = iGrid.getHeight();
+
+
+
+        for (int i = 1; i == howManyPlants; i++) {
+            Random rnd = new Random();
+            int x = rnd.nextInt(gridWidth);
+            int y = rnd.nextInt(gridHeight);
+            movement.geLivingAreas();
+        }
 
 
     }
