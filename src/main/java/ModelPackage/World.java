@@ -35,7 +35,7 @@ public class World implements Serializable, IWorld {
             Random rnd = new Random();
             int x = rnd.nextInt(gridWidth);
             int y = rnd.nextInt(gridHeight);
-            movement.geLivingAreas();
+
         }
 
 
