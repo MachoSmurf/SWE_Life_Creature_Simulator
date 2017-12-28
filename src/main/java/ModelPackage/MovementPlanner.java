@@ -1,11 +1,9 @@
 package ModelPackage;
 
 import javax.imageio.ImageIO;
-import javax.lang.model.type.ArrayType;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.nio.Buffer;
 import java.util.ArrayList;
 
 /**
@@ -132,7 +130,7 @@ public class MovementPlanner {
 
             for (MotionPoint currentPoint : plannableGrid){
                 for (Obstacle o : obstacleList){
-                    if ((o.getX() == currentPoint.getX()) && (o.getY() == currentPoint.getY())) {
+                    if ((o.point.getX() == currentPoint.getX()) && (o.point.getY() == currentPoint.getY())) {
                         currentPoint.setObstacle(true);
                     }
                 }
