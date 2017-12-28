@@ -8,7 +8,11 @@ import java.util.ArrayList;
 
 /**
  * Uses a simplified version of Dijkstra's pathfinding algorithm to find the shortest path to a certain position.
- * Also provides information on where to navigate to.
+ * Also provides information on where to navigate to. Assumes the following Grid setup:
+ *
+ * 6 7 8
+ * 3 4 5
+ * 0 1 2
  */
 public class MovementPlanner {
 
@@ -59,6 +63,8 @@ public class MovementPlanner {
         subGrids = new ArrayList<>();
 
         ArrayList<MotionPoint> waterList = new ArrayList<>();
+        //waterlist is always element 0 in the subgrid list
+        subGrids.add(waterList);
         for (MotionPoint motionPoint : plannableGrid){
             if (motionPoint.getWater()){
                 waterList.add(motionPoint);
@@ -108,7 +114,7 @@ public class MovementPlanner {
     }
 
     /**
-     * used to generate the plannable grid. If this fails the motionplanner can't properly function.
+     * Used to generate the plannable grid, consisting of MotionPoints and the points adjacent to them. If this fails the motionplanner can't properly function.
      */
     private void generatePlannableGrid(){
         if (simulationGrid != null){
@@ -120,19 +126,6 @@ public class MovementPlanner {
             for (GridPoint gridPoint : simulationGrid.getPointList()){
                 int gridPointNumber = getPointNumber(new Point(gridPoint.getX(), gridPoint.getY()));
                 plannableGrid.set(gridPointNumber, new MotionPoint(gridPoint));
-
-                /*
-                boolean newMotionPoint = true;
-                //TODO: Implement obstacles correctly, maintaining the point location formula
-                /*for (Obstacle o : obstacleList){
-                    //check if this gridpoint is an obstacle. If so this won't be a motionpoint
-                    if (((o.getX() == gridPoint.getX()) && (o.getY() == gridPoint.getY()))){
-                        newMotionPoint = false;
-                    }
-                }*//*
-                if (newMotionPoint){
-                    plannableGrid.add(new MotionPoint(gridPoint));
-                }*/
             }
 
             for (MotionPoint currentPoint : plannableGrid){
@@ -152,10 +145,18 @@ public class MovementPlanner {
         }
     }
 
+    /**
+     * Gets the total count of MotionPoints in the plannableGrid.
+     * @return int containing the MotionPoint count
+     */
     public int getTotalMotionPoints(){
         return plannableGrid.size();
     }
 
+    /**
+     * Gets the total adjacent points found in the plannable grid
+     * @return int containing the adjacent point count
+     */
     public int getTotalAdjacentCount(){
         int counter = 0;
         for (MotionPoint mp : plannableGrid){
@@ -317,6 +318,10 @@ public class MovementPlanner {
         return pathFound;
     }
 
+    /**
+     * Resets the pathFound and previousPoint references so the plannable grid can be reused, reducing the time needed
+     * for pathfinding
+     */
     private void resetPlannableGrid() {
         pathFound.clear();
         for (MotionPoint mp : plannableGrid){
@@ -324,6 +329,11 @@ public class MovementPlanner {
         }
     }
 
+    /**
+     * Gets the element number corresponding to this points coordinates.
+     * @param p Point to be used
+     * @return int element number in the pointList
+     */
     private int getPointNumber(Point p){
         int gridWidth = simulationGrid.getWidth();
         int x = (int)p.getX();
@@ -333,6 +343,12 @@ public class MovementPlanner {
         return number;
     }
 
+    /**
+     * Gets the MotionPoint corresponding to a coordinate
+     * @param x coordinate of point
+     * @param y coordinate of point
+     * @return MotionPoint corresponding to the point
+     */
     private MotionPoint getMotionPointByCoordinates(int x, int y){
        if (plannableGrid!=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
@@ -344,7 +360,15 @@ public class MovementPlanner {
         }
     }
 
-    private void debugGrid(int stepNumber,Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
+    /**
+     * Debugging method for generating a visual image of the plannableGrid.
+     * @param stepNumber int representing the number of steps in the motionplanning so far
+     * @param startPoint Point representing the start position of the motionplanning
+     * @param endPoint Point representing the end position (not to be confused with the endpoint used internally in the findPath method!)
+     * @param openPoints ArrayList of points containing the open Points
+     * @param closedPoints ArrayList of points containing the closed Points
+     */
+    private void debugGrid(int stepNumber, Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
         int factor = 20;
         int size = 5;
 
@@ -401,7 +425,8 @@ public class MovementPlanner {
 
 
         try{
-            ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
+            //ImageIO.write(img, "PNG", new File("/out/buffer_output"+stepNumber+".png"));
+            ImageIO.write(img, "PNG", new File(System.getProperty("user.dir") + File.separator + "out" + File.separator + "buffer_output"+stepNumber+".png"));
             //System.out.println("Wrote img to disk");
         }
         catch(Exception e){
@@ -497,6 +522,10 @@ public class MovementPlanner {
             return gridPoint.getY();
         }
 
+        /**
+         * Gets the state of this point (Water or not)
+         * @return
+         */
         public boolean getWater(){
             return gridPoint.getWater();
         }
