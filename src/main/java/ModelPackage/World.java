@@ -1,5 +1,6 @@
 package ModelPackage;
 
+import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,10 @@ public class World implements Serializable, IWorld {
     private int stepCount;
     MovementPlanner movement;
 
+    /**
+     *  Create a world with the parameters we get from LifePackage.
+     *
+     */
     public World(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore,int digestionBalanceCarnivore,int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
                  int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
                  int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
@@ -26,18 +31,50 @@ public class World implements Serializable, IWorld {
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
         movement = new MovementPlanner();
+        boolean worked = movement.initializePlanner(iGrid);
+        if (!worked) {
+            System.out.println("Something went wrong while initialising the motionPlanner");
+            return;
+        }
         int gridWidth = iGrid.getWidth();
         int gridHeight = iGrid.getHeight();
-
-
-
-        for (int i = 1; i == howManyPlants; i++) {
-            Random rnd = new Random();
-            int x = rnd.nextInt(gridWidth);
-            int y = rnd.nextInt(gridHeight);
-
+        Random rnd = new Random();
+        List<ArrayList<Point>> livingAreas = new ArrayList<ArrayList<Point>>();
+        try {
+            livingAreas = movement.getLivingAreas();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
+        /**
+         * If the random point is in a Living area and there is not another plant at that point, create a new plant
+         *  do this until you have as many plants as described in "howManyPlants".
+         */
+        for (int i = 1; i == howManyPlants; ) {
+            int x = rnd.nextInt(gridWidth);
+            int y = rnd.nextInt(gridHeight);
+            boolean alreadyAPlant = false;
+            for (ArrayList<Point> livingArea : livingAreas) {
+                for (Point gridPoint : livingArea) {
+                    if (x == gridPoint.x && y == gridPoint.y) {
+                        for (SimObject sim : plantList) {
+                            if (sim.point.x == x && sim.point.y == y) {
+                                alreadyAPlant = true;
+                            }
+                        }
+                        if (!alreadyAPlant) {
+                            plantList.add(new Plant(new Point(x, y), energyPlant));
+                            i++;
+                        }
+
+                    }
+                }
+            }
+        }
+        createCreatures(gridWidth, gridHeight, energyNonivore, digestionNonivore, digestionBalanceNonivore, staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore, swimThresholdNonivore, motionThresholdNonivore, livingAreas, howManyNonivore);
+        createCreatures(gridWidth, gridHeight, energyHerbivore, digestionHerbivore, digestionBalanceHerbivore, staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore, swimThresholdHerbivore, motionThresholdHerbivore, livingAreas, howManyHerbivore);
+        createCreatures(gridWidth, gridHeight, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, livingAreas, howManyCarnivore);
+        createCreatures(gridWidth, gridHeight, energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, livingAreas, howManyOmnivore);
 
     }
 
@@ -170,5 +207,60 @@ public class World implements Serializable, IWorld {
 
     public IGrid getGrid () {
         return iGrid;
+    }
+
+    /**
+     * This method acts as a universal creature maker.
+     *
+     * @param gridWidth
+     * @param gridHeight
+     * @param energy
+     * @param digestion
+     * @param digestionBalance
+     * @param stamina
+     * @param legs
+     * @param reproductionThreshold
+     * @param reproductionCost
+     * @param strength
+     * @param swimThreshold
+     * @param motionThreshold
+     * @param livingAreas
+     * @param howManyCreatures
+     */
+    private void createCreatures (
+            int gridWidth,
+            int gridHeight,
+            int energy,
+            Digestion digestion,
+            int digestionBalance,
+            int stamina,
+            int legs,
+            int reproductionThreshold,
+            int reproductionCost,
+            int strength,
+            int swimThreshold,
+            int motionThreshold,
+            List<ArrayList<Point>> livingAreas,
+            int howManyCreatures) {
+
+        for (int i = 1; i == howManyCreatures;) {
+            Random rnd = new Random();
+            int x = rnd.nextInt(gridWidth);
+            int y = rnd.nextInt(gridHeight);
+            for (ArrayList<Point> livingArea : livingAreas) {
+                for (Point gridPoint : livingArea) {
+                    if (x == gridPoint.x && y == gridPoint.y) {
+                        switch (digestion) {
+                            case Nonivore:
+                        }
+                        List<TargetCoordinate> path = movement.findCreature();
+
+                        creatureList.add(new Creature(new Point(x, y), energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path));
+                        i++;
+                    }
+                }
+            }
+        }
+
     }
 }

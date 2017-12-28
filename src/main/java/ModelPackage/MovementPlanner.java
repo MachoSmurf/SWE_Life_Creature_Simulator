@@ -563,4 +563,12 @@ public class MovementPlanner {
             return gridPoint.getType();
         }
     }
+
+    public List<TargetCoordinate> findCreature() {
+        return null;
+    }
+
+    public List<TargetCoordinate> findPlant (){
+        return null;
+    }
 }
