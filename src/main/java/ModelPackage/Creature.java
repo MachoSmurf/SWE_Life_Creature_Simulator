@@ -1,10 +1,9 @@
 package ModelPackage;
 
 
-
-
 import javafx.scene.paint.Color;
 
+import java.awt.*;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -27,10 +26,10 @@ public class Creature extends SimObject {
     private int speed;
     private int hunger;
     private boolean alive;
-    private List<TargetCoordinate> nextSteps;
+    private List<Point> nextSteps;
 
 
-    public Creature(java.awt.Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<TargetCoordinate> nextSteps) {
+    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps) {
         super(point, energy);
         alive = true;
         this.digestion = digestion;
@@ -113,9 +112,9 @@ public class Creature extends SimObject {
         }
 
         // next grid location.
-        TargetCoordinate nextGridPoint = nextSteps.get(0);
-        point.x = nextGridPoint.getX();
-        point.y = nextGridPoint.getY();
+        Point nextGridPoint = nextSteps.get(0);
+        point.x = nextGridPoint.x;
+        point.y = nextGridPoint.y;
 
         return status;
     }
