@@ -3,6 +3,7 @@ package ModelPackage;
 
 import org.junit.Test;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,11 +22,10 @@ public class CreatureTest {
         nextSteps.add(new TargetCoordinate());
 
         beast1 = new Creature(
-                20,
-                20,
+                new Point(20,20),
                 1000,
                 Digestion.Omnivore,
-                0,
+                60,
                 1500,
                 6,
                 600,
@@ -33,10 +33,9 @@ public class CreatureTest {
                 1200,
                 600,
                 400,
-                nextSteps);
+                null);
         beast2 = new Creature(
-                20,
-                20,
+                new Point(20,20),
                 900,
                 Digestion.Omnivore,
                 0,
@@ -47,7 +46,7 @@ public class CreatureTest {
                 1200,
                 600,
                 400,
-                nextSteps);
+                null);
 
         beast3 = beast1.mate(beast2);
     }
@@ -58,10 +57,9 @@ public class CreatureTest {
 
     @Test
     public void testMateEnergy () {
-        assertEquals("energy beast1",550, beast1.getEnegry());
-        assertEquals("energy beast2", 450, beast2.getEnegry());
-        assertEquals("energy beast3",900, beast3.getEnegry());
-
+        assertEquals("energy beast1",550, beast1.getEnergy());
+        assertEquals("energy beast2", 450, beast2.getEnergy());
+        assertEquals("energy beast3",900, beast3.getEnergy());
     }
 
     @Test

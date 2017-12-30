@@ -12,7 +12,7 @@ import java.util.Random;
 public class World implements Serializable, IWorld {
 
     private List<SimObject> plantList; //A List of all plants in this world
-    private List<SimObject> creatureList; // A list of all creatures in this world
+    protected List<SimObject> creatureList; // A list of all creatures in this world
     private List<StatusObject> objectList; // A List of all step items in this world.
     private IGrid iGrid;
     private int stepCount;
@@ -275,6 +275,9 @@ public class World implements Serializable, IWorld {
                             case Carnivore:
                                 target = findCreature(startPoint);
                                 break;
+                        }
+                        if (target == null) {
+                            //go swimming
                         }
                         List<Point> path = null;
                         try {

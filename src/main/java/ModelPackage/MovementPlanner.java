@@ -564,11 +564,4 @@ public class MovementPlanner {
         }
     }
 
-    public List<TargetCoordinate> findCreature() {
-        return null;
-    }
-
-    public List<TargetCoordinate> findPlant (){
-        return null;
-    }
 }

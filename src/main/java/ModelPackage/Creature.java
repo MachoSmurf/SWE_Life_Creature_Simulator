@@ -4,7 +4,9 @@ package ModelPackage;
 import javafx.scene.paint.Color;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -27,11 +29,16 @@ public class Creature extends SimObject {
     private int hunger;
     private boolean alive;
     private List<Point> nextSteps;
+    int stepstaken;
+    MovementPlanner movement;
+    List<ArrayList<Point>> livingAreas;
+    Random rnd;
 
 
     public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps) {
         super(point, energy);
         alive = true;
+        stepstaken = 0;
         this.digestion = digestion;
         this.digestionBalance = digestionBalance;
         this.stamina = stamina;
@@ -41,6 +48,7 @@ public class Creature extends SimObject {
         this.strength = strength;
         this.swimThreshold = swimThreshold;
         this.motionThreshold = motionThreshold;
+        movement = new MovementPlanner();
         if (energy < strength) {
             weight = legs * 10;
         }
@@ -58,9 +66,15 @@ public class Creature extends SimObject {
         speed = (100 - (weight - minWeight) - legSpeed) /10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
-
-
         status = new StatusObject(energy, getColor(), alive);
+
+
+        livingAreas = new ArrayList<ArrayList<Point>>();
+        try {
+            livingAreas = movement.getLivingAreas();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -80,13 +94,13 @@ public class Creature extends SimObject {
         if (!alive) return (status);
         //weight
 
-        int weightChild;
+
 
         if (energy < strength) {
-            weightChild = legs * 10;
+            weight = legs * 10;
         }
         else {
-            weightChild = legs * 10 + (energy - strength);
+            weight = legs * 10 + (energy - strength);
         }
 
         //move cost
@@ -110,11 +124,16 @@ public class Creature extends SimObject {
         if (energy <= 0 ) {
             alive = false;
         }
-
-        // next grid location.
-        Point nextGridPoint = nextSteps.get(0);
-        point.x = nextGridPoint.x;
-        point.y = nextGridPoint.y;
+            Point nextGridPoint = null;
+        int whichStep = speed + stepstaken;
+        if (whichStep > nextSteps.size()) {
+            nextGridPoint = nextSteps.get(nextSteps.size());
+        }
+        else {
+            nextGridPoint = nextSteps.get(whichStep);
+        }
+            point.x = nextGridPoint.x;
+            point.y = nextGridPoint.y;
 
         return status;
     }
@@ -132,7 +151,7 @@ public class Creature extends SimObject {
         int strengthChild = ThreadLocalRandom.current().nextInt(minStrength, maxStrength +1);
 
 
-        //digestion balans
+        //digestion balance
         int diffDigestionBalance = Math.abs(digestionBalance - otherParent.digestionBalance) / 10;
         int minDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 - diffDigestionBalance;
         int maxDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 + diffDigestionBalance;
@@ -164,8 +183,7 @@ public class Creature extends SimObject {
         int maxMotionThreshold = (motionThreshold + otherParent.motionThreshold) /2 + diffMotionThreshold;
         int motionThresholdChild = ThreadLocalRandom.current().nextInt(minMotionThreshold, maxMotionThreshold + 1);
 
-        //MovementPlanner move = new MovementPlanner(); => motion planning
-        //nextSteps = move.findPath(x, y,2,5);
+
 
         return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
     }
@@ -197,8 +215,8 @@ public class Creature extends SimObject {
         return status;
     }
 
-    public StatusObject eat (int eneryAdded) {
-        energy = energy + eneryAdded;
+    public StatusObject eat (int energyAdded) {
+        energy = energy + energyAdded;
 
         status = new StatusObject(energy, getColor(), alive);
         return status;
@@ -217,5 +235,5 @@ public class Creature extends SimObject {
                 break;
         }
         return point;
-    };
+    }
 }
