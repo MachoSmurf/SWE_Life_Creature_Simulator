@@ -219,7 +219,6 @@ public class MovementPlanner {
             return null;
         }
 
-        //TODO: break up into multiple functions
         long startTime = System.nanoTime();
 
         //points to be checked in this iteration
@@ -228,21 +227,38 @@ public class MovementPlanner {
         ArrayList<Point> pointBuffer = new ArrayList<>();
         //points already checked
         ArrayList<Point> closedPoints = new ArrayList<>();
+        //Livingarea for the startpoint
+        ArrayList<MotionPoint> primarySearchArea = new ArrayList<>();
+        //Buffer for points not in the primarySearchArea
+        ArrayList<Point> secondaySearchAreaBuffer = new ArrayList<>();
+
+        for(ArrayList<MotionPoint> area : subGrids){
+            if (area.contains(getMotionPointByCoordinates(startPoint))){
+                primarySearchArea = area;
+            }
+        }
 
         //fetch the first set of adjacent points to the startpoint
         closedPoints.add(startPoint);
         for (Point adjacentPoint : getMotionPointByCoordinates(startPoint).getAdjacentPoints()){
-            getMotionPointByCoordinates(adjacentPoint).setPreviousPoint(startPoint);
-            openPoints.add(adjacentPoint);
+            MotionPoint freshPoint = getMotionPointByCoordinates(adjacentPoint);
+            freshPoint.setPreviousPoint(startPoint);
+            if(primarySearchArea.contains(freshPoint)){
+                openPoints.add(adjacentPoint);
+            }
+            else{
+                secondaySearchAreaBuffer.add(adjacentPoint);
+            }
         }
 
         int distanceCounter = 0;
         //output debug image for start situation
         debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
         MotionPoint endPoint = null;
+        boolean searchInPrimary = true;
+
         while (endPoint == null){
-            //start counting loops for debug
-            if (openPoints.size() == 0){
+            if ((openPoints.size() == 0) && (secondaySearchAreaBuffer.size() == 0)){
                 return null;
             }
 
@@ -259,25 +275,39 @@ public class MovementPlanner {
                     MotionPoint motionPoint = getMotionPointByCoordinates(currentPoint);
                     for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
                         //only add to pointbuffer if not already in other list
-                        if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
+                        if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint)) && (!secondaySearchAreaBuffer.contains(freshOpenPoint))){
                             MotionPoint freshMP = getMotionPointByCoordinates(freshOpenPoint);
                             if ((freshMP.getPreviousPoint() == null)) {
                                 freshMP.setPreviousPoint(currentPoint);
+                            }
+                            if(primarySearchArea.contains(freshMP)){
                                 pointBuffer.add(freshOpenPoint);
+                            }
+                            else{
+                                secondaySearchAreaBuffer.add(freshOpenPoint);
                             }
                         }
                     }
                 }
             }
 
-
-            //target not found, move all open points to closed points and move the buffer into the open points
             for(Point openPoint : openPoints){
                 if (!closedPoints.contains(openPoint)){
                     closedPoints.add(openPoint);
                 }
             }
-            openPoints = new ArrayList<>(pointBuffer);
+
+            if (pointBuffer.size() == 0){
+                //no new points in primary area, start getting points from secondary area
+                searchInPrimary = false;
+            }
+            //target not found, move all open points to closed points and move the buffer into the open points
+            if (searchInPrimary){
+                openPoints = new ArrayList<>(pointBuffer);
+            }
+            else{
+                openPoints = new ArrayList<>(secondaySearchAreaBuffer);
+            }
             pointBuffer.clear();
             distanceCounter++;
             debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
