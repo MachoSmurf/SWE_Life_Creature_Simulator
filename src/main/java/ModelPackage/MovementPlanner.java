@@ -359,7 +359,7 @@ public class MovementPlanner {
      * @return MotionPoint corresponding to the point
      */
     private MotionPoint getMotionPointByCoordinates(Point p){
-        if (planableGrid !=null){
+       if (planableGrid !=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
             return planableGrid.get(((simulationGrid.getWidth() * ((int)p.getY() +1)) + ((int)p.getX() - simulationGrid.getWidth())));
         }
@@ -555,7 +555,7 @@ public class MovementPlanner {
             return gridPoint.getY();
         }
 
-        /**
+         /**
          * Gets the type of gridPoint
          * @return gridPointType enum
          */
