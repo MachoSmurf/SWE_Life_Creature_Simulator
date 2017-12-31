@@ -214,7 +214,7 @@ public class World implements Serializable, IWorld {
         }
         stepCount++;
 
-        NewTarget target = new NewTarget(creatureList, plantList);
+
         StepResult stepResult = new StepResult(iGrid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
         return stepResult;
     }
@@ -285,7 +285,7 @@ public class World implements Serializable, IWorld {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path));
+                        creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, this));
                         i++;
                     }
                 }
@@ -364,6 +364,20 @@ public class World implements Serializable, IWorld {
             }
         }
         return targetPoint;
+    }
+
+    protected Point getNewTargetCreature() {
+        int howManyCreatures = creatureList.size();
+        int selected = rnd.nextInt(howManyCreatures);
+        SimObject sim = creatureList.get(selected);
+        return sim.point;
+    }
+
+    protected Point getNewTargetPlant () {
+        int howManyPlants = plantList.size();
+        int selected = rnd.nextInt(howManyPlants);
+        SimObject sim = plantList.get(selected);
+        return sim.point;
     }
 
 

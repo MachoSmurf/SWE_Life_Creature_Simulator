@@ -31,9 +31,10 @@ public class Creature extends SimObject {
     private int stepsTaken;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
+    World world;
 
 
-    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps) {
+    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps, World world) {
         super(point, energy);
         alive = true;
         stepsTaken = 0;
@@ -46,6 +47,7 @@ public class Creature extends SimObject {
         this.strength = strength;
         this.swimThreshold = swimThreshold;
         this.motionThreshold = motionThreshold;
+        this.world = world;
         movement = new MovementPlanner();
         if (energy < strength) {
             weight = legs * 10;
@@ -90,9 +92,6 @@ public class Creature extends SimObject {
         }
         StatusObject status = new StatusObject(energy, gridColor, alive);
         if (!alive) return (status);
-        //weight
-
-
 
         if (energy < strength) {
             weight = legs * 10;
@@ -126,7 +125,13 @@ public class Creature extends SimObject {
         int whichStep = speed + stepsTaken;
         if (whichStep > nextSteps.size()) {
             nextGridPoint = nextSteps.get(nextSteps.size());
-            Point newTargetPoint = getNewTarget();
+            Point newTargetPoint = newTarget();
+            try {
+                nextSteps = movement.findPath(point, newTargetPoint);
+            } catch (Exception e) {
+                System.out.println("No new targets available!");
+            }
+
         }
         else {
             nextGridPoint = nextSteps.get(whichStep);
@@ -184,7 +189,7 @@ public class Creature extends SimObject {
 
 
 
-        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
+        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, world);
     }
 
     private int getReproductionCost () {
@@ -241,7 +246,7 @@ public class Creature extends SimObject {
      *
      * @return Point
      */
-    private Point getNewTarget () {
+    private Point newTarget() {
 
         List<Point> workingArea = null;
         Point targetPoint = null;
@@ -255,7 +260,14 @@ public class Creature extends SimObject {
 
         for (int i = 0; i == 100; i++) {
             for (Point point : workingArea) {
-                Point victimPoint = getNewTarget();
+                Point victimPoint;
+                if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)){
+                    victimPoint = world.getNewTargetCreature();
+                }
+                else {
+                    victimPoint = world.getNewTargetPlant();
+                }
+
                 if (victimPoint.x == point.x && victimPoint.y == point.y) {
                     return point;
                 }
@@ -265,7 +277,7 @@ public class Creature extends SimObject {
         if (targetPoint == null) {
             for (List<Point> livingArea : livingAreas) {
                 for (Point livingPoint : livingArea) {
-                    Point victimPoint = getNewTarget();
+                    Point victimPoint = world.getNewTargetCreature();
                     if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
                         return victimPoint;
                     }
@@ -274,4 +286,5 @@ public class Creature extends SimObject {
         }
         return targetPoint;
     }
+
 }
