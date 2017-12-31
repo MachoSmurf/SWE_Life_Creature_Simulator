@@ -1,4 +1,3 @@
-/**
 package ModelPackage;
 
 import org.junit.jupiter.api.Test;
@@ -476,7 +475,7 @@ class MovementPlannerTest {
         grid.setPointType(new Point(11,10), GridPointType.Ground);
         grid.setPointType(new Point(11,11), GridPointType.Ground);
         grid.setPointType(new Point(11,12), GridPointType.Ground);
-        grid.setPointType(new Point(11,13), GridPointType.Obstacle);
+        grid.setPointType(new Point(11,13), GridPointType.Ground);
         grid.setPointType(new Point(12,10), GridPointType.Ground);
         grid.setPointType(new Point(12,11), GridPointType.Ground);
         grid.setPointType(new Point(12,12), GridPointType.Ground);
@@ -490,8 +489,10 @@ class MovementPlannerTest {
         planner.initializePlanner(grid);
 
         ArrayList<Point> result = null;
+        ArrayList<Point> result2 = null;
         try {
             result = planner.findPath(new Point(2,2), new Point(10,11));
+            result2 = planner.findPath(new Point(10,10), new Point(13, 13));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -515,7 +516,25 @@ class MovementPlannerTest {
 
         assertEquals(16, areas.get(1).size());
         assertEquals(14, areas.get(2).size());
-        assertEquals(15, areas.get(3).size());
+        assertEquals(16, areas.get(3).size());
+
+        assertEquals(4, result2.size(), "Expected 4 steps in optimized test1");
+
+        grid.setPointType(new Point(12, 10), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 11), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 12), GridPointType.Obstacle);
+        grid.setPointType(new Point(11, 12), GridPointType.Obstacle);
+        grid.setPointType(new Point(10, 12), GridPointType.Obstacle);
+        planner.initializePlanner(grid);
+
+        try {
+            result2 = planner.findPath(new Point(10,10), new Point(13, 13));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        assertEquals(7, result2.size(), "Expected 6 steps in optimized test2");
+
     }
 
     @Test
@@ -553,4 +572,3 @@ class MovementPlannerTest {
         System.out.println("TP11 completed");
     }
 }
- */
