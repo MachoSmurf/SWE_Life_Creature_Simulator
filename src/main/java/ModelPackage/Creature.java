@@ -6,7 +6,6 @@ import javafx.scene.paint.Color;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -29,16 +28,15 @@ public class Creature extends SimObject {
     private int hunger;
     private boolean alive;
     private List<Point> nextSteps;
-    int stepstaken;
+    private int stepsTaken;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
-    Random rnd;
 
 
     public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps) {
         super(point, energy);
         alive = true;
-        stepstaken = 0;
+        stepsTaken = 0;
         this.digestion = digestion;
         this.digestionBalance = digestionBalance;
         this.stamina = stamina;
@@ -125,9 +123,10 @@ public class Creature extends SimObject {
             alive = false;
         }
             Point nextGridPoint = null;
-        int whichStep = speed + stepstaken;
+        int whichStep = speed + stepsTaken;
         if (whichStep > nextSteps.size()) {
             nextGridPoint = nextSteps.get(nextSteps.size());
+            Point newTargetPoint = getNewTarget();
         }
         else {
             nextGridPoint = nextSteps.get(whichStep);
@@ -235,5 +234,44 @@ public class Creature extends SimObject {
                 break;
         }
         return point;
+    }
+
+    /**
+     * Gets a new targetPoint.
+     *
+     * @return Point
+     */
+    private Point getNewTarget () {
+
+        List<Point> workingArea = null;
+        Point targetPoint = null;
+        for (List<Point> livingArea : livingAreas) {
+            for (Point livingPoint : livingArea) {
+                if (livingPoint.x == point.x && livingPoint.y == point.y) {
+                    workingArea = livingArea;
+                }
+            }
+        }
+
+        for (int i = 0; i == 100; i++) {
+            for (Point point : workingArea) {
+                Point victimPoint = getNewTarget();
+                if (victimPoint.x == point.x && victimPoint.y == point.y) {
+                    return point;
+                }
+            }
+        }
+
+        if (targetPoint == null) {
+            for (List<Point> livingArea : livingAreas) {
+                for (Point livingPoint : livingArea) {
+                    Point victimPoint = getNewTarget();
+                    if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
+                        return victimPoint;
+                    }
+                }
+            }
+        }
+        return targetPoint;
     }
 }

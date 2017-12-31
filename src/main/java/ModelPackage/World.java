@@ -214,7 +214,7 @@ public class World implements Serializable, IWorld {
         }
         stepCount++;
 
-
+        NewTarget target = new NewTarget(creatureList, plantList);
         StepResult stepResult = new StepResult(iGrid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
         return stepResult;
     }
@@ -302,26 +302,36 @@ public class World implements Serializable, IWorld {
      * @return targetPoint
      *
      */
+    // find the living area of this creature
     private Point findCreature (Point startPoint) {
         List<Point> workingArea = null;
         Point targetPoint = null;
-        boolean victimSelected = false;
-        if (workingArea == null) {
-            for (List<Point> livingArea : livingAreas) {
-                for (Point livingPoint : livingArea) {
-                    if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
-                        workingArea = livingArea;
-                    }
+        for (List<Point> livingArea : livingAreas) {
+            for (Point livingPoint : livingArea) {
+                if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
+                    workingArea = livingArea;
                 }
             }
         }
-        for (int i = 1; i == 100; i++) {
+
+        /**
+         * select a random creature from creatureList and compare the location.
+         * if the location is in the same livingArea as the original creature, return location else select another random creature
+         */
+
+
+        /**
+         * if there are no target creatures in this area, find a random creature in the whole world.
+         */
+        if (targetPoint == null) {
             int numberOfCreatures = creatureList.size();
             int selectedCreature = rnd.nextInt(numberOfCreatures);
             SimObject creature = creatureList.get(selectedCreature);
-            for (Point point : workingArea) {
-                if (creature.point.x == point.x && creature.point.y == point.y) {
-                    return point;
+            for (List<Point> livingArea : livingAreas) {
+                for (Point livingPoint : livingArea) {
+                    if (creature.point.x == livingPoint.x && creature.point.y == livingPoint.y){
+                        return creature.point;
+                    }
                 }
             }
         }
@@ -355,4 +365,6 @@ public class World implements Serializable, IWorld {
         }
         return targetPoint;
     }
+
+
 }
