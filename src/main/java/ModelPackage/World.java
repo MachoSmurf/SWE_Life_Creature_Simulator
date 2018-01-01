@@ -14,7 +14,7 @@ public class World implements Serializable, IWorld {
     private List<SimObject> plantList; //A List of all plants in this world
     protected List<SimObject> creatureList; // A list of all creatures in this world
     private List<StatusObject> objectList; // A List of all step items in this world.
-    private IGrid iGrid;
+    private IGrid Grid;
     private int stepCount;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
@@ -29,7 +29,8 @@ public class World implements Serializable, IWorld {
     public World(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore,int digestionBalanceCarnivore,int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
                  int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
                  int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
-                 int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore){
+                 int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
+                 int widthGrid, int heightGrid){
 
         // parameters
         stepCount = 0;
@@ -37,15 +38,15 @@ public class World implements Serializable, IWorld {
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
         movement = new MovementPlanner();
+        Grid = new Grid(widthGrid, heightGrid);
 
-
-        boolean worked = movement.initializePlanner(iGrid);
+        boolean worked = movement.initializePlanner(Grid);
         if (!worked) {
             System.out.println("Something went wrong while initialising the motionPlanner");
             return;
         }
-        int gridWidth = iGrid.getWidth();
-        int gridHeight = iGrid.getHeight();
+        int gridWidth = Grid.getWidth();
+        int gridHeight = Grid.getHeight();
         rnd = new Random();
         livingAreas = new ArrayList<ArrayList<Point>>();
         try {
@@ -220,7 +221,7 @@ public class World implements Serializable, IWorld {
     }
 
     public IGrid getGrid () {
-        return iGrid;
+        return Grid;
     }
 
     /**
