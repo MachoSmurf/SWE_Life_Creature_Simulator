@@ -34,32 +34,32 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button contentDisplay="CENTER" layoutX="429.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Load Simulation">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="246.0" mnemonicParsing="false" onAction="#onLoadSimulationClick" prefHeight="25.0" prefWidth="146.0" text="Load Simulation">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="429.0" layoutY="304.0" mnemonicParsing="false" text="Create New Simulation">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="304.0" mnemonicParsing="false" onAction="#onNewSimulationClick" text="Create New Simulation">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="429.0" layoutY="364.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Settings">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="364.0" mnemonicParsing="false" onAction="#onSettingsClick" prefHeight="25.0" prefWidth="146.0" text="Settings">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="627.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="User Management">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="246.0" mnemonicParsing="false" onAction="#onUserManagementClick" prefHeight="25.0" prefWidth="146.0" text="User Management">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="627.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="World Editor">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="304.0" mnemonicParsing="false" onAction="#onWorldEditorClick" prefHeight="25.0" prefWidth="146.0" text="World Editor">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="627.0" layoutY="364.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Logout">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="364.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="25.0" prefWidth="146.0" text="Logout">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
