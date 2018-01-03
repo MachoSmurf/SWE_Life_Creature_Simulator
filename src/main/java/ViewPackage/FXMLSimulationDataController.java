@@ -21,6 +21,13 @@ public class FXMLSimulationDataController extends UIController implements Initia
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
+        try{
+            FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
+        }
+        catch(IOException ioe){
+            System.out.println(ioe);
+            showWarning("Fout", "Het scherm kon niet worden geladen.");
+        }
     }
 }
 

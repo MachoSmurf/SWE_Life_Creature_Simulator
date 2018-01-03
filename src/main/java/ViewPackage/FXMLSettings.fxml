@@ -58,7 +58,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="999.0" layoutY="792.0" mnemonicParsing="false" text="Save Preferences">
+      <Button layoutX="999.0" layoutY="792.0" mnemonicParsing="false" onAction="#onCancelClick" text="Save Preferences">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

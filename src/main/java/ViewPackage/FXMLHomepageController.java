@@ -59,7 +59,7 @@ public class FXMLHomepageController extends UIController implements Initializabl
 
     public void onWorldEditorClick(ActionEvent actionEvent) {
         try{
-            FXMLWorldEditorController h = (FXMLWorldEditorController) changeScreen("/ViewPackage/FXMLWorldEditor.fxml", null);
+            FXMLWorldEditorController w = (FXMLWorldEditorController) changeScreen("/ViewPackage/FXMLWorldEditor.fxml", null);
         }
         catch(IOException ioe){
             System.out.println(ioe);

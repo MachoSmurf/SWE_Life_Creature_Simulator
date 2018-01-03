@@ -1,6 +1,8 @@
 package ViewPackage;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -13,5 +15,15 @@ public class FXMLUserManagementController extends UIController implements Initia
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+    }
+
+    public void onCancelClick(ActionEvent actionEvent) {
+        try{
+            FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
+        }
+        catch(IOException ioe){
+            System.out.println(ioe);
+            showWarning("Fout", "Het scherm kon niet worden geladen.");
+        }
     }
 }

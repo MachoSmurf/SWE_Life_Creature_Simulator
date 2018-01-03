@@ -38,7 +38,7 @@ public class FXMLLoginController extends UIController implements Initializable {
                 if (String.valueOf(user.getRights()).equals(true))
                 {
                     try{
-                        FXMLHomepageController h = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
+                        FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
                     }
                     catch(IOException ioe) {
                         System.out.println(ioe);
