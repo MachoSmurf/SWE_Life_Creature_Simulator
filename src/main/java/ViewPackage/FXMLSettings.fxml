@@ -48,17 +48,17 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="1135.0" layoutY="48.0" mnemonicParsing="false" text="Cancel">
+      <Button layoutX="1135.0" layoutY="48.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="792.0" mnemonicParsing="false" text="Save Preferences">
+      <Button layoutX="467.0" layoutY="792.0" mnemonicParsing="false" onAction="#onSavePreferences1Click" text="Save Preferences">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="999.0" layoutY="792.0" mnemonicParsing="false" onAction="#onCancelClick" text="Save Preferences">
+      <Button layoutX="999.0" layoutY="792.0" mnemonicParsing="false" onAction="#onSavePreferences2Click" text="Save Preferences">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

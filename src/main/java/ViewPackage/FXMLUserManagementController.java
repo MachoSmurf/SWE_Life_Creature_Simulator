@@ -1,5 +1,7 @@
 package ViewPackage;
 
+import DataMediatorPackage.IDataMediator;
+import UserPackage.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import java.io.IOException;
@@ -25,5 +27,9 @@ public class FXMLUserManagementController extends UIController implements Initia
             System.out.println(ioe);
             showWarning("Fout", "Het scherm kon niet worden geladen.");
         }
+    }
+
+    public void onSaveUserClick(ActionEvent actionEvent) {
+        //Nog uitwerken
     }
 }

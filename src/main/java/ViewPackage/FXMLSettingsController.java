@@ -26,4 +26,10 @@ public class FXMLSettingsController extends UIController implements Initializabl
             showWarning("Fout", "Het scherm kon niet worden geladen.");
         }
     }
+
+    public void onSavePreferences1Click(ActionEvent actionEvent) {
+    }
+
+    public void onSavePreferences2Click(ActionEvent actionEvent) {
+    }
 }
