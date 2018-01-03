@@ -32,14 +32,28 @@ public class FXMLLoginController extends UIController implements Initializable {
         else
         {
             boolean loginResult = user.Login(userName.getText(), password.getText());
+
             if (loginResult)
             {
-                try{
-                    FXMLHomepageController h = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
+                if (String.valueOf(user.getRights()).equals(true))
+                {
+                    try{
+                        FXMLHomepageController h = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
+                    }
+                    catch(IOException ioe) {
+                        System.out.println(ioe);
+                        showWarning("Fout", "Het scherm kon niet worden geladen.");
+                    }
                 }
-                catch(IOException ioe){
-                    System.out.println(ioe);
-                    showWarning("Fout", "Het scherm kon niet worden geladen.");
+                else
+                {
+                    try{
+                        FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
+                    }
+                    catch(IOException ioe) {
+                        System.out.println(ioe);
+                        showWarning("Fout", "Het scherm kon niet worden geladen.");
+                    }
                 }
             }
             else
