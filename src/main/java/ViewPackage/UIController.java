@@ -4,12 +4,15 @@ import EditorPackage.IEditorController;
 import LifePackage.ILifeController;
 import ModelPackage.StepResult;
 import UserPackage.IUserController;
+import UserPackage.User;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Responsible for controlling the switch between pages and storing some general UI functions and data
@@ -21,9 +24,12 @@ public abstract class UIController implements ILifeResult{
     protected ILifeController simulation4;
     protected IUserController user;
     protected IEditorController editor;
+    protected List<User> users;
     protected static Stage mainStage;
 
     protected UIController changeScreen(String fxmlPath, ActionEvent event) throws IOException{
+
+        this.users = new ArrayList<>();
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
 

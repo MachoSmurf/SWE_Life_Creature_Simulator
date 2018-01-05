@@ -34,15 +34,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="87.0" layoutY="88.0" />
+      <TextField fx:id="userName" layoutX="87.0" layoutY="88.0" />
       <Label layoutX="23.0" layoutY="58.0" text="New User">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <PasswordField layoutX="87.0" layoutY="122.0" />
-      <PasswordField layoutX="349.0" layoutY="88.0" />
-      <RadioButton layoutX="349.0" layoutY="126.0" mnemonicParsing="false" selected="true" text="Yes">
+      <PasswordField fx:id="password" layoutX="87.0" layoutY="122.0" />
+      <PasswordField fx:id="passwordRepeat" layoutX="349.0" layoutY="88.0" />
+      <RadioButton fx:id="simUserYes" layoutX="349.0" layoutY="126.0" mnemonicParsing="false" selected="true" text="Yes">
          <toggleGroup>
             <ToggleGroup fx:id="simUser" />
          </toggleGroup>
