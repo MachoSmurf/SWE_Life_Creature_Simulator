@@ -33,6 +33,7 @@ public class CreatureTest {
                 1200,
                 600,
                 400,
+                null,
                 null);
         beast2 = new Creature(
                 new Point(20,20),
@@ -46,6 +47,7 @@ public class CreatureTest {
                 1200,
                 600,
                 400,
+                null,
                 null);
 
         beast3 = beast1.mate(beast2);

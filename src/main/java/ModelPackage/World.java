@@ -14,7 +14,7 @@ public class World implements Serializable, IWorld {
     private List<SimObject> plantList; //A List of all plants in this world
     protected List<SimObject> creatureList; // A list of all creatures in this world
     private List<StatusObject> objectList; // A List of all step items in this world.
-    private IGrid Grid;
+    private IGrid grid;
     private int stepCount;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
@@ -38,15 +38,15 @@ public class World implements Serializable, IWorld {
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
         movement = new MovementPlanner();
-        Grid = new Grid(widthGrid, heightGrid);
+        grid = new Grid(widthGrid, heightGrid);
 
-        boolean worked = movement.initializePlanner(Grid);
+        boolean worked = movement.initializePlanner(grid);
         if (!worked) {
             System.out.println("Something went wrong while initialising the motionPlanner");
             return;
         }
-        int gridWidth = Grid.getWidth();
-        int gridHeight = Grid.getHeight();
+        int gridWidth = grid.getWidth();
+        int gridHeight = grid.getHeight();
         rnd = new Random();
         livingAreas = new ArrayList<ArrayList<Point>>();
         try {
@@ -59,7 +59,7 @@ public class World implements Serializable, IWorld {
          * If the random point is in a Living area and there is not another plant at that point, create a new plant
          *  do this until you have as many plants as described in "howManyPlants".
          */
-        for (int i = 1; i == howManyPlants; ) {
+        for (int i = 0; i < howManyPlants; ) {
             int x = rnd.nextInt(gridWidth);
             int y = rnd.nextInt(gridHeight);
             boolean alreadyAPlant = false;
@@ -216,12 +216,12 @@ public class World implements Serializable, IWorld {
         stepCount++;
 
 
-        StepResult stepResult = new StepResult(iGrid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
+        StepResult stepResult = new StepResult(grid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
         return stepResult;
     }
 
     public IGrid getGrid () {
-        return Grid;
+        return grid;
     }
 
     /**
@@ -243,7 +243,7 @@ public class World implements Serializable, IWorld {
      */
     private void createCreatures (int gridWidth, int gridHeight, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, int howManyCreatures) {
 
-        for (int i = 1; i == howManyCreatures;) {
+        for (int i = 0; i < howManyCreatures; ) {
             Random rnd = new Random();
             int x = rnd.nextInt(gridWidth);
             int y = rnd.nextInt(gridHeight);
