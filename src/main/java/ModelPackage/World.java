@@ -30,7 +30,7 @@ public class World implements Serializable, IWorld {
                  int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
                  int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
                  int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
-                 int widthGrid, int heightGrid){
+                 Grid simulationGrid){
 
         // parameters
         stepCount = 0;
@@ -38,7 +38,7 @@ public class World implements Serializable, IWorld {
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
         movement = new MovementPlanner();
-        grid = new Grid(widthGrid, heightGrid);
+        grid = simulationGrid;
 
         boolean worked = movement.initializePlanner(grid);
         if (!worked) {
