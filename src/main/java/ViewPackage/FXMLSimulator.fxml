@@ -3,6 +3,7 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
@@ -24,12 +25,44 @@
         <ImageView fitHeight="850.0" fitWidth="1400.0" layoutX="-198.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Background.jpg" />
-            </image></ImageView>
-        <Canvas fx:id="canvSimulation1" height="330.0" layoutX="14.0" layoutY="73.0" width="395.0" />
+            </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="21.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+         <content>
+              <Canvas fx:id="canvSimulation1" height="285.0" width="395.0" />
+         </content>
+      </ScrollPane>
         <Label layoutX="29.0" layoutY="47.0" text="Simulation 1:" />
-        <Button fx:id="btnTest" layoutX="467.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#onTestClick" text="Button" />
-        <Slider fx:id="sldZoom1" layoutX="78.0" layoutY="412.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
-        <Label layoutX="29.0" layoutY="411.0" text="Zoom:" />
-        <Label fx:id="lblZoomValue1" layoutX="235.0" layoutY="411.0" text="10" />
+        <Button fx:id="btnTest" layoutX="379.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#onTestClick" text="Button" />
+        <Slider fx:id="sldZoom1" layoutX="78.0" layoutY="393.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+        <Label layoutX="29.0" layoutY="392.0" text="Zoom:" />
+        <Label fx:id="lblZoomValue1" layoutX="235.0" layoutY="392.0" text="10" />
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="454.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+         <content>
+            <Canvas height="200.0" width="200.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="468.0" layoutY="47.0" text="Simulation 2:" />
+      <Label layoutX="29.0" layoutY="437.0" text="Simulation 3:" />
+      <Label layoutX="468.0" layoutY="446.0" text="Simulation 4:" />
+      <Slider fx:id="sldZoom11" layoutX="503.0" layoutY="393.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+      <Label layoutX="454.0" layoutY="392.0" text="Zoom:" />
+      <Label fx:id="lblZoomValue11" layoutX="660.0" layoutY="392.0" text="10" />
+      <Slider fx:id="sldZoom12" layoutX="70.0" layoutY="775.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+      <Label layoutX="21.0" layoutY="774.0" text="Zoom:" />
+      <Label fx:id="lblZoomValue12" layoutX="227.0" layoutY="774.0" text="10" />
+      <Slider fx:id="sldZoom13" layoutX="497.0" layoutY="775.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+      <Label layoutX="448.0" layoutY="774.0" text="Zoom:" />
+      <Label fx:id="lblZoomValue13" layoutX="654.0" layoutY="774.0" text="10" />
+      <ScrollPane layoutX="18.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0">
+         <content>
+            <Canvas height="200.0" width="200.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="448.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0">
+         <content>
+            <Canvas height="200.0" width="200.0" />
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>

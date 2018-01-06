@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Label;
 import javafx.scene.image.PixelWriter;
+import javafx.scene.layout.Pane;
 
 import java.awt.*;
 import java.net.URL;
@@ -25,6 +26,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     public Label lblZoomValue1;
     public Slider sldZoom1;
+    public ScrollPane spSim1;
 
     private int zoom = 20;
 
@@ -54,6 +56,11 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     private void drawGrid(IGrid g){
+
+        //spSim1.setPreferredSize(new Dimension(g.getWidth() * zoom, g.getHeight() * zoom));
+        canvSimulation1.setWidth(g.getWidth()*zoom);
+        canvSimulation1.setHeight(g.getHeight()*zoom);
+
         GraphicsContext gc = canvSimulation1.getGraphicsContext2D();
         gc.clearRect(0,0, canvSimulation1.getWidth(), canvSimulation1.getHeight());
         //gc.setFill(javafx.scene.paint.Color.BLACK);
