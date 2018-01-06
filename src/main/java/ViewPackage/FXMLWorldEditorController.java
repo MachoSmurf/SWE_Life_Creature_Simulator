@@ -1,6 +1,8 @@
 package ViewPackage;
 
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -13,5 +15,8 @@ public class FXMLWorldEditorController extends UIController implements Initializ
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+    }
+
+    public void ChangeColor(MouseEvent mouseEvent) {
     }
 }
