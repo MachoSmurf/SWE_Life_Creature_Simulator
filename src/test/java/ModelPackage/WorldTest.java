@@ -38,7 +38,7 @@ public class WorldTest {
                 2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 300, 200, 10,
                 1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 30,
                 40, 40);
-        world.doStep();
+        //world.doStep();
 
     }
 }
