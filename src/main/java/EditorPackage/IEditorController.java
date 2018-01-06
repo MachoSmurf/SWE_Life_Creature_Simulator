@@ -14,7 +14,7 @@ public interface IEditorController {
      * Saves a grid using a given name
      * @param gridName Name of the grid that has to be saved
      */
-    void saveGrid(String gridName);
+    void saveGrid(Grid grid, String gridName);
 
     /**
      * deletes a grid using a given name

@@ -2,6 +2,7 @@ package LifePackage;
 
 import ModelPackage.IWorld;
 import ModelPackage.StepResult;
+import ModelPackage.World;
 
 public interface ILifeController {
 
@@ -26,14 +27,14 @@ public interface ILifeController {
      * @param simName The reference name
      * @param runningSimulation The instance of the running simulation
      */
-    public void saveSimulation(String simName, IWorld runningSimulation);
+    public void saveSimulation(String simName, World runningSimulation);
 
     /**
      * Loads an unfinished simulation
      * @param simName the name used to reference the simulation
      * @return IWorld instance that was saved
      */
-    public IWorld loadSimulation(String simName);
+    public World loadSimulation(String simName);
 
     /**
      * Saves the result of a finished simulation
