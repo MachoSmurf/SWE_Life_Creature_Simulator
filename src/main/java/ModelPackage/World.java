@@ -93,6 +93,7 @@ public class World implements Serializable, IWorld {
         createCreatures(gridWidth, gridHeight, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore);
         createCreatures(gridWidth, gridHeight, energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore);
 
+        System.out.println("Created a World.");
     }
 
     /**
@@ -105,6 +106,8 @@ public class World implements Serializable, IWorld {
         List<SimObject> newCreatureList = new ArrayList<>();
         List<SimObject> newPlantList = new ArrayList<>();
         List<StatusObject> newObjectList = new ArrayList<>();
+        List<SimObject> Children = new ArrayList<>();
+
         int nonivores = 0;
         int omnivores = 0;
         int carnivores = 0;
@@ -116,8 +119,10 @@ public class World implements Serializable, IWorld {
         int energyHerbivores = 0;
         int energyPlants = 0;
         StatusObject object = null;
+        int simCount = 0;
 
         for(SimObject sim1 : creatureList) { // compare each creature in the CreatureList.
+
             boolean didThing = false;
             Creature sim = (Creature) sim1; //make creature of a SimObject
             for (SimObject simOtherCreature : newCreatureList) { // compare with every creature is the new list.
@@ -141,7 +146,8 @@ public class World implements Serializable, IWorld {
                     else  {
                         if (sim.getReproductionThreshold() < sim.getStrength() && otherCreature.getReproductionThreshold() < otherCreature.getStrength()) { // Same spicies => check is they want to mate
                             Creature child = sim.mate(otherCreature);
-                            creatureList.add(child);
+                            System.out.println("Mated");
+                            Children.add(child);
                             didThing = true;
                         }
                     }
@@ -149,7 +155,8 @@ public class World implements Serializable, IWorld {
                 else if (Math.abs(sim.point.x - otherCreature.point.x) <= 1 && Math.abs(sim.point.y - otherCreature.point.y) <= 1) {
                     if (sim.getReproductionThreshold() < sim.getStrength() && otherCreature.getReproductionThreshold() < otherCreature.getStrength()) { // Same spiecis => check is they want to mate
                         Creature child = sim.mate(otherCreature);
-                        creatureList.add(child);
+                        System.out.println("Mated");
+                        Children.add(child);
                     }
                 }
                 else {
@@ -183,7 +190,8 @@ public class World implements Serializable, IWorld {
             }
             newCreatureList.add(sim);
             newObjectList.add(object);
-
+            simCount++;
+            System.out.println("Creature With step: " + simCount);
         }
 
 
@@ -221,6 +229,10 @@ public class World implements Serializable, IWorld {
             energyPlants = energyPlants + plant.getEnergy();
         }
         stepCount++;
+        System.out.println("Voeg de children bij alle creatures.");
+        for (SimObject child : Children) {
+            creatureList.add(child);
+        }
 
 
         StepResult stepResult = new StepResult(grid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
@@ -313,9 +325,9 @@ public class World implements Serializable, IWorld {
                                     System.out.println("Second time error too");
                                 }
                             }
-                            creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, this));
+                            creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, movement, this));
                             i++;
-                            System.out.println("New creature made on location x=" + startPoint.x + " and y=" + startPoint.y );
+                            System.out.println("New creature made on location x=" + startPoint.x + " and y=" + startPoint.y + " Number: " + i);
                         }
                     }
                 }
@@ -325,6 +337,7 @@ public class World implements Serializable, IWorld {
             }
 
         }
+
 
     }
 
