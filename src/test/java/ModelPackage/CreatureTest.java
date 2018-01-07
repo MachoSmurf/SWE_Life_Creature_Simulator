@@ -19,9 +19,6 @@ public class CreatureTest {
 
     @org.junit.Before
     public void setUp() throws Exception {
-        List<TargetCoordinate> nextSteps = new ArrayList<>();
-        new TargetCoordinate();
-        nextSteps.add(new TargetCoordinate());
 
         beast1 = new Creature(
                 new Point(20,20),
