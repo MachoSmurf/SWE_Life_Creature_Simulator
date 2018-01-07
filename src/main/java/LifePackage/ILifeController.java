@@ -1,6 +1,5 @@
 package LifePackage;
 
-import ModelPackage.IWorld;
 import ModelPackage.StepResult;
 import ModelPackage.World;
 
@@ -34,7 +33,7 @@ public interface ILifeController {
      * @param simName the name used to reference the simulation
      * @return IWorld instance that was saved
      */
-    World loadSimulation(String simName);
+    void loadSimulation(String simName);
 
     /**
      * Saves the result of a finished simulation
@@ -49,11 +48,5 @@ public interface ILifeController {
      * @return A StepResult object containing the data of a finished simulation
      */
     StepResult loadStepResult(String resultName);
-
-    /**
-     *
-     */
-    void newSimulation();
-
 
 }

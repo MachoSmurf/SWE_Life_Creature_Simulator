@@ -57,7 +57,7 @@ public class FXMLHomepageController extends UIController implements Initializabl
         }
     }
 
-    public void onWorldEditorClick(ActionEvent actionEvent) {
+    /*public void onWorldEditorClick(ActionEvent actionEvent) {
         try{
             FXMLWorldEditorController w = (FXMLWorldEditorController) changeScreen("/ViewPackage/FXMLWorldEditor.fxml", null);
         }
@@ -65,7 +65,7 @@ public class FXMLHomepageController extends UIController implements Initializabl
             System.out.println(ioe);
             showWarning("Fout", "Het scherm kon niet worden geladen.");
         }
-    }
+    }*/
 
     public void onLogoutClick(ActionEvent actionEvent) {
         try{

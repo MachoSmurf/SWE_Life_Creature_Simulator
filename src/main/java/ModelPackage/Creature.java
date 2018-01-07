@@ -6,7 +6,6 @@ import javafx.scene.paint.Color;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -29,16 +28,16 @@ public class Creature extends SimObject {
     private int hunger;
     private boolean alive;
     private List<Point> nextSteps;
-    int stepstaken;
+    private int stepsTaken;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
-    Random rnd;
+    World world;
 
 
-    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps) {
+    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps, World world) {
         super(point, energy);
         alive = true;
-        stepstaken = 0;
+        stepsTaken = 0;
         this.digestion = digestion;
         this.digestionBalance = digestionBalance;
         this.stamina = stamina;
@@ -48,6 +47,7 @@ public class Creature extends SimObject {
         this.strength = strength;
         this.swimThreshold = swimThreshold;
         this.motionThreshold = motionThreshold;
+        this.world = world;
         movement = new MovementPlanner();
         if (energy < strength) {
             weight = legs * 10;
@@ -69,7 +69,7 @@ public class Creature extends SimObject {
         status = new StatusObject(energy, getColor(), alive);
 
 
-        livingAreas = new ArrayList<ArrayList<Point>>();
+        livingAreas = new ArrayList<>();
         try {
             livingAreas = movement.getLivingAreas();
         } catch (Exception e) {
@@ -92,9 +92,6 @@ public class Creature extends SimObject {
         }
         StatusObject status = new StatusObject(energy, gridColor, alive);
         if (!alive) return (status);
-        //weight
-
-
 
         if (energy < strength) {
             weight = legs * 10;
@@ -125,9 +122,16 @@ public class Creature extends SimObject {
             alive = false;
         }
             Point nextGridPoint = null;
-        int whichStep = speed + stepstaken;
+        int whichStep = speed + stepsTaken;
         if (whichStep > nextSteps.size()) {
             nextGridPoint = nextSteps.get(nextSteps.size());
+            Point newTargetPoint = newTarget();
+            try {
+                nextSteps = movement.findPath(point, newTargetPoint);
+            } catch (Exception e) {
+                System.out.println("No new targets available!");
+            }
+
         }
         else {
             nextGridPoint = nextSteps.get(whichStep);
@@ -185,7 +189,7 @@ public class Creature extends SimObject {
 
 
 
-        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps);
+        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, world);
     }
 
     private int getReproductionCost () {

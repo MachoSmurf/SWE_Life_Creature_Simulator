@@ -336,6 +336,7 @@ public class World implements Serializable, IWorld {
      * @return targetPoint
      *
      */
+    // find the living area of this creature
     private Point findCreature (Point startPoint) {
         List<Point> workingArea = null; //living area of this creature
         Point targetPoint = null; // target point of this creature
@@ -345,6 +346,7 @@ public class World implements Serializable, IWorld {
                 for (Point livingPoint : livingArea) {
                     if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) { //if a point in the living area is the same point as the startpoint.
                         workingArea = livingArea; //this living area is the living area of this creature.
+
                     }
                 }
             }
@@ -419,4 +421,20 @@ public class World implements Serializable, IWorld {
 
         return targetPoint;
     }
+
+    protected Point getNewTargetCreature() {
+        int howManyCreatures = creatureList.size();
+        int selected = rnd.nextInt(howManyCreatures);
+        SimObject sim = creatureList.get(selected);
+        return sim.point;
+    }
+
+    protected Point getNewTargetPlant () {
+        int howManyPlants = plantList.size();
+        int selected = rnd.nextInt(howManyPlants);
+        SimObject sim = plantList.get(selected);
+        return sim.point;
+    }
+
+
 }
