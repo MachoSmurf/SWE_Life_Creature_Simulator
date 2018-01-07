@@ -29,12 +29,12 @@ public class Creature extends SimObject {
     private boolean alive;
     private List<Point> nextSteps;
     private int stepsTaken;
-    MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
+    MovementPlanner movement;
     World world;
 
 
-    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps, World world) {
+    public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, List<Point> nextSteps, MovementPlanner movement, World world) {
         super(point, energy);
         alive = true;
         stepsTaken = 0;
@@ -47,8 +47,8 @@ public class Creature extends SimObject {
         this.strength = strength;
         this.swimThreshold = swimThreshold;
         this.motionThreshold = motionThreshold;
+        this.movement = movement;
         this.world = world;
-        movement = new MovementPlanner();
         if (energy < strength) {
             weight = legs * 10;
         }
@@ -71,7 +71,7 @@ public class Creature extends SimObject {
 
         livingAreas = new ArrayList<>();
         try {
-            livingAreas = movement.getLivingAreas();
+            livingAreas = this.movement.getLivingAreas();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -189,7 +189,7 @@ public class Creature extends SimObject {
 
 
 
-        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, world);
+        return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, movement, world);
     }
 
     private int getReproductionCost () {
@@ -277,7 +277,7 @@ public class Creature extends SimObject {
         if (targetPoint == null) {
             for (List<Point> livingArea : livingAreas) {
                 for (Point livingPoint : livingArea) {
-                    Point victimPoint = world.getNewTargetCreature();
+                    Point victimPoint = new Point(0,0);   //world.getNewTargetCreature();
                     if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
                         return victimPoint;
                     }

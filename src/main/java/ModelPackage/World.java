@@ -93,6 +93,7 @@ public class World implements Serializable, IWorld {
         createCreatures(gridWidth, gridHeight, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore);
         createCreatures(gridWidth, gridHeight, energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore);
 
+        System.out.println("Created a World.");
     }
 
     /**
@@ -313,9 +314,9 @@ public class World implements Serializable, IWorld {
                                     System.out.println("Second time error too");
                                 }
                             }
-                            creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, this));
+                            creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, movement, this));
                             i++;
-                            System.out.println("New creature made on location x=" + startPoint.x + " and y=" + startPoint.y );
+                            System.out.println("New creature made on location x=" + startPoint.x + " and y=" + startPoint.y + " Number: " + i);
                         }
                     }
                 }
@@ -325,6 +326,7 @@ public class World implements Serializable, IWorld {
             }
 
         }
+
 
     }
 
