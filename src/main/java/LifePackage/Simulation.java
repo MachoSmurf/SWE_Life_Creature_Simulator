@@ -79,9 +79,11 @@ public class Simulation implements ILifeController {
 
     private void step(){
         if (!simulationIsRunningStep){
+            simulationIsRunningStep = true;
             StepResult stepResult = world.doStep();
             //push stepResult back to UIController
             viewController.updateSimulationResults(stepResult);
+            simulationIsRunningStep = false;
         }
     }
 }
