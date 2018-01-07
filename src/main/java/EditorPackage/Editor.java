@@ -1,26 +1,54 @@
 package EditorPackage;
 
+import DataMediatorPackage.FileMediator;
+import ModelPackage.Grid;
+
+
+import java.io.*;
+import java.nio.file.Files;
+
 /**
  * Controls the in and output of a editor instance. Also responsible for passing data to and from an IDataMediator instance
  */
-public class Editor implements IEditorController{
+public class Editor extends FileMediator implements IEditorController{
 
-    public Editor(){
+    FileMediator fileMediator = new FileMediator();
 
-    }
-
-    @Override
-    public void loadGrid(String gridName) {
+    public Editor()
+    {
 
     }
 
     @Override
-    public void saveGrid(String gridName) {
-
+    public Grid loadGrid(String gridName)
+    {
+        return fileMediator.loadGrid(gridName);
     }
 
     @Override
-    public void deleteGrid(String gridName) {
+    public void saveGrid(Grid grid, String gridName)
+    {
+
+        fileMediator.saveGrid(grid, gridName);
+    }
+
+    @Override
+    public void deleteGrid(String gridName)
+    {
+        String gridFile = gridName + ".txt";
+        File file = new File(gridFile);
+
+        try
+        {
+            Files.deleteIfExists(file.toPath());
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
 
     }
+
+
 }
