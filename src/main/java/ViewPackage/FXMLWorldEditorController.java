@@ -3226,6 +3226,4806 @@ public class FXMLWorldEditorController extends UIController implements Initializ
             {
                 id400.setStyle("-fx-background-color: white");
             }
+            else if (id401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id401.setStyle("-fx-background-color: white");
+            }
+            else if (id402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id402.setStyle("-fx-background-color: white");
+            }
+            else if (id403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id403.setStyle("-fx-background-color: white");
+            }
+            else if (id404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id404.setStyle("-fx-background-color: white");
+            }
+            else if (id405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id405.setStyle("-fx-background-color: white");
+            }
+            else if (id406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id406.setStyle("-fx-background-color: white");
+            }
+            else if (id407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id407.setStyle("-fx-background-color: white");
+            }
+            else if (id408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id408.setStyle("-fx-background-color: white");
+            }
+            else if (id409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id409.setStyle("-fx-background-color: white");
+            }
+            else if (id410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id410.setStyle("-fx-background-color: white");
+            }
+            else if (id411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id411.setStyle("-fx-background-color: white");
+            }
+            else if (id412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id412.setStyle("-fx-background-color: white");
+            }
+            else if (id413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id413.setStyle("-fx-background-color: white");
+            }
+            else if (id414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id414.setStyle("-fx-background-color: white");
+            }
+            else if (id415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id415.setStyle("-fx-background-color: white");
+            }
+            else if (id416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id416.setStyle("-fx-background-color: white");
+            }
+            else if (id417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id417.setStyle("-fx-background-color: white");
+            }
+            else if (id418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id418.setStyle("-fx-background-color: white");
+            }
+            else if (id419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id419.setStyle("-fx-background-color: white");
+            }
+            else if (id420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id420.setStyle("-fx-background-color: white");
+            }
+            else if (id421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id421.setStyle("-fx-background-color: white");
+            }
+            else if (id422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id422.setStyle("-fx-background-color: white");
+            }
+            else if (id423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id423.setStyle("-fx-background-color: white");
+            }
+            else if (id424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id424.setStyle("-fx-background-color: white");
+            }
+            else if (id425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id425.setStyle("-fx-background-color: white");
+            }
+            else if (id426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id426.setStyle("-fx-background-color: white");
+            }
+            else if (id427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id427.setStyle("-fx-background-color: white");
+            }
+            else if (id428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id428.setStyle("-fx-background-color: white");
+            }
+            else if (id429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id429.setStyle("-fx-background-color: white");
+            }
+            else if (id430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id430.setStyle("-fx-background-color: white");
+            }
+            else if (id431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id431.setStyle("-fx-background-color: white");
+            }
+            else if (id432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id432.setStyle("-fx-background-color: white");
+            }
+            else if (id433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id433.setStyle("-fx-background-color: white");
+            }
+            else if (id434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id434.setStyle("-fx-background-color: white");
+            }
+            else if (id435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id435.setStyle("-fx-background-color: white");
+            }
+            else if (id436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id436.setStyle("-fx-background-color: white");
+            }
+            else if (id437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id437.setStyle("-fx-background-color: white");
+            }
+            else if (id438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id438.setStyle("-fx-background-color: white");
+            }
+            else if (id439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id439.setStyle("-fx-background-color: white");
+            }
+            else if (id440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id440.setStyle("-fx-background-color: white");
+            }
+            else if (id441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id441.setStyle("-fx-background-color: white");
+            }
+            else if (id442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id442.setStyle("-fx-background-color: white");
+            }
+            else if (id443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id443.setStyle("-fx-background-color: white");
+            }
+            else if (id444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id444.setStyle("-fx-background-color: white");
+            }
+            else if (id445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id445.setStyle("-fx-background-color: white");
+            }
+            else if (id446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id446.setStyle("-fx-background-color: white");
+            }
+            else if (id447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id447.setStyle("-fx-background-color: white");
+            }
+            else if (id448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id448.setStyle("-fx-background-color: white");
+            }
+            else if (id449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id449.setStyle("-fx-background-color: white");
+            }
+            else if (id450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id450.setStyle("-fx-background-color: white");
+            }
+            else if (id451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id451.setStyle("-fx-background-color: white");
+            }
+            else if (id452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id452.setStyle("-fx-background-color: white");
+            }
+            else if (id453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id453.setStyle("-fx-background-color: white");
+            }
+            else if (id454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id454.setStyle("-fx-background-color: white");
+            }
+            else if (id455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id455.setStyle("-fx-background-color: white");
+            }
+            else if (id456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id456.setStyle("-fx-background-color: white");
+            }
+            else if (id457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id457.setStyle("-fx-background-color: white");
+            }
+            else if (id458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id458.setStyle("-fx-background-color: white");
+            }
+            else if (id459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id459.setStyle("-fx-background-color: white");
+            }
+            else if (id460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id460.setStyle("-fx-background-color: white");
+            }
+            else if (id461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id461.setStyle("-fx-background-color: white");
+            }
+            else if (id462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id462.setStyle("-fx-background-color: white");
+            }
+            else if (id463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id463.setStyle("-fx-background-color: white");
+            }
+            else if (id464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id464.setStyle("-fx-background-color: white");
+            }
+            else if (id465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id465.setStyle("-fx-background-color: white");
+            }
+            else if (id466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id466.setStyle("-fx-background-color: white");
+            }
+            else if (id467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id467.setStyle("-fx-background-color: white");
+            }
+            else if (id468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id468.setStyle("-fx-background-color: white");
+            }
+            else if (id469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id469.setStyle("-fx-background-color: white");
+            }
+            else if (id470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id470.setStyle("-fx-background-color: white");
+            }
+            else if (id471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id471.setStyle("-fx-background-color: white");
+            }
+            else if (id472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id472.setStyle("-fx-background-color: white");
+            }
+            else if (id473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id473.setStyle("-fx-background-color: white");
+            }
+            else if (id474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id474.setStyle("-fx-background-color: white");
+            }
+            else if (id475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id475.setStyle("-fx-background-color: white");
+            }
+            else if (id476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id476.setStyle("-fx-background-color: white");
+            }
+            else if (id477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id477.setStyle("-fx-background-color: white");
+            }
+            else if (id478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id478.setStyle("-fx-background-color: white");
+            }
+            else if (id479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id479.setStyle("-fx-background-color: white");
+            }
+            else if (id480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id480.setStyle("-fx-background-color: white");
+            }
+            else if (id481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id481.setStyle("-fx-background-color: white");
+            }
+            else if (id482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id482.setStyle("-fx-background-color: white");
+            }
+            else if (id483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id483.setStyle("-fx-background-color: white");
+            }
+            else if (id484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id484.setStyle("-fx-background-color: white");
+            }
+            else if (id485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id485.setStyle("-fx-background-color: white");
+            }
+            else if (id486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id486.setStyle("-fx-background-color: white");
+            }
+            else if (id487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id487.setStyle("-fx-background-color: white");
+            }
+            else if (id488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id488.setStyle("-fx-background-color: white");
+            }
+            else if (id489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id489.setStyle("-fx-background-color: white");
+            }
+            else if (id490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id490.setStyle("-fx-background-color: white");
+            }
+            else if (id491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id491.setStyle("-fx-background-color: white");
+            }
+            else if (id492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id492.setStyle("-fx-background-color: white");
+            }
+            else if (id493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id493.setStyle("-fx-background-color: white");
+            }
+            else if (id494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id494.setStyle("-fx-background-color: white");
+            }
+            else if (id495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id495.setStyle("-fx-background-color: white");
+            }
+            else if (id496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id496.setStyle("-fx-background-color: white");
+            }
+            else if (id497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id497.setStyle("-fx-background-color: white");
+            }
+            else if (id498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id498.setStyle("-fx-background-color: white");
+            }
+            else if (id499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id499.setStyle("-fx-background-color: white");
+            }
+            else if (id500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id500.setStyle("-fx-background-color: white");
+            }
+            else if (id501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id501.setStyle("-fx-background-color: white");
+            }
+            else if (id502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id502.setStyle("-fx-background-color: white");
+            }
+            else if (id503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id503.setStyle("-fx-background-color: white");
+            }
+            else if (id504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id504.setStyle("-fx-background-color: white");
+            }
+            else if (id505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id505.setStyle("-fx-background-color: white");
+            }
+            else if (id506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id506.setStyle("-fx-background-color: white");
+            }
+            else if (id507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id507.setStyle("-fx-background-color: white");
+            }
+            else if (id508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id508.setStyle("-fx-background-color: white");
+            }
+            else if (id509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id509.setStyle("-fx-background-color: white");
+            }
+            else if (id510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id510.setStyle("-fx-background-color: white");
+            }
+            else if (id511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id511.setStyle("-fx-background-color: white");
+            }
+            else if (id512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id512.setStyle("-fx-background-color: white");
+            }
+            else if (id513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id513.setStyle("-fx-background-color: white");
+            }
+            else if (id514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id514.setStyle("-fx-background-color: white");
+            }
+            else if (id515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id515.setStyle("-fx-background-color: white");
+            }
+            else if (id516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id516.setStyle("-fx-background-color: white");
+            }
+            else if (id517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id517.setStyle("-fx-background-color: white");
+            }
+            else if (id518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id518.setStyle("-fx-background-color: white");
+            }
+            else if (id519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id519.setStyle("-fx-background-color: white");
+            }
+            else if (id520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id520.setStyle("-fx-background-color: white");
+            }
+            else if (id521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id521.setStyle("-fx-background-color: white");
+            }
+            else if (id522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id522.setStyle("-fx-background-color: white");
+            }
+            else if (id523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id523.setStyle("-fx-background-color: white");
+            }
+            else if (id524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id524.setStyle("-fx-background-color: white");
+            }
+            else if (id525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id525.setStyle("-fx-background-color: white");
+            }
+            else if (id526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id526.setStyle("-fx-background-color: white");
+            }
+            else if (id527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id527.setStyle("-fx-background-color: white");
+            }
+            else if (id528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id528.setStyle("-fx-background-color: white");
+            }
+            else if (id529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id529.setStyle("-fx-background-color: white");
+            }
+            else if (id530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id530.setStyle("-fx-background-color: white");
+            }
+            else if (id531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id531.setStyle("-fx-background-color: white");
+            }
+            else if (id532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id532.setStyle("-fx-background-color: white");
+            }
+            else if (id533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id533.setStyle("-fx-background-color: white");
+            }
+            else if (id534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id534.setStyle("-fx-background-color: white");
+            }
+            else if (id535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id535.setStyle("-fx-background-color: white");
+            }
+            else if (id536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id536.setStyle("-fx-background-color: white");
+            }
+            else if (id537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id537.setStyle("-fx-background-color: white");
+            }
+            else if (id538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id538.setStyle("-fx-background-color: white");
+            }
+            else if (id539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id539.setStyle("-fx-background-color: white");
+            }
+            else if (id540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id540.setStyle("-fx-background-color: white");
+            }
+            else if (id541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id541.setStyle("-fx-background-color: white");
+            }
+            else if (id542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id542.setStyle("-fx-background-color: white");
+            }
+            else if (id543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id543.setStyle("-fx-background-color: white");
+            }
+            else if (id544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id544.setStyle("-fx-background-color: white");
+            }
+            else if (id545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id545.setStyle("-fx-background-color: white");
+            }
+            else if (id546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id546.setStyle("-fx-background-color: white");
+            }
+            else if (id547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id547.setStyle("-fx-background-color: white");
+            }
+            else if (id548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id548.setStyle("-fx-background-color: white");
+            }
+            else if (id549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id549.setStyle("-fx-background-color: white");
+            }
+            else if (id550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id550.setStyle("-fx-background-color: white");
+            }
+            else if (id551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id551.setStyle("-fx-background-color: white");
+            }
+            else if (id552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id552.setStyle("-fx-background-color: white");
+            }
+            else if (id553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id553.setStyle("-fx-background-color: white");
+            }
+            else if (id554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id554.setStyle("-fx-background-color: white");
+            }
+            else if (id555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id555.setStyle("-fx-background-color: white");
+            }
+            else if (id556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id556.setStyle("-fx-background-color: white");
+            }
+            else if (id557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id557.setStyle("-fx-background-color: white");
+            }
+            else if (id558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id558.setStyle("-fx-background-color: white");
+            }
+            else if (id559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id559.setStyle("-fx-background-color: white");
+            }
+            else if (id560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id560.setStyle("-fx-background-color: white");
+            }
+            else if (id561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id561.setStyle("-fx-background-color: white");
+            }
+            else if (id562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id562.setStyle("-fx-background-color: white");
+            }
+            else if (id563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id563.setStyle("-fx-background-color: white");
+            }
+            else if (id564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id564.setStyle("-fx-background-color: white");
+            }
+            else if (id565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id565.setStyle("-fx-background-color: white");
+            }
+            else if (id566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id566.setStyle("-fx-background-color: white");
+            }
+            else if (id567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id567.setStyle("-fx-background-color: white");
+            }
+            else if (id568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id568.setStyle("-fx-background-color: white");
+            }
+            else if (id569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id569.setStyle("-fx-background-color: white");
+            }
+            else if (id570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id570.setStyle("-fx-background-color: white");
+            }
+            else if (id571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id571.setStyle("-fx-background-color: white");
+            }
+            else if (id572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id572.setStyle("-fx-background-color: white");
+            }
+            else if (id573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id573.setStyle("-fx-background-color: white");
+            }
+            else if (id574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id574.setStyle("-fx-background-color: white");
+            }
+            else if (id575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id575.setStyle("-fx-background-color: white");
+            }
+            else if (id576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id576.setStyle("-fx-background-color: white");
+            }
+            else if (id577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id577.setStyle("-fx-background-color: white");
+            }
+            else if (id578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id578.setStyle("-fx-background-color: white");
+            }
+            else if (id579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id579.setStyle("-fx-background-color: white");
+            }
+            else if (id580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id580.setStyle("-fx-background-color: white");
+            }
+            else if (id581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id581.setStyle("-fx-background-color: white");
+            }
+            else if (id582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id582.setStyle("-fx-background-color: white");
+            }
+            else if (id583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id583.setStyle("-fx-background-color: white");
+            }
+            else if (id584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id584.setStyle("-fx-background-color: white");
+            }
+            else if (id585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id585.setStyle("-fx-background-color: white");
+            }
+            else if (id586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id586.setStyle("-fx-background-color: white");
+            }
+            else if (id587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id587.setStyle("-fx-background-color: white");
+            }
+            else if (id588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id588.setStyle("-fx-background-color: white");
+            }
+            else if (id589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id589.setStyle("-fx-background-color: white");
+            }
+            else if (id590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id590.setStyle("-fx-background-color: white");
+            }
+            else if (id591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id591.setStyle("-fx-background-color: white");
+            }
+            else if (id592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id592.setStyle("-fx-background-color: white");
+            }
+            else if (id593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id593.setStyle("-fx-background-color: white");
+            }
+            else if (id594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id594.setStyle("-fx-background-color: white");
+            }
+            else if (id595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id595.setStyle("-fx-background-color: white");
+            }
+            else if (id596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id596.setStyle("-fx-background-color: white");
+            }
+            else if (id597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id597.setStyle("-fx-background-color: white");
+            }
+            else if (id598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id598.setStyle("-fx-background-color: white");
+            }
+            else if (id599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id599.setStyle("-fx-background-color: white");
+            }
+            else if (id600.getOnMouseClicked().equals(mouseEvent))
+            {
+                id600.setStyle("-fx-background-color: white");
+            }
+            else if (id601.getOnMouseClicked().equals(mouseEvent))
+            {
+                id601.setStyle("-fx-background-color: white");
+            }
+            else if (id602.getOnMouseClicked().equals(mouseEvent))
+            {
+                id602.setStyle("-fx-background-color: white");
+            }
+            else if (id603.getOnMouseClicked().equals(mouseEvent))
+            {
+                id603.setStyle("-fx-background-color: white");
+            }
+            else if (id604.getOnMouseClicked().equals(mouseEvent))
+            {
+                id604.setStyle("-fx-background-color: white");
+            }
+            else if (id605.getOnMouseClicked().equals(mouseEvent))
+            {
+                id605.setStyle("-fx-background-color: white");
+            }
+            else if (id606.getOnMouseClicked().equals(mouseEvent))
+            {
+                id606.setStyle("-fx-background-color: white");
+            }
+            else if (id607.getOnMouseClicked().equals(mouseEvent))
+            {
+                id607.setStyle("-fx-background-color: white");
+            }
+            else if (id608.getOnMouseClicked().equals(mouseEvent))
+            {
+                id608.setStyle("-fx-background-color: white");
+            }
+            else if (id609.getOnMouseClicked().equals(mouseEvent))
+            {
+                id609.setStyle("-fx-background-color: white");
+            }
+            else if (id610.getOnMouseClicked().equals(mouseEvent))
+            {
+                id610.setStyle("-fx-background-color: white");
+            }
+            else if (id611.getOnMouseClicked().equals(mouseEvent))
+            {
+                id611.setStyle("-fx-background-color: white");
+            }
+            else if (id612.getOnMouseClicked().equals(mouseEvent))
+            {
+                id612.setStyle("-fx-background-color: white");
+            }
+            else if (id613.getOnMouseClicked().equals(mouseEvent))
+            {
+                id613.setStyle("-fx-background-color: white");
+            }
+            else if (id614.getOnMouseClicked().equals(mouseEvent))
+            {
+                id614.setStyle("-fx-background-color: white");
+            }
+            else if (id615.getOnMouseClicked().equals(mouseEvent))
+            {
+                id615.setStyle("-fx-background-color: white");
+            }
+            else if (id616.getOnMouseClicked().equals(mouseEvent))
+            {
+                id616.setStyle("-fx-background-color: white");
+            }
+            else if (id617.getOnMouseClicked().equals(mouseEvent))
+            {
+                id617.setStyle("-fx-background-color: white");
+            }
+            else if (id618.getOnMouseClicked().equals(mouseEvent))
+            {
+                id618.setStyle("-fx-background-color: white");
+            }
+            else if (id619.getOnMouseClicked().equals(mouseEvent))
+            {
+                id619.setStyle("-fx-background-color: white");
+            }
+            else if (id620.getOnMouseClicked().equals(mouseEvent))
+            {
+                id620.setStyle("-fx-background-color: white");
+            }
+            else if (id621.getOnMouseClicked().equals(mouseEvent))
+            {
+                id621.setStyle("-fx-background-color: white");
+            }
+            else if (id622.getOnMouseClicked().equals(mouseEvent))
+            {
+                id622.setStyle("-fx-background-color: white");
+            }
+            else if (id623.getOnMouseClicked().equals(mouseEvent))
+            {
+                id623.setStyle("-fx-background-color: white");
+            }
+            else if (id624.getOnMouseClicked().equals(mouseEvent))
+            {
+                id624.setStyle("-fx-background-color: white");
+            }
+            else if (id625.getOnMouseClicked().equals(mouseEvent))
+            {
+                id625.setStyle("-fx-background-color: white");
+            }
+            else if (id626.getOnMouseClicked().equals(mouseEvent))
+            {
+                id626.setStyle("-fx-background-color: white");
+            }
+            else if (id627.getOnMouseClicked().equals(mouseEvent))
+            {
+                id627.setStyle("-fx-background-color: white");
+            }
+            else if (id628.getOnMouseClicked().equals(mouseEvent))
+            {
+                id628.setStyle("-fx-background-color: white");
+            }
+            else if (id629.getOnMouseClicked().equals(mouseEvent))
+            {
+                id629.setStyle("-fx-background-color: white");
+            }
+            else if (id630.getOnMouseClicked().equals(mouseEvent))
+            {
+                id630.setStyle("-fx-background-color: white");
+            }
+            else if (id631.getOnMouseClicked().equals(mouseEvent))
+            {
+                id631.setStyle("-fx-background-color: white");
+            }
+            else if (id632.getOnMouseClicked().equals(mouseEvent))
+            {
+                id632.setStyle("-fx-background-color: white");
+            }
+            else if (id633.getOnMouseClicked().equals(mouseEvent))
+            {
+                id633.setStyle("-fx-background-color: white");
+            }
+            else if (id634.getOnMouseClicked().equals(mouseEvent))
+            {
+                id634.setStyle("-fx-background-color: white");
+            }
+            else if (id635.getOnMouseClicked().equals(mouseEvent))
+            {
+                id635.setStyle("-fx-background-color: white");
+            }
+            else if (id636.getOnMouseClicked().equals(mouseEvent))
+            {
+                id636.setStyle("-fx-background-color: white");
+            }
+            else if (id637.getOnMouseClicked().equals(mouseEvent))
+            {
+                id637.setStyle("-fx-background-color: white");
+            }
+            else if (id638.getOnMouseClicked().equals(mouseEvent))
+            {
+                id638.setStyle("-fx-background-color: white");
+            }
+            else if (id639.getOnMouseClicked().equals(mouseEvent))
+            {
+                id639.setStyle("-fx-background-color: white");
+            }
+            else if (id640.getOnMouseClicked().equals(mouseEvent))
+            {
+                id640.setStyle("-fx-background-color: white");
+            }
+            else if (id641.getOnMouseClicked().equals(mouseEvent))
+            {
+                id641.setStyle("-fx-background-color: white");
+            }
+            else if (id642.getOnMouseClicked().equals(mouseEvent))
+            {
+                id642.setStyle("-fx-background-color: white");
+            }
+            else if (id643.getOnMouseClicked().equals(mouseEvent))
+            {
+                id643.setStyle("-fx-background-color: white");
+            }
+            else if (id644.getOnMouseClicked().equals(mouseEvent))
+            {
+                id644.setStyle("-fx-background-color: white");
+            }
+            else if (id645.getOnMouseClicked().equals(mouseEvent))
+            {
+                id645.setStyle("-fx-background-color: white");
+            }
+            else if (id646.getOnMouseClicked().equals(mouseEvent))
+            {
+                id646.setStyle("-fx-background-color: white");
+            }
+            else if (id647.getOnMouseClicked().equals(mouseEvent))
+            {
+                id647.setStyle("-fx-background-color: white");
+            }
+            else if (id648.getOnMouseClicked().equals(mouseEvent))
+            {
+                id648.setStyle("-fx-background-color: white");
+            }
+            else if (id649.getOnMouseClicked().equals(mouseEvent))
+            {
+                id649.setStyle("-fx-background-color: white");
+            }
+            else if (id650.getOnMouseClicked().equals(mouseEvent))
+            {
+                id650.setStyle("-fx-background-color: white");
+            }
+            else if (id651.getOnMouseClicked().equals(mouseEvent))
+            {
+                id651.setStyle("-fx-background-color: white");
+            }
+            else if (id652.getOnMouseClicked().equals(mouseEvent))
+            {
+                id652.setStyle("-fx-background-color: white");
+            }
+            else if (id653.getOnMouseClicked().equals(mouseEvent))
+            {
+                id653.setStyle("-fx-background-color: white");
+            }
+            else if (id654.getOnMouseClicked().equals(mouseEvent))
+            {
+                id654.setStyle("-fx-background-color: white");
+            }
+            else if (id655.getOnMouseClicked().equals(mouseEvent))
+            {
+                id655.setStyle("-fx-background-color: white");
+            }
+            else if (id656.getOnMouseClicked().equals(mouseEvent))
+            {
+                id656.setStyle("-fx-background-color: white");
+            }
+            else if (id657.getOnMouseClicked().equals(mouseEvent))
+            {
+                id657.setStyle("-fx-background-color: white");
+            }
+            else if (id658.getOnMouseClicked().equals(mouseEvent))
+            {
+                id658.setStyle("-fx-background-color: white");
+            }
+            else if (id659.getOnMouseClicked().equals(mouseEvent))
+            {
+                id659.setStyle("-fx-background-color: white");
+            }
+            else if (id660.getOnMouseClicked().equals(mouseEvent))
+            {
+                id660.setStyle("-fx-background-color: white");
+            }
+            else if (id661.getOnMouseClicked().equals(mouseEvent))
+            {
+                id661.setStyle("-fx-background-color: white");
+            }
+            else if (id662.getOnMouseClicked().equals(mouseEvent))
+            {
+                id662.setStyle("-fx-background-color: white");
+            }
+            else if (id663.getOnMouseClicked().equals(mouseEvent))
+            {
+                id663.setStyle("-fx-background-color: white");
+            }
+            else if (id664.getOnMouseClicked().equals(mouseEvent))
+            {
+                id664.setStyle("-fx-background-color: white");
+            }
+            else if (id665.getOnMouseClicked().equals(mouseEvent))
+            {
+                id665.setStyle("-fx-background-color: white");
+            }
+            else if (id666.getOnMouseClicked().equals(mouseEvent))
+            {
+                id666.setStyle("-fx-background-color: white");
+            }
+            else if (id667.getOnMouseClicked().equals(mouseEvent))
+            {
+                id667.setStyle("-fx-background-color: white");
+            }
+            else if (id668.getOnMouseClicked().equals(mouseEvent))
+            {
+                id668.setStyle("-fx-background-color: white");
+            }
+            else if (id669.getOnMouseClicked().equals(mouseEvent))
+            {
+                id669.setStyle("-fx-background-color: white");
+            }
+            else if (id670.getOnMouseClicked().equals(mouseEvent))
+            {
+                id670.setStyle("-fx-background-color: white");
+            }
+            else if (id671.getOnMouseClicked().equals(mouseEvent))
+            {
+                id671.setStyle("-fx-background-color: white");
+            }
+            else if (id672.getOnMouseClicked().equals(mouseEvent))
+            {
+                id672.setStyle("-fx-background-color: white");
+            }
+            else if (id673.getOnMouseClicked().equals(mouseEvent))
+            {
+                id673.setStyle("-fx-background-color: white");
+            }
+            else if (id674.getOnMouseClicked().equals(mouseEvent))
+            {
+                id674.setStyle("-fx-background-color: white");
+            }
+            else if (id675.getOnMouseClicked().equals(mouseEvent))
+            {
+                id675.setStyle("-fx-background-color: white");
+            }
+            else if (id676.getOnMouseClicked().equals(mouseEvent))
+            {
+                id676.setStyle("-fx-background-color: white");
+            }
+            else if (id677.getOnMouseClicked().equals(mouseEvent))
+            {
+                id677.setStyle("-fx-background-color: white");
+            }
+            else if (id678.getOnMouseClicked().equals(mouseEvent))
+            {
+                id678.setStyle("-fx-background-color: white");
+            }
+            else if (id679.getOnMouseClicked().equals(mouseEvent))
+            {
+                id679.setStyle("-fx-background-color: white");
+            }
+            else if (id680.getOnMouseClicked().equals(mouseEvent))
+            {
+                id680.setStyle("-fx-background-color: white");
+            }
+            else if (id681.getOnMouseClicked().equals(mouseEvent))
+            {
+                id681.setStyle("-fx-background-color: white");
+            }
+            else if (id682.getOnMouseClicked().equals(mouseEvent))
+            {
+                id682.setStyle("-fx-background-color: white");
+            }
+            else if (id683.getOnMouseClicked().equals(mouseEvent))
+            {
+                id683.setStyle("-fx-background-color: white");
+            }
+            else if (id684.getOnMouseClicked().equals(mouseEvent))
+            {
+                id684.setStyle("-fx-background-color: white");
+            }
+            else if (id685.getOnMouseClicked().equals(mouseEvent))
+            {
+                id685.setStyle("-fx-background-color: white");
+            }
+            else if (id686.getOnMouseClicked().equals(mouseEvent))
+            {
+                id686.setStyle("-fx-background-color: white");
+            }
+            else if (id687.getOnMouseClicked().equals(mouseEvent))
+            {
+                id687.setStyle("-fx-background-color: white");
+            }
+            else if (id688.getOnMouseClicked().equals(mouseEvent))
+            {
+                id688.setStyle("-fx-background-color: white");
+            }
+            else if (id689.getOnMouseClicked().equals(mouseEvent))
+            {
+                id689.setStyle("-fx-background-color: white");
+            }
+            else if (id690.getOnMouseClicked().equals(mouseEvent))
+            {
+                id690.setStyle("-fx-background-color: white");
+            }
+            else if (id691.getOnMouseClicked().equals(mouseEvent))
+            {
+                id691.setStyle("-fx-background-color: white");
+            }
+            else if (id692.getOnMouseClicked().equals(mouseEvent))
+            {
+                id692.setStyle("-fx-background-color: white");
+            }
+            else if (id693.getOnMouseClicked().equals(mouseEvent))
+            {
+                id693.setStyle("-fx-background-color: white");
+            }
+            else if (id694.getOnMouseClicked().equals(mouseEvent))
+            {
+                id694.setStyle("-fx-background-color: white");
+            }
+            else if (id695.getOnMouseClicked().equals(mouseEvent))
+            {
+                id695.setStyle("-fx-background-color: white");
+            }
+            else if (id696.getOnMouseClicked().equals(mouseEvent))
+            {
+                id696.setStyle("-fx-background-color: white");
+            }
+            else if (id697.getOnMouseClicked().equals(mouseEvent))
+            {
+                id697.setStyle("-fx-background-color: white");
+            }
+            else if (id698.getOnMouseClicked().equals(mouseEvent))
+            {
+                id698.setStyle("-fx-background-color: white");
+            }
+            else if (id699.getOnMouseClicked().equals(mouseEvent))
+            {
+                id699.setStyle("-fx-background-color: white");
+            }
+            else if (id700.getOnMouseClicked().equals(mouseEvent))
+            {
+                id700.setStyle("-fx-background-color: white");
+            }
+            else if (id701.getOnMouseClicked().equals(mouseEvent))
+            {
+                id701.setStyle("-fx-background-color: white");
+            }
+            else if (id702.getOnMouseClicked().equals(mouseEvent))
+            {
+                id702.setStyle("-fx-background-color: white");
+            }
+            else if (id703.getOnMouseClicked().equals(mouseEvent))
+            {
+                id703.setStyle("-fx-background-color: white");
+            }
+            else if (id704.getOnMouseClicked().equals(mouseEvent))
+            {
+                id704.setStyle("-fx-background-color: white");
+            }
+            else if (id705.getOnMouseClicked().equals(mouseEvent))
+            {
+                id705.setStyle("-fx-background-color: white");
+            }
+            else if (id706.getOnMouseClicked().equals(mouseEvent))
+            {
+                id706.setStyle("-fx-background-color: white");
+            }
+            else if (id707.getOnMouseClicked().equals(mouseEvent))
+            {
+                id707.setStyle("-fx-background-color: white");
+            }
+            else if (id708.getOnMouseClicked().equals(mouseEvent))
+            {
+                id708.setStyle("-fx-background-color: white");
+            }
+            else if (id709.getOnMouseClicked().equals(mouseEvent))
+            {
+                id709.setStyle("-fx-background-color: white");
+            }
+            else if (id710.getOnMouseClicked().equals(mouseEvent))
+            {
+                id710.setStyle("-fx-background-color: white");
+            }
+            else if (id711.getOnMouseClicked().equals(mouseEvent))
+            {
+                id711.setStyle("-fx-background-color: white");
+            }
+            else if (id712.getOnMouseClicked().equals(mouseEvent))
+            {
+                id712.setStyle("-fx-background-color: white");
+            }
+            else if (id713.getOnMouseClicked().equals(mouseEvent))
+            {
+                id713.setStyle("-fx-background-color: white");
+            }
+            else if (id714.getOnMouseClicked().equals(mouseEvent))
+            {
+                id714.setStyle("-fx-background-color: white");
+            }
+            else if (id715.getOnMouseClicked().equals(mouseEvent))
+            {
+                id715.setStyle("-fx-background-color: white");
+            }
+            else if (id716.getOnMouseClicked().equals(mouseEvent))
+            {
+                id716.setStyle("-fx-background-color: white");
+            }
+            else if (id717.getOnMouseClicked().equals(mouseEvent))
+            {
+                id717.setStyle("-fx-background-color: white");
+            }
+            else if (id718.getOnMouseClicked().equals(mouseEvent))
+            {
+                id718.setStyle("-fx-background-color: white");
+            }
+            else if (id719.getOnMouseClicked().equals(mouseEvent))
+            {
+                id719.setStyle("-fx-background-color: white");
+            }
+            else if (id720.getOnMouseClicked().equals(mouseEvent))
+            {
+                id720.setStyle("-fx-background-color: white");
+            }
+            else if (id721.getOnMouseClicked().equals(mouseEvent))
+            {
+                id721.setStyle("-fx-background-color: white");
+            }
+            else if (id722.getOnMouseClicked().equals(mouseEvent))
+            {
+                id722.setStyle("-fx-background-color: white");
+            }
+            else if (id723.getOnMouseClicked().equals(mouseEvent))
+            {
+                id723.setStyle("-fx-background-color: white");
+            }
+            else if (id724.getOnMouseClicked().equals(mouseEvent))
+            {
+                id724.setStyle("-fx-background-color: white");
+            }
+            else if (id725.getOnMouseClicked().equals(mouseEvent))
+            {
+                id725.setStyle("-fx-background-color: white");
+            }
+            else if (id726.getOnMouseClicked().equals(mouseEvent))
+            {
+                id726.setStyle("-fx-background-color: white");
+            }
+            else if (id727.getOnMouseClicked().equals(mouseEvent))
+            {
+                id727.setStyle("-fx-background-color: white");
+            }
+            else if (id728.getOnMouseClicked().equals(mouseEvent))
+            {
+                id728.setStyle("-fx-background-color: white");
+            }
+            else if (id729.getOnMouseClicked().equals(mouseEvent))
+            {
+                id729.setStyle("-fx-background-color: white");
+            }
+            else if (id730.getOnMouseClicked().equals(mouseEvent))
+            {
+                id730.setStyle("-fx-background-color: white");
+            }
+            else if (id731.getOnMouseClicked().equals(mouseEvent))
+            {
+                id731.setStyle("-fx-background-color: white");
+            }
+            else if (id732.getOnMouseClicked().equals(mouseEvent))
+            {
+                id732.setStyle("-fx-background-color: white");
+            }
+            else if (id733.getOnMouseClicked().equals(mouseEvent))
+            {
+                id733.setStyle("-fx-background-color: white");
+            }
+            else if (id734.getOnMouseClicked().equals(mouseEvent))
+            {
+                id734.setStyle("-fx-background-color: white");
+            }
+            else if (id735.getOnMouseClicked().equals(mouseEvent))
+            {
+                id735.setStyle("-fx-background-color: white");
+            }
+            else if (id736.getOnMouseClicked().equals(mouseEvent))
+            {
+                id736.setStyle("-fx-background-color: white");
+            }
+            else if (id737.getOnMouseClicked().equals(mouseEvent))
+            {
+                id737.setStyle("-fx-background-color: white");
+            }
+            else if (id738.getOnMouseClicked().equals(mouseEvent))
+            {
+                id738.setStyle("-fx-background-color: white");
+            }
+            else if (id739.getOnMouseClicked().equals(mouseEvent))
+            {
+                id739.setStyle("-fx-background-color: white");
+            }
+            else if (id740.getOnMouseClicked().equals(mouseEvent))
+            {
+                id740.setStyle("-fx-background-color: white");
+            }
+            else if (id741.getOnMouseClicked().equals(mouseEvent))
+            {
+                id741.setStyle("-fx-background-color: white");
+            }
+            else if (id742.getOnMouseClicked().equals(mouseEvent))
+            {
+                id742.setStyle("-fx-background-color: white");
+            }
+            else if (id743.getOnMouseClicked().equals(mouseEvent))
+            {
+                id743.setStyle("-fx-background-color: white");
+            }
+            else if (id744.getOnMouseClicked().equals(mouseEvent))
+            {
+                id744.setStyle("-fx-background-color: white");
+            }
+            else if (id745.getOnMouseClicked().equals(mouseEvent))
+            {
+                id745.setStyle("-fx-background-color: white");
+            }
+            else if (id746.getOnMouseClicked().equals(mouseEvent))
+            {
+                id746.setStyle("-fx-background-color: white");
+            }
+            else if (id747.getOnMouseClicked().equals(mouseEvent))
+            {
+                id747.setStyle("-fx-background-color: white");
+            }
+            else if (id748.getOnMouseClicked().equals(mouseEvent))
+            {
+                id748.setStyle("-fx-background-color: white");
+            }
+            else if (id749.getOnMouseClicked().equals(mouseEvent))
+            {
+                id749.setStyle("-fx-background-color: white");
+            }
+            else if (id750.getOnMouseClicked().equals(mouseEvent))
+            {
+                id750.setStyle("-fx-background-color: white");
+            }
+            else if (id751.getOnMouseClicked().equals(mouseEvent))
+            {
+                id751.setStyle("-fx-background-color: white");
+            }
+            else if (id752.getOnMouseClicked().equals(mouseEvent))
+            {
+                id752.setStyle("-fx-background-color: white");
+            }
+            else if (id753.getOnMouseClicked().equals(mouseEvent))
+            {
+                id753.setStyle("-fx-background-color: white");
+            }
+            else if (id754.getOnMouseClicked().equals(mouseEvent))
+            {
+                id754.setStyle("-fx-background-color: white");
+            }
+            else if (id755.getOnMouseClicked().equals(mouseEvent))
+            {
+                id755.setStyle("-fx-background-color: white");
+            }
+            else if (id756.getOnMouseClicked().equals(mouseEvent))
+            {
+                id756.setStyle("-fx-background-color: white");
+            }
+            else if (id757.getOnMouseClicked().equals(mouseEvent))
+            {
+                id757.setStyle("-fx-background-color: white");
+            }
+            else if (id758.getOnMouseClicked().equals(mouseEvent))
+            {
+                id758.setStyle("-fx-background-color: white");
+            }
+            else if (id759.getOnMouseClicked().equals(mouseEvent))
+            {
+                id759.setStyle("-fx-background-color: white");
+            }
+            else if (id760.getOnMouseClicked().equals(mouseEvent))
+            {
+                id760.setStyle("-fx-background-color: white");
+            }
+            else if (id761.getOnMouseClicked().equals(mouseEvent))
+            {
+                id761.setStyle("-fx-background-color: white");
+            }
+            else if (id762.getOnMouseClicked().equals(mouseEvent))
+            {
+                id762.setStyle("-fx-background-color: white");
+            }
+            else if (id763.getOnMouseClicked().equals(mouseEvent))
+            {
+                id763.setStyle("-fx-background-color: white");
+            }
+            else if (id764.getOnMouseClicked().equals(mouseEvent))
+            {
+                id764.setStyle("-fx-background-color: white");
+            }
+            else if (id765.getOnMouseClicked().equals(mouseEvent))
+            {
+                id765.setStyle("-fx-background-color: white");
+            }
+            else if (id766.getOnMouseClicked().equals(mouseEvent))
+            {
+                id766.setStyle("-fx-background-color: white");
+            }
+            else if (id767.getOnMouseClicked().equals(mouseEvent))
+            {
+                id767.setStyle("-fx-background-color: white");
+            }
+            else if (id768.getOnMouseClicked().equals(mouseEvent))
+            {
+                id768.setStyle("-fx-background-color: white");
+            }
+            else if (id769.getOnMouseClicked().equals(mouseEvent))
+            {
+                id769.setStyle("-fx-background-color: white");
+            }
+            else if (id770.getOnMouseClicked().equals(mouseEvent))
+            {
+                id770.setStyle("-fx-background-color: white");
+            }
+            else if (id771.getOnMouseClicked().equals(mouseEvent))
+            {
+                id771.setStyle("-fx-background-color: white");
+            }
+            else if (id772.getOnMouseClicked().equals(mouseEvent))
+            {
+                id772.setStyle("-fx-background-color: white");
+            }
+            else if (id773.getOnMouseClicked().equals(mouseEvent))
+            {
+                id773.setStyle("-fx-background-color: white");
+            }
+            else if (id774.getOnMouseClicked().equals(mouseEvent))
+            {
+                id774.setStyle("-fx-background-color: white");
+            }
+            else if (id775.getOnMouseClicked().equals(mouseEvent))
+            {
+                id775.setStyle("-fx-background-color: white");
+            }
+            else if (id776.getOnMouseClicked().equals(mouseEvent))
+            {
+                id776.setStyle("-fx-background-color: white");
+            }
+            else if (id777.getOnMouseClicked().equals(mouseEvent))
+            {
+                id777.setStyle("-fx-background-color: white");
+            }
+            else if (id778.getOnMouseClicked().equals(mouseEvent))
+            {
+                id778.setStyle("-fx-background-color: white");
+            }
+            else if (id779.getOnMouseClicked().equals(mouseEvent))
+            {
+                id779.setStyle("-fx-background-color: white");
+            }
+            else if (id780.getOnMouseClicked().equals(mouseEvent))
+            {
+                id780.setStyle("-fx-background-color: white");
+            }
+            else if (id781.getOnMouseClicked().equals(mouseEvent))
+            {
+                id781.setStyle("-fx-background-color: white");
+            }
+            else if (id782.getOnMouseClicked().equals(mouseEvent))
+            {
+                id782.setStyle("-fx-background-color: white");
+            }
+            else if (id783.getOnMouseClicked().equals(mouseEvent))
+            {
+                id783.setStyle("-fx-background-color: white");
+            }
+            else if (id784.getOnMouseClicked().equals(mouseEvent))
+            {
+                id784.setStyle("-fx-background-color: white");
+            }
+            else if (id785.getOnMouseClicked().equals(mouseEvent))
+            {
+                id785.setStyle("-fx-background-color: white");
+            }
+            else if (id786.getOnMouseClicked().equals(mouseEvent))
+            {
+                id786.setStyle("-fx-background-color: white");
+            }
+            else if (id787.getOnMouseClicked().equals(mouseEvent))
+            {
+                id787.setStyle("-fx-background-color: white");
+            }
+            else if (id788.getOnMouseClicked().equals(mouseEvent))
+            {
+                id788.setStyle("-fx-background-color: white");
+            }
+            else if (id789.getOnMouseClicked().equals(mouseEvent))
+            {
+                id789.setStyle("-fx-background-color: white");
+            }
+            else if (id790.getOnMouseClicked().equals(mouseEvent))
+            {
+                id790.setStyle("-fx-background-color: white");
+            }
+            else if (id791.getOnMouseClicked().equals(mouseEvent))
+            {
+                id791.setStyle("-fx-background-color: white");
+            }
+            else if (id792.getOnMouseClicked().equals(mouseEvent))
+            {
+                id792.setStyle("-fx-background-color: white");
+            }
+            else if (id793.getOnMouseClicked().equals(mouseEvent))
+            {
+                id793.setStyle("-fx-background-color: white");
+            }
+            else if (id794.getOnMouseClicked().equals(mouseEvent))
+            {
+                id794.setStyle("-fx-background-color: white");
+            }
+            else if (id795.getOnMouseClicked().equals(mouseEvent))
+            {
+                id795.setStyle("-fx-background-color: white");
+            }
+            else if (id796.getOnMouseClicked().equals(mouseEvent))
+            {
+                id796.setStyle("-fx-background-color: white");
+            }
+            else if (id797.getOnMouseClicked().equals(mouseEvent))
+            {
+                id797.setStyle("-fx-background-color: white");
+            }
+            else if (id798.getOnMouseClicked().equals(mouseEvent))
+            {
+                id798.setStyle("-fx-background-color: white");
+            }
+            else if (id799.getOnMouseClicked().equals(mouseEvent))
+            {
+                id799.setStyle("-fx-background-color: white");
+            }
+            else if (id800.getOnMouseClicked().equals(mouseEvent))
+            {
+                id800.setStyle("-fx-background-color: white");
+            }
+            else if (id801.getOnMouseClicked().equals(mouseEvent))
+            {
+                id801.setStyle("-fx-background-color: white");
+            }
+            else if (id802.getOnMouseClicked().equals(mouseEvent))
+            {
+                id802.setStyle("-fx-background-color: white");
+            }
+            else if (id803.getOnMouseClicked().equals(mouseEvent))
+            {
+                id803.setStyle("-fx-background-color: white");
+            }
+            else if (id804.getOnMouseClicked().equals(mouseEvent))
+            {
+                id804.setStyle("-fx-background-color: white");
+            }
+            else if (id805.getOnMouseClicked().equals(mouseEvent))
+            {
+                id805.setStyle("-fx-background-color: white");
+            }
+            else if (id806.getOnMouseClicked().equals(mouseEvent))
+            {
+                id806.setStyle("-fx-background-color: white");
+            }
+            else if (id807.getOnMouseClicked().equals(mouseEvent))
+            {
+                id807.setStyle("-fx-background-color: white");
+            }
+            else if (id808.getOnMouseClicked().equals(mouseEvent))
+            {
+                id808.setStyle("-fx-background-color: white");
+            }
+            else if (id809.getOnMouseClicked().equals(mouseEvent))
+            {
+                id809.setStyle("-fx-background-color: white");
+            }
+            else if (id810.getOnMouseClicked().equals(mouseEvent))
+            {
+                id810.setStyle("-fx-background-color: white");
+            }
+            else if (id811.getOnMouseClicked().equals(mouseEvent))
+            {
+                id811.setStyle("-fx-background-color: white");
+            }
+            else if (id812.getOnMouseClicked().equals(mouseEvent))
+            {
+                id812.setStyle("-fx-background-color: white");
+            }
+            else if (id813.getOnMouseClicked().equals(mouseEvent))
+            {
+                id813.setStyle("-fx-background-color: white");
+            }
+            else if (id814.getOnMouseClicked().equals(mouseEvent))
+            {
+                id814.setStyle("-fx-background-color: white");
+            }
+            else if (id815.getOnMouseClicked().equals(mouseEvent))
+            {
+                id815.setStyle("-fx-background-color: white");
+            }
+            else if (id816.getOnMouseClicked().equals(mouseEvent))
+            {
+                id816.setStyle("-fx-background-color: white");
+            }
+            else if (id817.getOnMouseClicked().equals(mouseEvent))
+            {
+                id817.setStyle("-fx-background-color: white");
+            }
+            else if (id818.getOnMouseClicked().equals(mouseEvent))
+            {
+                id818.setStyle("-fx-background-color: white");
+            }
+            else if (id819.getOnMouseClicked().equals(mouseEvent))
+            {
+                id819.setStyle("-fx-background-color: white");
+            }
+            else if (id820.getOnMouseClicked().equals(mouseEvent))
+            {
+                id820.setStyle("-fx-background-color: white");
+            }
+            else if (id821.getOnMouseClicked().equals(mouseEvent))
+            {
+                id821.setStyle("-fx-background-color: white");
+            }
+            else if (id822.getOnMouseClicked().equals(mouseEvent))
+            {
+                id822.setStyle("-fx-background-color: white");
+            }
+            else if (id823.getOnMouseClicked().equals(mouseEvent))
+            {
+                id823.setStyle("-fx-background-color: white");
+            }
+            else if (id824.getOnMouseClicked().equals(mouseEvent))
+            {
+                id824.setStyle("-fx-background-color: white");
+            }
+            else if (id825.getOnMouseClicked().equals(mouseEvent))
+            {
+                id825.setStyle("-fx-background-color: white");
+            }
+            else if (id826.getOnMouseClicked().equals(mouseEvent))
+            {
+                id826.setStyle("-fx-background-color: white");
+            }
+            else if (id827.getOnMouseClicked().equals(mouseEvent))
+            {
+                id827.setStyle("-fx-background-color: white");
+            }
+            else if (id828.getOnMouseClicked().equals(mouseEvent))
+            {
+                id828.setStyle("-fx-background-color: white");
+            }
+            else if (id829.getOnMouseClicked().equals(mouseEvent))
+            {
+                id829.setStyle("-fx-background-color: white");
+            }
+            else if (id830.getOnMouseClicked().equals(mouseEvent))
+            {
+                id830.setStyle("-fx-background-color: white");
+            }
+            else if (id831.getOnMouseClicked().equals(mouseEvent))
+            {
+                id831.setStyle("-fx-background-color: white");
+            }
+            else if (id832.getOnMouseClicked().equals(mouseEvent))
+            {
+                id832.setStyle("-fx-background-color: white");
+            }
+            else if (id833.getOnMouseClicked().equals(mouseEvent))
+            {
+                id833.setStyle("-fx-background-color: white");
+            }
+            else if (id834.getOnMouseClicked().equals(mouseEvent))
+            {
+                id834.setStyle("-fx-background-color: white");
+            }
+            else if (id835.getOnMouseClicked().equals(mouseEvent))
+            {
+                id835.setStyle("-fx-background-color: white");
+            }
+            else if (id836.getOnMouseClicked().equals(mouseEvent))
+            {
+                id836.setStyle("-fx-background-color: white");
+            }
+            else if (id837.getOnMouseClicked().equals(mouseEvent))
+            {
+                id837.setStyle("-fx-background-color: white");
+            }
+            else if (id838.getOnMouseClicked().equals(mouseEvent))
+            {
+                id838.setStyle("-fx-background-color: white");
+            }
+            else if (id839.getOnMouseClicked().equals(mouseEvent))
+            {
+                id839.setStyle("-fx-background-color: white");
+            }
+            else if (id840.getOnMouseClicked().equals(mouseEvent))
+            {
+                id840.setStyle("-fx-background-color: white");
+            }
+            else if (id841.getOnMouseClicked().equals(mouseEvent))
+            {
+                id841.setStyle("-fx-background-color: white");
+            }
+            else if (id842.getOnMouseClicked().equals(mouseEvent))
+            {
+                id842.setStyle("-fx-background-color: white");
+            }
+            else if (id843.getOnMouseClicked().equals(mouseEvent))
+            {
+                id843.setStyle("-fx-background-color: white");
+            }
+            else if (id844.getOnMouseClicked().equals(mouseEvent))
+            {
+                id844.setStyle("-fx-background-color: white");
+            }
+            else if (id845.getOnMouseClicked().equals(mouseEvent))
+            {
+                id845.setStyle("-fx-background-color: white");
+            }
+            else if (id846.getOnMouseClicked().equals(mouseEvent))
+            {
+                id846.setStyle("-fx-background-color: white");
+            }
+            else if (id847.getOnMouseClicked().equals(mouseEvent))
+            {
+                id847.setStyle("-fx-background-color: white");
+            }
+            else if (id848.getOnMouseClicked().equals(mouseEvent))
+            {
+                id848.setStyle("-fx-background-color: white");
+            }
+            else if (id849.getOnMouseClicked().equals(mouseEvent))
+            {
+                id849.setStyle("-fx-background-color: white");
+            }
+            else if (id850.getOnMouseClicked().equals(mouseEvent))
+            {
+                id850.setStyle("-fx-background-color: white");
+            }
+            else if (id851.getOnMouseClicked().equals(mouseEvent))
+            {
+                id851.setStyle("-fx-background-color: white");
+            }
+            else if (id852.getOnMouseClicked().equals(mouseEvent))
+            {
+                id852.setStyle("-fx-background-color: white");
+            }
+            else if (id853.getOnMouseClicked().equals(mouseEvent))
+            {
+                id853.setStyle("-fx-background-color: white");
+            }
+            else if (id854.getOnMouseClicked().equals(mouseEvent))
+            {
+                id854.setStyle("-fx-background-color: white");
+            }
+            else if (id855.getOnMouseClicked().equals(mouseEvent))
+            {
+                id855.setStyle("-fx-background-color: white");
+            }
+            else if (id856.getOnMouseClicked().equals(mouseEvent))
+            {
+                id856.setStyle("-fx-background-color: white");
+            }
+            else if (id857.getOnMouseClicked().equals(mouseEvent))
+            {
+                id857.setStyle("-fx-background-color: white");
+            }
+            else if (id858.getOnMouseClicked().equals(mouseEvent))
+            {
+                id858.setStyle("-fx-background-color: white");
+            }
+            else if (id859.getOnMouseClicked().equals(mouseEvent))
+            {
+                id859.setStyle("-fx-background-color: white");
+            }
+            else if (id860.getOnMouseClicked().equals(mouseEvent))
+            {
+                id860.setStyle("-fx-background-color: white");
+            }
+            else if (id861.getOnMouseClicked().equals(mouseEvent))
+            {
+                id861.setStyle("-fx-background-color: white");
+            }
+            else if (id862.getOnMouseClicked().equals(mouseEvent))
+            {
+                id862.setStyle("-fx-background-color: white");
+            }
+            else if (id863.getOnMouseClicked().equals(mouseEvent))
+            {
+                id863.setStyle("-fx-background-color: white");
+            }
+            else if (id864.getOnMouseClicked().equals(mouseEvent))
+            {
+                id864.setStyle("-fx-background-color: white");
+            }
+            else if (id865.getOnMouseClicked().equals(mouseEvent))
+            {
+                id865.setStyle("-fx-background-color: white");
+            }
+            else if (id866.getOnMouseClicked().equals(mouseEvent))
+            {
+                id866.setStyle("-fx-background-color: white");
+            }
+            else if (id867.getOnMouseClicked().equals(mouseEvent))
+            {
+                id867.setStyle("-fx-background-color: white");
+            }
+            else if (id868.getOnMouseClicked().equals(mouseEvent))
+            {
+                id868.setStyle("-fx-background-color: white");
+            }
+            else if (id869.getOnMouseClicked().equals(mouseEvent))
+            {
+                id869.setStyle("-fx-background-color: white");
+            }
+            else if (id870.getOnMouseClicked().equals(mouseEvent))
+            {
+                id870.setStyle("-fx-background-color: white");
+            }
+            else if (id871.getOnMouseClicked().equals(mouseEvent))
+            {
+                id871.setStyle("-fx-background-color: white");
+            }
+            else if (id872.getOnMouseClicked().equals(mouseEvent))
+            {
+                id872.setStyle("-fx-background-color: white");
+            }
+            else if (id873.getOnMouseClicked().equals(mouseEvent))
+            {
+                id873.setStyle("-fx-background-color: white");
+            }
+            else if (id874.getOnMouseClicked().equals(mouseEvent))
+            {
+                id874.setStyle("-fx-background-color: white");
+            }
+            else if (id875.getOnMouseClicked().equals(mouseEvent))
+            {
+                id875.setStyle("-fx-background-color: white");
+            }
+            else if (id876.getOnMouseClicked().equals(mouseEvent))
+            {
+                id876.setStyle("-fx-background-color: white");
+            }
+            else if (id877.getOnMouseClicked().equals(mouseEvent))
+            {
+                id877.setStyle("-fx-background-color: white");
+            }
+            else if (id878.getOnMouseClicked().equals(mouseEvent))
+            {
+                id878.setStyle("-fx-background-color: white");
+            }
+            else if (id879.getOnMouseClicked().equals(mouseEvent))
+            {
+                id879.setStyle("-fx-background-color: white");
+            }
+            else if (id880.getOnMouseClicked().equals(mouseEvent))
+            {
+                id880.setStyle("-fx-background-color: white");
+            }
+            else if (id881.getOnMouseClicked().equals(mouseEvent))
+            {
+                id881.setStyle("-fx-background-color: white");
+            }
+            else if (id882.getOnMouseClicked().equals(mouseEvent))
+            {
+                id882.setStyle("-fx-background-color: white");
+            }
+            else if (id883.getOnMouseClicked().equals(mouseEvent))
+            {
+                id883.setStyle("-fx-background-color: white");
+            }
+            else if (id884.getOnMouseClicked().equals(mouseEvent))
+            {
+                id884.setStyle("-fx-background-color: white");
+            }
+            else if (id885.getOnMouseClicked().equals(mouseEvent))
+            {
+                id885.setStyle("-fx-background-color: white");
+            }
+            else if (id886.getOnMouseClicked().equals(mouseEvent))
+            {
+                id886.setStyle("-fx-background-color: white");
+            }
+            else if (id887.getOnMouseClicked().equals(mouseEvent))
+            {
+                id887.setStyle("-fx-background-color: white");
+            }
+            else if (id888.getOnMouseClicked().equals(mouseEvent))
+            {
+                id888.setStyle("-fx-background-color: white");
+            }
+            else if (id889.getOnMouseClicked().equals(mouseEvent))
+            {
+                id889.setStyle("-fx-background-color: white");
+            }
+            else if (id890.getOnMouseClicked().equals(mouseEvent))
+            {
+                id890.setStyle("-fx-background-color: white");
+            }
+            else if (id891.getOnMouseClicked().equals(mouseEvent))
+            {
+                id891.setStyle("-fx-background-color: white");
+            }
+            else if (id892.getOnMouseClicked().equals(mouseEvent))
+            {
+                id892.setStyle("-fx-background-color: white");
+            }
+            else if (id893.getOnMouseClicked().equals(mouseEvent))
+            {
+                id893.setStyle("-fx-background-color: white");
+            }
+            else if (id894.getOnMouseClicked().equals(mouseEvent))
+            {
+                id894.setStyle("-fx-background-color: white");
+            }
+            else if (id895.getOnMouseClicked().equals(mouseEvent))
+            {
+                id895.setStyle("-fx-background-color: white");
+            }
+            else if (id896.getOnMouseClicked().equals(mouseEvent))
+            {
+                id896.setStyle("-fx-background-color: white");
+            }
+            else if (id897.getOnMouseClicked().equals(mouseEvent))
+            {
+                id897.setStyle("-fx-background-color: white");
+            }
+            else if (id898.getOnMouseClicked().equals(mouseEvent))
+            {
+                id898.setStyle("-fx-background-color: white");
+            }
+            else if (id899.getOnMouseClicked().equals(mouseEvent))
+            {
+                id899.setStyle("-fx-background-color: white");
+            }
+            else if (id900.getOnMouseClicked().equals(mouseEvent))
+            {
+                id900.setStyle("-fx-background-color: white");
+            }
+            else if (id901.getOnMouseClicked().equals(mouseEvent))
+            {
+                id901.setStyle("-fx-background-color: white");
+            }
+            else if (id902.getOnMouseClicked().equals(mouseEvent))
+            {
+                id902.setStyle("-fx-background-color: white");
+            }
+            else if (id903.getOnMouseClicked().equals(mouseEvent))
+            {
+                id903.setStyle("-fx-background-color: white");
+            }
+            else if (id904.getOnMouseClicked().equals(mouseEvent))
+            {
+                id904.setStyle("-fx-background-color: white");
+            }
+            else if (id905.getOnMouseClicked().equals(mouseEvent))
+            {
+                id905.setStyle("-fx-background-color: white");
+            }
+            else if (id906.getOnMouseClicked().equals(mouseEvent))
+            {
+                id906.setStyle("-fx-background-color: white");
+            }
+            else if (id907.getOnMouseClicked().equals(mouseEvent))
+            {
+                id907.setStyle("-fx-background-color: white");
+            }
+            else if (id908.getOnMouseClicked().equals(mouseEvent))
+            {
+                id908.setStyle("-fx-background-color: white");
+            }
+            else if (id909.getOnMouseClicked().equals(mouseEvent))
+            {
+                id909.setStyle("-fx-background-color: white");
+            }
+            else if (id910.getOnMouseClicked().equals(mouseEvent))
+            {
+                id910.setStyle("-fx-background-color: white");
+            }
+            else if (id911.getOnMouseClicked().equals(mouseEvent))
+            {
+                id911.setStyle("-fx-background-color: white");
+            }
+            else if (id912.getOnMouseClicked().equals(mouseEvent))
+            {
+                id912.setStyle("-fx-background-color: white");
+            }
+            else if (id913.getOnMouseClicked().equals(mouseEvent))
+            {
+                id913.setStyle("-fx-background-color: white");
+            }
+            else if (id914.getOnMouseClicked().equals(mouseEvent))
+            {
+                id914.setStyle("-fx-background-color: white");
+            }
+            else if (id915.getOnMouseClicked().equals(mouseEvent))
+            {
+                id915.setStyle("-fx-background-color: white");
+            }
+            else if (id916.getOnMouseClicked().equals(mouseEvent))
+            {
+                id916.setStyle("-fx-background-color: white");
+            }
+            else if (id917.getOnMouseClicked().equals(mouseEvent))
+            {
+                id917.setStyle("-fx-background-color: white");
+            }
+            else if (id918.getOnMouseClicked().equals(mouseEvent))
+            {
+                id918.setStyle("-fx-background-color: white");
+            }
+            else if (id919.getOnMouseClicked().equals(mouseEvent))
+            {
+                id919.setStyle("-fx-background-color: white");
+            }
+            else if (id920.getOnMouseClicked().equals(mouseEvent))
+            {
+                id920.setStyle("-fx-background-color: white");
+            }
+            else if (id921.getOnMouseClicked().equals(mouseEvent))
+            {
+                id921.setStyle("-fx-background-color: white");
+            }
+            else if (id922.getOnMouseClicked().equals(mouseEvent))
+            {
+                id922.setStyle("-fx-background-color: white");
+            }
+            else if (id923.getOnMouseClicked().equals(mouseEvent))
+            {
+                id923.setStyle("-fx-background-color: white");
+            }
+            else if (id924.getOnMouseClicked().equals(mouseEvent))
+            {
+                id924.setStyle("-fx-background-color: white");
+            }
+            else if (id925.getOnMouseClicked().equals(mouseEvent))
+            {
+                id925.setStyle("-fx-background-color: white");
+            }
+            else if (id926.getOnMouseClicked().equals(mouseEvent))
+            {
+                id926.setStyle("-fx-background-color: white");
+            }
+            else if (id927.getOnMouseClicked().equals(mouseEvent))
+            {
+                id927.setStyle("-fx-background-color: white");
+            }
+            else if (id928.getOnMouseClicked().equals(mouseEvent))
+            {
+                id928.setStyle("-fx-background-color: white");
+            }
+            else if (id929.getOnMouseClicked().equals(mouseEvent))
+            {
+                id929.setStyle("-fx-background-color: white");
+            }
+            else if (id930.getOnMouseClicked().equals(mouseEvent))
+            {
+                id930.setStyle("-fx-background-color: white");
+            }
+            else if (id931.getOnMouseClicked().equals(mouseEvent))
+            {
+                id931.setStyle("-fx-background-color: white");
+            }
+            else if (id932.getOnMouseClicked().equals(mouseEvent))
+            {
+                id932.setStyle("-fx-background-color: white");
+            }
+            else if (id933.getOnMouseClicked().equals(mouseEvent))
+            {
+                id933.setStyle("-fx-background-color: white");
+            }
+            else if (id934.getOnMouseClicked().equals(mouseEvent))
+            {
+                id934.setStyle("-fx-background-color: white");
+            }
+            else if (id935.getOnMouseClicked().equals(mouseEvent))
+            {
+                id935.setStyle("-fx-background-color: white");
+            }
+            else if (id936.getOnMouseClicked().equals(mouseEvent))
+            {
+                id936.setStyle("-fx-background-color: white");
+            }
+            else if (id937.getOnMouseClicked().equals(mouseEvent))
+            {
+                id937.setStyle("-fx-background-color: white");
+            }
+            else if (id938.getOnMouseClicked().equals(mouseEvent))
+            {
+                id938.setStyle("-fx-background-color: white");
+            }
+            else if (id939.getOnMouseClicked().equals(mouseEvent))
+            {
+                id939.setStyle("-fx-background-color: white");
+            }
+            else if (id940.getOnMouseClicked().equals(mouseEvent))
+            {
+                id940.setStyle("-fx-background-color: white");
+            }
+            else if (id941.getOnMouseClicked().equals(mouseEvent))
+            {
+                id941.setStyle("-fx-background-color: white");
+            }
+            else if (id942.getOnMouseClicked().equals(mouseEvent))
+            {
+                id942.setStyle("-fx-background-color: white");
+            }
+            else if (id943.getOnMouseClicked().equals(mouseEvent))
+            {
+                id943.setStyle("-fx-background-color: white");
+            }
+            else if (id944.getOnMouseClicked().equals(mouseEvent))
+            {
+                id944.setStyle("-fx-background-color: white");
+            }
+            else if (id945.getOnMouseClicked().equals(mouseEvent))
+            {
+                id945.setStyle("-fx-background-color: white");
+            }
+            else if (id946.getOnMouseClicked().equals(mouseEvent))
+            {
+                id946.setStyle("-fx-background-color: white");
+            }
+            else if (id947.getOnMouseClicked().equals(mouseEvent))
+            {
+                id947.setStyle("-fx-background-color: white");
+            }
+            else if (id948.getOnMouseClicked().equals(mouseEvent))
+            {
+                id948.setStyle("-fx-background-color: white");
+            }
+            else if (id949.getOnMouseClicked().equals(mouseEvent))
+            {
+                id949.setStyle("-fx-background-color: white");
+            }
+            else if (id950.getOnMouseClicked().equals(mouseEvent))
+            {
+                id950.setStyle("-fx-background-color: white");
+            }
+            else if (id951.getOnMouseClicked().equals(mouseEvent))
+            {
+                id951.setStyle("-fx-background-color: white");
+            }
+            else if (id952.getOnMouseClicked().equals(mouseEvent))
+            {
+                id952.setStyle("-fx-background-color: white");
+            }
+            else if (id953.getOnMouseClicked().equals(mouseEvent))
+            {
+                id953.setStyle("-fx-background-color: white");
+            }
+            else if (id954.getOnMouseClicked().equals(mouseEvent))
+            {
+                id954.setStyle("-fx-background-color: white");
+            }
+            else if (id955.getOnMouseClicked().equals(mouseEvent))
+            {
+                id955.setStyle("-fx-background-color: white");
+            }
+            else if (id956.getOnMouseClicked().equals(mouseEvent))
+            {
+                id956.setStyle("-fx-background-color: white");
+            }
+            else if (id957.getOnMouseClicked().equals(mouseEvent))
+            {
+                id957.setStyle("-fx-background-color: white");
+            }
+            else if (id958.getOnMouseClicked().equals(mouseEvent))
+            {
+                id958.setStyle("-fx-background-color: white");
+            }
+            else if (id959.getOnMouseClicked().equals(mouseEvent))
+            {
+                id959.setStyle("-fx-background-color: white");
+            }
+            else if (id960.getOnMouseClicked().equals(mouseEvent))
+            {
+                id960.setStyle("-fx-background-color: white");
+            }
+            else if (id961.getOnMouseClicked().equals(mouseEvent))
+            {
+                id961.setStyle("-fx-background-color: white");
+            }
+            else if (id962.getOnMouseClicked().equals(mouseEvent))
+            {
+                id962.setStyle("-fx-background-color: white");
+            }
+            else if (id963.getOnMouseClicked().equals(mouseEvent))
+            {
+                id963.setStyle("-fx-background-color: white");
+            }
+            else if (id964.getOnMouseClicked().equals(mouseEvent))
+            {
+                id964.setStyle("-fx-background-color: white");
+            }
+            else if (id965.getOnMouseClicked().equals(mouseEvent))
+            {
+                id965.setStyle("-fx-background-color: white");
+            }
+            else if (id966.getOnMouseClicked().equals(mouseEvent))
+            {
+                id966.setStyle("-fx-background-color: white");
+            }
+            else if (id967.getOnMouseClicked().equals(mouseEvent))
+            {
+                id967.setStyle("-fx-background-color: white");
+            }
+            else if (id968.getOnMouseClicked().equals(mouseEvent))
+            {
+                id968.setStyle("-fx-background-color: white");
+            }
+            else if (id969.getOnMouseClicked().equals(mouseEvent))
+            {
+                id969.setStyle("-fx-background-color: white");
+            }
+            else if (id970.getOnMouseClicked().equals(mouseEvent))
+            {
+                id970.setStyle("-fx-background-color: white");
+            }
+            else if (id971.getOnMouseClicked().equals(mouseEvent))
+            {
+                id971.setStyle("-fx-background-color: white");
+            }
+            else if (id972.getOnMouseClicked().equals(mouseEvent))
+            {
+                id972.setStyle("-fx-background-color: white");
+            }
+            else if (id973.getOnMouseClicked().equals(mouseEvent))
+            {
+                id973.setStyle("-fx-background-color: white");
+            }
+            else if (id974.getOnMouseClicked().equals(mouseEvent))
+            {
+                id974.setStyle("-fx-background-color: white");
+            }
+            else if (id975.getOnMouseClicked().equals(mouseEvent))
+            {
+                id975.setStyle("-fx-background-color: white");
+            }
+            else if (id976.getOnMouseClicked().equals(mouseEvent))
+            {
+                id976.setStyle("-fx-background-color: white");
+            }
+            else if (id977.getOnMouseClicked().equals(mouseEvent))
+            {
+                id977.setStyle("-fx-background-color: white");
+            }
+            else if (id978.getOnMouseClicked().equals(mouseEvent))
+            {
+                id978.setStyle("-fx-background-color: white");
+            }
+            else if (id979.getOnMouseClicked().equals(mouseEvent))
+            {
+                id979.setStyle("-fx-background-color: white");
+            }
+            else if (id980.getOnMouseClicked().equals(mouseEvent))
+            {
+                id980.setStyle("-fx-background-color: white");
+            }
+            else if (id981.getOnMouseClicked().equals(mouseEvent))
+            {
+                id981.setStyle("-fx-background-color: white");
+            }
+            else if (id982.getOnMouseClicked().equals(mouseEvent))
+            {
+                id982.setStyle("-fx-background-color: white");
+            }
+            else if (id983.getOnMouseClicked().equals(mouseEvent))
+            {
+                id983.setStyle("-fx-background-color: white");
+            }
+            else if (id984.getOnMouseClicked().equals(mouseEvent))
+            {
+                id984.setStyle("-fx-background-color: white");
+            }
+            else if (id985.getOnMouseClicked().equals(mouseEvent))
+            {
+                id985.setStyle("-fx-background-color: white");
+            }
+            else if (id986.getOnMouseClicked().equals(mouseEvent))
+            {
+                id986.setStyle("-fx-background-color: white");
+            }
+            else if (id987.getOnMouseClicked().equals(mouseEvent))
+            {
+                id987.setStyle("-fx-background-color: white");
+            }
+            else if (id988.getOnMouseClicked().equals(mouseEvent))
+            {
+                id988.setStyle("-fx-background-color: white");
+            }
+            else if (id989.getOnMouseClicked().equals(mouseEvent))
+            {
+                id989.setStyle("-fx-background-color: white");
+            }
+            else if (id990.getOnMouseClicked().equals(mouseEvent))
+            {
+                id990.setStyle("-fx-background-color: white");
+            }
+            else if (id991.getOnMouseClicked().equals(mouseEvent))
+            {
+                id991.setStyle("-fx-background-color: white");
+            }
+            else if (id992.getOnMouseClicked().equals(mouseEvent))
+            {
+                id992.setStyle("-fx-background-color: white");
+            }
+            else if (id993.getOnMouseClicked().equals(mouseEvent))
+            {
+                id993.setStyle("-fx-background-color: white");
+            }
+            else if (id994.getOnMouseClicked().equals(mouseEvent))
+            {
+                id994.setStyle("-fx-background-color: white");
+            }
+            else if (id995.getOnMouseClicked().equals(mouseEvent))
+            {
+                id995.setStyle("-fx-background-color: white");
+            }
+            else if (id996.getOnMouseClicked().equals(mouseEvent))
+            {
+                id996.setStyle("-fx-background-color: white");
+            }
+            else if (id997.getOnMouseClicked().equals(mouseEvent))
+            {
+                id997.setStyle("-fx-background-color: white");
+            }
+            else if (id998.getOnMouseClicked().equals(mouseEvent))
+            {
+                id998.setStyle("-fx-background-color: white");
+            }
+            else if (id999.getOnMouseClicked().equals(mouseEvent))
+            {
+                id999.setStyle("-fx-background-color: white");
+            }
+            else if (id1000.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1000.setStyle("-fx-background-color: white");
+            }
+            else if (id1001.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1001.setStyle("-fx-background-color: white");
+            }
+            else if (id1002.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1002.setStyle("-fx-background-color: white");
+            }
+            else if (id1003.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1003.setStyle("-fx-background-color: white");
+            }
+            else if (id1004.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1004.setStyle("-fx-background-color: white");
+            }
+            else if (id1005.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1005.setStyle("-fx-background-color: white");
+            }
+            else if (id1006.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1006.setStyle("-fx-background-color: white");
+            }
+            else if (id1007.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1007.setStyle("-fx-background-color: white");
+            }
+            else if (id1008.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1008.setStyle("-fx-background-color: white");
+            }
+            else if (id1009.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1009.setStyle("-fx-background-color: white");
+            }
+            else if (id1010.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1010.setStyle("-fx-background-color: white");
+            }
+            else if (id1011.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1011.setStyle("-fx-background-color: white");
+            }
+            else if (id1012.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1012.setStyle("-fx-background-color: white");
+            }
+            else if (id1013.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1013.setStyle("-fx-background-color: white");
+            }
+            else if (id1014.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1014.setStyle("-fx-background-color: white");
+            }
+            else if (id1015.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1015.setStyle("-fx-background-color: white");
+            }
+            else if (id1016.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1016.setStyle("-fx-background-color: white");
+            }
+            else if (id1017.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1017.setStyle("-fx-background-color: white");
+            }
+            else if (id1018.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1018.setStyle("-fx-background-color: white");
+            }
+            else if (id1019.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1019.setStyle("-fx-background-color: white");
+            }
+            else if (id1020.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1020.setStyle("-fx-background-color: white");
+            }
+            else if (id1021.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1021.setStyle("-fx-background-color: white");
+            }
+            else if (id1022.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1022.setStyle("-fx-background-color: white");
+            }
+            else if (id1023.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1023.setStyle("-fx-background-color: white");
+            }
+            else if (id1024.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1024.setStyle("-fx-background-color: white");
+            }
+            else if (id1025.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1025.setStyle("-fx-background-color: white");
+            }
+            else if (id1026.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1026.setStyle("-fx-background-color: white");
+            }
+            else if (id1027.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1027.setStyle("-fx-background-color: white");
+            }
+            else if (id1028.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1028.setStyle("-fx-background-color: white");
+            }
+            else if (id1029.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1029.setStyle("-fx-background-color: white");
+            }
+            else if (id1030.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1030.setStyle("-fx-background-color: white");
+            }
+            else if (id1031.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1031.setStyle("-fx-background-color: white");
+            }
+            else if (id1032.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1032.setStyle("-fx-background-color: white");
+            }
+            else if (id1033.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1033.setStyle("-fx-background-color: white");
+            }
+            else if (id1034.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1034.setStyle("-fx-background-color: white");
+            }
+            else if (id1035.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1035.setStyle("-fx-background-color: white");
+            }
+            else if (id1036.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1036.setStyle("-fx-background-color: white");
+            }
+            else if (id1037.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1037.setStyle("-fx-background-color: white");
+            }
+            else if (id1038.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1038.setStyle("-fx-background-color: white");
+            }
+            else if (id1039.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1039.setStyle("-fx-background-color: white");
+            }
+            else if (id1040.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1040.setStyle("-fx-background-color: white");
+            }
+            else if (id1041.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1041.setStyle("-fx-background-color: white");
+            }
+            else if (id1042.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1042.setStyle("-fx-background-color: white");
+            }
+            else if (id1043.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1043.setStyle("-fx-background-color: white");
+            }
+            else if (id1044.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1044.setStyle("-fx-background-color: white");
+            }
+            else if (id1045.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1045.setStyle("-fx-background-color: white");
+            }
+            else if (id1046.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1046.setStyle("-fx-background-color: white");
+            }
+            else if (id1047.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1047.setStyle("-fx-background-color: white");
+            }
+            else if (id1048.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1048.setStyle("-fx-background-color: white");
+            }
+            else if (id1049.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1049.setStyle("-fx-background-color: white");
+            }
+            else if (id1050.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1050.setStyle("-fx-background-color: white");
+            }
+            else if (id1051.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1051.setStyle("-fx-background-color: white");
+            }
+            else if (id1052.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1052.setStyle("-fx-background-color: white");
+            }
+            else if (id1053.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1053.setStyle("-fx-background-color: white");
+            }
+            else if (id1054.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1054.setStyle("-fx-background-color: white");
+            }
+            else if (id1055.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1055.setStyle("-fx-background-color: white");
+            }
+            else if (id1056.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1056.setStyle("-fx-background-color: white");
+            }
+            else if (id1057.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1057.setStyle("-fx-background-color: white");
+            }
+            else if (id1058.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1058.setStyle("-fx-background-color: white");
+            }
+            else if (id1059.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1059.setStyle("-fx-background-color: white");
+            }
+            else if (id1060.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1060.setStyle("-fx-background-color: white");
+            }
+            else if (id1061.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1061.setStyle("-fx-background-color: white");
+            }
+            else if (id1062.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1062.setStyle("-fx-background-color: white");
+            }
+            else if (id1063.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1063.setStyle("-fx-background-color: white");
+            }
+            else if (id1064.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1064.setStyle("-fx-background-color: white");
+            }
+            else if (id1065.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1065.setStyle("-fx-background-color: white");
+            }
+            else if (id1066.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1066.setStyle("-fx-background-color: white");
+            }
+            else if (id1067.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1067.setStyle("-fx-background-color: white");
+            }
+            else if (id1068.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1068.setStyle("-fx-background-color: white");
+            }
+            else if (id1069.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1069.setStyle("-fx-background-color: white");
+            }
+            else if (id1070.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1070.setStyle("-fx-background-color: white");
+            }
+            else if (id1071.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1071.setStyle("-fx-background-color: white");
+            }
+            else if (id1072.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1072.setStyle("-fx-background-color: white");
+            }
+            else if (id1073.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1073.setStyle("-fx-background-color: white");
+            }
+            else if (id1074.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1074.setStyle("-fx-background-color: white");
+            }
+            else if (id1075.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1075.setStyle("-fx-background-color: white");
+            }
+            else if (id1076.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1076.setStyle("-fx-background-color: white");
+            }
+            else if (id1077.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1077.setStyle("-fx-background-color: white");
+            }
+            else if (id1078.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1078.setStyle("-fx-background-color: white");
+            }
+            else if (id1079.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1079.setStyle("-fx-background-color: white");
+            }
+            else if (id1080.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1080.setStyle("-fx-background-color: white");
+            }
+            else if (id1081.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1081.setStyle("-fx-background-color: white");
+            }
+            else if (id1082.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1082.setStyle("-fx-background-color: white");
+            }
+            else if (id1083.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1083.setStyle("-fx-background-color: white");
+            }
+            else if (id1084.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1084.setStyle("-fx-background-color: white");
+            }
+            else if (id1085.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1085.setStyle("-fx-background-color: white");
+            }
+            else if (id1086.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1086.setStyle("-fx-background-color: white");
+            }
+            else if (id1087.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1087.setStyle("-fx-background-color: white");
+            }
+            else if (id1088.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1088.setStyle("-fx-background-color: white");
+            }
+            else if (id1089.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1089.setStyle("-fx-background-color: white");
+            }
+            else if (id1090.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1090.setStyle("-fx-background-color: white");
+            }
+            else if (id1091.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1091.setStyle("-fx-background-color: white");
+            }
+            else if (id1092.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1092.setStyle("-fx-background-color: white");
+            }
+            else if (id1093.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1093.setStyle("-fx-background-color: white");
+            }
+            else if (id1094.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1094.setStyle("-fx-background-color: white");
+            }
+            else if (id1095.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1095.setStyle("-fx-background-color: white");
+            }
+            else if (id1096.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1096.setStyle("-fx-background-color: white");
+            }
+            else if (id1097.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1097.setStyle("-fx-background-color: white");
+            }
+            else if (id1098.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1098.setStyle("-fx-background-color: white");
+            }
+            else if (id1099.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1099.setStyle("-fx-background-color: white");
+            }
+            else if (id1100.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1100.setStyle("-fx-background-color: white");
+            }
+            else if (id1101.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1101.setStyle("-fx-background-color: white");
+            }
+            else if (id1102.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1102.setStyle("-fx-background-color: white");
+            }
+            else if (id1103.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1103.setStyle("-fx-background-color: white");
+            }
+            else if (id1104.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1104.setStyle("-fx-background-color: white");
+            }
+            else if (id1105.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1105.setStyle("-fx-background-color: white");
+            }
+            else if (id1106.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1106.setStyle("-fx-background-color: white");
+            }
+            else if (id1107.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1107.setStyle("-fx-background-color: white");
+            }
+            else if (id1108.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1108.setStyle("-fx-background-color: white");
+            }
+            else if (id1109.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1109.setStyle("-fx-background-color: white");
+            }
+            else if (id1110.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1110.setStyle("-fx-background-color: white");
+            }
+            else if (id1111.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1111.setStyle("-fx-background-color: white");
+            }
+            else if (id1112.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1112.setStyle("-fx-background-color: white");
+            }
+            else if (id1113.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1113.setStyle("-fx-background-color: white");
+            }
+            else if (id1114.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1114.setStyle("-fx-background-color: white");
+            }
+            else if (id1115.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1115.setStyle("-fx-background-color: white");
+            }
+            else if (id1116.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1116.setStyle("-fx-background-color: white");
+            }
+            else if (id1117.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1117.setStyle("-fx-background-color: white");
+            }
+            else if (id1118.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1118.setStyle("-fx-background-color: white");
+            }
+            else if (id1119.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1119.setStyle("-fx-background-color: white");
+            }
+            else if (id1120.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1120.setStyle("-fx-background-color: white");
+            }
+            else if (id1121.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1121.setStyle("-fx-background-color: white");
+            }
+            else if (id1122.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1122.setStyle("-fx-background-color: white");
+            }
+            else if (id1123.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1123.setStyle("-fx-background-color: white");
+            }
+            else if (id1124.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1124.setStyle("-fx-background-color: white");
+            }
+            else if (id1125.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1125.setStyle("-fx-background-color: white");
+            }
+            else if (id1126.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1126.setStyle("-fx-background-color: white");
+            }
+            else if (id1127.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1127.setStyle("-fx-background-color: white");
+            }
+            else if (id1128.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1128.setStyle("-fx-background-color: white");
+            }
+            else if (id1129.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1129.setStyle("-fx-background-color: white");
+            }
+            else if (id1130.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1130.setStyle("-fx-background-color: white");
+            }
+            else if (id1131.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1131.setStyle("-fx-background-color: white");
+            }
+            else if (id1132.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1132.setStyle("-fx-background-color: white");
+            }
+            else if (id1133.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1133.setStyle("-fx-background-color: white");
+            }
+            else if (id1134.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1134.setStyle("-fx-background-color: white");
+            }
+            else if (id1135.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1135.setStyle("-fx-background-color: white");
+            }
+            else if (id1136.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1136.setStyle("-fx-background-color: white");
+            }
+            else if (id1137.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1137.setStyle("-fx-background-color: white");
+            }
+            else if (id1138.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1138.setStyle("-fx-background-color: white");
+            }
+            else if (id1139.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1139.setStyle("-fx-background-color: white");
+            }
+            else if (id1140.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1140.setStyle("-fx-background-color: white");
+            }
+            else if (id1141.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1141.setStyle("-fx-background-color: white");
+            }
+            else if (id1142.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1142.setStyle("-fx-background-color: white");
+            }
+            else if (id1143.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1143.setStyle("-fx-background-color: white");
+            }
+            else if (id1144.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1144.setStyle("-fx-background-color: white");
+            }
+            else if (id1145.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1145.setStyle("-fx-background-color: white");
+            }
+            else if (id1146.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1146.setStyle("-fx-background-color: white");
+            }
+            else if (id1147.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1147.setStyle("-fx-background-color: white");
+            }
+            else if (id1148.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1148.setStyle("-fx-background-color: white");
+            }
+            else if (id1149.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1149.setStyle("-fx-background-color: white");
+            }
+            else if (id1150.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1150.setStyle("-fx-background-color: white");
+            }
+            else if (id1151.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1151.setStyle("-fx-background-color: white");
+            }
+            else if (id1152.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1152.setStyle("-fx-background-color: white");
+            }
+            else if (id1153.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1153.setStyle("-fx-background-color: white");
+            }
+            else if (id1154.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1154.setStyle("-fx-background-color: white");
+            }
+            else if (id1155.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1155.setStyle("-fx-background-color: white");
+            }
+            else if (id1156.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1156.setStyle("-fx-background-color: white");
+            }
+            else if (id1157.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1157.setStyle("-fx-background-color: white");
+            }
+            else if (id1158.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1158.setStyle("-fx-background-color: white");
+            }
+            else if (id1159.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1159.setStyle("-fx-background-color: white");
+            }
+            else if (id1160.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1160.setStyle("-fx-background-color: white");
+            }
+            else if (id1161.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1161.setStyle("-fx-background-color: white");
+            }
+            else if (id1162.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1162.setStyle("-fx-background-color: white");
+            }
+            else if (id1163.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1163.setStyle("-fx-background-color: white");
+            }
+            else if (id1164.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1164.setStyle("-fx-background-color: white");
+            }
+            else if (id1165.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1165.setStyle("-fx-background-color: white");
+            }
+            else if (id1166.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1166.setStyle("-fx-background-color: white");
+            }
+            else if (id1167.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1167.setStyle("-fx-background-color: white");
+            }
+            else if (id1168.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1168.setStyle("-fx-background-color: white");
+            }
+            else if (id1169.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1169.setStyle("-fx-background-color: white");
+            }
+            else if (id1170.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1170.setStyle("-fx-background-color: white");
+            }
+            else if (id1171.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1171.setStyle("-fx-background-color: white");
+            }
+            else if (id1172.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1172.setStyle("-fx-background-color: white");
+            }
+            else if (id1173.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1173.setStyle("-fx-background-color: white");
+            }
+            else if (id1174.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1174.setStyle("-fx-background-color: white");
+            }
+            else if (id1175.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1175.setStyle("-fx-background-color: white");
+            }
+            else if (id1176.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1176.setStyle("-fx-background-color: white");
+            }
+            else if (id1177.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1177.setStyle("-fx-background-color: white");
+            }
+            else if (id1178.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1178.setStyle("-fx-background-color: white");
+            }
+            else if (id1179.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1179.setStyle("-fx-background-color: white");
+            }
+            else if (id1180.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1180.setStyle("-fx-background-color: white");
+            }
+            else if (id1181.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1181.setStyle("-fx-background-color: white");
+            }
+            else if (id1182.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1182.setStyle("-fx-background-color: white");
+            }
+            else if (id1183.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1183.setStyle("-fx-background-color: white");
+            }
+            else if (id1184.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1184.setStyle("-fx-background-color: white");
+            }
+            else if (id1185.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1185.setStyle("-fx-background-color: white");
+            }
+            else if (id1186.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1186.setStyle("-fx-background-color: white");
+            }
+            else if (id1187.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1187.setStyle("-fx-background-color: white");
+            }
+            else if (id1188.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1188.setStyle("-fx-background-color: white");
+            }
+            else if (id1189.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1189.setStyle("-fx-background-color: white");
+            }
+            else if (id1190.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1190.setStyle("-fx-background-color: white");
+            }
+            else if (id1191.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1191.setStyle("-fx-background-color: white");
+            }
+            else if (id1192.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1192.setStyle("-fx-background-color: white");
+            }
+            else if (id1193.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1193.setStyle("-fx-background-color: white");
+            }
+            else if (id1194.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1194.setStyle("-fx-background-color: white");
+            }
+            else if (id1195.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1195.setStyle("-fx-background-color: white");
+            }
+            else if (id1196.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1196.setStyle("-fx-background-color: white");
+            }
+            else if (id1197.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1197.setStyle("-fx-background-color: white");
+            }
+            else if (id1198.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1198.setStyle("-fx-background-color: white");
+            }
+            else if (id1199.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1199.setStyle("-fx-background-color: white");
+            }
+            else if (id1200.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1200.setStyle("-fx-background-color: white");
+            }
+            else if (id1201.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1201.setStyle("-fx-background-color: white");
+            }
+            else if (id1202.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1202.setStyle("-fx-background-color: white");
+            }
+            else if (id1203.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1203.setStyle("-fx-background-color: white");
+            }
+            else if (id1204.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1204.setStyle("-fx-background-color: white");
+            }
+            else if (id1205.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1205.setStyle("-fx-background-color: white");
+            }
+            else if (id1206.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1206.setStyle("-fx-background-color: white");
+            }
+            else if (id1207.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1207.setStyle("-fx-background-color: white");
+            }
+            else if (id1208.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1208.setStyle("-fx-background-color: white");
+            }
+            else if (id1209.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1209.setStyle("-fx-background-color: white");
+            }
+            else if (id1210.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1210.setStyle("-fx-background-color: white");
+            }
+            else if (id1211.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1211.setStyle("-fx-background-color: white");
+            }
+            else if (id1212.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1212.setStyle("-fx-background-color: white");
+            }
+            else if (id1213.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1213.setStyle("-fx-background-color: white");
+            }
+            else if (id1214.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1214.setStyle("-fx-background-color: white");
+            }
+            else if (id1215.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1215.setStyle("-fx-background-color: white");
+            }
+            else if (id1216.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1216.setStyle("-fx-background-color: white");
+            }
+            else if (id1217.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1217.setStyle("-fx-background-color: white");
+            }
+            else if (id1218.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1218.setStyle("-fx-background-color: white");
+            }
+            else if (id1219.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1219.setStyle("-fx-background-color: white");
+            }
+            else if (id1220.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1220.setStyle("-fx-background-color: white");
+            }
+            else if (id1221.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1221.setStyle("-fx-background-color: white");
+            }
+            else if (id1222.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1222.setStyle("-fx-background-color: white");
+            }
+            else if (id1223.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1223.setStyle("-fx-background-color: white");
+            }
+            else if (id1224.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1224.setStyle("-fx-background-color: white");
+            }
+            else if (id1225.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1225.setStyle("-fx-background-color: white");
+            }
+            else if (id1226.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1226.setStyle("-fx-background-color: white");
+            }
+            else if (id1227.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1227.setStyle("-fx-background-color: white");
+            }
+            else if (id1228.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1228.setStyle("-fx-background-color: white");
+            }
+            else if (id1229.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1229.setStyle("-fx-background-color: white");
+            }
+            else if (id1230.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1230.setStyle("-fx-background-color: white");
+            }
+            else if (id1231.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1231.setStyle("-fx-background-color: white");
+            }
+            else if (id1232.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1232.setStyle("-fx-background-color: white");
+            }
+            else if (id1233.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1233.setStyle("-fx-background-color: white");
+            }
+            else if (id1234.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1234.setStyle("-fx-background-color: white");
+            }
+            else if (id1235.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1235.setStyle("-fx-background-color: white");
+            }
+            else if (id1236.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1236.setStyle("-fx-background-color: white");
+            }
+            else if (id1237.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1237.setStyle("-fx-background-color: white");
+            }
+            else if (id1238.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1238.setStyle("-fx-background-color: white");
+            }
+            else if (id1239.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1239.setStyle("-fx-background-color: white");
+            }
+            else if (id1240.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1240.setStyle("-fx-background-color: white");
+            }
+            else if (id1241.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1241.setStyle("-fx-background-color: white");
+            }
+            else if (id1242.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1242.setStyle("-fx-background-color: white");
+            }
+            else if (id1243.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1243.setStyle("-fx-background-color: white");
+            }
+            else if (id1244.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1244.setStyle("-fx-background-color: white");
+            }
+            else if (id1245.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1245.setStyle("-fx-background-color: white");
+            }
+            else if (id1246.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1246.setStyle("-fx-background-color: white");
+            }
+            else if (id1247.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1247.setStyle("-fx-background-color: white");
+            }
+            else if (id1248.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1248.setStyle("-fx-background-color: white");
+            }
+            else if (id1249.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1249.setStyle("-fx-background-color: white");
+            }
+            else if (id1250.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1250.setStyle("-fx-background-color: white");
+            }
+            else if (id1251.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1251.setStyle("-fx-background-color: white");
+            }
+            else if (id1252.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1252.setStyle("-fx-background-color: white");
+            }
+            else if (id1253.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1253.setStyle("-fx-background-color: white");
+            }
+            else if (id1254.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1254.setStyle("-fx-background-color: white");
+            }
+            else if (id1255.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1255.setStyle("-fx-background-color: white");
+            }
+            else if (id1256.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1256.setStyle("-fx-background-color: white");
+            }
+            else if (id1257.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1257.setStyle("-fx-background-color: white");
+            }
+            else if (id1258.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1258.setStyle("-fx-background-color: white");
+            }
+            else if (id1259.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1259.setStyle("-fx-background-color: white");
+            }
+            else if (id1260.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1260.setStyle("-fx-background-color: white");
+            }
+            else if (id1261.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1261.setStyle("-fx-background-color: white");
+            }
+            else if (id1262.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1262.setStyle("-fx-background-color: white");
+            }
+            else if (id1263.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1263.setStyle("-fx-background-color: white");
+            }
+            else if (id1264.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1264.setStyle("-fx-background-color: white");
+            }
+            else if (id1265.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1265.setStyle("-fx-background-color: white");
+            }
+            else if (id1266.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1266.setStyle("-fx-background-color: white");
+            }
+            else if (id1267.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1267.setStyle("-fx-background-color: white");
+            }
+            else if (id1268.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1268.setStyle("-fx-background-color: white");
+            }
+            else if (id1269.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1269.setStyle("-fx-background-color: white");
+            }
+            else if (id1270.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1270.setStyle("-fx-background-color: white");
+            }
+            else if (id1271.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1271.setStyle("-fx-background-color: white");
+            }
+            else if (id1272.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1272.setStyle("-fx-background-color: white");
+            }
+            else if (id1273.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1273.setStyle("-fx-background-color: white");
+            }
+            else if (id1274.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1274.setStyle("-fx-background-color: white");
+            }
+            else if (id1275.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1275.setStyle("-fx-background-color: white");
+            }
+            else if (id1276.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1276.setStyle("-fx-background-color: white");
+            }
+            else if (id1277.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1277.setStyle("-fx-background-color: white");
+            }
+            else if (id1278.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1278.setStyle("-fx-background-color: white");
+            }
+            else if (id1279.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1279.setStyle("-fx-background-color: white");
+            }
+            else if (id1280.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1280.setStyle("-fx-background-color: white");
+            }
+            else if (id1281.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1281.setStyle("-fx-background-color: white");
+            }
+            else if (id1282.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1282.setStyle("-fx-background-color: white");
+            }
+            else if (id1283.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1283.setStyle("-fx-background-color: white");
+            }
+            else if (id1284.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1284.setStyle("-fx-background-color: white");
+            }
+            else if (id1285.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1285.setStyle("-fx-background-color: white");
+            }
+            else if (id1286.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1286.setStyle("-fx-background-color: white");
+            }
+            else if (id1287.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1287.setStyle("-fx-background-color: white");
+            }
+            else if (id1288.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1288.setStyle("-fx-background-color: white");
+            }
+            else if (id1289.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1289.setStyle("-fx-background-color: white");
+            }
+            else if (id1290.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1290.setStyle("-fx-background-color: white");
+            }
+            else if (id1291.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1291.setStyle("-fx-background-color: white");
+            }
+            else if (id1292.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1292.setStyle("-fx-background-color: white");
+            }
+            else if (id1293.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1293.setStyle("-fx-background-color: white");
+            }
+            else if (id1294.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1294.setStyle("-fx-background-color: white");
+            }
+            else if (id1295.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1295.setStyle("-fx-background-color: white");
+            }
+            else if (id1296.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1296.setStyle("-fx-background-color: white");
+            }
+            else if (id1297.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1297.setStyle("-fx-background-color: white");
+            }
+            else if (id1298.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1298.setStyle("-fx-background-color: white");
+            }
+            else if (id1299.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1299.setStyle("-fx-background-color: white");
+            }
+            else if (id1300.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1300.setStyle("-fx-background-color: white");
+            }
+            else if (id1301.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1301.setStyle("-fx-background-color: white");
+            }
+            else if (id1302.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1302.setStyle("-fx-background-color: white");
+            }
+            else if (id1303.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1303.setStyle("-fx-background-color: white");
+            }
+            else if (id1304.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1304.setStyle("-fx-background-color: white");
+            }
+            else if (id1305.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1305.setStyle("-fx-background-color: white");
+            }
+            else if (id1306.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1306.setStyle("-fx-background-color: white");
+            }
+            else if (id1307.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1307.setStyle("-fx-background-color: white");
+            }
+            else if (id1308.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1308.setStyle("-fx-background-color: white");
+            }
+            else if (id1309.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1309.setStyle("-fx-background-color: white");
+            }
+            else if (id1310.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1310.setStyle("-fx-background-color: white");
+            }
+            else if (id1311.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1311.setStyle("-fx-background-color: white");
+            }
+            else if (id1312.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1312.setStyle("-fx-background-color: white");
+            }
+            else if (id1313.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1313.setStyle("-fx-background-color: white");
+            }
+            else if (id1314.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1314.setStyle("-fx-background-color: white");
+            }
+            else if (id1315.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1315.setStyle("-fx-background-color: white");
+            }
+            else if (id1316.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1316.setStyle("-fx-background-color: white");
+            }
+            else if (id1317.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1317.setStyle("-fx-background-color: white");
+            }
+            else if (id1318.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1318.setStyle("-fx-background-color: white");
+            }
+            else if (id1319.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1319.setStyle("-fx-background-color: white");
+            }
+            else if (id1320.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1320.setStyle("-fx-background-color: white");
+            }
+            else if (id1321.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1321.setStyle("-fx-background-color: white");
+            }
+            else if (id1322.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1322.setStyle("-fx-background-color: white");
+            }
+            else if (id1323.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1323.setStyle("-fx-background-color: white");
+            }
+            else if (id1324.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1324.setStyle("-fx-background-color: white");
+            }
+            else if (id1325.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1325.setStyle("-fx-background-color: white");
+            }
+            else if (id1326.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1326.setStyle("-fx-background-color: white");
+            }
+            else if (id1327.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1327.setStyle("-fx-background-color: white");
+            }
+            else if (id1328.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1328.setStyle("-fx-background-color: white");
+            }
+            else if (id1329.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1329.setStyle("-fx-background-color: white");
+            }
+            else if (id1330.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1330.setStyle("-fx-background-color: white");
+            }
+            else if (id1331.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1331.setStyle("-fx-background-color: white");
+            }
+            else if (id1332.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1332.setStyle("-fx-background-color: white");
+            }
+            else if (id1333.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1333.setStyle("-fx-background-color: white");
+            }
+            else if (id1334.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1334.setStyle("-fx-background-color: white");
+            }
+            else if (id1335.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1335.setStyle("-fx-background-color: white");
+            }
+            else if (id1336.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1336.setStyle("-fx-background-color: white");
+            }
+            else if (id1337.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1337.setStyle("-fx-background-color: white");
+            }
+            else if (id1338.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1338.setStyle("-fx-background-color: white");
+            }
+            else if (id1339.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1339.setStyle("-fx-background-color: white");
+            }
+            else if (id1340.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1340.setStyle("-fx-background-color: white");
+            }
+            else if (id1341.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1341.setStyle("-fx-background-color: white");
+            }
+            else if (id1342.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1342.setStyle("-fx-background-color: white");
+            }
+            else if (id1343.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1343.setStyle("-fx-background-color: white");
+            }
+            else if (id1344.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1344.setStyle("-fx-background-color: white");
+            }
+            else if (id1345.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1345.setStyle("-fx-background-color: white");
+            }
+            else if (id1346.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1346.setStyle("-fx-background-color: white");
+            }
+            else if (id1347.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1347.setStyle("-fx-background-color: white");
+            }
+            else if (id1348.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1348.setStyle("-fx-background-color: white");
+            }
+            else if (id1349.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1349.setStyle("-fx-background-color: white");
+            }
+            else if (id1350.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1350.setStyle("-fx-background-color: white");
+            }
+            else if (id1351.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1351.setStyle("-fx-background-color: white");
+            }
+            else if (id1352.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1352.setStyle("-fx-background-color: white");
+            }
+            else if (id1353.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1353.setStyle("-fx-background-color: white");
+            }
+            else if (id1354.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1354.setStyle("-fx-background-color: white");
+            }
+            else if (id1355.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1355.setStyle("-fx-background-color: white");
+            }
+            else if (id1356.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1356.setStyle("-fx-background-color: white");
+            }
+            else if (id1357.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1357.setStyle("-fx-background-color: white");
+            }
+            else if (id1358.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1358.setStyle("-fx-background-color: white");
+            }
+            else if (id1359.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1359.setStyle("-fx-background-color: white");
+            }
+            else if (id1360.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1360.setStyle("-fx-background-color: white");
+            }
+            else if (id1361.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1361.setStyle("-fx-background-color: white");
+            }
+            else if (id1362.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1362.setStyle("-fx-background-color: white");
+            }
+            else if (id1363.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1363.setStyle("-fx-background-color: white");
+            }
+            else if (id1364.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1364.setStyle("-fx-background-color: white");
+            }
+            else if (id1365.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1365.setStyle("-fx-background-color: white");
+            }
+            else if (id1366.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1366.setStyle("-fx-background-color: white");
+            }
+            else if (id1367.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1367.setStyle("-fx-background-color: white");
+            }
+            else if (id1368.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1368.setStyle("-fx-background-color: white");
+            }
+            else if (id1369.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1369.setStyle("-fx-background-color: white");
+            }
+            else if (id1370.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1370.setStyle("-fx-background-color: white");
+            }
+            else if (id1371.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1371.setStyle("-fx-background-color: white");
+            }
+            else if (id1372.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1372.setStyle("-fx-background-color: white");
+            }
+            else if (id1373.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1373.setStyle("-fx-background-color: white");
+            }
+            else if (id1374.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1374.setStyle("-fx-background-color: white");
+            }
+            else if (id1375.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1375.setStyle("-fx-background-color: white");
+            }
+            else if (id1376.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1376.setStyle("-fx-background-color: white");
+            }
+            else if (id1377.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1377.setStyle("-fx-background-color: white");
+            }
+            else if (id1378.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1378.setStyle("-fx-background-color: white");
+            }
+            else if (id1379.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1379.setStyle("-fx-background-color: white");
+            }
+            else if (id1380.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1380.setStyle("-fx-background-color: white");
+            }
+            else if (id1381.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1381.setStyle("-fx-background-color: white");
+            }
+            else if (id1382.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1382.setStyle("-fx-background-color: white");
+            }
+            else if (id1383.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1383.setStyle("-fx-background-color: white");
+            }
+            else if (id1384.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1384.setStyle("-fx-background-color: white");
+            }
+            else if (id1385.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1385.setStyle("-fx-background-color: white");
+            }
+            else if (id1386.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1386.setStyle("-fx-background-color: white");
+            }
+            else if (id1387.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1387.setStyle("-fx-background-color: white");
+            }
+            else if (id1388.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1388.setStyle("-fx-background-color: white");
+            }
+            else if (id1389.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1389.setStyle("-fx-background-color: white");
+            }
+            else if (id1390.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1390.setStyle("-fx-background-color: white");
+            }
+            else if (id1391.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1391.setStyle("-fx-background-color: white");
+            }
+            else if (id1392.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1392.setStyle("-fx-background-color: white");
+            }
+            else if (id1393.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1393.setStyle("-fx-background-color: white");
+            }
+            else if (id1394.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1394.setStyle("-fx-background-color: white");
+            }
+            else if (id1395.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1395.setStyle("-fx-background-color: white");
+            }
+            else if (id1396.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1396.setStyle("-fx-background-color: white");
+            }
+            else if (id1397.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1397.setStyle("-fx-background-color: white");
+            }
+            else if (id1398.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1398.setStyle("-fx-background-color: white");
+            }
+            else if (id1399.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1399.setStyle("-fx-background-color: white");
+            }
+            else if (id1400.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1400.setStyle("-fx-background-color: white");
+            }
+            else if (id1401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1401.setStyle("-fx-background-color: white");
+            }
+            else if (id1402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1402.setStyle("-fx-background-color: white");
+            }
+            else if (id1403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1403.setStyle("-fx-background-color: white");
+            }
+            else if (id1404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1404.setStyle("-fx-background-color: white");
+            }
+            else if (id1405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1405.setStyle("-fx-background-color: white");
+            }
+            else if (id1406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1406.setStyle("-fx-background-color: white");
+            }
+            else if (id1407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1407.setStyle("-fx-background-color: white");
+            }
+            else if (id1408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1408.setStyle("-fx-background-color: white");
+            }
+            else if (id1409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1409.setStyle("-fx-background-color: white");
+            }
+            else if (id1410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1410.setStyle("-fx-background-color: white");
+            }
+            else if (id1411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1411.setStyle("-fx-background-color: white");
+            }
+            else if (id1412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1412.setStyle("-fx-background-color: white");
+            }
+            else if (id1413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1413.setStyle("-fx-background-color: white");
+            }
+            else if (id1414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1414.setStyle("-fx-background-color: white");
+            }
+            else if (id1415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1415.setStyle("-fx-background-color: white");
+            }
+            else if (id1416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1416.setStyle("-fx-background-color: white");
+            }
+            else if (id1417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1417.setStyle("-fx-background-color: white");
+            }
+            else if (id1418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1418.setStyle("-fx-background-color: white");
+            }
+            else if (id1419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1419.setStyle("-fx-background-color: white");
+            }
+            else if (id1420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1420.setStyle("-fx-background-color: white");
+            }
+            else if (id1421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1421.setStyle("-fx-background-color: white");
+            }
+            else if (id1422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1422.setStyle("-fx-background-color: white");
+            }
+            else if (id1423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1423.setStyle("-fx-background-color: white");
+            }
+            else if (id1424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1424.setStyle("-fx-background-color: white");
+            }
+            else if (id1425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1425.setStyle("-fx-background-color: white");
+            }
+            else if (id1426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1426.setStyle("-fx-background-color: white");
+            }
+            else if (id1427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1427.setStyle("-fx-background-color: white");
+            }
+            else if (id1428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1428.setStyle("-fx-background-color: white");
+            }
+            else if (id1429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1429.setStyle("-fx-background-color: white");
+            }
+            else if (id1430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1430.setStyle("-fx-background-color: white");
+            }
+            else if (id1431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1431.setStyle("-fx-background-color: white");
+            }
+            else if (id1432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1432.setStyle("-fx-background-color: white");
+            }
+            else if (id1433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1433.setStyle("-fx-background-color: white");
+            }
+            else if (id1434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1434.setStyle("-fx-background-color: white");
+            }
+            else if (id1435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1435.setStyle("-fx-background-color: white");
+            }
+            else if (id1436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1436.setStyle("-fx-background-color: white");
+            }
+            else if (id1437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1437.setStyle("-fx-background-color: white");
+            }
+            else if (id1438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1438.setStyle("-fx-background-color: white");
+            }
+            else if (id1439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1439.setStyle("-fx-background-color: white");
+            }
+            else if (id1440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1440.setStyle("-fx-background-color: white");
+            }
+            else if (id1441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1441.setStyle("-fx-background-color: white");
+            }
+            else if (id1442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1442.setStyle("-fx-background-color: white");
+            }
+            else if (id1443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1443.setStyle("-fx-background-color: white");
+            }
+            else if (id1444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1444.setStyle("-fx-background-color: white");
+            }
+            else if (id1445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1445.setStyle("-fx-background-color: white");
+            }
+            else if (id1446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1446.setStyle("-fx-background-color: white");
+            }
+            else if (id1447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1447.setStyle("-fx-background-color: white");
+            }
+            else if (id1448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1448.setStyle("-fx-background-color: white");
+            }
+            else if (id1449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1449.setStyle("-fx-background-color: white");
+            }
+            else if (id1450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1450.setStyle("-fx-background-color: white");
+            }
+            else if (id1451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1451.setStyle("-fx-background-color: white");
+            }
+            else if (id1452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1452.setStyle("-fx-background-color: white");
+            }
+            else if (id1453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1453.setStyle("-fx-background-color: white");
+            }
+            else if (id1454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1454.setStyle("-fx-background-color: white");
+            }
+            else if (id1455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1455.setStyle("-fx-background-color: white");
+            }
+            else if (id1456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1456.setStyle("-fx-background-color: white");
+            }
+            else if (id1457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1457.setStyle("-fx-background-color: white");
+            }
+            else if (id1458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1458.setStyle("-fx-background-color: white");
+            }
+            else if (id1459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1459.setStyle("-fx-background-color: white");
+            }
+            else if (id1460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1460.setStyle("-fx-background-color: white");
+            }
+            else if (id1461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1461.setStyle("-fx-background-color: white");
+            }
+            else if (id1462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1462.setStyle("-fx-background-color: white");
+            }
+            else if (id1463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1463.setStyle("-fx-background-color: white");
+            }
+            else if (id1464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1464.setStyle("-fx-background-color: white");
+            }
+            else if (id1465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1465.setStyle("-fx-background-color: white");
+            }
+            else if (id1466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1466.setStyle("-fx-background-color: white");
+            }
+            else if (id1467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1467.setStyle("-fx-background-color: white");
+            }
+            else if (id1468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1468.setStyle("-fx-background-color: white");
+            }
+            else if (id1469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1469.setStyle("-fx-background-color: white");
+            }
+            else if (id1470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1470.setStyle("-fx-background-color: white");
+            }
+            else if (id1471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1471.setStyle("-fx-background-color: white");
+            }
+            else if (id1472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1472.setStyle("-fx-background-color: white");
+            }
+            else if (id1473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1473.setStyle("-fx-background-color: white");
+            }
+            else if (id1474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1474.setStyle("-fx-background-color: white");
+            }
+            else if (id1475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1475.setStyle("-fx-background-color: white");
+            }
+            else if (id1476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1476.setStyle("-fx-background-color: white");
+            }
+            else if (id1477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1477.setStyle("-fx-background-color: white");
+            }
+            else if (id1478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1478.setStyle("-fx-background-color: white");
+            }
+            else if (id1479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1479.setStyle("-fx-background-color: white");
+            }
+            else if (id1480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1480.setStyle("-fx-background-color: white");
+            }
+            else if (id1481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1481.setStyle("-fx-background-color: white");
+            }
+            else if (id1482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1482.setStyle("-fx-background-color: white");
+            }
+            else if (id1483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1483.setStyle("-fx-background-color: white");
+            }
+            else if (id1484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1484.setStyle("-fx-background-color: white");
+            }
+            else if (id1485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1485.setStyle("-fx-background-color: white");
+            }
+            else if (id1486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1486.setStyle("-fx-background-color: white");
+            }
+            else if (id1487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1487.setStyle("-fx-background-color: white");
+            }
+            else if (id1488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1488.setStyle("-fx-background-color: white");
+            }
+            else if (id1489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1489.setStyle("-fx-background-color: white");
+            }
+            else if (id1490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1490.setStyle("-fx-background-color: white");
+            }
+            else if (id1491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1491.setStyle("-fx-background-color: white");
+            }
+            else if (id1492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1492.setStyle("-fx-background-color: white");
+            }
+            else if (id1493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1493.setStyle("-fx-background-color: white");
+            }
+            else if (id1494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1494.setStyle("-fx-background-color: white");
+            }
+            else if (id1495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1495.setStyle("-fx-background-color: white");
+            }
+            else if (id1496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1496.setStyle("-fx-background-color: white");
+            }
+            else if (id1497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1497.setStyle("-fx-background-color: white");
+            }
+            else if (id1498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1498.setStyle("-fx-background-color: white");
+            }
+            else if (id1499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1499.setStyle("-fx-background-color: white");
+            }
+            else if (id1500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1500.setStyle("-fx-background-color: white");
+            }
+            else if (id1501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1501.setStyle("-fx-background-color: white");
+            }
+            else if (id1502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1502.setStyle("-fx-background-color: white");
+            }
+            else if (id1503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1503.setStyle("-fx-background-color: white");
+            }
+            else if (id1504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1504.setStyle("-fx-background-color: white");
+            }
+            else if (id1505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1505.setStyle("-fx-background-color: white");
+            }
+            else if (id1506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1506.setStyle("-fx-background-color: white");
+            }
+            else if (id1507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1507.setStyle("-fx-background-color: white");
+            }
+            else if (id1508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1508.setStyle("-fx-background-color: white");
+            }
+            else if (id1509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1509.setStyle("-fx-background-color: white");
+            }
+            else if (id1510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1510.setStyle("-fx-background-color: white");
+            }
+            else if (id1511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1511.setStyle("-fx-background-color: white");
+            }
+            else if (id1512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1512.setStyle("-fx-background-color: white");
+            }
+            else if (id1513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1513.setStyle("-fx-background-color: white");
+            }
+            else if (id1514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1514.setStyle("-fx-background-color: white");
+            }
+            else if (id1515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1515.setStyle("-fx-background-color: white");
+            }
+            else if (id1516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1516.setStyle("-fx-background-color: white");
+            }
+            else if (id1517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1517.setStyle("-fx-background-color: white");
+            }
+            else if (id1518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1518.setStyle("-fx-background-color: white");
+            }
+            else if (id1519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1519.setStyle("-fx-background-color: white");
+            }
+            else if (id1520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1520.setStyle("-fx-background-color: white");
+            }
+            else if (id1521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1521.setStyle("-fx-background-color: white");
+            }
+            else if (id1522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1522.setStyle("-fx-background-color: white");
+            }
+            else if (id1523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1523.setStyle("-fx-background-color: white");
+            }
+            else if (id1524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1524.setStyle("-fx-background-color: white");
+            }
+            else if (id1525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1525.setStyle("-fx-background-color: white");
+            }
+            else if (id1526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1526.setStyle("-fx-background-color: white");
+            }
+            else if (id1527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1527.setStyle("-fx-background-color: white");
+            }
+            else if (id1528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1528.setStyle("-fx-background-color: white");
+            }
+            else if (id1529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1529.setStyle("-fx-background-color: white");
+            }
+            else if (id1530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1530.setStyle("-fx-background-color: white");
+            }
+            else if (id1531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1531.setStyle("-fx-background-color: white");
+            }
+            else if (id1532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1532.setStyle("-fx-background-color: white");
+            }
+            else if (id1533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1533.setStyle("-fx-background-color: white");
+            }
+            else if (id1534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1534.setStyle("-fx-background-color: white");
+            }
+            else if (id1535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1535.setStyle("-fx-background-color: white");
+            }
+            else if (id1536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1536.setStyle("-fx-background-color: white");
+            }
+            else if (id1537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1537.setStyle("-fx-background-color: white");
+            }
+            else if (id1538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1538.setStyle("-fx-background-color: white");
+            }
+            else if (id1539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1539.setStyle("-fx-background-color: white");
+            }
+            else if (id1540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1540.setStyle("-fx-background-color: white");
+            }
+            else if (id1541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1541.setStyle("-fx-background-color: white");
+            }
+            else if (id1542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1542.setStyle("-fx-background-color: white");
+            }
+            else if (id1543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1543.setStyle("-fx-background-color: white");
+            }
+            else if (id1544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1544.setStyle("-fx-background-color: white");
+            }
+            else if (id1545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1545.setStyle("-fx-background-color: white");
+            }
+            else if (id1546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1546.setStyle("-fx-background-color: white");
+            }
+            else if (id1547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1547.setStyle("-fx-background-color: white");
+            }
+            else if (id1548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1548.setStyle("-fx-background-color: white");
+            }
+            else if (id1549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1549.setStyle("-fx-background-color: white");
+            }
+            else if (id1550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1550.setStyle("-fx-background-color: white");
+            }
+            else if (id1551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1551.setStyle("-fx-background-color: white");
+            }
+            else if (id1552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1552.setStyle("-fx-background-color: white");
+            }
+            else if (id1553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1553.setStyle("-fx-background-color: white");
+            }
+            else if (id1554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1554.setStyle("-fx-background-color: white");
+            }
+            else if (id1555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1555.setStyle("-fx-background-color: white");
+            }
+            else if (id1556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1556.setStyle("-fx-background-color: white");
+            }
+            else if (id1557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1557.setStyle("-fx-background-color: white");
+            }
+            else if (id1558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1558.setStyle("-fx-background-color: white");
+            }
+            else if (id1559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1559.setStyle("-fx-background-color: white");
+            }
+            else if (id1560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1560.setStyle("-fx-background-color: white");
+            }
+            else if (id1561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1561.setStyle("-fx-background-color: white");
+            }
+            else if (id1562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1562.setStyle("-fx-background-color: white");
+            }
+            else if (id1563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1563.setStyle("-fx-background-color: white");
+            }
+            else if (id1564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1564.setStyle("-fx-background-color: white");
+            }
+            else if (id1565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1565.setStyle("-fx-background-color: white");
+            }
+            else if (id1566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1566.setStyle("-fx-background-color: white");
+            }
+            else if (id1567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1567.setStyle("-fx-background-color: white");
+            }
+            else if (id1568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1568.setStyle("-fx-background-color: white");
+            }
+            else if (id1569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1569.setStyle("-fx-background-color: white");
+            }
+            else if (id1570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1570.setStyle("-fx-background-color: white");
+            }
+            else if (id1571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1571.setStyle("-fx-background-color: white");
+            }
+            else if (id1572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1572.setStyle("-fx-background-color: white");
+            }
+            else if (id1573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1573.setStyle("-fx-background-color: white");
+            }
+            else if (id1574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1574.setStyle("-fx-background-color: white");
+            }
+            else if (id1575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1575.setStyle("-fx-background-color: white");
+            }
+            else if (id1576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1576.setStyle("-fx-background-color: white");
+            }
+            else if (id1577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1577.setStyle("-fx-background-color: white");
+            }
+            else if (id1578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1578.setStyle("-fx-background-color: white");
+            }
+            else if (id1579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1579.setStyle("-fx-background-color: white");
+            }
+            else if (id1580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1580.setStyle("-fx-background-color: white");
+            }
+            else if (id1581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1581.setStyle("-fx-background-color: white");
+            }
+            else if (id1582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1582.setStyle("-fx-background-color: white");
+            }
+            else if (id1583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1583.setStyle("-fx-background-color: white");
+            }
+            else if (id1584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1584.setStyle("-fx-background-color: white");
+            }
+            else if (id1585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1585.setStyle("-fx-background-color: white");
+            }
+            else if (id1586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1586.setStyle("-fx-background-color: white");
+            }
+            else if (id1587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1587.setStyle("-fx-background-color: white");
+            }
+            else if (id1588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1588.setStyle("-fx-background-color: white");
+            }
+            else if (id1589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1589.setStyle("-fx-background-color: white");
+            }
+            else if (id1590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1590.setStyle("-fx-background-color: white");
+            }
+            else if (id1591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1591.setStyle("-fx-background-color: white");
+            }
+            else if (id1592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1592.setStyle("-fx-background-color: white");
+            }
+            else if (id1593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1593.setStyle("-fx-background-color: white");
+            }
+            else if (id1594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1594.setStyle("-fx-background-color: white");
+            }
+            else if (id1595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1595.setStyle("-fx-background-color: white");
+            }
+            else if (id1596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1596.setStyle("-fx-background-color: white");
+            }
+            else if (id1597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1597.setStyle("-fx-background-color: white");
+            }
+            else if (id1598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1598.setStyle("-fx-background-color: white");
+            }
+            else if (id1599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1599.setStyle("-fx-background-color: white");
+            }
+            else
+            {
+                id1600.setStyle("-fx-background-color: white");
+            }
         }
         else if (water.isSelected())
         {
@@ -4829,6 +9629,4806 @@ public class FXMLWorldEditorController extends UIController implements Initializ
             {
                 id400.setStyle("-fx-background-color: blue");
             }
+            else if (id401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id401.setStyle("-fx-background-color: blue");
+            }
+            else if (id402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id402.setStyle("-fx-background-color: blue");
+            }
+            else if (id403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id403.setStyle("-fx-background-color: blue");
+            }
+            else if (id404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id404.setStyle("-fx-background-color: blue");
+            }
+            else if (id405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id405.setStyle("-fx-background-color: blue");
+            }
+            else if (id406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id406.setStyle("-fx-background-color: blue");
+            }
+            else if (id407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id407.setStyle("-fx-background-color: blue");
+            }
+            else if (id408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id408.setStyle("-fx-background-color: blue");
+            }
+            else if (id409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id409.setStyle("-fx-background-color: blue");
+            }
+            else if (id410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id410.setStyle("-fx-background-color: blue");
+            }
+            else if (id411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id411.setStyle("-fx-background-color: blue");
+            }
+            else if (id412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id412.setStyle("-fx-background-color: blue");
+            }
+            else if (id413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id413.setStyle("-fx-background-color: blue");
+            }
+            else if (id414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id414.setStyle("-fx-background-color: blue");
+            }
+            else if (id415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id415.setStyle("-fx-background-color: blue");
+            }
+            else if (id416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id416.setStyle("-fx-background-color: blue");
+            }
+            else if (id417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id417.setStyle("-fx-background-color: blue");
+            }
+            else if (id418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id418.setStyle("-fx-background-color: blue");
+            }
+            else if (id419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id419.setStyle("-fx-background-color: blue");
+            }
+            else if (id420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id420.setStyle("-fx-background-color: blue");
+            }
+            else if (id421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id421.setStyle("-fx-background-color: blue");
+            }
+            else if (id422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id422.setStyle("-fx-background-color: blue");
+            }
+            else if (id423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id423.setStyle("-fx-background-color: blue");
+            }
+            else if (id424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id424.setStyle("-fx-background-color: blue");
+            }
+            else if (id425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id425.setStyle("-fx-background-color: blue");
+            }
+            else if (id426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id426.setStyle("-fx-background-color: blue");
+            }
+            else if (id427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id427.setStyle("-fx-background-color: blue");
+            }
+            else if (id428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id428.setStyle("-fx-background-color: blue");
+            }
+            else if (id429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id429.setStyle("-fx-background-color: blue");
+            }
+            else if (id430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id430.setStyle("-fx-background-color: blue");
+            }
+            else if (id431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id431.setStyle("-fx-background-color: blue");
+            }
+            else if (id432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id432.setStyle("-fx-background-color: blue");
+            }
+            else if (id433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id433.setStyle("-fx-background-color: blue");
+            }
+            else if (id434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id434.setStyle("-fx-background-color: blue");
+            }
+            else if (id435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id435.setStyle("-fx-background-color: blue");
+            }
+            else if (id436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id436.setStyle("-fx-background-color: blue");
+            }
+            else if (id437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id437.setStyle("-fx-background-color: blue");
+            }
+            else if (id438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id438.setStyle("-fx-background-color: blue");
+            }
+            else if (id439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id439.setStyle("-fx-background-color: blue");
+            }
+            else if (id440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id440.setStyle("-fx-background-color: blue");
+            }
+            else if (id441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id441.setStyle("-fx-background-color: blue");
+            }
+            else if (id442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id442.setStyle("-fx-background-color: blue");
+            }
+            else if (id443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id443.setStyle("-fx-background-color: blue");
+            }
+            else if (id444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id444.setStyle("-fx-background-color: blue");
+            }
+            else if (id445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id445.setStyle("-fx-background-color: blue");
+            }
+            else if (id446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id446.setStyle("-fx-background-color: blue");
+            }
+            else if (id447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id447.setStyle("-fx-background-color: blue");
+            }
+            else if (id448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id448.setStyle("-fx-background-color: blue");
+            }
+            else if (id449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id449.setStyle("-fx-background-color: blue");
+            }
+            else if (id450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id450.setStyle("-fx-background-color: blue");
+            }
+            else if (id451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id451.setStyle("-fx-background-color: blue");
+            }
+            else if (id452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id452.setStyle("-fx-background-color: blue");
+            }
+            else if (id453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id453.setStyle("-fx-background-color: blue");
+            }
+            else if (id454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id454.setStyle("-fx-background-color: blue");
+            }
+            else if (id455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id455.setStyle("-fx-background-color: blue");
+            }
+            else if (id456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id456.setStyle("-fx-background-color: blue");
+            }
+            else if (id457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id457.setStyle("-fx-background-color: blue");
+            }
+            else if (id458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id458.setStyle("-fx-background-color: blue");
+            }
+            else if (id459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id459.setStyle("-fx-background-color: blue");
+            }
+            else if (id460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id460.setStyle("-fx-background-color: blue");
+            }
+            else if (id461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id461.setStyle("-fx-background-color: blue");
+            }
+            else if (id462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id462.setStyle("-fx-background-color: blue");
+            }
+            else if (id463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id463.setStyle("-fx-background-color: blue");
+            }
+            else if (id464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id464.setStyle("-fx-background-color: blue");
+            }
+            else if (id465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id465.setStyle("-fx-background-color: blue");
+            }
+            else if (id466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id466.setStyle("-fx-background-color: blue");
+            }
+            else if (id467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id467.setStyle("-fx-background-color: blue");
+            }
+            else if (id468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id468.setStyle("-fx-background-color: blue");
+            }
+            else if (id469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id469.setStyle("-fx-background-color: blue");
+            }
+            else if (id470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id470.setStyle("-fx-background-color: blue");
+            }
+            else if (id471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id471.setStyle("-fx-background-color: blue");
+            }
+            else if (id472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id472.setStyle("-fx-background-color: blue");
+            }
+            else if (id473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id473.setStyle("-fx-background-color: blue");
+            }
+            else if (id474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id474.setStyle("-fx-background-color: blue");
+            }
+            else if (id475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id475.setStyle("-fx-background-color: blue");
+            }
+            else if (id476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id476.setStyle("-fx-background-color: blue");
+            }
+            else if (id477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id477.setStyle("-fx-background-color: blue");
+            }
+            else if (id478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id478.setStyle("-fx-background-color: blue");
+            }
+            else if (id479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id479.setStyle("-fx-background-color: blue");
+            }
+            else if (id480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id480.setStyle("-fx-background-color: blue");
+            }
+            else if (id481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id481.setStyle("-fx-background-color: blue");
+            }
+            else if (id482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id482.setStyle("-fx-background-color: blue");
+            }
+            else if (id483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id483.setStyle("-fx-background-color: blue");
+            }
+            else if (id484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id484.setStyle("-fx-background-color: blue");
+            }
+            else if (id485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id485.setStyle("-fx-background-color: blue");
+            }
+            else if (id486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id486.setStyle("-fx-background-color: blue");
+            }
+            else if (id487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id487.setStyle("-fx-background-color: blue");
+            }
+            else if (id488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id488.setStyle("-fx-background-color: blue");
+            }
+            else if (id489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id489.setStyle("-fx-background-color: blue");
+            }
+            else if (id490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id490.setStyle("-fx-background-color: blue");
+            }
+            else if (id491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id491.setStyle("-fx-background-color: blue");
+            }
+            else if (id492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id492.setStyle("-fx-background-color: blue");
+            }
+            else if (id493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id493.setStyle("-fx-background-color: blue");
+            }
+            else if (id494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id494.setStyle("-fx-background-color: blue");
+            }
+            else if (id495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id495.setStyle("-fx-background-color: blue");
+            }
+            else if (id496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id496.setStyle("-fx-background-color: blue");
+            }
+            else if (id497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id497.setStyle("-fx-background-color: blue");
+            }
+            else if (id498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id498.setStyle("-fx-background-color: blue");
+            }
+            else if (id499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id499.setStyle("-fx-background-color: blue");
+            }
+            else if (id500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id500.setStyle("-fx-background-color: blue");
+            }
+            else if (id501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id501.setStyle("-fx-background-color: blue");
+            }
+            else if (id502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id502.setStyle("-fx-background-color: blue");
+            }
+            else if (id503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id503.setStyle("-fx-background-color: blue");
+            }
+            else if (id504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id504.setStyle("-fx-background-color: blue");
+            }
+            else if (id505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id505.setStyle("-fx-background-color: blue");
+            }
+            else if (id506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id506.setStyle("-fx-background-color: blue");
+            }
+            else if (id507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id507.setStyle("-fx-background-color: blue");
+            }
+            else if (id508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id508.setStyle("-fx-background-color: blue");
+            }
+            else if (id509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id509.setStyle("-fx-background-color: blue");
+            }
+            else if (id510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id510.setStyle("-fx-background-color: blue");
+            }
+            else if (id511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id511.setStyle("-fx-background-color: blue");
+            }
+            else if (id512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id512.setStyle("-fx-background-color: blue");
+            }
+            else if (id513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id513.setStyle("-fx-background-color: blue");
+            }
+            else if (id514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id514.setStyle("-fx-background-color: blue");
+            }
+            else if (id515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id515.setStyle("-fx-background-color: blue");
+            }
+            else if (id516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id516.setStyle("-fx-background-color: blue");
+            }
+            else if (id517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id517.setStyle("-fx-background-color: blue");
+            }
+            else if (id518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id518.setStyle("-fx-background-color: blue");
+            }
+            else if (id519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id519.setStyle("-fx-background-color: blue");
+            }
+            else if (id520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id520.setStyle("-fx-background-color: blue");
+            }
+            else if (id521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id521.setStyle("-fx-background-color: blue");
+            }
+            else if (id522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id522.setStyle("-fx-background-color: blue");
+            }
+            else if (id523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id523.setStyle("-fx-background-color: blue");
+            }
+            else if (id524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id524.setStyle("-fx-background-color: blue");
+            }
+            else if (id525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id525.setStyle("-fx-background-color: blue");
+            }
+            else if (id526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id526.setStyle("-fx-background-color: blue");
+            }
+            else if (id527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id527.setStyle("-fx-background-color: blue");
+            }
+            else if (id528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id528.setStyle("-fx-background-color: blue");
+            }
+            else if (id529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id529.setStyle("-fx-background-color: blue");
+            }
+            else if (id530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id530.setStyle("-fx-background-color: blue");
+            }
+            else if (id531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id531.setStyle("-fx-background-color: blue");
+            }
+            else if (id532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id532.setStyle("-fx-background-color: blue");
+            }
+            else if (id533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id533.setStyle("-fx-background-color: blue");
+            }
+            else if (id534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id534.setStyle("-fx-background-color: blue");
+            }
+            else if (id535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id535.setStyle("-fx-background-color: blue");
+            }
+            else if (id536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id536.setStyle("-fx-background-color: blue");
+            }
+            else if (id537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id537.setStyle("-fx-background-color: blue");
+            }
+            else if (id538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id538.setStyle("-fx-background-color: blue");
+            }
+            else if (id539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id539.setStyle("-fx-background-color: blue");
+            }
+            else if (id540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id540.setStyle("-fx-background-color: blue");
+            }
+            else if (id541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id541.setStyle("-fx-background-color: blue");
+            }
+            else if (id542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id542.setStyle("-fx-background-color: blue");
+            }
+            else if (id543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id543.setStyle("-fx-background-color: blue");
+            }
+            else if (id544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id544.setStyle("-fx-background-color: blue");
+            }
+            else if (id545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id545.setStyle("-fx-background-color: blue");
+            }
+            else if (id546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id546.setStyle("-fx-background-color: blue");
+            }
+            else if (id547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id547.setStyle("-fx-background-color: blue");
+            }
+            else if (id548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id548.setStyle("-fx-background-color: blue");
+            }
+            else if (id549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id549.setStyle("-fx-background-color: blue");
+            }
+            else if (id550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id550.setStyle("-fx-background-color: blue");
+            }
+            else if (id551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id551.setStyle("-fx-background-color: blue");
+            }
+            else if (id552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id552.setStyle("-fx-background-color: blue");
+            }
+            else if (id553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id553.setStyle("-fx-background-color: blue");
+            }
+            else if (id554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id554.setStyle("-fx-background-color: blue");
+            }
+            else if (id555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id555.setStyle("-fx-background-color: blue");
+            }
+            else if (id556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id556.setStyle("-fx-background-color: blue");
+            }
+            else if (id557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id557.setStyle("-fx-background-color: blue");
+            }
+            else if (id558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id558.setStyle("-fx-background-color: blue");
+            }
+            else if (id559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id559.setStyle("-fx-background-color: blue");
+            }
+            else if (id560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id560.setStyle("-fx-background-color: blue");
+            }
+            else if (id561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id561.setStyle("-fx-background-color: blue");
+            }
+            else if (id562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id562.setStyle("-fx-background-color: blue");
+            }
+            else if (id563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id563.setStyle("-fx-background-color: blue");
+            }
+            else if (id564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id564.setStyle("-fx-background-color: blue");
+            }
+            else if (id565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id565.setStyle("-fx-background-color: blue");
+            }
+            else if (id566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id566.setStyle("-fx-background-color: blue");
+            }
+            else if (id567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id567.setStyle("-fx-background-color: blue");
+            }
+            else if (id568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id568.setStyle("-fx-background-color: blue");
+            }
+            else if (id569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id569.setStyle("-fx-background-color: blue");
+            }
+            else if (id570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id570.setStyle("-fx-background-color: blue");
+            }
+            else if (id571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id571.setStyle("-fx-background-color: blue");
+            }
+            else if (id572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id572.setStyle("-fx-background-color: blue");
+            }
+            else if (id573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id573.setStyle("-fx-background-color: blue");
+            }
+            else if (id574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id574.setStyle("-fx-background-color: blue");
+            }
+            else if (id575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id575.setStyle("-fx-background-color: blue");
+            }
+            else if (id576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id576.setStyle("-fx-background-color: blue");
+            }
+            else if (id577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id577.setStyle("-fx-background-color: blue");
+            }
+            else if (id578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id578.setStyle("-fx-background-color: blue");
+            }
+            else if (id579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id579.setStyle("-fx-background-color: blue");
+            }
+            else if (id580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id580.setStyle("-fx-background-color: blue");
+            }
+            else if (id581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id581.setStyle("-fx-background-color: blue");
+            }
+            else if (id582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id582.setStyle("-fx-background-color: blue");
+            }
+            else if (id583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id583.setStyle("-fx-background-color: blue");
+            }
+            else if (id584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id584.setStyle("-fx-background-color: blue");
+            }
+            else if (id585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id585.setStyle("-fx-background-color: blue");
+            }
+            else if (id586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id586.setStyle("-fx-background-color: blue");
+            }
+            else if (id587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id587.setStyle("-fx-background-color: blue");
+            }
+            else if (id588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id588.setStyle("-fx-background-color: blue");
+            }
+            else if (id589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id589.setStyle("-fx-background-color: blue");
+            }
+            else if (id590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id590.setStyle("-fx-background-color: blue");
+            }
+            else if (id591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id591.setStyle("-fx-background-color: blue");
+            }
+            else if (id592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id592.setStyle("-fx-background-color: blue");
+            }
+            else if (id593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id593.setStyle("-fx-background-color: blue");
+            }
+            else if (id594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id594.setStyle("-fx-background-color: blue");
+            }
+            else if (id595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id595.setStyle("-fx-background-color: blue");
+            }
+            else if (id596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id596.setStyle("-fx-background-color: blue");
+            }
+            else if (id597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id597.setStyle("-fx-background-color: blue");
+            }
+            else if (id598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id598.setStyle("-fx-background-color: blue");
+            }
+            else if (id599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id599.setStyle("-fx-background-color: blue");
+            }
+            else if (id600.getOnMouseClicked().equals(mouseEvent))
+            {
+                id600.setStyle("-fx-background-color: blue");
+            }
+            else if (id601.getOnMouseClicked().equals(mouseEvent))
+            {
+                id601.setStyle("-fx-background-color: blue");
+            }
+            else if (id602.getOnMouseClicked().equals(mouseEvent))
+            {
+                id602.setStyle("-fx-background-color: blue");
+            }
+            else if (id603.getOnMouseClicked().equals(mouseEvent))
+            {
+                id603.setStyle("-fx-background-color: blue");
+            }
+            else if (id604.getOnMouseClicked().equals(mouseEvent))
+            {
+                id604.setStyle("-fx-background-color: blue");
+            }
+            else if (id605.getOnMouseClicked().equals(mouseEvent))
+            {
+                id605.setStyle("-fx-background-color: blue");
+            }
+            else if (id606.getOnMouseClicked().equals(mouseEvent))
+            {
+                id606.setStyle("-fx-background-color: blue");
+            }
+            else if (id607.getOnMouseClicked().equals(mouseEvent))
+            {
+                id607.setStyle("-fx-background-color: blue");
+            }
+            else if (id608.getOnMouseClicked().equals(mouseEvent))
+            {
+                id608.setStyle("-fx-background-color: blue");
+            }
+            else if (id609.getOnMouseClicked().equals(mouseEvent))
+            {
+                id609.setStyle("-fx-background-color: blue");
+            }
+            else if (id610.getOnMouseClicked().equals(mouseEvent))
+            {
+                id610.setStyle("-fx-background-color: blue");
+            }
+            else if (id611.getOnMouseClicked().equals(mouseEvent))
+            {
+                id611.setStyle("-fx-background-color: blue");
+            }
+            else if (id612.getOnMouseClicked().equals(mouseEvent))
+            {
+                id612.setStyle("-fx-background-color: blue");
+            }
+            else if (id613.getOnMouseClicked().equals(mouseEvent))
+            {
+                id613.setStyle("-fx-background-color: blue");
+            }
+            else if (id614.getOnMouseClicked().equals(mouseEvent))
+            {
+                id614.setStyle("-fx-background-color: blue");
+            }
+            else if (id615.getOnMouseClicked().equals(mouseEvent))
+            {
+                id615.setStyle("-fx-background-color: blue");
+            }
+            else if (id616.getOnMouseClicked().equals(mouseEvent))
+            {
+                id616.setStyle("-fx-background-color: blue");
+            }
+            else if (id617.getOnMouseClicked().equals(mouseEvent))
+            {
+                id617.setStyle("-fx-background-color: blue");
+            }
+            else if (id618.getOnMouseClicked().equals(mouseEvent))
+            {
+                id618.setStyle("-fx-background-color: blue");
+            }
+            else if (id619.getOnMouseClicked().equals(mouseEvent))
+            {
+                id619.setStyle("-fx-background-color: blue");
+            }
+            else if (id620.getOnMouseClicked().equals(mouseEvent))
+            {
+                id620.setStyle("-fx-background-color: blue");
+            }
+            else if (id621.getOnMouseClicked().equals(mouseEvent))
+            {
+                id621.setStyle("-fx-background-color: blue");
+            }
+            else if (id622.getOnMouseClicked().equals(mouseEvent))
+            {
+                id622.setStyle("-fx-background-color: blue");
+            }
+            else if (id623.getOnMouseClicked().equals(mouseEvent))
+            {
+                id623.setStyle("-fx-background-color: blue");
+            }
+            else if (id624.getOnMouseClicked().equals(mouseEvent))
+            {
+                id624.setStyle("-fx-background-color: blue");
+            }
+            else if (id625.getOnMouseClicked().equals(mouseEvent))
+            {
+                id625.setStyle("-fx-background-color: blue");
+            }
+            else if (id626.getOnMouseClicked().equals(mouseEvent))
+            {
+                id626.setStyle("-fx-background-color: blue");
+            }
+            else if (id627.getOnMouseClicked().equals(mouseEvent))
+            {
+                id627.setStyle("-fx-background-color: blue");
+            }
+            else if (id628.getOnMouseClicked().equals(mouseEvent))
+            {
+                id628.setStyle("-fx-background-color: blue");
+            }
+            else if (id629.getOnMouseClicked().equals(mouseEvent))
+            {
+                id629.setStyle("-fx-background-color: blue");
+            }
+            else if (id630.getOnMouseClicked().equals(mouseEvent))
+            {
+                id630.setStyle("-fx-background-color: blue");
+            }
+            else if (id631.getOnMouseClicked().equals(mouseEvent))
+            {
+                id631.setStyle("-fx-background-color: blue");
+            }
+            else if (id632.getOnMouseClicked().equals(mouseEvent))
+            {
+                id632.setStyle("-fx-background-color: blue");
+            }
+            else if (id633.getOnMouseClicked().equals(mouseEvent))
+            {
+                id633.setStyle("-fx-background-color: blue");
+            }
+            else if (id634.getOnMouseClicked().equals(mouseEvent))
+            {
+                id634.setStyle("-fx-background-color: blue");
+            }
+            else if (id635.getOnMouseClicked().equals(mouseEvent))
+            {
+                id635.setStyle("-fx-background-color: blue");
+            }
+            else if (id636.getOnMouseClicked().equals(mouseEvent))
+            {
+                id636.setStyle("-fx-background-color: blue");
+            }
+            else if (id637.getOnMouseClicked().equals(mouseEvent))
+            {
+                id637.setStyle("-fx-background-color: blue");
+            }
+            else if (id638.getOnMouseClicked().equals(mouseEvent))
+            {
+                id638.setStyle("-fx-background-color: blue");
+            }
+            else if (id639.getOnMouseClicked().equals(mouseEvent))
+            {
+                id639.setStyle("-fx-background-color: blue");
+            }
+            else if (id640.getOnMouseClicked().equals(mouseEvent))
+            {
+                id640.setStyle("-fx-background-color: blue");
+            }
+            else if (id641.getOnMouseClicked().equals(mouseEvent))
+            {
+                id641.setStyle("-fx-background-color: blue");
+            }
+            else if (id642.getOnMouseClicked().equals(mouseEvent))
+            {
+                id642.setStyle("-fx-background-color: blue");
+            }
+            else if (id643.getOnMouseClicked().equals(mouseEvent))
+            {
+                id643.setStyle("-fx-background-color: blue");
+            }
+            else if (id644.getOnMouseClicked().equals(mouseEvent))
+            {
+                id644.setStyle("-fx-background-color: blue");
+            }
+            else if (id645.getOnMouseClicked().equals(mouseEvent))
+            {
+                id645.setStyle("-fx-background-color: blue");
+            }
+            else if (id646.getOnMouseClicked().equals(mouseEvent))
+            {
+                id646.setStyle("-fx-background-color: blue");
+            }
+            else if (id647.getOnMouseClicked().equals(mouseEvent))
+            {
+                id647.setStyle("-fx-background-color: blue");
+            }
+            else if (id648.getOnMouseClicked().equals(mouseEvent))
+            {
+                id648.setStyle("-fx-background-color: blue");
+            }
+            else if (id649.getOnMouseClicked().equals(mouseEvent))
+            {
+                id649.setStyle("-fx-background-color: blue");
+            }
+            else if (id650.getOnMouseClicked().equals(mouseEvent))
+            {
+                id650.setStyle("-fx-background-color: blue");
+            }
+            else if (id651.getOnMouseClicked().equals(mouseEvent))
+            {
+                id651.setStyle("-fx-background-color: blue");
+            }
+            else if (id652.getOnMouseClicked().equals(mouseEvent))
+            {
+                id652.setStyle("-fx-background-color: blue");
+            }
+            else if (id653.getOnMouseClicked().equals(mouseEvent))
+            {
+                id653.setStyle("-fx-background-color: blue");
+            }
+            else if (id654.getOnMouseClicked().equals(mouseEvent))
+            {
+                id654.setStyle("-fx-background-color: blue");
+            }
+            else if (id655.getOnMouseClicked().equals(mouseEvent))
+            {
+                id655.setStyle("-fx-background-color: blue");
+            }
+            else if (id656.getOnMouseClicked().equals(mouseEvent))
+            {
+                id656.setStyle("-fx-background-color: blue");
+            }
+            else if (id657.getOnMouseClicked().equals(mouseEvent))
+            {
+                id657.setStyle("-fx-background-color: blue");
+            }
+            else if (id658.getOnMouseClicked().equals(mouseEvent))
+            {
+                id658.setStyle("-fx-background-color: blue");
+            }
+            else if (id659.getOnMouseClicked().equals(mouseEvent))
+            {
+                id659.setStyle("-fx-background-color: blue");
+            }
+            else if (id660.getOnMouseClicked().equals(mouseEvent))
+            {
+                id660.setStyle("-fx-background-color: blue");
+            }
+            else if (id661.getOnMouseClicked().equals(mouseEvent))
+            {
+                id661.setStyle("-fx-background-color: blue");
+            }
+            else if (id662.getOnMouseClicked().equals(mouseEvent))
+            {
+                id662.setStyle("-fx-background-color: blue");
+            }
+            else if (id663.getOnMouseClicked().equals(mouseEvent))
+            {
+                id663.setStyle("-fx-background-color: blue");
+            }
+            else if (id664.getOnMouseClicked().equals(mouseEvent))
+            {
+                id664.setStyle("-fx-background-color: blue");
+            }
+            else if (id665.getOnMouseClicked().equals(mouseEvent))
+            {
+                id665.setStyle("-fx-background-color: blue");
+            }
+            else if (id666.getOnMouseClicked().equals(mouseEvent))
+            {
+                id666.setStyle("-fx-background-color: blue");
+            }
+            else if (id667.getOnMouseClicked().equals(mouseEvent))
+            {
+                id667.setStyle("-fx-background-color: blue");
+            }
+            else if (id668.getOnMouseClicked().equals(mouseEvent))
+            {
+                id668.setStyle("-fx-background-color: blue");
+            }
+            else if (id669.getOnMouseClicked().equals(mouseEvent))
+            {
+                id669.setStyle("-fx-background-color: blue");
+            }
+            else if (id670.getOnMouseClicked().equals(mouseEvent))
+            {
+                id670.setStyle("-fx-background-color: blue");
+            }
+            else if (id671.getOnMouseClicked().equals(mouseEvent))
+            {
+                id671.setStyle("-fx-background-color: blue");
+            }
+            else if (id672.getOnMouseClicked().equals(mouseEvent))
+            {
+                id672.setStyle("-fx-background-color: blue");
+            }
+            else if (id673.getOnMouseClicked().equals(mouseEvent))
+            {
+                id673.setStyle("-fx-background-color: blue");
+            }
+            else if (id674.getOnMouseClicked().equals(mouseEvent))
+            {
+                id674.setStyle("-fx-background-color: blue");
+            }
+            else if (id675.getOnMouseClicked().equals(mouseEvent))
+            {
+                id675.setStyle("-fx-background-color: blue");
+            }
+            else if (id676.getOnMouseClicked().equals(mouseEvent))
+            {
+                id676.setStyle("-fx-background-color: blue");
+            }
+            else if (id677.getOnMouseClicked().equals(mouseEvent))
+            {
+                id677.setStyle("-fx-background-color: blue");
+            }
+            else if (id678.getOnMouseClicked().equals(mouseEvent))
+            {
+                id678.setStyle("-fx-background-color: blue");
+            }
+            else if (id679.getOnMouseClicked().equals(mouseEvent))
+            {
+                id679.setStyle("-fx-background-color: blue");
+            }
+            else if (id680.getOnMouseClicked().equals(mouseEvent))
+            {
+                id680.setStyle("-fx-background-color: blue");
+            }
+            else if (id681.getOnMouseClicked().equals(mouseEvent))
+            {
+                id681.setStyle("-fx-background-color: blue");
+            }
+            else if (id682.getOnMouseClicked().equals(mouseEvent))
+            {
+                id682.setStyle("-fx-background-color: blue");
+            }
+            else if (id683.getOnMouseClicked().equals(mouseEvent))
+            {
+                id683.setStyle("-fx-background-color: blue");
+            }
+            else if (id684.getOnMouseClicked().equals(mouseEvent))
+            {
+                id684.setStyle("-fx-background-color: blue");
+            }
+            else if (id685.getOnMouseClicked().equals(mouseEvent))
+            {
+                id685.setStyle("-fx-background-color: blue");
+            }
+            else if (id686.getOnMouseClicked().equals(mouseEvent))
+            {
+                id686.setStyle("-fx-background-color: blue");
+            }
+            else if (id687.getOnMouseClicked().equals(mouseEvent))
+            {
+                id687.setStyle("-fx-background-color: blue");
+            }
+            else if (id688.getOnMouseClicked().equals(mouseEvent))
+            {
+                id688.setStyle("-fx-background-color: blue");
+            }
+            else if (id689.getOnMouseClicked().equals(mouseEvent))
+            {
+                id689.setStyle("-fx-background-color: blue");
+            }
+            else if (id690.getOnMouseClicked().equals(mouseEvent))
+            {
+                id690.setStyle("-fx-background-color: blue");
+            }
+            else if (id691.getOnMouseClicked().equals(mouseEvent))
+            {
+                id691.setStyle("-fx-background-color: blue");
+            }
+            else if (id692.getOnMouseClicked().equals(mouseEvent))
+            {
+                id692.setStyle("-fx-background-color: blue");
+            }
+            else if (id693.getOnMouseClicked().equals(mouseEvent))
+            {
+                id693.setStyle("-fx-background-color: blue");
+            }
+            else if (id694.getOnMouseClicked().equals(mouseEvent))
+            {
+                id694.setStyle("-fx-background-color: blue");
+            }
+            else if (id695.getOnMouseClicked().equals(mouseEvent))
+            {
+                id695.setStyle("-fx-background-color: blue");
+            }
+            else if (id696.getOnMouseClicked().equals(mouseEvent))
+            {
+                id696.setStyle("-fx-background-color: blue");
+            }
+            else if (id697.getOnMouseClicked().equals(mouseEvent))
+            {
+                id697.setStyle("-fx-background-color: blue");
+            }
+            else if (id698.getOnMouseClicked().equals(mouseEvent))
+            {
+                id698.setStyle("-fx-background-color: blue");
+            }
+            else if (id699.getOnMouseClicked().equals(mouseEvent))
+            {
+                id699.setStyle("-fx-background-color: blue");
+            }
+            else if (id700.getOnMouseClicked().equals(mouseEvent))
+            {
+                id700.setStyle("-fx-background-color: blue");
+            }
+            else if (id701.getOnMouseClicked().equals(mouseEvent))
+            {
+                id701.setStyle("-fx-background-color: blue");
+            }
+            else if (id702.getOnMouseClicked().equals(mouseEvent))
+            {
+                id702.setStyle("-fx-background-color: blue");
+            }
+            else if (id703.getOnMouseClicked().equals(mouseEvent))
+            {
+                id703.setStyle("-fx-background-color: blue");
+            }
+            else if (id704.getOnMouseClicked().equals(mouseEvent))
+            {
+                id704.setStyle("-fx-background-color: blue");
+            }
+            else if (id705.getOnMouseClicked().equals(mouseEvent))
+            {
+                id705.setStyle("-fx-background-color: blue");
+            }
+            else if (id706.getOnMouseClicked().equals(mouseEvent))
+            {
+                id706.setStyle("-fx-background-color: blue");
+            }
+            else if (id707.getOnMouseClicked().equals(mouseEvent))
+            {
+                id707.setStyle("-fx-background-color: blue");
+            }
+            else if (id708.getOnMouseClicked().equals(mouseEvent))
+            {
+                id708.setStyle("-fx-background-color: blue");
+            }
+            else if (id709.getOnMouseClicked().equals(mouseEvent))
+            {
+                id709.setStyle("-fx-background-color: blue");
+            }
+            else if (id710.getOnMouseClicked().equals(mouseEvent))
+            {
+                id710.setStyle("-fx-background-color: blue");
+            }
+            else if (id711.getOnMouseClicked().equals(mouseEvent))
+            {
+                id711.setStyle("-fx-background-color: blue");
+            }
+            else if (id712.getOnMouseClicked().equals(mouseEvent))
+            {
+                id712.setStyle("-fx-background-color: blue");
+            }
+            else if (id713.getOnMouseClicked().equals(mouseEvent))
+            {
+                id713.setStyle("-fx-background-color: blue");
+            }
+            else if (id714.getOnMouseClicked().equals(mouseEvent))
+            {
+                id714.setStyle("-fx-background-color: blue");
+            }
+            else if (id715.getOnMouseClicked().equals(mouseEvent))
+            {
+                id715.setStyle("-fx-background-color: blue");
+            }
+            else if (id716.getOnMouseClicked().equals(mouseEvent))
+            {
+                id716.setStyle("-fx-background-color: blue");
+            }
+            else if (id717.getOnMouseClicked().equals(mouseEvent))
+            {
+                id717.setStyle("-fx-background-color: blue");
+            }
+            else if (id718.getOnMouseClicked().equals(mouseEvent))
+            {
+                id718.setStyle("-fx-background-color: blue");
+            }
+            else if (id719.getOnMouseClicked().equals(mouseEvent))
+            {
+                id719.setStyle("-fx-background-color: blue");
+            }
+            else if (id720.getOnMouseClicked().equals(mouseEvent))
+            {
+                id720.setStyle("-fx-background-color: blue");
+            }
+            else if (id721.getOnMouseClicked().equals(mouseEvent))
+            {
+                id721.setStyle("-fx-background-color: blue");
+            }
+            else if (id722.getOnMouseClicked().equals(mouseEvent))
+            {
+                id722.setStyle("-fx-background-color: blue");
+            }
+            else if (id723.getOnMouseClicked().equals(mouseEvent))
+            {
+                id723.setStyle("-fx-background-color: blue");
+            }
+            else if (id724.getOnMouseClicked().equals(mouseEvent))
+            {
+                id724.setStyle("-fx-background-color: blue");
+            }
+            else if (id725.getOnMouseClicked().equals(mouseEvent))
+            {
+                id725.setStyle("-fx-background-color: blue");
+            }
+            else if (id726.getOnMouseClicked().equals(mouseEvent))
+            {
+                id726.setStyle("-fx-background-color: blue");
+            }
+            else if (id727.getOnMouseClicked().equals(mouseEvent))
+            {
+                id727.setStyle("-fx-background-color: blue");
+            }
+            else if (id728.getOnMouseClicked().equals(mouseEvent))
+            {
+                id728.setStyle("-fx-background-color: blue");
+            }
+            else if (id729.getOnMouseClicked().equals(mouseEvent))
+            {
+                id729.setStyle("-fx-background-color: blue");
+            }
+            else if (id730.getOnMouseClicked().equals(mouseEvent))
+            {
+                id730.setStyle("-fx-background-color: blue");
+            }
+            else if (id731.getOnMouseClicked().equals(mouseEvent))
+            {
+                id731.setStyle("-fx-background-color: blue");
+            }
+            else if (id732.getOnMouseClicked().equals(mouseEvent))
+            {
+                id732.setStyle("-fx-background-color: blue");
+            }
+            else if (id733.getOnMouseClicked().equals(mouseEvent))
+            {
+                id733.setStyle("-fx-background-color: blue");
+            }
+            else if (id734.getOnMouseClicked().equals(mouseEvent))
+            {
+                id734.setStyle("-fx-background-color: blue");
+            }
+            else if (id735.getOnMouseClicked().equals(mouseEvent))
+            {
+                id735.setStyle("-fx-background-color: blue");
+            }
+            else if (id736.getOnMouseClicked().equals(mouseEvent))
+            {
+                id736.setStyle("-fx-background-color: blue");
+            }
+            else if (id737.getOnMouseClicked().equals(mouseEvent))
+            {
+                id737.setStyle("-fx-background-color: blue");
+            }
+            else if (id738.getOnMouseClicked().equals(mouseEvent))
+            {
+                id738.setStyle("-fx-background-color: blue");
+            }
+            else if (id739.getOnMouseClicked().equals(mouseEvent))
+            {
+                id739.setStyle("-fx-background-color: blue");
+            }
+            else if (id740.getOnMouseClicked().equals(mouseEvent))
+            {
+                id740.setStyle("-fx-background-color: blue");
+            }
+            else if (id741.getOnMouseClicked().equals(mouseEvent))
+            {
+                id741.setStyle("-fx-background-color: blue");
+            }
+            else if (id742.getOnMouseClicked().equals(mouseEvent))
+            {
+                id742.setStyle("-fx-background-color: blue");
+            }
+            else if (id743.getOnMouseClicked().equals(mouseEvent))
+            {
+                id743.setStyle("-fx-background-color: blue");
+            }
+            else if (id744.getOnMouseClicked().equals(mouseEvent))
+            {
+                id744.setStyle("-fx-background-color: blue");
+            }
+            else if (id745.getOnMouseClicked().equals(mouseEvent))
+            {
+                id745.setStyle("-fx-background-color: blue");
+            }
+            else if (id746.getOnMouseClicked().equals(mouseEvent))
+            {
+                id746.setStyle("-fx-background-color: blue");
+            }
+            else if (id747.getOnMouseClicked().equals(mouseEvent))
+            {
+                id747.setStyle("-fx-background-color: blue");
+            }
+            else if (id748.getOnMouseClicked().equals(mouseEvent))
+            {
+                id748.setStyle("-fx-background-color: blue");
+            }
+            else if (id749.getOnMouseClicked().equals(mouseEvent))
+            {
+                id749.setStyle("-fx-background-color: blue");
+            }
+            else if (id750.getOnMouseClicked().equals(mouseEvent))
+            {
+                id750.setStyle("-fx-background-color: blue");
+            }
+            else if (id751.getOnMouseClicked().equals(mouseEvent))
+            {
+                id751.setStyle("-fx-background-color: blue");
+            }
+            else if (id752.getOnMouseClicked().equals(mouseEvent))
+            {
+                id752.setStyle("-fx-background-color: blue");
+            }
+            else if (id753.getOnMouseClicked().equals(mouseEvent))
+            {
+                id753.setStyle("-fx-background-color: blue");
+            }
+            else if (id754.getOnMouseClicked().equals(mouseEvent))
+            {
+                id754.setStyle("-fx-background-color: blue");
+            }
+            else if (id755.getOnMouseClicked().equals(mouseEvent))
+            {
+                id755.setStyle("-fx-background-color: blue");
+            }
+            else if (id756.getOnMouseClicked().equals(mouseEvent))
+            {
+                id756.setStyle("-fx-background-color: blue");
+            }
+            else if (id757.getOnMouseClicked().equals(mouseEvent))
+            {
+                id757.setStyle("-fx-background-color: blue");
+            }
+            else if (id758.getOnMouseClicked().equals(mouseEvent))
+            {
+                id758.setStyle("-fx-background-color: blue");
+            }
+            else if (id759.getOnMouseClicked().equals(mouseEvent))
+            {
+                id759.setStyle("-fx-background-color: blue");
+            }
+            else if (id760.getOnMouseClicked().equals(mouseEvent))
+            {
+                id760.setStyle("-fx-background-color: blue");
+            }
+            else if (id761.getOnMouseClicked().equals(mouseEvent))
+            {
+                id761.setStyle("-fx-background-color: blue");
+            }
+            else if (id762.getOnMouseClicked().equals(mouseEvent))
+            {
+                id762.setStyle("-fx-background-color: blue");
+            }
+            else if (id763.getOnMouseClicked().equals(mouseEvent))
+            {
+                id763.setStyle("-fx-background-color: blue");
+            }
+            else if (id764.getOnMouseClicked().equals(mouseEvent))
+            {
+                id764.setStyle("-fx-background-color: blue");
+            }
+            else if (id765.getOnMouseClicked().equals(mouseEvent))
+            {
+                id765.setStyle("-fx-background-color: blue");
+            }
+            else if (id766.getOnMouseClicked().equals(mouseEvent))
+            {
+                id766.setStyle("-fx-background-color: blue");
+            }
+            else if (id767.getOnMouseClicked().equals(mouseEvent))
+            {
+                id767.setStyle("-fx-background-color: blue");
+            }
+            else if (id768.getOnMouseClicked().equals(mouseEvent))
+            {
+                id768.setStyle("-fx-background-color: blue");
+            }
+            else if (id769.getOnMouseClicked().equals(mouseEvent))
+            {
+                id769.setStyle("-fx-background-color: blue");
+            }
+            else if (id770.getOnMouseClicked().equals(mouseEvent))
+            {
+                id770.setStyle("-fx-background-color: blue");
+            }
+            else if (id771.getOnMouseClicked().equals(mouseEvent))
+            {
+                id771.setStyle("-fx-background-color: blue");
+            }
+            else if (id772.getOnMouseClicked().equals(mouseEvent))
+            {
+                id772.setStyle("-fx-background-color: blue");
+            }
+            else if (id773.getOnMouseClicked().equals(mouseEvent))
+            {
+                id773.setStyle("-fx-background-color: blue");
+            }
+            else if (id774.getOnMouseClicked().equals(mouseEvent))
+            {
+                id774.setStyle("-fx-background-color: blue");
+            }
+            else if (id775.getOnMouseClicked().equals(mouseEvent))
+            {
+                id775.setStyle("-fx-background-color: blue");
+            }
+            else if (id776.getOnMouseClicked().equals(mouseEvent))
+            {
+                id776.setStyle("-fx-background-color: blue");
+            }
+            else if (id777.getOnMouseClicked().equals(mouseEvent))
+            {
+                id777.setStyle("-fx-background-color: blue");
+            }
+            else if (id778.getOnMouseClicked().equals(mouseEvent))
+            {
+                id778.setStyle("-fx-background-color: blue");
+            }
+            else if (id779.getOnMouseClicked().equals(mouseEvent))
+            {
+                id779.setStyle("-fx-background-color: blue");
+            }
+            else if (id780.getOnMouseClicked().equals(mouseEvent))
+            {
+                id780.setStyle("-fx-background-color: blue");
+            }
+            else if (id781.getOnMouseClicked().equals(mouseEvent))
+            {
+                id781.setStyle("-fx-background-color: blue");
+            }
+            else if (id782.getOnMouseClicked().equals(mouseEvent))
+            {
+                id782.setStyle("-fx-background-color: blue");
+            }
+            else if (id783.getOnMouseClicked().equals(mouseEvent))
+            {
+                id783.setStyle("-fx-background-color: blue");
+            }
+            else if (id784.getOnMouseClicked().equals(mouseEvent))
+            {
+                id784.setStyle("-fx-background-color: blue");
+            }
+            else if (id785.getOnMouseClicked().equals(mouseEvent))
+            {
+                id785.setStyle("-fx-background-color: blue");
+            }
+            else if (id786.getOnMouseClicked().equals(mouseEvent))
+            {
+                id786.setStyle("-fx-background-color: blue");
+            }
+            else if (id787.getOnMouseClicked().equals(mouseEvent))
+            {
+                id787.setStyle("-fx-background-color: blue");
+            }
+            else if (id788.getOnMouseClicked().equals(mouseEvent))
+            {
+                id788.setStyle("-fx-background-color: blue");
+            }
+            else if (id789.getOnMouseClicked().equals(mouseEvent))
+            {
+                id789.setStyle("-fx-background-color: blue");
+            }
+            else if (id790.getOnMouseClicked().equals(mouseEvent))
+            {
+                id790.setStyle("-fx-background-color: blue");
+            }
+            else if (id791.getOnMouseClicked().equals(mouseEvent))
+            {
+                id791.setStyle("-fx-background-color: blue");
+            }
+            else if (id792.getOnMouseClicked().equals(mouseEvent))
+            {
+                id792.setStyle("-fx-background-color: blue");
+            }
+            else if (id793.getOnMouseClicked().equals(mouseEvent))
+            {
+                id793.setStyle("-fx-background-color: blue");
+            }
+            else if (id794.getOnMouseClicked().equals(mouseEvent))
+            {
+                id794.setStyle("-fx-background-color: blue");
+            }
+            else if (id795.getOnMouseClicked().equals(mouseEvent))
+            {
+                id795.setStyle("-fx-background-color: blue");
+            }
+            else if (id796.getOnMouseClicked().equals(mouseEvent))
+            {
+                id796.setStyle("-fx-background-color: blue");
+            }
+            else if (id797.getOnMouseClicked().equals(mouseEvent))
+            {
+                id797.setStyle("-fx-background-color: blue");
+            }
+            else if (id798.getOnMouseClicked().equals(mouseEvent))
+            {
+                id798.setStyle("-fx-background-color: blue");
+            }
+            else if (id799.getOnMouseClicked().equals(mouseEvent))
+            {
+                id799.setStyle("-fx-background-color: blue");
+            }
+            else if (id800.getOnMouseClicked().equals(mouseEvent))
+            {
+                id800.setStyle("-fx-background-color: blue");
+            }
+            else if (id801.getOnMouseClicked().equals(mouseEvent))
+            {
+                id801.setStyle("-fx-background-color: blue");
+            }
+            else if (id802.getOnMouseClicked().equals(mouseEvent))
+            {
+                id802.setStyle("-fx-background-color: blue");
+            }
+            else if (id803.getOnMouseClicked().equals(mouseEvent))
+            {
+                id803.setStyle("-fx-background-color: blue");
+            }
+            else if (id804.getOnMouseClicked().equals(mouseEvent))
+            {
+                id804.setStyle("-fx-background-color: blue");
+            }
+            else if (id805.getOnMouseClicked().equals(mouseEvent))
+            {
+                id805.setStyle("-fx-background-color: blue");
+            }
+            else if (id806.getOnMouseClicked().equals(mouseEvent))
+            {
+                id806.setStyle("-fx-background-color: blue");
+            }
+            else if (id807.getOnMouseClicked().equals(mouseEvent))
+            {
+                id807.setStyle("-fx-background-color: blue");
+            }
+            else if (id808.getOnMouseClicked().equals(mouseEvent))
+            {
+                id808.setStyle("-fx-background-color: blue");
+            }
+            else if (id809.getOnMouseClicked().equals(mouseEvent))
+            {
+                id809.setStyle("-fx-background-color: blue");
+            }
+            else if (id810.getOnMouseClicked().equals(mouseEvent))
+            {
+                id810.setStyle("-fx-background-color: blue");
+            }
+            else if (id811.getOnMouseClicked().equals(mouseEvent))
+            {
+                id811.setStyle("-fx-background-color: blue");
+            }
+            else if (id812.getOnMouseClicked().equals(mouseEvent))
+            {
+                id812.setStyle("-fx-background-color: blue");
+            }
+            else if (id813.getOnMouseClicked().equals(mouseEvent))
+            {
+                id813.setStyle("-fx-background-color: blue");
+            }
+            else if (id814.getOnMouseClicked().equals(mouseEvent))
+            {
+                id814.setStyle("-fx-background-color: blue");
+            }
+            else if (id815.getOnMouseClicked().equals(mouseEvent))
+            {
+                id815.setStyle("-fx-background-color: blue");
+            }
+            else if (id816.getOnMouseClicked().equals(mouseEvent))
+            {
+                id816.setStyle("-fx-background-color: blue");
+            }
+            else if (id817.getOnMouseClicked().equals(mouseEvent))
+            {
+                id817.setStyle("-fx-background-color: blue");
+            }
+            else if (id818.getOnMouseClicked().equals(mouseEvent))
+            {
+                id818.setStyle("-fx-background-color: blue");
+            }
+            else if (id819.getOnMouseClicked().equals(mouseEvent))
+            {
+                id819.setStyle("-fx-background-color: blue");
+            }
+            else if (id820.getOnMouseClicked().equals(mouseEvent))
+            {
+                id820.setStyle("-fx-background-color: blue");
+            }
+            else if (id821.getOnMouseClicked().equals(mouseEvent))
+            {
+                id821.setStyle("-fx-background-color: blue");
+            }
+            else if (id822.getOnMouseClicked().equals(mouseEvent))
+            {
+                id822.setStyle("-fx-background-color: blue");
+            }
+            else if (id823.getOnMouseClicked().equals(mouseEvent))
+            {
+                id823.setStyle("-fx-background-color: blue");
+            }
+            else if (id824.getOnMouseClicked().equals(mouseEvent))
+            {
+                id824.setStyle("-fx-background-color: blue");
+            }
+            else if (id825.getOnMouseClicked().equals(mouseEvent))
+            {
+                id825.setStyle("-fx-background-color: blue");
+            }
+            else if (id826.getOnMouseClicked().equals(mouseEvent))
+            {
+                id826.setStyle("-fx-background-color: blue");
+            }
+            else if (id827.getOnMouseClicked().equals(mouseEvent))
+            {
+                id827.setStyle("-fx-background-color: blue");
+            }
+            else if (id828.getOnMouseClicked().equals(mouseEvent))
+            {
+                id828.setStyle("-fx-background-color: blue");
+            }
+            else if (id829.getOnMouseClicked().equals(mouseEvent))
+            {
+                id829.setStyle("-fx-background-color: blue");
+            }
+            else if (id830.getOnMouseClicked().equals(mouseEvent))
+            {
+                id830.setStyle("-fx-background-color: blue");
+            }
+            else if (id831.getOnMouseClicked().equals(mouseEvent))
+            {
+                id831.setStyle("-fx-background-color: blue");
+            }
+            else if (id832.getOnMouseClicked().equals(mouseEvent))
+            {
+                id832.setStyle("-fx-background-color: blue");
+            }
+            else if (id833.getOnMouseClicked().equals(mouseEvent))
+            {
+                id833.setStyle("-fx-background-color: blue");
+            }
+            else if (id834.getOnMouseClicked().equals(mouseEvent))
+            {
+                id834.setStyle("-fx-background-color: blue");
+            }
+            else if (id835.getOnMouseClicked().equals(mouseEvent))
+            {
+                id835.setStyle("-fx-background-color: blue");
+            }
+            else if (id836.getOnMouseClicked().equals(mouseEvent))
+            {
+                id836.setStyle("-fx-background-color: blue");
+            }
+            else if (id837.getOnMouseClicked().equals(mouseEvent))
+            {
+                id837.setStyle("-fx-background-color: blue");
+            }
+            else if (id838.getOnMouseClicked().equals(mouseEvent))
+            {
+                id838.setStyle("-fx-background-color: blue");
+            }
+            else if (id839.getOnMouseClicked().equals(mouseEvent))
+            {
+                id839.setStyle("-fx-background-color: blue");
+            }
+            else if (id840.getOnMouseClicked().equals(mouseEvent))
+            {
+                id840.setStyle("-fx-background-color: blue");
+            }
+            else if (id841.getOnMouseClicked().equals(mouseEvent))
+            {
+                id841.setStyle("-fx-background-color: blue");
+            }
+            else if (id842.getOnMouseClicked().equals(mouseEvent))
+            {
+                id842.setStyle("-fx-background-color: blue");
+            }
+            else if (id843.getOnMouseClicked().equals(mouseEvent))
+            {
+                id843.setStyle("-fx-background-color: blue");
+            }
+            else if (id844.getOnMouseClicked().equals(mouseEvent))
+            {
+                id844.setStyle("-fx-background-color: blue");
+            }
+            else if (id845.getOnMouseClicked().equals(mouseEvent))
+            {
+                id845.setStyle("-fx-background-color: blue");
+            }
+            else if (id846.getOnMouseClicked().equals(mouseEvent))
+            {
+                id846.setStyle("-fx-background-color: blue");
+            }
+            else if (id847.getOnMouseClicked().equals(mouseEvent))
+            {
+                id847.setStyle("-fx-background-color: blue");
+            }
+            else if (id848.getOnMouseClicked().equals(mouseEvent))
+            {
+                id848.setStyle("-fx-background-color: blue");
+            }
+            else if (id849.getOnMouseClicked().equals(mouseEvent))
+            {
+                id849.setStyle("-fx-background-color: blue");
+            }
+            else if (id850.getOnMouseClicked().equals(mouseEvent))
+            {
+                id850.setStyle("-fx-background-color: blue");
+            }
+            else if (id851.getOnMouseClicked().equals(mouseEvent))
+            {
+                id851.setStyle("-fx-background-color: blue");
+            }
+            else if (id852.getOnMouseClicked().equals(mouseEvent))
+            {
+                id852.setStyle("-fx-background-color: blue");
+            }
+            else if (id853.getOnMouseClicked().equals(mouseEvent))
+            {
+                id853.setStyle("-fx-background-color: blue");
+            }
+            else if (id854.getOnMouseClicked().equals(mouseEvent))
+            {
+                id854.setStyle("-fx-background-color: blue");
+            }
+            else if (id855.getOnMouseClicked().equals(mouseEvent))
+            {
+                id855.setStyle("-fx-background-color: blue");
+            }
+            else if (id856.getOnMouseClicked().equals(mouseEvent))
+            {
+                id856.setStyle("-fx-background-color: blue");
+            }
+            else if (id857.getOnMouseClicked().equals(mouseEvent))
+            {
+                id857.setStyle("-fx-background-color: blue");
+            }
+            else if (id858.getOnMouseClicked().equals(mouseEvent))
+            {
+                id858.setStyle("-fx-background-color: blue");
+            }
+            else if (id859.getOnMouseClicked().equals(mouseEvent))
+            {
+                id859.setStyle("-fx-background-color: blue");
+            }
+            else if (id860.getOnMouseClicked().equals(mouseEvent))
+            {
+                id860.setStyle("-fx-background-color: blue");
+            }
+            else if (id861.getOnMouseClicked().equals(mouseEvent))
+            {
+                id861.setStyle("-fx-background-color: blue");
+            }
+            else if (id862.getOnMouseClicked().equals(mouseEvent))
+            {
+                id862.setStyle("-fx-background-color: blue");
+            }
+            else if (id863.getOnMouseClicked().equals(mouseEvent))
+            {
+                id863.setStyle("-fx-background-color: blue");
+            }
+            else if (id864.getOnMouseClicked().equals(mouseEvent))
+            {
+                id864.setStyle("-fx-background-color: blue");
+            }
+            else if (id865.getOnMouseClicked().equals(mouseEvent))
+            {
+                id865.setStyle("-fx-background-color: blue");
+            }
+            else if (id866.getOnMouseClicked().equals(mouseEvent))
+            {
+                id866.setStyle("-fx-background-color: blue");
+            }
+            else if (id867.getOnMouseClicked().equals(mouseEvent))
+            {
+                id867.setStyle("-fx-background-color: blue");
+            }
+            else if (id868.getOnMouseClicked().equals(mouseEvent))
+            {
+                id868.setStyle("-fx-background-color: blue");
+            }
+            else if (id869.getOnMouseClicked().equals(mouseEvent))
+            {
+                id869.setStyle("-fx-background-color: blue");
+            }
+            else if (id870.getOnMouseClicked().equals(mouseEvent))
+            {
+                id870.setStyle("-fx-background-color: blue");
+            }
+            else if (id871.getOnMouseClicked().equals(mouseEvent))
+            {
+                id871.setStyle("-fx-background-color: blue");
+            }
+            else if (id872.getOnMouseClicked().equals(mouseEvent))
+            {
+                id872.setStyle("-fx-background-color: blue");
+            }
+            else if (id873.getOnMouseClicked().equals(mouseEvent))
+            {
+                id873.setStyle("-fx-background-color: blue");
+            }
+            else if (id874.getOnMouseClicked().equals(mouseEvent))
+            {
+                id874.setStyle("-fx-background-color: blue");
+            }
+            else if (id875.getOnMouseClicked().equals(mouseEvent))
+            {
+                id875.setStyle("-fx-background-color: blue");
+            }
+            else if (id876.getOnMouseClicked().equals(mouseEvent))
+            {
+                id876.setStyle("-fx-background-color: blue");
+            }
+            else if (id877.getOnMouseClicked().equals(mouseEvent))
+            {
+                id877.setStyle("-fx-background-color: blue");
+            }
+            else if (id878.getOnMouseClicked().equals(mouseEvent))
+            {
+                id878.setStyle("-fx-background-color: blue");
+            }
+            else if (id879.getOnMouseClicked().equals(mouseEvent))
+            {
+                id879.setStyle("-fx-background-color: blue");
+            }
+            else if (id880.getOnMouseClicked().equals(mouseEvent))
+            {
+                id880.setStyle("-fx-background-color: blue");
+            }
+            else if (id881.getOnMouseClicked().equals(mouseEvent))
+            {
+                id881.setStyle("-fx-background-color: blue");
+            }
+            else if (id882.getOnMouseClicked().equals(mouseEvent))
+            {
+                id882.setStyle("-fx-background-color: blue");
+            }
+            else if (id883.getOnMouseClicked().equals(mouseEvent))
+            {
+                id883.setStyle("-fx-background-color: blue");
+            }
+            else if (id884.getOnMouseClicked().equals(mouseEvent))
+            {
+                id884.setStyle("-fx-background-color: blue");
+            }
+            else if (id885.getOnMouseClicked().equals(mouseEvent))
+            {
+                id885.setStyle("-fx-background-color: blue");
+            }
+            else if (id886.getOnMouseClicked().equals(mouseEvent))
+            {
+                id886.setStyle("-fx-background-color: blue");
+            }
+            else if (id887.getOnMouseClicked().equals(mouseEvent))
+            {
+                id887.setStyle("-fx-background-color: blue");
+            }
+            else if (id888.getOnMouseClicked().equals(mouseEvent))
+            {
+                id888.setStyle("-fx-background-color: blue");
+            }
+            else if (id889.getOnMouseClicked().equals(mouseEvent))
+            {
+                id889.setStyle("-fx-background-color: blue");
+            }
+            else if (id890.getOnMouseClicked().equals(mouseEvent))
+            {
+                id890.setStyle("-fx-background-color: blue");
+            }
+            else if (id891.getOnMouseClicked().equals(mouseEvent))
+            {
+                id891.setStyle("-fx-background-color: blue");
+            }
+            else if (id892.getOnMouseClicked().equals(mouseEvent))
+            {
+                id892.setStyle("-fx-background-color: blue");
+            }
+            else if (id893.getOnMouseClicked().equals(mouseEvent))
+            {
+                id893.setStyle("-fx-background-color: blue");
+            }
+            else if (id894.getOnMouseClicked().equals(mouseEvent))
+            {
+                id894.setStyle("-fx-background-color: blue");
+            }
+            else if (id895.getOnMouseClicked().equals(mouseEvent))
+            {
+                id895.setStyle("-fx-background-color: blue");
+            }
+            else if (id896.getOnMouseClicked().equals(mouseEvent))
+            {
+                id896.setStyle("-fx-background-color: blue");
+            }
+            else if (id897.getOnMouseClicked().equals(mouseEvent))
+            {
+                id897.setStyle("-fx-background-color: blue");
+            }
+            else if (id898.getOnMouseClicked().equals(mouseEvent))
+            {
+                id898.setStyle("-fx-background-color: blue");
+            }
+            else if (id899.getOnMouseClicked().equals(mouseEvent))
+            {
+                id899.setStyle("-fx-background-color: blue");
+            }
+            else if (id900.getOnMouseClicked().equals(mouseEvent))
+            {
+                id900.setStyle("-fx-background-color: blue");
+            }
+            else if (id901.getOnMouseClicked().equals(mouseEvent))
+            {
+                id901.setStyle("-fx-background-color: blue");
+            }
+            else if (id902.getOnMouseClicked().equals(mouseEvent))
+            {
+                id902.setStyle("-fx-background-color: blue");
+            }
+            else if (id903.getOnMouseClicked().equals(mouseEvent))
+            {
+                id903.setStyle("-fx-background-color: blue");
+            }
+            else if (id904.getOnMouseClicked().equals(mouseEvent))
+            {
+                id904.setStyle("-fx-background-color: blue");
+            }
+            else if (id905.getOnMouseClicked().equals(mouseEvent))
+            {
+                id905.setStyle("-fx-background-color: blue");
+            }
+            else if (id906.getOnMouseClicked().equals(mouseEvent))
+            {
+                id906.setStyle("-fx-background-color: blue");
+            }
+            else if (id907.getOnMouseClicked().equals(mouseEvent))
+            {
+                id907.setStyle("-fx-background-color: blue");
+            }
+            else if (id908.getOnMouseClicked().equals(mouseEvent))
+            {
+                id908.setStyle("-fx-background-color: blue");
+            }
+            else if (id909.getOnMouseClicked().equals(mouseEvent))
+            {
+                id909.setStyle("-fx-background-color: blue");
+            }
+            else if (id910.getOnMouseClicked().equals(mouseEvent))
+            {
+                id910.setStyle("-fx-background-color: blue");
+            }
+            else if (id911.getOnMouseClicked().equals(mouseEvent))
+            {
+                id911.setStyle("-fx-background-color: blue");
+            }
+            else if (id912.getOnMouseClicked().equals(mouseEvent))
+            {
+                id912.setStyle("-fx-background-color: blue");
+            }
+            else if (id913.getOnMouseClicked().equals(mouseEvent))
+            {
+                id913.setStyle("-fx-background-color: blue");
+            }
+            else if (id914.getOnMouseClicked().equals(mouseEvent))
+            {
+                id914.setStyle("-fx-background-color: blue");
+            }
+            else if (id915.getOnMouseClicked().equals(mouseEvent))
+            {
+                id915.setStyle("-fx-background-color: blue");
+            }
+            else if (id916.getOnMouseClicked().equals(mouseEvent))
+            {
+                id916.setStyle("-fx-background-color: blue");
+            }
+            else if (id917.getOnMouseClicked().equals(mouseEvent))
+            {
+                id917.setStyle("-fx-background-color: blue");
+            }
+            else if (id918.getOnMouseClicked().equals(mouseEvent))
+            {
+                id918.setStyle("-fx-background-color: blue");
+            }
+            else if (id919.getOnMouseClicked().equals(mouseEvent))
+            {
+                id919.setStyle("-fx-background-color: blue");
+            }
+            else if (id920.getOnMouseClicked().equals(mouseEvent))
+            {
+                id920.setStyle("-fx-background-color: blue");
+            }
+            else if (id921.getOnMouseClicked().equals(mouseEvent))
+            {
+                id921.setStyle("-fx-background-color: blue");
+            }
+            else if (id922.getOnMouseClicked().equals(mouseEvent))
+            {
+                id922.setStyle("-fx-background-color: blue");
+            }
+            else if (id923.getOnMouseClicked().equals(mouseEvent))
+            {
+                id923.setStyle("-fx-background-color: blue");
+            }
+            else if (id924.getOnMouseClicked().equals(mouseEvent))
+            {
+                id924.setStyle("-fx-background-color: blue");
+            }
+            else if (id925.getOnMouseClicked().equals(mouseEvent))
+            {
+                id925.setStyle("-fx-background-color: blue");
+            }
+            else if (id926.getOnMouseClicked().equals(mouseEvent))
+            {
+                id926.setStyle("-fx-background-color: blue");
+            }
+            else if (id927.getOnMouseClicked().equals(mouseEvent))
+            {
+                id927.setStyle("-fx-background-color: blue");
+            }
+            else if (id928.getOnMouseClicked().equals(mouseEvent))
+            {
+                id928.setStyle("-fx-background-color: blue");
+            }
+            else if (id929.getOnMouseClicked().equals(mouseEvent))
+            {
+                id929.setStyle("-fx-background-color: blue");
+            }
+            else if (id930.getOnMouseClicked().equals(mouseEvent))
+            {
+                id930.setStyle("-fx-background-color: blue");
+            }
+            else if (id931.getOnMouseClicked().equals(mouseEvent))
+            {
+                id931.setStyle("-fx-background-color: blue");
+            }
+            else if (id932.getOnMouseClicked().equals(mouseEvent))
+            {
+                id932.setStyle("-fx-background-color: blue");
+            }
+            else if (id933.getOnMouseClicked().equals(mouseEvent))
+            {
+                id933.setStyle("-fx-background-color: blue");
+            }
+            else if (id934.getOnMouseClicked().equals(mouseEvent))
+            {
+                id934.setStyle("-fx-background-color: blue");
+            }
+            else if (id935.getOnMouseClicked().equals(mouseEvent))
+            {
+                id935.setStyle("-fx-background-color: blue");
+            }
+            else if (id936.getOnMouseClicked().equals(mouseEvent))
+            {
+                id936.setStyle("-fx-background-color: blue");
+            }
+            else if (id937.getOnMouseClicked().equals(mouseEvent))
+            {
+                id937.setStyle("-fx-background-color: blue");
+            }
+            else if (id938.getOnMouseClicked().equals(mouseEvent))
+            {
+                id938.setStyle("-fx-background-color: blue");
+            }
+            else if (id939.getOnMouseClicked().equals(mouseEvent))
+            {
+                id939.setStyle("-fx-background-color: blue");
+            }
+            else if (id940.getOnMouseClicked().equals(mouseEvent))
+            {
+                id940.setStyle("-fx-background-color: blue");
+            }
+            else if (id941.getOnMouseClicked().equals(mouseEvent))
+            {
+                id941.setStyle("-fx-background-color: blue");
+            }
+            else if (id942.getOnMouseClicked().equals(mouseEvent))
+            {
+                id942.setStyle("-fx-background-color: blue");
+            }
+            else if (id943.getOnMouseClicked().equals(mouseEvent))
+            {
+                id943.setStyle("-fx-background-color: blue");
+            }
+            else if (id944.getOnMouseClicked().equals(mouseEvent))
+            {
+                id944.setStyle("-fx-background-color: blue");
+            }
+            else if (id945.getOnMouseClicked().equals(mouseEvent))
+            {
+                id945.setStyle("-fx-background-color: blue");
+            }
+            else if (id946.getOnMouseClicked().equals(mouseEvent))
+            {
+                id946.setStyle("-fx-background-color: blue");
+            }
+            else if (id947.getOnMouseClicked().equals(mouseEvent))
+            {
+                id947.setStyle("-fx-background-color: blue");
+            }
+            else if (id948.getOnMouseClicked().equals(mouseEvent))
+            {
+                id948.setStyle("-fx-background-color: blue");
+            }
+            else if (id949.getOnMouseClicked().equals(mouseEvent))
+            {
+                id949.setStyle("-fx-background-color: blue");
+            }
+            else if (id950.getOnMouseClicked().equals(mouseEvent))
+            {
+                id950.setStyle("-fx-background-color: blue");
+            }
+            else if (id951.getOnMouseClicked().equals(mouseEvent))
+            {
+                id951.setStyle("-fx-background-color: blue");
+            }
+            else if (id952.getOnMouseClicked().equals(mouseEvent))
+            {
+                id952.setStyle("-fx-background-color: blue");
+            }
+            else if (id953.getOnMouseClicked().equals(mouseEvent))
+            {
+                id953.setStyle("-fx-background-color: blue");
+            }
+            else if (id954.getOnMouseClicked().equals(mouseEvent))
+            {
+                id954.setStyle("-fx-background-color: blue");
+            }
+            else if (id955.getOnMouseClicked().equals(mouseEvent))
+            {
+                id955.setStyle("-fx-background-color: blue");
+            }
+            else if (id956.getOnMouseClicked().equals(mouseEvent))
+            {
+                id956.setStyle("-fx-background-color: blue");
+            }
+            else if (id957.getOnMouseClicked().equals(mouseEvent))
+            {
+                id957.setStyle("-fx-background-color: blue");
+            }
+            else if (id958.getOnMouseClicked().equals(mouseEvent))
+            {
+                id958.setStyle("-fx-background-color: blue");
+            }
+            else if (id959.getOnMouseClicked().equals(mouseEvent))
+            {
+                id959.setStyle("-fx-background-color: blue");
+            }
+            else if (id960.getOnMouseClicked().equals(mouseEvent))
+            {
+                id960.setStyle("-fx-background-color: blue");
+            }
+            else if (id961.getOnMouseClicked().equals(mouseEvent))
+            {
+                id961.setStyle("-fx-background-color: blue");
+            }
+            else if (id962.getOnMouseClicked().equals(mouseEvent))
+            {
+                id962.setStyle("-fx-background-color: blue");
+            }
+            else if (id963.getOnMouseClicked().equals(mouseEvent))
+            {
+                id963.setStyle("-fx-background-color: blue");
+            }
+            else if (id964.getOnMouseClicked().equals(mouseEvent))
+            {
+                id964.setStyle("-fx-background-color: blue");
+            }
+            else if (id965.getOnMouseClicked().equals(mouseEvent))
+            {
+                id965.setStyle("-fx-background-color: blue");
+            }
+            else if (id966.getOnMouseClicked().equals(mouseEvent))
+            {
+                id966.setStyle("-fx-background-color: blue");
+            }
+            else if (id967.getOnMouseClicked().equals(mouseEvent))
+            {
+                id967.setStyle("-fx-background-color: blue");
+            }
+            else if (id968.getOnMouseClicked().equals(mouseEvent))
+            {
+                id968.setStyle("-fx-background-color: blue");
+            }
+            else if (id969.getOnMouseClicked().equals(mouseEvent))
+            {
+                id969.setStyle("-fx-background-color: blue");
+            }
+            else if (id970.getOnMouseClicked().equals(mouseEvent))
+            {
+                id970.setStyle("-fx-background-color: blue");
+            }
+            else if (id971.getOnMouseClicked().equals(mouseEvent))
+            {
+                id971.setStyle("-fx-background-color: blue");
+            }
+            else if (id972.getOnMouseClicked().equals(mouseEvent))
+            {
+                id972.setStyle("-fx-background-color: blue");
+            }
+            else if (id973.getOnMouseClicked().equals(mouseEvent))
+            {
+                id973.setStyle("-fx-background-color: blue");
+            }
+            else if (id974.getOnMouseClicked().equals(mouseEvent))
+            {
+                id974.setStyle("-fx-background-color: blue");
+            }
+            else if (id975.getOnMouseClicked().equals(mouseEvent))
+            {
+                id975.setStyle("-fx-background-color: blue");
+            }
+            else if (id976.getOnMouseClicked().equals(mouseEvent))
+            {
+                id976.setStyle("-fx-background-color: blue");
+            }
+            else if (id977.getOnMouseClicked().equals(mouseEvent))
+            {
+                id977.setStyle("-fx-background-color: blue");
+            }
+            else if (id978.getOnMouseClicked().equals(mouseEvent))
+            {
+                id978.setStyle("-fx-background-color: blue");
+            }
+            else if (id979.getOnMouseClicked().equals(mouseEvent))
+            {
+                id979.setStyle("-fx-background-color: blue");
+            }
+            else if (id980.getOnMouseClicked().equals(mouseEvent))
+            {
+                id980.setStyle("-fx-background-color: blue");
+            }
+            else if (id981.getOnMouseClicked().equals(mouseEvent))
+            {
+                id981.setStyle("-fx-background-color: blue");
+            }
+            else if (id982.getOnMouseClicked().equals(mouseEvent))
+            {
+                id982.setStyle("-fx-background-color: blue");
+            }
+            else if (id983.getOnMouseClicked().equals(mouseEvent))
+            {
+                id983.setStyle("-fx-background-color: blue");
+            }
+            else if (id984.getOnMouseClicked().equals(mouseEvent))
+            {
+                id984.setStyle("-fx-background-color: blue");
+            }
+            else if (id985.getOnMouseClicked().equals(mouseEvent))
+            {
+                id985.setStyle("-fx-background-color: blue");
+            }
+            else if (id986.getOnMouseClicked().equals(mouseEvent))
+            {
+                id986.setStyle("-fx-background-color: blue");
+            }
+            else if (id987.getOnMouseClicked().equals(mouseEvent))
+            {
+                id987.setStyle("-fx-background-color: blue");
+            }
+            else if (id988.getOnMouseClicked().equals(mouseEvent))
+            {
+                id988.setStyle("-fx-background-color: blue");
+            }
+            else if (id989.getOnMouseClicked().equals(mouseEvent))
+            {
+                id989.setStyle("-fx-background-color: blue");
+            }
+            else if (id990.getOnMouseClicked().equals(mouseEvent))
+            {
+                id990.setStyle("-fx-background-color: blue");
+            }
+            else if (id991.getOnMouseClicked().equals(mouseEvent))
+            {
+                id991.setStyle("-fx-background-color: blue");
+            }
+            else if (id992.getOnMouseClicked().equals(mouseEvent))
+            {
+                id992.setStyle("-fx-background-color: blue");
+            }
+            else if (id993.getOnMouseClicked().equals(mouseEvent))
+            {
+                id993.setStyle("-fx-background-color: blue");
+            }
+            else if (id994.getOnMouseClicked().equals(mouseEvent))
+            {
+                id994.setStyle("-fx-background-color: blue");
+            }
+            else if (id995.getOnMouseClicked().equals(mouseEvent))
+            {
+                id995.setStyle("-fx-background-color: blue");
+            }
+            else if (id996.getOnMouseClicked().equals(mouseEvent))
+            {
+                id996.setStyle("-fx-background-color: blue");
+            }
+            else if (id997.getOnMouseClicked().equals(mouseEvent))
+            {
+                id997.setStyle("-fx-background-color: blue");
+            }
+            else if (id998.getOnMouseClicked().equals(mouseEvent))
+            {
+                id998.setStyle("-fx-background-color: blue");
+            }
+            else if (id999.getOnMouseClicked().equals(mouseEvent))
+            {
+                id999.setStyle("-fx-background-color: blue");
+            }
+            else if (id1000.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1000.setStyle("-fx-background-color: blue");
+            }
+            else if (id1001.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1001.setStyle("-fx-background-color: blue");
+            }
+            else if (id1002.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1002.setStyle("-fx-background-color: blue");
+            }
+            else if (id1003.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1003.setStyle("-fx-background-color: blue");
+            }
+            else if (id1004.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1004.setStyle("-fx-background-color: blue");
+            }
+            else if (id1005.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1005.setStyle("-fx-background-color: blue");
+            }
+            else if (id1006.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1006.setStyle("-fx-background-color: blue");
+            }
+            else if (id1007.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1007.setStyle("-fx-background-color: blue");
+            }
+            else if (id1008.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1008.setStyle("-fx-background-color: blue");
+            }
+            else if (id1009.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1009.setStyle("-fx-background-color: blue");
+            }
+            else if (id1010.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1010.setStyle("-fx-background-color: blue");
+            }
+            else if (id1011.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1011.setStyle("-fx-background-color: blue");
+            }
+            else if (id1012.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1012.setStyle("-fx-background-color: blue");
+            }
+            else if (id1013.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1013.setStyle("-fx-background-color: blue");
+            }
+            else if (id1014.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1014.setStyle("-fx-background-color: blue");
+            }
+            else if (id1015.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1015.setStyle("-fx-background-color: blue");
+            }
+            else if (id1016.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1016.setStyle("-fx-background-color: blue");
+            }
+            else if (id1017.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1017.setStyle("-fx-background-color: blue");
+            }
+            else if (id1018.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1018.setStyle("-fx-background-color: blue");
+            }
+            else if (id1019.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1019.setStyle("-fx-background-color: blue");
+            }
+            else if (id1020.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1020.setStyle("-fx-background-color: blue");
+            }
+            else if (id1021.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1021.setStyle("-fx-background-color: blue");
+            }
+            else if (id1022.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1022.setStyle("-fx-background-color: blue");
+            }
+            else if (id1023.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1023.setStyle("-fx-background-color: blue");
+            }
+            else if (id1024.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1024.setStyle("-fx-background-color: blue");
+            }
+            else if (id1025.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1025.setStyle("-fx-background-color: blue");
+            }
+            else if (id1026.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1026.setStyle("-fx-background-color: blue");
+            }
+            else if (id1027.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1027.setStyle("-fx-background-color: blue");
+            }
+            else if (id1028.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1028.setStyle("-fx-background-color: blue");
+            }
+            else if (id1029.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1029.setStyle("-fx-background-color: blue");
+            }
+            else if (id1030.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1030.setStyle("-fx-background-color: blue");
+            }
+            else if (id1031.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1031.setStyle("-fx-background-color: blue");
+            }
+            else if (id1032.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1032.setStyle("-fx-background-color: blue");
+            }
+            else if (id1033.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1033.setStyle("-fx-background-color: blue");
+            }
+            else if (id1034.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1034.setStyle("-fx-background-color: blue");
+            }
+            else if (id1035.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1035.setStyle("-fx-background-color: blue");
+            }
+            else if (id1036.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1036.setStyle("-fx-background-color: blue");
+            }
+            else if (id1037.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1037.setStyle("-fx-background-color: blue");
+            }
+            else if (id1038.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1038.setStyle("-fx-background-color: blue");
+            }
+            else if (id1039.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1039.setStyle("-fx-background-color: blue");
+            }
+            else if (id1040.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1040.setStyle("-fx-background-color: blue");
+            }
+            else if (id1041.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1041.setStyle("-fx-background-color: blue");
+            }
+            else if (id1042.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1042.setStyle("-fx-background-color: blue");
+            }
+            else if (id1043.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1043.setStyle("-fx-background-color: blue");
+            }
+            else if (id1044.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1044.setStyle("-fx-background-color: blue");
+            }
+            else if (id1045.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1045.setStyle("-fx-background-color: blue");
+            }
+            else if (id1046.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1046.setStyle("-fx-background-color: blue");
+            }
+            else if (id1047.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1047.setStyle("-fx-background-color: blue");
+            }
+            else if (id1048.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1048.setStyle("-fx-background-color: blue");
+            }
+            else if (id1049.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1049.setStyle("-fx-background-color: blue");
+            }
+            else if (id1050.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1050.setStyle("-fx-background-color: blue");
+            }
+            else if (id1051.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1051.setStyle("-fx-background-color: blue");
+            }
+            else if (id1052.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1052.setStyle("-fx-background-color: blue");
+            }
+            else if (id1053.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1053.setStyle("-fx-background-color: blue");
+            }
+            else if (id1054.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1054.setStyle("-fx-background-color: blue");
+            }
+            else if (id1055.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1055.setStyle("-fx-background-color: blue");
+            }
+            else if (id1056.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1056.setStyle("-fx-background-color: blue");
+            }
+            else if (id1057.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1057.setStyle("-fx-background-color: blue");
+            }
+            else if (id1058.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1058.setStyle("-fx-background-color: blue");
+            }
+            else if (id1059.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1059.setStyle("-fx-background-color: blue");
+            }
+            else if (id1060.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1060.setStyle("-fx-background-color: blue");
+            }
+            else if (id1061.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1061.setStyle("-fx-background-color: blue");
+            }
+            else if (id1062.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1062.setStyle("-fx-background-color: blue");
+            }
+            else if (id1063.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1063.setStyle("-fx-background-color: blue");
+            }
+            else if (id1064.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1064.setStyle("-fx-background-color: blue");
+            }
+            else if (id1065.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1065.setStyle("-fx-background-color: blue");
+            }
+            else if (id1066.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1066.setStyle("-fx-background-color: blue");
+            }
+            else if (id1067.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1067.setStyle("-fx-background-color: blue");
+            }
+            else if (id1068.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1068.setStyle("-fx-background-color: blue");
+            }
+            else if (id1069.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1069.setStyle("-fx-background-color: blue");
+            }
+            else if (id1070.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1070.setStyle("-fx-background-color: blue");
+            }
+            else if (id1071.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1071.setStyle("-fx-background-color: blue");
+            }
+            else if (id1072.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1072.setStyle("-fx-background-color: blue");
+            }
+            else if (id1073.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1073.setStyle("-fx-background-color: blue");
+            }
+            else if (id1074.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1074.setStyle("-fx-background-color: blue");
+            }
+            else if (id1075.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1075.setStyle("-fx-background-color: blue");
+            }
+            else if (id1076.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1076.setStyle("-fx-background-color: blue");
+            }
+            else if (id1077.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1077.setStyle("-fx-background-color: blue");
+            }
+            else if (id1078.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1078.setStyle("-fx-background-color: blue");
+            }
+            else if (id1079.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1079.setStyle("-fx-background-color: blue");
+            }
+            else if (id1080.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1080.setStyle("-fx-background-color: blue");
+            }
+            else if (id1081.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1081.setStyle("-fx-background-color: blue");
+            }
+            else if (id1082.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1082.setStyle("-fx-background-color: blue");
+            }
+            else if (id1083.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1083.setStyle("-fx-background-color: blue");
+            }
+            else if (id1084.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1084.setStyle("-fx-background-color: blue");
+            }
+            else if (id1085.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1085.setStyle("-fx-background-color: blue");
+            }
+            else if (id1086.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1086.setStyle("-fx-background-color: blue");
+            }
+            else if (id1087.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1087.setStyle("-fx-background-color: blue");
+            }
+            else if (id1088.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1088.setStyle("-fx-background-color: blue");
+            }
+            else if (id1089.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1089.setStyle("-fx-background-color: blue");
+            }
+            else if (id1090.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1090.setStyle("-fx-background-color: blue");
+            }
+            else if (id1091.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1091.setStyle("-fx-background-color: blue");
+            }
+            else if (id1092.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1092.setStyle("-fx-background-color: blue");
+            }
+            else if (id1093.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1093.setStyle("-fx-background-color: blue");
+            }
+            else if (id1094.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1094.setStyle("-fx-background-color: blue");
+            }
+            else if (id1095.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1095.setStyle("-fx-background-color: blue");
+            }
+            else if (id1096.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1096.setStyle("-fx-background-color: blue");
+            }
+            else if (id1097.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1097.setStyle("-fx-background-color: blue");
+            }
+            else if (id1098.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1098.setStyle("-fx-background-color: blue");
+            }
+            else if (id1099.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1099.setStyle("-fx-background-color: blue");
+            }
+            else if (id1100.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1100.setStyle("-fx-background-color: blue");
+            }
+            else if (id1101.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1101.setStyle("-fx-background-color: blue");
+            }
+            else if (id1102.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1102.setStyle("-fx-background-color: blue");
+            }
+            else if (id1103.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1103.setStyle("-fx-background-color: blue");
+            }
+            else if (id1104.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1104.setStyle("-fx-background-color: blue");
+            }
+            else if (id1105.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1105.setStyle("-fx-background-color: blue");
+            }
+            else if (id1106.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1106.setStyle("-fx-background-color: blue");
+            }
+            else if (id1107.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1107.setStyle("-fx-background-color: blue");
+            }
+            else if (id1108.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1108.setStyle("-fx-background-color: blue");
+            }
+            else if (id1109.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1109.setStyle("-fx-background-color: blue");
+            }
+            else if (id1110.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1110.setStyle("-fx-background-color: blue");
+            }
+            else if (id1111.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1111.setStyle("-fx-background-color: blue");
+            }
+            else if (id1112.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1112.setStyle("-fx-background-color: blue");
+            }
+            else if (id1113.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1113.setStyle("-fx-background-color: blue");
+            }
+            else if (id1114.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1114.setStyle("-fx-background-color: blue");
+            }
+            else if (id1115.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1115.setStyle("-fx-background-color: blue");
+            }
+            else if (id1116.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1116.setStyle("-fx-background-color: blue");
+            }
+            else if (id1117.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1117.setStyle("-fx-background-color: blue");
+            }
+            else if (id1118.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1118.setStyle("-fx-background-color: blue");
+            }
+            else if (id1119.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1119.setStyle("-fx-background-color: blue");
+            }
+            else if (id1120.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1120.setStyle("-fx-background-color: blue");
+            }
+            else if (id1121.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1121.setStyle("-fx-background-color: blue");
+            }
+            else if (id1122.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1122.setStyle("-fx-background-color: blue");
+            }
+            else if (id1123.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1123.setStyle("-fx-background-color: blue");
+            }
+            else if (id1124.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1124.setStyle("-fx-background-color: blue");
+            }
+            else if (id1125.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1125.setStyle("-fx-background-color: blue");
+            }
+            else if (id1126.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1126.setStyle("-fx-background-color: blue");
+            }
+            else if (id1127.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1127.setStyle("-fx-background-color: blue");
+            }
+            else if (id1128.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1128.setStyle("-fx-background-color: blue");
+            }
+            else if (id1129.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1129.setStyle("-fx-background-color: blue");
+            }
+            else if (id1130.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1130.setStyle("-fx-background-color: blue");
+            }
+            else if (id1131.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1131.setStyle("-fx-background-color: blue");
+            }
+            else if (id1132.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1132.setStyle("-fx-background-color: blue");
+            }
+            else if (id1133.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1133.setStyle("-fx-background-color: blue");
+            }
+            else if (id1134.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1134.setStyle("-fx-background-color: blue");
+            }
+            else if (id1135.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1135.setStyle("-fx-background-color: blue");
+            }
+            else if (id1136.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1136.setStyle("-fx-background-color: blue");
+            }
+            else if (id1137.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1137.setStyle("-fx-background-color: blue");
+            }
+            else if (id1138.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1138.setStyle("-fx-background-color: blue");
+            }
+            else if (id1139.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1139.setStyle("-fx-background-color: blue");
+            }
+            else if (id1140.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1140.setStyle("-fx-background-color: blue");
+            }
+            else if (id1141.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1141.setStyle("-fx-background-color: blue");
+            }
+            else if (id1142.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1142.setStyle("-fx-background-color: blue");
+            }
+            else if (id1143.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1143.setStyle("-fx-background-color: blue");
+            }
+            else if (id1144.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1144.setStyle("-fx-background-color: blue");
+            }
+            else if (id1145.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1145.setStyle("-fx-background-color: blue");
+            }
+            else if (id1146.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1146.setStyle("-fx-background-color: blue");
+            }
+            else if (id1147.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1147.setStyle("-fx-background-color: blue");
+            }
+            else if (id1148.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1148.setStyle("-fx-background-color: blue");
+            }
+            else if (id1149.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1149.setStyle("-fx-background-color: blue");
+            }
+            else if (id1150.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1150.setStyle("-fx-background-color: blue");
+            }
+            else if (id1151.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1151.setStyle("-fx-background-color: blue");
+            }
+            else if (id1152.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1152.setStyle("-fx-background-color: blue");
+            }
+            else if (id1153.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1153.setStyle("-fx-background-color: blue");
+            }
+            else if (id1154.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1154.setStyle("-fx-background-color: blue");
+            }
+            else if (id1155.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1155.setStyle("-fx-background-color: blue");
+            }
+            else if (id1156.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1156.setStyle("-fx-background-color: blue");
+            }
+            else if (id1157.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1157.setStyle("-fx-background-color: blue");
+            }
+            else if (id1158.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1158.setStyle("-fx-background-color: blue");
+            }
+            else if (id1159.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1159.setStyle("-fx-background-color: blue");
+            }
+            else if (id1160.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1160.setStyle("-fx-background-color: blue");
+            }
+            else if (id1161.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1161.setStyle("-fx-background-color: blue");
+            }
+            else if (id1162.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1162.setStyle("-fx-background-color: blue");
+            }
+            else if (id1163.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1163.setStyle("-fx-background-color: blue");
+            }
+            else if (id1164.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1164.setStyle("-fx-background-color: blue");
+            }
+            else if (id1165.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1165.setStyle("-fx-background-color: blue");
+            }
+            else if (id1166.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1166.setStyle("-fx-background-color: blue");
+            }
+            else if (id1167.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1167.setStyle("-fx-background-color: blue");
+            }
+            else if (id1168.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1168.setStyle("-fx-background-color: blue");
+            }
+            else if (id1169.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1169.setStyle("-fx-background-color: blue");
+            }
+            else if (id1170.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1170.setStyle("-fx-background-color: blue");
+            }
+            else if (id1171.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1171.setStyle("-fx-background-color: blue");
+            }
+            else if (id1172.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1172.setStyle("-fx-background-color: blue");
+            }
+            else if (id1173.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1173.setStyle("-fx-background-color: blue");
+            }
+            else if (id1174.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1174.setStyle("-fx-background-color: blue");
+            }
+            else if (id1175.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1175.setStyle("-fx-background-color: blue");
+            }
+            else if (id1176.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1176.setStyle("-fx-background-color: blue");
+            }
+            else if (id1177.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1177.setStyle("-fx-background-color: blue");
+            }
+            else if (id1178.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1178.setStyle("-fx-background-color: blue");
+            }
+            else if (id1179.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1179.setStyle("-fx-background-color: blue");
+            }
+            else if (id1180.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1180.setStyle("-fx-background-color: blue");
+            }
+            else if (id1181.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1181.setStyle("-fx-background-color: blue");
+            }
+            else if (id1182.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1182.setStyle("-fx-background-color: blue");
+            }
+            else if (id1183.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1183.setStyle("-fx-background-color: blue");
+            }
+            else if (id1184.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1184.setStyle("-fx-background-color: blue");
+            }
+            else if (id1185.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1185.setStyle("-fx-background-color: blue");
+            }
+            else if (id1186.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1186.setStyle("-fx-background-color: blue");
+            }
+            else if (id1187.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1187.setStyle("-fx-background-color: blue");
+            }
+            else if (id1188.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1188.setStyle("-fx-background-color: blue");
+            }
+            else if (id1189.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1189.setStyle("-fx-background-color: blue");
+            }
+            else if (id1190.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1190.setStyle("-fx-background-color: blue");
+            }
+            else if (id1191.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1191.setStyle("-fx-background-color: blue");
+            }
+            else if (id1192.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1192.setStyle("-fx-background-color: blue");
+            }
+            else if (id1193.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1193.setStyle("-fx-background-color: blue");
+            }
+            else if (id1194.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1194.setStyle("-fx-background-color: blue");
+            }
+            else if (id1195.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1195.setStyle("-fx-background-color: blue");
+            }
+            else if (id1196.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1196.setStyle("-fx-background-color: blue");
+            }
+            else if (id1197.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1197.setStyle("-fx-background-color: blue");
+            }
+            else if (id1198.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1198.setStyle("-fx-background-color: blue");
+            }
+            else if (id1199.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1199.setStyle("-fx-background-color: blue");
+            }
+            else if (id1200.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1200.setStyle("-fx-background-color: blue");
+            }
+            else if (id1201.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1201.setStyle("-fx-background-color: blue");
+            }
+            else if (id1202.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1202.setStyle("-fx-background-color: blue");
+            }
+            else if (id1203.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1203.setStyle("-fx-background-color: blue");
+            }
+            else if (id1204.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1204.setStyle("-fx-background-color: blue");
+            }
+            else if (id1205.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1205.setStyle("-fx-background-color: blue");
+            }
+            else if (id1206.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1206.setStyle("-fx-background-color: blue");
+            }
+            else if (id1207.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1207.setStyle("-fx-background-color: blue");
+            }
+            else if (id1208.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1208.setStyle("-fx-background-color: blue");
+            }
+            else if (id1209.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1209.setStyle("-fx-background-color: blue");
+            }
+            else if (id1210.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1210.setStyle("-fx-background-color: blue");
+            }
+            else if (id1211.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1211.setStyle("-fx-background-color: blue");
+            }
+            else if (id1212.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1212.setStyle("-fx-background-color: blue");
+            }
+            else if (id1213.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1213.setStyle("-fx-background-color: blue");
+            }
+            else if (id1214.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1214.setStyle("-fx-background-color: blue");
+            }
+            else if (id1215.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1215.setStyle("-fx-background-color: blue");
+            }
+            else if (id1216.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1216.setStyle("-fx-background-color: blue");
+            }
+            else if (id1217.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1217.setStyle("-fx-background-color: blue");
+            }
+            else if (id1218.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1218.setStyle("-fx-background-color: blue");
+            }
+            else if (id1219.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1219.setStyle("-fx-background-color: blue");
+            }
+            else if (id1220.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1220.setStyle("-fx-background-color: blue");
+            }
+            else if (id1221.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1221.setStyle("-fx-background-color: blue");
+            }
+            else if (id1222.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1222.setStyle("-fx-background-color: blue");
+            }
+            else if (id1223.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1223.setStyle("-fx-background-color: blue");
+            }
+            else if (id1224.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1224.setStyle("-fx-background-color: blue");
+            }
+            else if (id1225.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1225.setStyle("-fx-background-color: blue");
+            }
+            else if (id1226.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1226.setStyle("-fx-background-color: blue");
+            }
+            else if (id1227.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1227.setStyle("-fx-background-color: blue");
+            }
+            else if (id1228.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1228.setStyle("-fx-background-color: blue");
+            }
+            else if (id1229.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1229.setStyle("-fx-background-color: blue");
+            }
+            else if (id1230.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1230.setStyle("-fx-background-color: blue");
+            }
+            else if (id1231.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1231.setStyle("-fx-background-color: blue");
+            }
+            else if (id1232.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1232.setStyle("-fx-background-color: blue");
+            }
+            else if (id1233.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1233.setStyle("-fx-background-color: blue");
+            }
+            else if (id1234.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1234.setStyle("-fx-background-color: blue");
+            }
+            else if (id1235.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1235.setStyle("-fx-background-color: blue");
+            }
+            else if (id1236.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1236.setStyle("-fx-background-color: blue");
+            }
+            else if (id1237.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1237.setStyle("-fx-background-color: blue");
+            }
+            else if (id1238.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1238.setStyle("-fx-background-color: blue");
+            }
+            else if (id1239.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1239.setStyle("-fx-background-color: blue");
+            }
+            else if (id1240.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1240.setStyle("-fx-background-color: blue");
+            }
+            else if (id1241.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1241.setStyle("-fx-background-color: blue");
+            }
+            else if (id1242.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1242.setStyle("-fx-background-color: blue");
+            }
+            else if (id1243.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1243.setStyle("-fx-background-color: blue");
+            }
+            else if (id1244.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1244.setStyle("-fx-background-color: blue");
+            }
+            else if (id1245.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1245.setStyle("-fx-background-color: blue");
+            }
+            else if (id1246.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1246.setStyle("-fx-background-color: blue");
+            }
+            else if (id1247.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1247.setStyle("-fx-background-color: blue");
+            }
+            else if (id1248.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1248.setStyle("-fx-background-color: blue");
+            }
+            else if (id1249.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1249.setStyle("-fx-background-color: blue");
+            }
+            else if (id1250.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1250.setStyle("-fx-background-color: blue");
+            }
+            else if (id1251.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1251.setStyle("-fx-background-color: blue");
+            }
+            else if (id1252.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1252.setStyle("-fx-background-color: blue");
+            }
+            else if (id1253.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1253.setStyle("-fx-background-color: blue");
+            }
+            else if (id1254.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1254.setStyle("-fx-background-color: blue");
+            }
+            else if (id1255.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1255.setStyle("-fx-background-color: blue");
+            }
+            else if (id1256.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1256.setStyle("-fx-background-color: blue");
+            }
+            else if (id1257.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1257.setStyle("-fx-background-color: blue");
+            }
+            else if (id1258.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1258.setStyle("-fx-background-color: blue");
+            }
+            else if (id1259.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1259.setStyle("-fx-background-color: blue");
+            }
+            else if (id1260.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1260.setStyle("-fx-background-color: blue");
+            }
+            else if (id1261.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1261.setStyle("-fx-background-color: blue");
+            }
+            else if (id1262.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1262.setStyle("-fx-background-color: blue");
+            }
+            else if (id1263.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1263.setStyle("-fx-background-color: blue");
+            }
+            else if (id1264.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1264.setStyle("-fx-background-color: blue");
+            }
+            else if (id1265.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1265.setStyle("-fx-background-color: blue");
+            }
+            else if (id1266.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1266.setStyle("-fx-background-color: blue");
+            }
+            else if (id1267.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1267.setStyle("-fx-background-color: blue");
+            }
+            else if (id1268.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1268.setStyle("-fx-background-color: blue");
+            }
+            else if (id1269.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1269.setStyle("-fx-background-color: blue");
+            }
+            else if (id1270.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1270.setStyle("-fx-background-color: blue");
+            }
+            else if (id1271.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1271.setStyle("-fx-background-color: blue");
+            }
+            else if (id1272.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1272.setStyle("-fx-background-color: blue");
+            }
+            else if (id1273.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1273.setStyle("-fx-background-color: blue");
+            }
+            else if (id1274.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1274.setStyle("-fx-background-color: blue");
+            }
+            else if (id1275.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1275.setStyle("-fx-background-color: blue");
+            }
+            else if (id1276.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1276.setStyle("-fx-background-color: blue");
+            }
+            else if (id1277.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1277.setStyle("-fx-background-color: blue");
+            }
+            else if (id1278.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1278.setStyle("-fx-background-color: blue");
+            }
+            else if (id1279.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1279.setStyle("-fx-background-color: blue");
+            }
+            else if (id1280.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1280.setStyle("-fx-background-color: blue");
+            }
+            else if (id1281.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1281.setStyle("-fx-background-color: blue");
+            }
+            else if (id1282.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1282.setStyle("-fx-background-color: blue");
+            }
+            else if (id1283.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1283.setStyle("-fx-background-color: blue");
+            }
+            else if (id1284.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1284.setStyle("-fx-background-color: blue");
+            }
+            else if (id1285.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1285.setStyle("-fx-background-color: blue");
+            }
+            else if (id1286.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1286.setStyle("-fx-background-color: blue");
+            }
+            else if (id1287.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1287.setStyle("-fx-background-color: blue");
+            }
+            else if (id1288.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1288.setStyle("-fx-background-color: blue");
+            }
+            else if (id1289.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1289.setStyle("-fx-background-color: blue");
+            }
+            else if (id1290.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1290.setStyle("-fx-background-color: blue");
+            }
+            else if (id1291.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1291.setStyle("-fx-background-color: blue");
+            }
+            else if (id1292.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1292.setStyle("-fx-background-color: blue");
+            }
+            else if (id1293.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1293.setStyle("-fx-background-color: blue");
+            }
+            else if (id1294.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1294.setStyle("-fx-background-color: blue");
+            }
+            else if (id1295.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1295.setStyle("-fx-background-color: blue");
+            }
+            else if (id1296.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1296.setStyle("-fx-background-color: blue");
+            }
+            else if (id1297.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1297.setStyle("-fx-background-color: blue");
+            }
+            else if (id1298.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1298.setStyle("-fx-background-color: blue");
+            }
+            else if (id1299.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1299.setStyle("-fx-background-color: blue");
+            }
+            else if (id1300.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1300.setStyle("-fx-background-color: blue");
+            }
+            else if (id1301.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1301.setStyle("-fx-background-color: blue");
+            }
+            else if (id1302.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1302.setStyle("-fx-background-color: blue");
+            }
+            else if (id1303.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1303.setStyle("-fx-background-color: blue");
+            }
+            else if (id1304.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1304.setStyle("-fx-background-color: blue");
+            }
+            else if (id1305.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1305.setStyle("-fx-background-color: blue");
+            }
+            else if (id1306.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1306.setStyle("-fx-background-color: blue");
+            }
+            else if (id1307.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1307.setStyle("-fx-background-color: blue");
+            }
+            else if (id1308.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1308.setStyle("-fx-background-color: blue");
+            }
+            else if (id1309.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1309.setStyle("-fx-background-color: blue");
+            }
+            else if (id1310.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1310.setStyle("-fx-background-color: blue");
+            }
+            else if (id1311.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1311.setStyle("-fx-background-color: blue");
+            }
+            else if (id1312.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1312.setStyle("-fx-background-color: blue");
+            }
+            else if (id1313.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1313.setStyle("-fx-background-color: blue");
+            }
+            else if (id1314.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1314.setStyle("-fx-background-color: blue");
+            }
+            else if (id1315.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1315.setStyle("-fx-background-color: blue");
+            }
+            else if (id1316.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1316.setStyle("-fx-background-color: blue");
+            }
+            else if (id1317.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1317.setStyle("-fx-background-color: blue");
+            }
+            else if (id1318.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1318.setStyle("-fx-background-color: blue");
+            }
+            else if (id1319.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1319.setStyle("-fx-background-color: blue");
+            }
+            else if (id1320.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1320.setStyle("-fx-background-color: blue");
+            }
+            else if (id1321.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1321.setStyle("-fx-background-color: blue");
+            }
+            else if (id1322.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1322.setStyle("-fx-background-color: blue");
+            }
+            else if (id1323.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1323.setStyle("-fx-background-color: blue");
+            }
+            else if (id1324.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1324.setStyle("-fx-background-color: blue");
+            }
+            else if (id1325.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1325.setStyle("-fx-background-color: blue");
+            }
+            else if (id1326.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1326.setStyle("-fx-background-color: blue");
+            }
+            else if (id1327.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1327.setStyle("-fx-background-color: blue");
+            }
+            else if (id1328.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1328.setStyle("-fx-background-color: blue");
+            }
+            else if (id1329.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1329.setStyle("-fx-background-color: blue");
+            }
+            else if (id1330.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1330.setStyle("-fx-background-color: blue");
+            }
+            else if (id1331.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1331.setStyle("-fx-background-color: blue");
+            }
+            else if (id1332.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1332.setStyle("-fx-background-color: blue");
+            }
+            else if (id1333.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1333.setStyle("-fx-background-color: blue");
+            }
+            else if (id1334.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1334.setStyle("-fx-background-color: blue");
+            }
+            else if (id1335.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1335.setStyle("-fx-background-color: blue");
+            }
+            else if (id1336.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1336.setStyle("-fx-background-color: blue");
+            }
+            else if (id1337.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1337.setStyle("-fx-background-color: blue");
+            }
+            else if (id1338.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1338.setStyle("-fx-background-color: blue");
+            }
+            else if (id1339.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1339.setStyle("-fx-background-color: blue");
+            }
+            else if (id1340.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1340.setStyle("-fx-background-color: blue");
+            }
+            else if (id1341.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1341.setStyle("-fx-background-color: blue");
+            }
+            else if (id1342.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1342.setStyle("-fx-background-color: blue");
+            }
+            else if (id1343.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1343.setStyle("-fx-background-color: blue");
+            }
+            else if (id1344.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1344.setStyle("-fx-background-color: blue");
+            }
+            else if (id1345.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1345.setStyle("-fx-background-color: blue");
+            }
+            else if (id1346.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1346.setStyle("-fx-background-color: blue");
+            }
+            else if (id1347.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1347.setStyle("-fx-background-color: blue");
+            }
+            else if (id1348.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1348.setStyle("-fx-background-color: blue");
+            }
+            else if (id1349.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1349.setStyle("-fx-background-color: blue");
+            }
+            else if (id1350.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1350.setStyle("-fx-background-color: blue");
+            }
+            else if (id1351.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1351.setStyle("-fx-background-color: blue");
+            }
+            else if (id1352.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1352.setStyle("-fx-background-color: blue");
+            }
+            else if (id1353.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1353.setStyle("-fx-background-color: blue");
+            }
+            else if (id1354.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1354.setStyle("-fx-background-color: blue");
+            }
+            else if (id1355.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1355.setStyle("-fx-background-color: blue");
+            }
+            else if (id1356.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1356.setStyle("-fx-background-color: blue");
+            }
+            else if (id1357.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1357.setStyle("-fx-background-color: blue");
+            }
+            else if (id1358.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1358.setStyle("-fx-background-color: blue");
+            }
+            else if (id1359.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1359.setStyle("-fx-background-color: blue");
+            }
+            else if (id1360.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1360.setStyle("-fx-background-color: blue");
+            }
+            else if (id1361.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1361.setStyle("-fx-background-color: blue");
+            }
+            else if (id1362.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1362.setStyle("-fx-background-color: blue");
+            }
+            else if (id1363.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1363.setStyle("-fx-background-color: blue");
+            }
+            else if (id1364.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1364.setStyle("-fx-background-color: blue");
+            }
+            else if (id1365.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1365.setStyle("-fx-background-color: blue");
+            }
+            else if (id1366.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1366.setStyle("-fx-background-color: blue");
+            }
+            else if (id1367.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1367.setStyle("-fx-background-color: blue");
+            }
+            else if (id1368.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1368.setStyle("-fx-background-color: blue");
+            }
+            else if (id1369.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1369.setStyle("-fx-background-color: blue");
+            }
+            else if (id1370.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1370.setStyle("-fx-background-color: blue");
+            }
+            else if (id1371.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1371.setStyle("-fx-background-color: blue");
+            }
+            else if (id1372.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1372.setStyle("-fx-background-color: blue");
+            }
+            else if (id1373.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1373.setStyle("-fx-background-color: blue");
+            }
+            else if (id1374.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1374.setStyle("-fx-background-color: blue");
+            }
+            else if (id1375.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1375.setStyle("-fx-background-color: blue");
+            }
+            else if (id1376.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1376.setStyle("-fx-background-color: blue");
+            }
+            else if (id1377.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1377.setStyle("-fx-background-color: blue");
+            }
+            else if (id1378.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1378.setStyle("-fx-background-color: blue");
+            }
+            else if (id1379.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1379.setStyle("-fx-background-color: blue");
+            }
+            else if (id1380.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1380.setStyle("-fx-background-color: blue");
+            }
+            else if (id1381.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1381.setStyle("-fx-background-color: blue");
+            }
+            else if (id1382.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1382.setStyle("-fx-background-color: blue");
+            }
+            else if (id1383.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1383.setStyle("-fx-background-color: blue");
+            }
+            else if (id1384.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1384.setStyle("-fx-background-color: blue");
+            }
+            else if (id1385.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1385.setStyle("-fx-background-color: blue");
+            }
+            else if (id1386.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1386.setStyle("-fx-background-color: blue");
+            }
+            else if (id1387.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1387.setStyle("-fx-background-color: blue");
+            }
+            else if (id1388.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1388.setStyle("-fx-background-color: blue");
+            }
+            else if (id1389.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1389.setStyle("-fx-background-color: blue");
+            }
+            else if (id1390.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1390.setStyle("-fx-background-color: blue");
+            }
+            else if (id1391.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1391.setStyle("-fx-background-color: blue");
+            }
+            else if (id1392.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1392.setStyle("-fx-background-color: blue");
+            }
+            else if (id1393.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1393.setStyle("-fx-background-color: blue");
+            }
+            else if (id1394.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1394.setStyle("-fx-background-color: blue");
+            }
+            else if (id1395.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1395.setStyle("-fx-background-color: blue");
+            }
+            else if (id1396.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1396.setStyle("-fx-background-color: blue");
+            }
+            else if (id1397.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1397.setStyle("-fx-background-color: blue");
+            }
+            else if (id1398.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1398.setStyle("-fx-background-color: blue");
+            }
+            else if (id1399.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1399.setStyle("-fx-background-color: blue");
+            }
+            else if (id1400.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1400.setStyle("-fx-background-color: blue");
+            }
+            else if (id1401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1401.setStyle("-fx-background-color: blue");
+            }
+            else if (id1402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1402.setStyle("-fx-background-color: blue");
+            }
+            else if (id1403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1403.setStyle("-fx-background-color: blue");
+            }
+            else if (id1404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1404.setStyle("-fx-background-color: blue");
+            }
+            else if (id1405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1405.setStyle("-fx-background-color: blue");
+            }
+            else if (id1406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1406.setStyle("-fx-background-color: blue");
+            }
+            else if (id1407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1407.setStyle("-fx-background-color: blue");
+            }
+            else if (id1408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1408.setStyle("-fx-background-color: blue");
+            }
+            else if (id1409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1409.setStyle("-fx-background-color: blue");
+            }
+            else if (id1410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1410.setStyle("-fx-background-color: blue");
+            }
+            else if (id1411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1411.setStyle("-fx-background-color: blue");
+            }
+            else if (id1412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1412.setStyle("-fx-background-color: blue");
+            }
+            else if (id1413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1413.setStyle("-fx-background-color: blue");
+            }
+            else if (id1414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1414.setStyle("-fx-background-color: blue");
+            }
+            else if (id1415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1415.setStyle("-fx-background-color: blue");
+            }
+            else if (id1416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1416.setStyle("-fx-background-color: blue");
+            }
+            else if (id1417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1417.setStyle("-fx-background-color: blue");
+            }
+            else if (id1418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1418.setStyle("-fx-background-color: blue");
+            }
+            else if (id1419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1419.setStyle("-fx-background-color: blue");
+            }
+            else if (id1420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1420.setStyle("-fx-background-color: blue");
+            }
+            else if (id1421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1421.setStyle("-fx-background-color: blue");
+            }
+            else if (id1422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1422.setStyle("-fx-background-color: blue");
+            }
+            else if (id1423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1423.setStyle("-fx-background-color: blue");
+            }
+            else if (id1424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1424.setStyle("-fx-background-color: blue");
+            }
+            else if (id1425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1425.setStyle("-fx-background-color: blue");
+            }
+            else if (id1426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1426.setStyle("-fx-background-color: blue");
+            }
+            else if (id1427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1427.setStyle("-fx-background-color: blue");
+            }
+            else if (id1428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1428.setStyle("-fx-background-color: blue");
+            }
+            else if (id1429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1429.setStyle("-fx-background-color: blue");
+            }
+            else if (id1430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1430.setStyle("-fx-background-color: blue");
+            }
+            else if (id1431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1431.setStyle("-fx-background-color: blue");
+            }
+            else if (id1432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1432.setStyle("-fx-background-color: blue");
+            }
+            else if (id1433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1433.setStyle("-fx-background-color: blue");
+            }
+            else if (id1434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1434.setStyle("-fx-background-color: blue");
+            }
+            else if (id1435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1435.setStyle("-fx-background-color: blue");
+            }
+            else if (id1436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1436.setStyle("-fx-background-color: blue");
+            }
+            else if (id1437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1437.setStyle("-fx-background-color: blue");
+            }
+            else if (id1438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1438.setStyle("-fx-background-color: blue");
+            }
+            else if (id1439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1439.setStyle("-fx-background-color: blue");
+            }
+            else if (id1440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1440.setStyle("-fx-background-color: blue");
+            }
+            else if (id1441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1441.setStyle("-fx-background-color: blue");
+            }
+            else if (id1442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1442.setStyle("-fx-background-color: blue");
+            }
+            else if (id1443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1443.setStyle("-fx-background-color: blue");
+            }
+            else if (id1444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1444.setStyle("-fx-background-color: blue");
+            }
+            else if (id1445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1445.setStyle("-fx-background-color: blue");
+            }
+            else if (id1446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1446.setStyle("-fx-background-color: blue");
+            }
+            else if (id1447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1447.setStyle("-fx-background-color: blue");
+            }
+            else if (id1448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1448.setStyle("-fx-background-color: blue");
+            }
+            else if (id1449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1449.setStyle("-fx-background-color: blue");
+            }
+            else if (id1450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1450.setStyle("-fx-background-color: blue");
+            }
+            else if (id1451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1451.setStyle("-fx-background-color: blue");
+            }
+            else if (id1452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1452.setStyle("-fx-background-color: blue");
+            }
+            else if (id1453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1453.setStyle("-fx-background-color: blue");
+            }
+            else if (id1454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1454.setStyle("-fx-background-color: blue");
+            }
+            else if (id1455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1455.setStyle("-fx-background-color: blue");
+            }
+            else if (id1456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1456.setStyle("-fx-background-color: blue");
+            }
+            else if (id1457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1457.setStyle("-fx-background-color: blue");
+            }
+            else if (id1458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1458.setStyle("-fx-background-color: blue");
+            }
+            else if (id1459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1459.setStyle("-fx-background-color: blue");
+            }
+            else if (id1460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1460.setStyle("-fx-background-color: blue");
+            }
+            else if (id1461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1461.setStyle("-fx-background-color: blue");
+            }
+            else if (id1462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1462.setStyle("-fx-background-color: blue");
+            }
+            else if (id1463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1463.setStyle("-fx-background-color: blue");
+            }
+            else if (id1464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1464.setStyle("-fx-background-color: blue");
+            }
+            else if (id1465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1465.setStyle("-fx-background-color: blue");
+            }
+            else if (id1466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1466.setStyle("-fx-background-color: blue");
+            }
+            else if (id1467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1467.setStyle("-fx-background-color: blue");
+            }
+            else if (id1468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1468.setStyle("-fx-background-color: blue");
+            }
+            else if (id1469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1469.setStyle("-fx-background-color: blue");
+            }
+            else if (id1470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1470.setStyle("-fx-background-color: blue");
+            }
+            else if (id1471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1471.setStyle("-fx-background-color: blue");
+            }
+            else if (id1472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1472.setStyle("-fx-background-color: blue");
+            }
+            else if (id1473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1473.setStyle("-fx-background-color: blue");
+            }
+            else if (id1474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1474.setStyle("-fx-background-color: blue");
+            }
+            else if (id1475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1475.setStyle("-fx-background-color: blue");
+            }
+            else if (id1476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1476.setStyle("-fx-background-color: blue");
+            }
+            else if (id1477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1477.setStyle("-fx-background-color: blue");
+            }
+            else if (id1478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1478.setStyle("-fx-background-color: blue");
+            }
+            else if (id1479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1479.setStyle("-fx-background-color: blue");
+            }
+            else if (id1480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1480.setStyle("-fx-background-color: blue");
+            }
+            else if (id1481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1481.setStyle("-fx-background-color: blue");
+            }
+            else if (id1482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1482.setStyle("-fx-background-color: blue");
+            }
+            else if (id1483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1483.setStyle("-fx-background-color: blue");
+            }
+            else if (id1484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1484.setStyle("-fx-background-color: blue");
+            }
+            else if (id1485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1485.setStyle("-fx-background-color: blue");
+            }
+            else if (id1486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1486.setStyle("-fx-background-color: blue");
+            }
+            else if (id1487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1487.setStyle("-fx-background-color: blue");
+            }
+            else if (id1488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1488.setStyle("-fx-background-color: blue");
+            }
+            else if (id1489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1489.setStyle("-fx-background-color: blue");
+            }
+            else if (id1490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1490.setStyle("-fx-background-color: blue");
+            }
+            else if (id1491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1491.setStyle("-fx-background-color: blue");
+            }
+            else if (id1492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1492.setStyle("-fx-background-color: blue");
+            }
+            else if (id1493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1493.setStyle("-fx-background-color: blue");
+            }
+            else if (id1494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1494.setStyle("-fx-background-color: blue");
+            }
+            else if (id1495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1495.setStyle("-fx-background-color: blue");
+            }
+            else if (id1496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1496.setStyle("-fx-background-color: blue");
+            }
+            else if (id1497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1497.setStyle("-fx-background-color: blue");
+            }
+            else if (id1498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1498.setStyle("-fx-background-color: blue");
+            }
+            else if (id1499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1499.setStyle("-fx-background-color: blue");
+            }
+            else if (id1500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1500.setStyle("-fx-background-color: blue");
+            }
+            else if (id1501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1501.setStyle("-fx-background-color: blue");
+            }
+            else if (id1502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1502.setStyle("-fx-background-color: blue");
+            }
+            else if (id1503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1503.setStyle("-fx-background-color: blue");
+            }
+            else if (id1504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1504.setStyle("-fx-background-color: blue");
+            }
+            else if (id1505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1505.setStyle("-fx-background-color: blue");
+            }
+            else if (id1506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1506.setStyle("-fx-background-color: blue");
+            }
+            else if (id1507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1507.setStyle("-fx-background-color: blue");
+            }
+            else if (id1508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1508.setStyle("-fx-background-color: blue");
+            }
+            else if (id1509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1509.setStyle("-fx-background-color: blue");
+            }
+            else if (id1510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1510.setStyle("-fx-background-color: blue");
+            }
+            else if (id1511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1511.setStyle("-fx-background-color: blue");
+            }
+            else if (id1512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1512.setStyle("-fx-background-color: blue");
+            }
+            else if (id1513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1513.setStyle("-fx-background-color: blue");
+            }
+            else if (id1514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1514.setStyle("-fx-background-color: blue");
+            }
+            else if (id1515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1515.setStyle("-fx-background-color: blue");
+            }
+            else if (id1516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1516.setStyle("-fx-background-color: blue");
+            }
+            else if (id1517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1517.setStyle("-fx-background-color: blue");
+            }
+            else if (id1518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1518.setStyle("-fx-background-color: blue");
+            }
+            else if (id1519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1519.setStyle("-fx-background-color: blue");
+            }
+            else if (id1520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1520.setStyle("-fx-background-color: blue");
+            }
+            else if (id1521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1521.setStyle("-fx-background-color: blue");
+            }
+            else if (id1522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1522.setStyle("-fx-background-color: blue");
+            }
+            else if (id1523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1523.setStyle("-fx-background-color: blue");
+            }
+            else if (id1524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1524.setStyle("-fx-background-color: blue");
+            }
+            else if (id1525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1525.setStyle("-fx-background-color: blue");
+            }
+            else if (id1526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1526.setStyle("-fx-background-color: blue");
+            }
+            else if (id1527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1527.setStyle("-fx-background-color: blue");
+            }
+            else if (id1528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1528.setStyle("-fx-background-color: blue");
+            }
+            else if (id1529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1529.setStyle("-fx-background-color: blue");
+            }
+            else if (id1530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1530.setStyle("-fx-background-color: blue");
+            }
+            else if (id1531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1531.setStyle("-fx-background-color: blue");
+            }
+            else if (id1532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1532.setStyle("-fx-background-color: blue");
+            }
+            else if (id1533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1533.setStyle("-fx-background-color: blue");
+            }
+            else if (id1534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1534.setStyle("-fx-background-color: blue");
+            }
+            else if (id1535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1535.setStyle("-fx-background-color: blue");
+            }
+            else if (id1536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1536.setStyle("-fx-background-color: blue");
+            }
+            else if (id1537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1537.setStyle("-fx-background-color: blue");
+            }
+            else if (id1538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1538.setStyle("-fx-background-color: blue");
+            }
+            else if (id1539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1539.setStyle("-fx-background-color: blue");
+            }
+            else if (id1540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1540.setStyle("-fx-background-color: blue");
+            }
+            else if (id1541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1541.setStyle("-fx-background-color: blue");
+            }
+            else if (id1542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1542.setStyle("-fx-background-color: blue");
+            }
+            else if (id1543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1543.setStyle("-fx-background-color: blue");
+            }
+            else if (id1544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1544.setStyle("-fx-background-color: blue");
+            }
+            else if (id1545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1545.setStyle("-fx-background-color: blue");
+            }
+            else if (id1546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1546.setStyle("-fx-background-color: blue");
+            }
+            else if (id1547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1547.setStyle("-fx-background-color: blue");
+            }
+            else if (id1548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1548.setStyle("-fx-background-color: blue");
+            }
+            else if (id1549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1549.setStyle("-fx-background-color: blue");
+            }
+            else if (id1550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1550.setStyle("-fx-background-color: blue");
+            }
+            else if (id1551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1551.setStyle("-fx-background-color: blue");
+            }
+            else if (id1552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1552.setStyle("-fx-background-color: blue");
+            }
+            else if (id1553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1553.setStyle("-fx-background-color: blue");
+            }
+            else if (id1554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1554.setStyle("-fx-background-color: blue");
+            }
+            else if (id1555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1555.setStyle("-fx-background-color: blue");
+            }
+            else if (id1556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1556.setStyle("-fx-background-color: blue");
+            }
+            else if (id1557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1557.setStyle("-fx-background-color: blue");
+            }
+            else if (id1558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1558.setStyle("-fx-background-color: blue");
+            }
+            else if (id1559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1559.setStyle("-fx-background-color: blue");
+            }
+            else if (id1560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1560.setStyle("-fx-background-color: blue");
+            }
+            else if (id1561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1561.setStyle("-fx-background-color: blue");
+            }
+            else if (id1562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1562.setStyle("-fx-background-color: blue");
+            }
+            else if (id1563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1563.setStyle("-fx-background-color: blue");
+            }
+            else if (id1564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1564.setStyle("-fx-background-color: blue");
+            }
+            else if (id1565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1565.setStyle("-fx-background-color: blue");
+            }
+            else if (id1566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1566.setStyle("-fx-background-color: blue");
+            }
+            else if (id1567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1567.setStyle("-fx-background-color: blue");
+            }
+            else if (id1568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1568.setStyle("-fx-background-color: blue");
+            }
+            else if (id1569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1569.setStyle("-fx-background-color: blue");
+            }
+            else if (id1570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1570.setStyle("-fx-background-color: blue");
+            }
+            else if (id1571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1571.setStyle("-fx-background-color: blue");
+            }
+            else if (id1572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1572.setStyle("-fx-background-color: blue");
+            }
+            else if (id1573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1573.setStyle("-fx-background-color: blue");
+            }
+            else if (id1574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1574.setStyle("-fx-background-color: blue");
+            }
+            else if (id1575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1575.setStyle("-fx-background-color: blue");
+            }
+            else if (id1576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1576.setStyle("-fx-background-color: blue");
+            }
+            else if (id1577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1577.setStyle("-fx-background-color: blue");
+            }
+            else if (id1578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1578.setStyle("-fx-background-color: blue");
+            }
+            else if (id1579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1579.setStyle("-fx-background-color: blue");
+            }
+            else if (id1580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1580.setStyle("-fx-background-color: blue");
+            }
+            else if (id1581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1581.setStyle("-fx-background-color: blue");
+            }
+            else if (id1582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1582.setStyle("-fx-background-color: blue");
+            }
+            else if (id1583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1583.setStyle("-fx-background-color: blue");
+            }
+            else if (id1584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1584.setStyle("-fx-background-color: blue");
+            }
+            else if (id1585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1585.setStyle("-fx-background-color: blue");
+            }
+            else if (id1586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1586.setStyle("-fx-background-color: blue");
+            }
+            else if (id1587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1587.setStyle("-fx-background-color: blue");
+            }
+            else if (id1588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1588.setStyle("-fx-background-color: blue");
+            }
+            else if (id1589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1589.setStyle("-fx-background-color: blue");
+            }
+            else if (id1590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1590.setStyle("-fx-background-color: blue");
+            }
+            else if (id1591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1591.setStyle("-fx-background-color: blue");
+            }
+            else if (id1592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1592.setStyle("-fx-background-color: blue");
+            }
+            else if (id1593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1593.setStyle("-fx-background-color: blue");
+            }
+            else if (id1594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1594.setStyle("-fx-background-color: blue");
+            }
+            else if (id1595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1595.setStyle("-fx-background-color: blue");
+            }
+            else if (id1596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1596.setStyle("-fx-background-color: blue");
+            }
+            else if (id1597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1597.setStyle("-fx-background-color: blue");
+            }
+            else if (id1598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1598.setStyle("-fx-background-color: blue");
+            }
+            else if (id1599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1599.setStyle("-fx-background-color: blue");
+            }
+            else
+            {
+                id1600.setStyle("-fx-background-color: blue");
+            }
         }
         else
         {
@@ -6431,6 +16031,4806 @@ public class FXMLWorldEditorController extends UIController implements Initializ
             else if (id400.getOnMouseClicked().equals(mouseEvent))
             {
                 id400.setStyle("-fx-background-color: black");
+            }
+            else if (id401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id401.setStyle("-fx-background-color: black");
+            }
+            else if (id402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id402.setStyle("-fx-background-color: black");
+            }
+            else if (id403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id403.setStyle("-fx-background-color: black");
+            }
+            else if (id404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id404.setStyle("-fx-background-color: black");
+            }
+            else if (id405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id405.setStyle("-fx-background-color: black");
+            }
+            else if (id406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id406.setStyle("-fx-background-color: black");
+            }
+            else if (id407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id407.setStyle("-fx-background-color: black");
+            }
+            else if (id408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id408.setStyle("-fx-background-color: black");
+            }
+            else if (id409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id409.setStyle("-fx-background-color: black");
+            }
+            else if (id410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id410.setStyle("-fx-background-color: black");
+            }
+            else if (id411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id411.setStyle("-fx-background-color: black");
+            }
+            else if (id412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id412.setStyle("-fx-background-color: black");
+            }
+            else if (id413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id413.setStyle("-fx-background-color: black");
+            }
+            else if (id414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id414.setStyle("-fx-background-color: black");
+            }
+            else if (id415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id415.setStyle("-fx-background-color: black");
+            }
+            else if (id416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id416.setStyle("-fx-background-color: black");
+            }
+            else if (id417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id417.setStyle("-fx-background-color: black");
+            }
+            else if (id418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id418.setStyle("-fx-background-color: black");
+            }
+            else if (id419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id419.setStyle("-fx-background-color: black");
+            }
+            else if (id420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id420.setStyle("-fx-background-color: black");
+            }
+            else if (id421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id421.setStyle("-fx-background-color: black");
+            }
+            else if (id422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id422.setStyle("-fx-background-color: black");
+            }
+            else if (id423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id423.setStyle("-fx-background-color: black");
+            }
+            else if (id424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id424.setStyle("-fx-background-color: black");
+            }
+            else if (id425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id425.setStyle("-fx-background-color: black");
+            }
+            else if (id426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id426.setStyle("-fx-background-color: black");
+            }
+            else if (id427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id427.setStyle("-fx-background-color: black");
+            }
+            else if (id428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id428.setStyle("-fx-background-color: black");
+            }
+            else if (id429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id429.setStyle("-fx-background-color: black");
+            }
+            else if (id430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id430.setStyle("-fx-background-color: black");
+            }
+            else if (id431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id431.setStyle("-fx-background-color: black");
+            }
+            else if (id432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id432.setStyle("-fx-background-color: black");
+            }
+            else if (id433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id433.setStyle("-fx-background-color: black");
+            }
+            else if (id434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id434.setStyle("-fx-background-color: black");
+            }
+            else if (id435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id435.setStyle("-fx-background-color: black");
+            }
+            else if (id436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id436.setStyle("-fx-background-color: black");
+            }
+            else if (id437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id437.setStyle("-fx-background-color: black");
+            }
+            else if (id438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id438.setStyle("-fx-background-color: black");
+            }
+            else if (id439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id439.setStyle("-fx-background-color: black");
+            }
+            else if (id440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id440.setStyle("-fx-background-color: black");
+            }
+            else if (id441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id441.setStyle("-fx-background-color: black");
+            }
+            else if (id442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id442.setStyle("-fx-background-color: black");
+            }
+            else if (id443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id443.setStyle("-fx-background-color: black");
+            }
+            else if (id444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id444.setStyle("-fx-background-color: black");
+            }
+            else if (id445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id445.setStyle("-fx-background-color: black");
+            }
+            else if (id446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id446.setStyle("-fx-background-color: black");
+            }
+            else if (id447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id447.setStyle("-fx-background-color: black");
+            }
+            else if (id448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id448.setStyle("-fx-background-color: black");
+            }
+            else if (id449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id449.setStyle("-fx-background-color: black");
+            }
+            else if (id450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id450.setStyle("-fx-background-color: black");
+            }
+            else if (id451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id451.setStyle("-fx-background-color: black");
+            }
+            else if (id452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id452.setStyle("-fx-background-color: black");
+            }
+            else if (id453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id453.setStyle("-fx-background-color: black");
+            }
+            else if (id454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id454.setStyle("-fx-background-color: black");
+            }
+            else if (id455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id455.setStyle("-fx-background-color: black");
+            }
+            else if (id456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id456.setStyle("-fx-background-color: black");
+            }
+            else if (id457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id457.setStyle("-fx-background-color: black");
+            }
+            else if (id458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id458.setStyle("-fx-background-color: black");
+            }
+            else if (id459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id459.setStyle("-fx-background-color: black");
+            }
+            else if (id460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id460.setStyle("-fx-background-color: black");
+            }
+            else if (id461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id461.setStyle("-fx-background-color: black");
+            }
+            else if (id462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id462.setStyle("-fx-background-color: black");
+            }
+            else if (id463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id463.setStyle("-fx-background-color: black");
+            }
+            else if (id464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id464.setStyle("-fx-background-color: black");
+            }
+            else if (id465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id465.setStyle("-fx-background-color: black");
+            }
+            else if (id466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id466.setStyle("-fx-background-color: black");
+            }
+            else if (id467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id467.setStyle("-fx-background-color: black");
+            }
+            else if (id468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id468.setStyle("-fx-background-color: black");
+            }
+            else if (id469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id469.setStyle("-fx-background-color: black");
+            }
+            else if (id470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id470.setStyle("-fx-background-color: black");
+            }
+            else if (id471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id471.setStyle("-fx-background-color: black");
+            }
+            else if (id472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id472.setStyle("-fx-background-color: black");
+            }
+            else if (id473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id473.setStyle("-fx-background-color: black");
+            }
+            else if (id474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id474.setStyle("-fx-background-color: black");
+            }
+            else if (id475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id475.setStyle("-fx-background-color: black");
+            }
+            else if (id476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id476.setStyle("-fx-background-color: black");
+            }
+            else if (id477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id477.setStyle("-fx-background-color: black");
+            }
+            else if (id478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id478.setStyle("-fx-background-color: black");
+            }
+            else if (id479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id479.setStyle("-fx-background-color: black");
+            }
+            else if (id480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id480.setStyle("-fx-background-color: black");
+            }
+            else if (id481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id481.setStyle("-fx-background-color: black");
+            }
+            else if (id482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id482.setStyle("-fx-background-color: black");
+            }
+            else if (id483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id483.setStyle("-fx-background-color: black");
+            }
+            else if (id484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id484.setStyle("-fx-background-color: black");
+            }
+            else if (id485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id485.setStyle("-fx-background-color: black");
+            }
+            else if (id486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id486.setStyle("-fx-background-color: black");
+            }
+            else if (id487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id487.setStyle("-fx-background-color: black");
+            }
+            else if (id488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id488.setStyle("-fx-background-color: black");
+            }
+            else if (id489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id489.setStyle("-fx-background-color: black");
+            }
+            else if (id490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id490.setStyle("-fx-background-color: black");
+            }
+            else if (id491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id491.setStyle("-fx-background-color: black");
+            }
+            else if (id492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id492.setStyle("-fx-background-color: black");
+            }
+            else if (id493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id493.setStyle("-fx-background-color: black");
+            }
+            else if (id494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id494.setStyle("-fx-background-color: black");
+            }
+            else if (id495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id495.setStyle("-fx-background-color: black");
+            }
+            else if (id496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id496.setStyle("-fx-background-color: black");
+            }
+            else if (id497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id497.setStyle("-fx-background-color: black");
+            }
+            else if (id498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id498.setStyle("-fx-background-color: black");
+            }
+            else if (id499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id499.setStyle("-fx-background-color: black");
+            }
+            else if (id500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id500.setStyle("-fx-background-color: black");
+            }
+            else if (id501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id501.setStyle("-fx-background-color: black");
+            }
+            else if (id502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id502.setStyle("-fx-background-color: black");
+            }
+            else if (id503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id503.setStyle("-fx-background-color: black");
+            }
+            else if (id504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id504.setStyle("-fx-background-color: black");
+            }
+            else if (id505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id505.setStyle("-fx-background-color: black");
+            }
+            else if (id506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id506.setStyle("-fx-background-color: black");
+            }
+            else if (id507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id507.setStyle("-fx-background-color: black");
+            }
+            else if (id508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id508.setStyle("-fx-background-color: black");
+            }
+            else if (id509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id509.setStyle("-fx-background-color: black");
+            }
+            else if (id510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id510.setStyle("-fx-background-color: black");
+            }
+            else if (id511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id511.setStyle("-fx-background-color: black");
+            }
+            else if (id512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id512.setStyle("-fx-background-color: black");
+            }
+            else if (id513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id513.setStyle("-fx-background-color: black");
+            }
+            else if (id514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id514.setStyle("-fx-background-color: black");
+            }
+            else if (id515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id515.setStyle("-fx-background-color: black");
+            }
+            else if (id516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id516.setStyle("-fx-background-color: black");
+            }
+            else if (id517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id517.setStyle("-fx-background-color: black");
+            }
+            else if (id518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id518.setStyle("-fx-background-color: black");
+            }
+            else if (id519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id519.setStyle("-fx-background-color: black");
+            }
+            else if (id520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id520.setStyle("-fx-background-color: black");
+            }
+            else if (id521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id521.setStyle("-fx-background-color: black");
+            }
+            else if (id522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id522.setStyle("-fx-background-color: black");
+            }
+            else if (id523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id523.setStyle("-fx-background-color: black");
+            }
+            else if (id524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id524.setStyle("-fx-background-color: black");
+            }
+            else if (id525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id525.setStyle("-fx-background-color: black");
+            }
+            else if (id526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id526.setStyle("-fx-background-color: black");
+            }
+            else if (id527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id527.setStyle("-fx-background-color: black");
+            }
+            else if (id528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id528.setStyle("-fx-background-color: black");
+            }
+            else if (id529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id529.setStyle("-fx-background-color: black");
+            }
+            else if (id530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id530.setStyle("-fx-background-color: black");
+            }
+            else if (id531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id531.setStyle("-fx-background-color: black");
+            }
+            else if (id532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id532.setStyle("-fx-background-color: black");
+            }
+            else if (id533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id533.setStyle("-fx-background-color: black");
+            }
+            else if (id534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id534.setStyle("-fx-background-color: black");
+            }
+            else if (id535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id535.setStyle("-fx-background-color: black");
+            }
+            else if (id536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id536.setStyle("-fx-background-color: black");
+            }
+            else if (id537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id537.setStyle("-fx-background-color: black");
+            }
+            else if (id538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id538.setStyle("-fx-background-color: black");
+            }
+            else if (id539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id539.setStyle("-fx-background-color: black");
+            }
+            else if (id540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id540.setStyle("-fx-background-color: black");
+            }
+            else if (id541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id541.setStyle("-fx-background-color: black");
+            }
+            else if (id542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id542.setStyle("-fx-background-color: black");
+            }
+            else if (id543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id543.setStyle("-fx-background-color: black");
+            }
+            else if (id544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id544.setStyle("-fx-background-color: black");
+            }
+            else if (id545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id545.setStyle("-fx-background-color: black");
+            }
+            else if (id546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id546.setStyle("-fx-background-color: black");
+            }
+            else if (id547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id547.setStyle("-fx-background-color: black");
+            }
+            else if (id548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id548.setStyle("-fx-background-color: black");
+            }
+            else if (id549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id549.setStyle("-fx-background-color: black");
+            }
+            else if (id550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id550.setStyle("-fx-background-color: black");
+            }
+            else if (id551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id551.setStyle("-fx-background-color: black");
+            }
+            else if (id552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id552.setStyle("-fx-background-color: black");
+            }
+            else if (id553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id553.setStyle("-fx-background-color: black");
+            }
+            else if (id554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id554.setStyle("-fx-background-color: black");
+            }
+            else if (id555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id555.setStyle("-fx-background-color: black");
+            }
+            else if (id556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id556.setStyle("-fx-background-color: black");
+            }
+            else if (id557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id557.setStyle("-fx-background-color: black");
+            }
+            else if (id558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id558.setStyle("-fx-background-color: black");
+            }
+            else if (id559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id559.setStyle("-fx-background-color: black");
+            }
+            else if (id560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id560.setStyle("-fx-background-color: black");
+            }
+            else if (id561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id561.setStyle("-fx-background-color: black");
+            }
+            else if (id562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id562.setStyle("-fx-background-color: black");
+            }
+            else if (id563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id563.setStyle("-fx-background-color: black");
+            }
+            else if (id564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id564.setStyle("-fx-background-color: black");
+            }
+            else if (id565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id565.setStyle("-fx-background-color: black");
+            }
+            else if (id566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id566.setStyle("-fx-background-color: black");
+            }
+            else if (id567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id567.setStyle("-fx-background-color: black");
+            }
+            else if (id568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id568.setStyle("-fx-background-color: black");
+            }
+            else if (id569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id569.setStyle("-fx-background-color: black");
+            }
+            else if (id570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id570.setStyle("-fx-background-color: black");
+            }
+            else if (id571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id571.setStyle("-fx-background-color: black");
+            }
+            else if (id572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id572.setStyle("-fx-background-color: black");
+            }
+            else if (id573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id573.setStyle("-fx-background-color: black");
+            }
+            else if (id574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id574.setStyle("-fx-background-color: black");
+            }
+            else if (id575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id575.setStyle("-fx-background-color: black");
+            }
+            else if (id576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id576.setStyle("-fx-background-color: black");
+            }
+            else if (id577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id577.setStyle("-fx-background-color: black");
+            }
+            else if (id578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id578.setStyle("-fx-background-color: black");
+            }
+            else if (id579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id579.setStyle("-fx-background-color: black");
+            }
+            else if (id580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id580.setStyle("-fx-background-color: black");
+            }
+            else if (id581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id581.setStyle("-fx-background-color: black");
+            }
+            else if (id582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id582.setStyle("-fx-background-color: black");
+            }
+            else if (id583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id583.setStyle("-fx-background-color: black");
+            }
+            else if (id584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id584.setStyle("-fx-background-color: black");
+            }
+            else if (id585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id585.setStyle("-fx-background-color: black");
+            }
+            else if (id586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id586.setStyle("-fx-background-color: black");
+            }
+            else if (id587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id587.setStyle("-fx-background-color: black");
+            }
+            else if (id588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id588.setStyle("-fx-background-color: black");
+            }
+            else if (id589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id589.setStyle("-fx-background-color: black");
+            }
+            else if (id590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id590.setStyle("-fx-background-color: black");
+            }
+            else if (id591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id591.setStyle("-fx-background-color: black");
+            }
+            else if (id592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id592.setStyle("-fx-background-color: black");
+            }
+            else if (id593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id593.setStyle("-fx-background-color: black");
+            }
+            else if (id594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id594.setStyle("-fx-background-color: black");
+            }
+            else if (id595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id595.setStyle("-fx-background-color: black");
+            }
+            else if (id596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id596.setStyle("-fx-background-color: black");
+            }
+            else if (id597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id597.setStyle("-fx-background-color: black");
+            }
+            else if (id598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id598.setStyle("-fx-background-color: black");
+            }
+            else if (id599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id599.setStyle("-fx-background-color: black");
+            }
+            else if (id600.getOnMouseClicked().equals(mouseEvent))
+            {
+                id600.setStyle("-fx-background-color: black");
+            }
+            else if (id601.getOnMouseClicked().equals(mouseEvent))
+            {
+                id601.setStyle("-fx-background-color: black");
+            }
+            else if (id602.getOnMouseClicked().equals(mouseEvent))
+            {
+                id602.setStyle("-fx-background-color: black");
+            }
+            else if (id603.getOnMouseClicked().equals(mouseEvent))
+            {
+                id603.setStyle("-fx-background-color: black");
+            }
+            else if (id604.getOnMouseClicked().equals(mouseEvent))
+            {
+                id604.setStyle("-fx-background-color: black");
+            }
+            else if (id605.getOnMouseClicked().equals(mouseEvent))
+            {
+                id605.setStyle("-fx-background-color: black");
+            }
+            else if (id606.getOnMouseClicked().equals(mouseEvent))
+            {
+                id606.setStyle("-fx-background-color: black");
+            }
+            else if (id607.getOnMouseClicked().equals(mouseEvent))
+            {
+                id607.setStyle("-fx-background-color: black");
+            }
+            else if (id608.getOnMouseClicked().equals(mouseEvent))
+            {
+                id608.setStyle("-fx-background-color: black");
+            }
+            else if (id609.getOnMouseClicked().equals(mouseEvent))
+            {
+                id609.setStyle("-fx-background-color: black");
+            }
+            else if (id610.getOnMouseClicked().equals(mouseEvent))
+            {
+                id610.setStyle("-fx-background-color: black");
+            }
+            else if (id611.getOnMouseClicked().equals(mouseEvent))
+            {
+                id611.setStyle("-fx-background-color: black");
+            }
+            else if (id612.getOnMouseClicked().equals(mouseEvent))
+            {
+                id612.setStyle("-fx-background-color: black");
+            }
+            else if (id613.getOnMouseClicked().equals(mouseEvent))
+            {
+                id613.setStyle("-fx-background-color: black");
+            }
+            else if (id614.getOnMouseClicked().equals(mouseEvent))
+            {
+                id614.setStyle("-fx-background-color: black");
+            }
+            else if (id615.getOnMouseClicked().equals(mouseEvent))
+            {
+                id615.setStyle("-fx-background-color: black");
+            }
+            else if (id616.getOnMouseClicked().equals(mouseEvent))
+            {
+                id616.setStyle("-fx-background-color: black");
+            }
+            else if (id617.getOnMouseClicked().equals(mouseEvent))
+            {
+                id617.setStyle("-fx-background-color: black");
+            }
+            else if (id618.getOnMouseClicked().equals(mouseEvent))
+            {
+                id618.setStyle("-fx-background-color: black");
+            }
+            else if (id619.getOnMouseClicked().equals(mouseEvent))
+            {
+                id619.setStyle("-fx-background-color: black");
+            }
+            else if (id620.getOnMouseClicked().equals(mouseEvent))
+            {
+                id620.setStyle("-fx-background-color: black");
+            }
+            else if (id621.getOnMouseClicked().equals(mouseEvent))
+            {
+                id621.setStyle("-fx-background-color: black");
+            }
+            else if (id622.getOnMouseClicked().equals(mouseEvent))
+            {
+                id622.setStyle("-fx-background-color: black");
+            }
+            else if (id623.getOnMouseClicked().equals(mouseEvent))
+            {
+                id623.setStyle("-fx-background-color: black");
+            }
+            else if (id624.getOnMouseClicked().equals(mouseEvent))
+            {
+                id624.setStyle("-fx-background-color: black");
+            }
+            else if (id625.getOnMouseClicked().equals(mouseEvent))
+            {
+                id625.setStyle("-fx-background-color: black");
+            }
+            else if (id626.getOnMouseClicked().equals(mouseEvent))
+            {
+                id626.setStyle("-fx-background-color: black");
+            }
+            else if (id627.getOnMouseClicked().equals(mouseEvent))
+            {
+                id627.setStyle("-fx-background-color: black");
+            }
+            else if (id628.getOnMouseClicked().equals(mouseEvent))
+            {
+                id628.setStyle("-fx-background-color: black");
+            }
+            else if (id629.getOnMouseClicked().equals(mouseEvent))
+            {
+                id629.setStyle("-fx-background-color: black");
+            }
+            else if (id630.getOnMouseClicked().equals(mouseEvent))
+            {
+                id630.setStyle("-fx-background-color: black");
+            }
+            else if (id631.getOnMouseClicked().equals(mouseEvent))
+            {
+                id631.setStyle("-fx-background-color: black");
+            }
+            else if (id632.getOnMouseClicked().equals(mouseEvent))
+            {
+                id632.setStyle("-fx-background-color: black");
+            }
+            else if (id633.getOnMouseClicked().equals(mouseEvent))
+            {
+                id633.setStyle("-fx-background-color: black");
+            }
+            else if (id634.getOnMouseClicked().equals(mouseEvent))
+            {
+                id634.setStyle("-fx-background-color: black");
+            }
+            else if (id635.getOnMouseClicked().equals(mouseEvent))
+            {
+                id635.setStyle("-fx-background-color: black");
+            }
+            else if (id636.getOnMouseClicked().equals(mouseEvent))
+            {
+                id636.setStyle("-fx-background-color: black");
+            }
+            else if (id637.getOnMouseClicked().equals(mouseEvent))
+            {
+                id637.setStyle("-fx-background-color: black");
+            }
+            else if (id638.getOnMouseClicked().equals(mouseEvent))
+            {
+                id638.setStyle("-fx-background-color: black");
+            }
+            else if (id639.getOnMouseClicked().equals(mouseEvent))
+            {
+                id639.setStyle("-fx-background-color: black");
+            }
+            else if (id640.getOnMouseClicked().equals(mouseEvent))
+            {
+                id640.setStyle("-fx-background-color: black");
+            }
+            else if (id641.getOnMouseClicked().equals(mouseEvent))
+            {
+                id641.setStyle("-fx-background-color: black");
+            }
+            else if (id642.getOnMouseClicked().equals(mouseEvent))
+            {
+                id642.setStyle("-fx-background-color: black");
+            }
+            else if (id643.getOnMouseClicked().equals(mouseEvent))
+            {
+                id643.setStyle("-fx-background-color: black");
+            }
+            else if (id644.getOnMouseClicked().equals(mouseEvent))
+            {
+                id644.setStyle("-fx-background-color: black");
+            }
+            else if (id645.getOnMouseClicked().equals(mouseEvent))
+            {
+                id645.setStyle("-fx-background-color: black");
+            }
+            else if (id646.getOnMouseClicked().equals(mouseEvent))
+            {
+                id646.setStyle("-fx-background-color: black");
+            }
+            else if (id647.getOnMouseClicked().equals(mouseEvent))
+            {
+                id647.setStyle("-fx-background-color: black");
+            }
+            else if (id648.getOnMouseClicked().equals(mouseEvent))
+            {
+                id648.setStyle("-fx-background-color: black");
+            }
+            else if (id649.getOnMouseClicked().equals(mouseEvent))
+            {
+                id649.setStyle("-fx-background-color: black");
+            }
+            else if (id650.getOnMouseClicked().equals(mouseEvent))
+            {
+                id650.setStyle("-fx-background-color: black");
+            }
+            else if (id651.getOnMouseClicked().equals(mouseEvent))
+            {
+                id651.setStyle("-fx-background-color: black");
+            }
+            else if (id652.getOnMouseClicked().equals(mouseEvent))
+            {
+                id652.setStyle("-fx-background-color: black");
+            }
+            else if (id653.getOnMouseClicked().equals(mouseEvent))
+            {
+                id653.setStyle("-fx-background-color: black");
+            }
+            else if (id654.getOnMouseClicked().equals(mouseEvent))
+            {
+                id654.setStyle("-fx-background-color: black");
+            }
+            else if (id655.getOnMouseClicked().equals(mouseEvent))
+            {
+                id655.setStyle("-fx-background-color: black");
+            }
+            else if (id656.getOnMouseClicked().equals(mouseEvent))
+            {
+                id656.setStyle("-fx-background-color: black");
+            }
+            else if (id657.getOnMouseClicked().equals(mouseEvent))
+            {
+                id657.setStyle("-fx-background-color: black");
+            }
+            else if (id658.getOnMouseClicked().equals(mouseEvent))
+            {
+                id658.setStyle("-fx-background-color: black");
+            }
+            else if (id659.getOnMouseClicked().equals(mouseEvent))
+            {
+                id659.setStyle("-fx-background-color: black");
+            }
+            else if (id660.getOnMouseClicked().equals(mouseEvent))
+            {
+                id660.setStyle("-fx-background-color: black");
+            }
+            else if (id661.getOnMouseClicked().equals(mouseEvent))
+            {
+                id661.setStyle("-fx-background-color: black");
+            }
+            else if (id662.getOnMouseClicked().equals(mouseEvent))
+            {
+                id662.setStyle("-fx-background-color: black");
+            }
+            else if (id663.getOnMouseClicked().equals(mouseEvent))
+            {
+                id663.setStyle("-fx-background-color: black");
+            }
+            else if (id664.getOnMouseClicked().equals(mouseEvent))
+            {
+                id664.setStyle("-fx-background-color: black");
+            }
+            else if (id665.getOnMouseClicked().equals(mouseEvent))
+            {
+                id665.setStyle("-fx-background-color: black");
+            }
+            else if (id666.getOnMouseClicked().equals(mouseEvent))
+            {
+                id666.setStyle("-fx-background-color: black");
+            }
+            else if (id667.getOnMouseClicked().equals(mouseEvent))
+            {
+                id667.setStyle("-fx-background-color: black");
+            }
+            else if (id668.getOnMouseClicked().equals(mouseEvent))
+            {
+                id668.setStyle("-fx-background-color: black");
+            }
+            else if (id669.getOnMouseClicked().equals(mouseEvent))
+            {
+                id669.setStyle("-fx-background-color: black");
+            }
+            else if (id670.getOnMouseClicked().equals(mouseEvent))
+            {
+                id670.setStyle("-fx-background-color: black");
+            }
+            else if (id671.getOnMouseClicked().equals(mouseEvent))
+            {
+                id671.setStyle("-fx-background-color: black");
+            }
+            else if (id672.getOnMouseClicked().equals(mouseEvent))
+            {
+                id672.setStyle("-fx-background-color: black");
+            }
+            else if (id673.getOnMouseClicked().equals(mouseEvent))
+            {
+                id673.setStyle("-fx-background-color: black");
+            }
+            else if (id674.getOnMouseClicked().equals(mouseEvent))
+            {
+                id674.setStyle("-fx-background-color: black");
+            }
+            else if (id675.getOnMouseClicked().equals(mouseEvent))
+            {
+                id675.setStyle("-fx-background-color: black");
+            }
+            else if (id676.getOnMouseClicked().equals(mouseEvent))
+            {
+                id676.setStyle("-fx-background-color: black");
+            }
+            else if (id677.getOnMouseClicked().equals(mouseEvent))
+            {
+                id677.setStyle("-fx-background-color: black");
+            }
+            else if (id678.getOnMouseClicked().equals(mouseEvent))
+            {
+                id678.setStyle("-fx-background-color: black");
+            }
+            else if (id679.getOnMouseClicked().equals(mouseEvent))
+            {
+                id679.setStyle("-fx-background-color: black");
+            }
+            else if (id680.getOnMouseClicked().equals(mouseEvent))
+            {
+                id680.setStyle("-fx-background-color: black");
+            }
+            else if (id681.getOnMouseClicked().equals(mouseEvent))
+            {
+                id681.setStyle("-fx-background-color: black");
+            }
+            else if (id682.getOnMouseClicked().equals(mouseEvent))
+            {
+                id682.setStyle("-fx-background-color: black");
+            }
+            else if (id683.getOnMouseClicked().equals(mouseEvent))
+            {
+                id683.setStyle("-fx-background-color: black");
+            }
+            else if (id684.getOnMouseClicked().equals(mouseEvent))
+            {
+                id684.setStyle("-fx-background-color: black");
+            }
+            else if (id685.getOnMouseClicked().equals(mouseEvent))
+            {
+                id685.setStyle("-fx-background-color: black");
+            }
+            else if (id686.getOnMouseClicked().equals(mouseEvent))
+            {
+                id686.setStyle("-fx-background-color: black");
+            }
+            else if (id687.getOnMouseClicked().equals(mouseEvent))
+            {
+                id687.setStyle("-fx-background-color: black");
+            }
+            else if (id688.getOnMouseClicked().equals(mouseEvent))
+            {
+                id688.setStyle("-fx-background-color: black");
+            }
+            else if (id689.getOnMouseClicked().equals(mouseEvent))
+            {
+                id689.setStyle("-fx-background-color: black");
+            }
+            else if (id690.getOnMouseClicked().equals(mouseEvent))
+            {
+                id690.setStyle("-fx-background-color: black");
+            }
+            else if (id691.getOnMouseClicked().equals(mouseEvent))
+            {
+                id691.setStyle("-fx-background-color: black");
+            }
+            else if (id692.getOnMouseClicked().equals(mouseEvent))
+            {
+                id692.setStyle("-fx-background-color: black");
+            }
+            else if (id693.getOnMouseClicked().equals(mouseEvent))
+            {
+                id693.setStyle("-fx-background-color: black");
+            }
+            else if (id694.getOnMouseClicked().equals(mouseEvent))
+            {
+                id694.setStyle("-fx-background-color: black");
+            }
+            else if (id695.getOnMouseClicked().equals(mouseEvent))
+            {
+                id695.setStyle("-fx-background-color: black");
+            }
+            else if (id696.getOnMouseClicked().equals(mouseEvent))
+            {
+                id696.setStyle("-fx-background-color: black");
+            }
+            else if (id697.getOnMouseClicked().equals(mouseEvent))
+            {
+                id697.setStyle("-fx-background-color: black");
+            }
+            else if (id698.getOnMouseClicked().equals(mouseEvent))
+            {
+                id698.setStyle("-fx-background-color: black");
+            }
+            else if (id699.getOnMouseClicked().equals(mouseEvent))
+            {
+                id699.setStyle("-fx-background-color: black");
+            }
+            else if (id700.getOnMouseClicked().equals(mouseEvent))
+            {
+                id700.setStyle("-fx-background-color: black");
+            }
+            else if (id701.getOnMouseClicked().equals(mouseEvent))
+            {
+                id701.setStyle("-fx-background-color: black");
+            }
+            else if (id702.getOnMouseClicked().equals(mouseEvent))
+            {
+                id702.setStyle("-fx-background-color: black");
+            }
+            else if (id703.getOnMouseClicked().equals(mouseEvent))
+            {
+                id703.setStyle("-fx-background-color: black");
+            }
+            else if (id704.getOnMouseClicked().equals(mouseEvent))
+            {
+                id704.setStyle("-fx-background-color: black");
+            }
+            else if (id705.getOnMouseClicked().equals(mouseEvent))
+            {
+                id705.setStyle("-fx-background-color: black");
+            }
+            else if (id706.getOnMouseClicked().equals(mouseEvent))
+            {
+                id706.setStyle("-fx-background-color: black");
+            }
+            else if (id707.getOnMouseClicked().equals(mouseEvent))
+            {
+                id707.setStyle("-fx-background-color: black");
+            }
+            else if (id708.getOnMouseClicked().equals(mouseEvent))
+            {
+                id708.setStyle("-fx-background-color: black");
+            }
+            else if (id709.getOnMouseClicked().equals(mouseEvent))
+            {
+                id709.setStyle("-fx-background-color: black");
+            }
+            else if (id710.getOnMouseClicked().equals(mouseEvent))
+            {
+                id710.setStyle("-fx-background-color: black");
+            }
+            else if (id711.getOnMouseClicked().equals(mouseEvent))
+            {
+                id711.setStyle("-fx-background-color: black");
+            }
+            else if (id712.getOnMouseClicked().equals(mouseEvent))
+            {
+                id712.setStyle("-fx-background-color: black");
+            }
+            else if (id713.getOnMouseClicked().equals(mouseEvent))
+            {
+                id713.setStyle("-fx-background-color: black");
+            }
+            else if (id714.getOnMouseClicked().equals(mouseEvent))
+            {
+                id714.setStyle("-fx-background-color: black");
+            }
+            else if (id715.getOnMouseClicked().equals(mouseEvent))
+            {
+                id715.setStyle("-fx-background-color: black");
+            }
+            else if (id716.getOnMouseClicked().equals(mouseEvent))
+            {
+                id716.setStyle("-fx-background-color: black");
+            }
+            else if (id717.getOnMouseClicked().equals(mouseEvent))
+            {
+                id717.setStyle("-fx-background-color: black");
+            }
+            else if (id718.getOnMouseClicked().equals(mouseEvent))
+            {
+                id718.setStyle("-fx-background-color: black");
+            }
+            else if (id719.getOnMouseClicked().equals(mouseEvent))
+            {
+                id719.setStyle("-fx-background-color: black");
+            }
+            else if (id720.getOnMouseClicked().equals(mouseEvent))
+            {
+                id720.setStyle("-fx-background-color: black");
+            }
+            else if (id721.getOnMouseClicked().equals(mouseEvent))
+            {
+                id721.setStyle("-fx-background-color: black");
+            }
+            else if (id722.getOnMouseClicked().equals(mouseEvent))
+            {
+                id722.setStyle("-fx-background-color: black");
+            }
+            else if (id723.getOnMouseClicked().equals(mouseEvent))
+            {
+                id723.setStyle("-fx-background-color: black");
+            }
+            else if (id724.getOnMouseClicked().equals(mouseEvent))
+            {
+                id724.setStyle("-fx-background-color: black");
+            }
+            else if (id725.getOnMouseClicked().equals(mouseEvent))
+            {
+                id725.setStyle("-fx-background-color: black");
+            }
+            else if (id726.getOnMouseClicked().equals(mouseEvent))
+            {
+                id726.setStyle("-fx-background-color: black");
+            }
+            else if (id727.getOnMouseClicked().equals(mouseEvent))
+            {
+                id727.setStyle("-fx-background-color: black");
+            }
+            else if (id728.getOnMouseClicked().equals(mouseEvent))
+            {
+                id728.setStyle("-fx-background-color: black");
+            }
+            else if (id729.getOnMouseClicked().equals(mouseEvent))
+            {
+                id729.setStyle("-fx-background-color: black");
+            }
+            else if (id730.getOnMouseClicked().equals(mouseEvent))
+            {
+                id730.setStyle("-fx-background-color: black");
+            }
+            else if (id731.getOnMouseClicked().equals(mouseEvent))
+            {
+                id731.setStyle("-fx-background-color: black");
+            }
+            else if (id732.getOnMouseClicked().equals(mouseEvent))
+            {
+                id732.setStyle("-fx-background-color: black");
+            }
+            else if (id733.getOnMouseClicked().equals(mouseEvent))
+            {
+                id733.setStyle("-fx-background-color: black");
+            }
+            else if (id734.getOnMouseClicked().equals(mouseEvent))
+            {
+                id734.setStyle("-fx-background-color: black");
+            }
+            else if (id735.getOnMouseClicked().equals(mouseEvent))
+            {
+                id735.setStyle("-fx-background-color: black");
+            }
+            else if (id736.getOnMouseClicked().equals(mouseEvent))
+            {
+                id736.setStyle("-fx-background-color: black");
+            }
+            else if (id737.getOnMouseClicked().equals(mouseEvent))
+            {
+                id737.setStyle("-fx-background-color: black");
+            }
+            else if (id738.getOnMouseClicked().equals(mouseEvent))
+            {
+                id738.setStyle("-fx-background-color: black");
+            }
+            else if (id739.getOnMouseClicked().equals(mouseEvent))
+            {
+                id739.setStyle("-fx-background-color: black");
+            }
+            else if (id740.getOnMouseClicked().equals(mouseEvent))
+            {
+                id740.setStyle("-fx-background-color: black");
+            }
+            else if (id741.getOnMouseClicked().equals(mouseEvent))
+            {
+                id741.setStyle("-fx-background-color: black");
+            }
+            else if (id742.getOnMouseClicked().equals(mouseEvent))
+            {
+                id742.setStyle("-fx-background-color: black");
+            }
+            else if (id743.getOnMouseClicked().equals(mouseEvent))
+            {
+                id743.setStyle("-fx-background-color: black");
+            }
+            else if (id744.getOnMouseClicked().equals(mouseEvent))
+            {
+                id744.setStyle("-fx-background-color: black");
+            }
+            else if (id745.getOnMouseClicked().equals(mouseEvent))
+            {
+                id745.setStyle("-fx-background-color: black");
+            }
+            else if (id746.getOnMouseClicked().equals(mouseEvent))
+            {
+                id746.setStyle("-fx-background-color: black");
+            }
+            else if (id747.getOnMouseClicked().equals(mouseEvent))
+            {
+                id747.setStyle("-fx-background-color: black");
+            }
+            else if (id748.getOnMouseClicked().equals(mouseEvent))
+            {
+                id748.setStyle("-fx-background-color: black");
+            }
+            else if (id749.getOnMouseClicked().equals(mouseEvent))
+            {
+                id749.setStyle("-fx-background-color: black");
+            }
+            else if (id750.getOnMouseClicked().equals(mouseEvent))
+            {
+                id750.setStyle("-fx-background-color: black");
+            }
+            else if (id751.getOnMouseClicked().equals(mouseEvent))
+            {
+                id751.setStyle("-fx-background-color: black");
+            }
+            else if (id752.getOnMouseClicked().equals(mouseEvent))
+            {
+                id752.setStyle("-fx-background-color: black");
+            }
+            else if (id753.getOnMouseClicked().equals(mouseEvent))
+            {
+                id753.setStyle("-fx-background-color: black");
+            }
+            else if (id754.getOnMouseClicked().equals(mouseEvent))
+            {
+                id754.setStyle("-fx-background-color: black");
+            }
+            else if (id755.getOnMouseClicked().equals(mouseEvent))
+            {
+                id755.setStyle("-fx-background-color: black");
+            }
+            else if (id756.getOnMouseClicked().equals(mouseEvent))
+            {
+                id756.setStyle("-fx-background-color: black");
+            }
+            else if (id757.getOnMouseClicked().equals(mouseEvent))
+            {
+                id757.setStyle("-fx-background-color: black");
+            }
+            else if (id758.getOnMouseClicked().equals(mouseEvent))
+            {
+                id758.setStyle("-fx-background-color: black");
+            }
+            else if (id759.getOnMouseClicked().equals(mouseEvent))
+            {
+                id759.setStyle("-fx-background-color: black");
+            }
+            else if (id760.getOnMouseClicked().equals(mouseEvent))
+            {
+                id760.setStyle("-fx-background-color: black");
+            }
+            else if (id761.getOnMouseClicked().equals(mouseEvent))
+            {
+                id761.setStyle("-fx-background-color: black");
+            }
+            else if (id762.getOnMouseClicked().equals(mouseEvent))
+            {
+                id762.setStyle("-fx-background-color: black");
+            }
+            else if (id763.getOnMouseClicked().equals(mouseEvent))
+            {
+                id763.setStyle("-fx-background-color: black");
+            }
+            else if (id764.getOnMouseClicked().equals(mouseEvent))
+            {
+                id764.setStyle("-fx-background-color: black");
+            }
+            else if (id765.getOnMouseClicked().equals(mouseEvent))
+            {
+                id765.setStyle("-fx-background-color: black");
+            }
+            else if (id766.getOnMouseClicked().equals(mouseEvent))
+            {
+                id766.setStyle("-fx-background-color: black");
+            }
+            else if (id767.getOnMouseClicked().equals(mouseEvent))
+            {
+                id767.setStyle("-fx-background-color: black");
+            }
+            else if (id768.getOnMouseClicked().equals(mouseEvent))
+            {
+                id768.setStyle("-fx-background-color: black");
+            }
+            else if (id769.getOnMouseClicked().equals(mouseEvent))
+            {
+                id769.setStyle("-fx-background-color: black");
+            }
+            else if (id770.getOnMouseClicked().equals(mouseEvent))
+            {
+                id770.setStyle("-fx-background-color: black");
+            }
+            else if (id771.getOnMouseClicked().equals(mouseEvent))
+            {
+                id771.setStyle("-fx-background-color: black");
+            }
+            else if (id772.getOnMouseClicked().equals(mouseEvent))
+            {
+                id772.setStyle("-fx-background-color: black");
+            }
+            else if (id773.getOnMouseClicked().equals(mouseEvent))
+            {
+                id773.setStyle("-fx-background-color: black");
+            }
+            else if (id774.getOnMouseClicked().equals(mouseEvent))
+            {
+                id774.setStyle("-fx-background-color: black");
+            }
+            else if (id775.getOnMouseClicked().equals(mouseEvent))
+            {
+                id775.setStyle("-fx-background-color: black");
+            }
+            else if (id776.getOnMouseClicked().equals(mouseEvent))
+            {
+                id776.setStyle("-fx-background-color: black");
+            }
+            else if (id777.getOnMouseClicked().equals(mouseEvent))
+            {
+                id777.setStyle("-fx-background-color: black");
+            }
+            else if (id778.getOnMouseClicked().equals(mouseEvent))
+            {
+                id778.setStyle("-fx-background-color: black");
+            }
+            else if (id779.getOnMouseClicked().equals(mouseEvent))
+            {
+                id779.setStyle("-fx-background-color: black");
+            }
+            else if (id780.getOnMouseClicked().equals(mouseEvent))
+            {
+                id780.setStyle("-fx-background-color: black");
+            }
+            else if (id781.getOnMouseClicked().equals(mouseEvent))
+            {
+                id781.setStyle("-fx-background-color: black");
+            }
+            else if (id782.getOnMouseClicked().equals(mouseEvent))
+            {
+                id782.setStyle("-fx-background-color: black");
+            }
+            else if (id783.getOnMouseClicked().equals(mouseEvent))
+            {
+                id783.setStyle("-fx-background-color: black");
+            }
+            else if (id784.getOnMouseClicked().equals(mouseEvent))
+            {
+                id784.setStyle("-fx-background-color: black");
+            }
+            else if (id785.getOnMouseClicked().equals(mouseEvent))
+            {
+                id785.setStyle("-fx-background-color: black");
+            }
+            else if (id786.getOnMouseClicked().equals(mouseEvent))
+            {
+                id786.setStyle("-fx-background-color: black");
+            }
+            else if (id787.getOnMouseClicked().equals(mouseEvent))
+            {
+                id787.setStyle("-fx-background-color: black");
+            }
+            else if (id788.getOnMouseClicked().equals(mouseEvent))
+            {
+                id788.setStyle("-fx-background-color: black");
+            }
+            else if (id789.getOnMouseClicked().equals(mouseEvent))
+            {
+                id789.setStyle("-fx-background-color: black");
+            }
+            else if (id790.getOnMouseClicked().equals(mouseEvent))
+            {
+                id790.setStyle("-fx-background-color: black");
+            }
+            else if (id791.getOnMouseClicked().equals(mouseEvent))
+            {
+                id791.setStyle("-fx-background-color: black");
+            }
+            else if (id792.getOnMouseClicked().equals(mouseEvent))
+            {
+                id792.setStyle("-fx-background-color: black");
+            }
+            else if (id793.getOnMouseClicked().equals(mouseEvent))
+            {
+                id793.setStyle("-fx-background-color: black");
+            }
+            else if (id794.getOnMouseClicked().equals(mouseEvent))
+            {
+                id794.setStyle("-fx-background-color: black");
+            }
+            else if (id795.getOnMouseClicked().equals(mouseEvent))
+            {
+                id795.setStyle("-fx-background-color: black");
+            }
+            else if (id796.getOnMouseClicked().equals(mouseEvent))
+            {
+                id796.setStyle("-fx-background-color: black");
+            }
+            else if (id797.getOnMouseClicked().equals(mouseEvent))
+            {
+                id797.setStyle("-fx-background-color: black");
+            }
+            else if (id798.getOnMouseClicked().equals(mouseEvent))
+            {
+                id798.setStyle("-fx-background-color: black");
+            }
+            else if (id799.getOnMouseClicked().equals(mouseEvent))
+            {
+                id799.setStyle("-fx-background-color: black");
+            }
+            else if (id800.getOnMouseClicked().equals(mouseEvent))
+            {
+                id800.setStyle("-fx-background-color: black");
+            }
+            else if (id801.getOnMouseClicked().equals(mouseEvent))
+            {
+                id801.setStyle("-fx-background-color: black");
+            }
+            else if (id802.getOnMouseClicked().equals(mouseEvent))
+            {
+                id802.setStyle("-fx-background-color: black");
+            }
+            else if (id803.getOnMouseClicked().equals(mouseEvent))
+            {
+                id803.setStyle("-fx-background-color: black");
+            }
+            else if (id804.getOnMouseClicked().equals(mouseEvent))
+            {
+                id804.setStyle("-fx-background-color: black");
+            }
+            else if (id805.getOnMouseClicked().equals(mouseEvent))
+            {
+                id805.setStyle("-fx-background-color: black");
+            }
+            else if (id806.getOnMouseClicked().equals(mouseEvent))
+            {
+                id806.setStyle("-fx-background-color: black");
+            }
+            else if (id807.getOnMouseClicked().equals(mouseEvent))
+            {
+                id807.setStyle("-fx-background-color: black");
+            }
+            else if (id808.getOnMouseClicked().equals(mouseEvent))
+            {
+                id808.setStyle("-fx-background-color: black");
+            }
+            else if (id809.getOnMouseClicked().equals(mouseEvent))
+            {
+                id809.setStyle("-fx-background-color: black");
+            }
+            else if (id810.getOnMouseClicked().equals(mouseEvent))
+            {
+                id810.setStyle("-fx-background-color: black");
+            }
+            else if (id811.getOnMouseClicked().equals(mouseEvent))
+            {
+                id811.setStyle("-fx-background-color: black");
+            }
+            else if (id812.getOnMouseClicked().equals(mouseEvent))
+            {
+                id812.setStyle("-fx-background-color: black");
+            }
+            else if (id813.getOnMouseClicked().equals(mouseEvent))
+            {
+                id813.setStyle("-fx-background-color: black");
+            }
+            else if (id814.getOnMouseClicked().equals(mouseEvent))
+            {
+                id814.setStyle("-fx-background-color: black");
+            }
+            else if (id815.getOnMouseClicked().equals(mouseEvent))
+            {
+                id815.setStyle("-fx-background-color: black");
+            }
+            else if (id816.getOnMouseClicked().equals(mouseEvent))
+            {
+                id816.setStyle("-fx-background-color: black");
+            }
+            else if (id817.getOnMouseClicked().equals(mouseEvent))
+            {
+                id817.setStyle("-fx-background-color: black");
+            }
+            else if (id818.getOnMouseClicked().equals(mouseEvent))
+            {
+                id818.setStyle("-fx-background-color: black");
+            }
+            else if (id819.getOnMouseClicked().equals(mouseEvent))
+            {
+                id819.setStyle("-fx-background-color: black");
+            }
+            else if (id820.getOnMouseClicked().equals(mouseEvent))
+            {
+                id820.setStyle("-fx-background-color: black");
+            }
+            else if (id821.getOnMouseClicked().equals(mouseEvent))
+            {
+                id821.setStyle("-fx-background-color: black");
+            }
+            else if (id822.getOnMouseClicked().equals(mouseEvent))
+            {
+                id822.setStyle("-fx-background-color: black");
+            }
+            else if (id823.getOnMouseClicked().equals(mouseEvent))
+            {
+                id823.setStyle("-fx-background-color: black");
+            }
+            else if (id824.getOnMouseClicked().equals(mouseEvent))
+            {
+                id824.setStyle("-fx-background-color: black");
+            }
+            else if (id825.getOnMouseClicked().equals(mouseEvent))
+            {
+                id825.setStyle("-fx-background-color: black");
+            }
+            else if (id826.getOnMouseClicked().equals(mouseEvent))
+            {
+                id826.setStyle("-fx-background-color: black");
+            }
+            else if (id827.getOnMouseClicked().equals(mouseEvent))
+            {
+                id827.setStyle("-fx-background-color: black");
+            }
+            else if (id828.getOnMouseClicked().equals(mouseEvent))
+            {
+                id828.setStyle("-fx-background-color: black");
+            }
+            else if (id829.getOnMouseClicked().equals(mouseEvent))
+            {
+                id829.setStyle("-fx-background-color: black");
+            }
+            else if (id830.getOnMouseClicked().equals(mouseEvent))
+            {
+                id830.setStyle("-fx-background-color: black");
+            }
+            else if (id831.getOnMouseClicked().equals(mouseEvent))
+            {
+                id831.setStyle("-fx-background-color: black");
+            }
+            else if (id832.getOnMouseClicked().equals(mouseEvent))
+            {
+                id832.setStyle("-fx-background-color: black");
+            }
+            else if (id833.getOnMouseClicked().equals(mouseEvent))
+            {
+                id833.setStyle("-fx-background-color: black");
+            }
+            else if (id834.getOnMouseClicked().equals(mouseEvent))
+            {
+                id834.setStyle("-fx-background-color: black");
+            }
+            else if (id835.getOnMouseClicked().equals(mouseEvent))
+            {
+                id835.setStyle("-fx-background-color: black");
+            }
+            else if (id836.getOnMouseClicked().equals(mouseEvent))
+            {
+                id836.setStyle("-fx-background-color: black");
+            }
+            else if (id837.getOnMouseClicked().equals(mouseEvent))
+            {
+                id837.setStyle("-fx-background-color: black");
+            }
+            else if (id838.getOnMouseClicked().equals(mouseEvent))
+            {
+                id838.setStyle("-fx-background-color: black");
+            }
+            else if (id839.getOnMouseClicked().equals(mouseEvent))
+            {
+                id839.setStyle("-fx-background-color: black");
+            }
+            else if (id840.getOnMouseClicked().equals(mouseEvent))
+            {
+                id840.setStyle("-fx-background-color: black");
+            }
+            else if (id841.getOnMouseClicked().equals(mouseEvent))
+            {
+                id841.setStyle("-fx-background-color: black");
+            }
+            else if (id842.getOnMouseClicked().equals(mouseEvent))
+            {
+                id842.setStyle("-fx-background-color: black");
+            }
+            else if (id843.getOnMouseClicked().equals(mouseEvent))
+            {
+                id843.setStyle("-fx-background-color: black");
+            }
+            else if (id844.getOnMouseClicked().equals(mouseEvent))
+            {
+                id844.setStyle("-fx-background-color: black");
+            }
+            else if (id845.getOnMouseClicked().equals(mouseEvent))
+            {
+                id845.setStyle("-fx-background-color: black");
+            }
+            else if (id846.getOnMouseClicked().equals(mouseEvent))
+            {
+                id846.setStyle("-fx-background-color: black");
+            }
+            else if (id847.getOnMouseClicked().equals(mouseEvent))
+            {
+                id847.setStyle("-fx-background-color: black");
+            }
+            else if (id848.getOnMouseClicked().equals(mouseEvent))
+            {
+                id848.setStyle("-fx-background-color: black");
+            }
+            else if (id849.getOnMouseClicked().equals(mouseEvent))
+            {
+                id849.setStyle("-fx-background-color: black");
+            }
+            else if (id850.getOnMouseClicked().equals(mouseEvent))
+            {
+                id850.setStyle("-fx-background-color: black");
+            }
+            else if (id851.getOnMouseClicked().equals(mouseEvent))
+            {
+                id851.setStyle("-fx-background-color: black");
+            }
+            else if (id852.getOnMouseClicked().equals(mouseEvent))
+            {
+                id852.setStyle("-fx-background-color: black");
+            }
+            else if (id853.getOnMouseClicked().equals(mouseEvent))
+            {
+                id853.setStyle("-fx-background-color: black");
+            }
+            else if (id854.getOnMouseClicked().equals(mouseEvent))
+            {
+                id854.setStyle("-fx-background-color: black");
+            }
+            else if (id855.getOnMouseClicked().equals(mouseEvent))
+            {
+                id855.setStyle("-fx-background-color: black");
+            }
+            else if (id856.getOnMouseClicked().equals(mouseEvent))
+            {
+                id856.setStyle("-fx-background-color: black");
+            }
+            else if (id857.getOnMouseClicked().equals(mouseEvent))
+            {
+                id857.setStyle("-fx-background-color: black");
+            }
+            else if (id858.getOnMouseClicked().equals(mouseEvent))
+            {
+                id858.setStyle("-fx-background-color: black");
+            }
+            else if (id859.getOnMouseClicked().equals(mouseEvent))
+            {
+                id859.setStyle("-fx-background-color: black");
+            }
+            else if (id860.getOnMouseClicked().equals(mouseEvent))
+            {
+                id860.setStyle("-fx-background-color: black");
+            }
+            else if (id861.getOnMouseClicked().equals(mouseEvent))
+            {
+                id861.setStyle("-fx-background-color: black");
+            }
+            else if (id862.getOnMouseClicked().equals(mouseEvent))
+            {
+                id862.setStyle("-fx-background-color: black");
+            }
+            else if (id863.getOnMouseClicked().equals(mouseEvent))
+            {
+                id863.setStyle("-fx-background-color: black");
+            }
+            else if (id864.getOnMouseClicked().equals(mouseEvent))
+            {
+                id864.setStyle("-fx-background-color: black");
+            }
+            else if (id865.getOnMouseClicked().equals(mouseEvent))
+            {
+                id865.setStyle("-fx-background-color: black");
+            }
+            else if (id866.getOnMouseClicked().equals(mouseEvent))
+            {
+                id866.setStyle("-fx-background-color: black");
+            }
+            else if (id867.getOnMouseClicked().equals(mouseEvent))
+            {
+                id867.setStyle("-fx-background-color: black");
+            }
+            else if (id868.getOnMouseClicked().equals(mouseEvent))
+            {
+                id868.setStyle("-fx-background-color: black");
+            }
+            else if (id869.getOnMouseClicked().equals(mouseEvent))
+            {
+                id869.setStyle("-fx-background-color: black");
+            }
+            else if (id870.getOnMouseClicked().equals(mouseEvent))
+            {
+                id870.setStyle("-fx-background-color: black");
+            }
+            else if (id871.getOnMouseClicked().equals(mouseEvent))
+            {
+                id871.setStyle("-fx-background-color: black");
+            }
+            else if (id872.getOnMouseClicked().equals(mouseEvent))
+            {
+                id872.setStyle("-fx-background-color: black");
+            }
+            else if (id873.getOnMouseClicked().equals(mouseEvent))
+            {
+                id873.setStyle("-fx-background-color: black");
+            }
+            else if (id874.getOnMouseClicked().equals(mouseEvent))
+            {
+                id874.setStyle("-fx-background-color: black");
+            }
+            else if (id875.getOnMouseClicked().equals(mouseEvent))
+            {
+                id875.setStyle("-fx-background-color: black");
+            }
+            else if (id876.getOnMouseClicked().equals(mouseEvent))
+            {
+                id876.setStyle("-fx-background-color: black");
+            }
+            else if (id877.getOnMouseClicked().equals(mouseEvent))
+            {
+                id877.setStyle("-fx-background-color: black");
+            }
+            else if (id878.getOnMouseClicked().equals(mouseEvent))
+            {
+                id878.setStyle("-fx-background-color: black");
+            }
+            else if (id879.getOnMouseClicked().equals(mouseEvent))
+            {
+                id879.setStyle("-fx-background-color: black");
+            }
+            else if (id880.getOnMouseClicked().equals(mouseEvent))
+            {
+                id880.setStyle("-fx-background-color: black");
+            }
+            else if (id881.getOnMouseClicked().equals(mouseEvent))
+            {
+                id881.setStyle("-fx-background-color: black");
+            }
+            else if (id882.getOnMouseClicked().equals(mouseEvent))
+            {
+                id882.setStyle("-fx-background-color: black");
+            }
+            else if (id883.getOnMouseClicked().equals(mouseEvent))
+            {
+                id883.setStyle("-fx-background-color: black");
+            }
+            else if (id884.getOnMouseClicked().equals(mouseEvent))
+            {
+                id884.setStyle("-fx-background-color: black");
+            }
+            else if (id885.getOnMouseClicked().equals(mouseEvent))
+            {
+                id885.setStyle("-fx-background-color: black");
+            }
+            else if (id886.getOnMouseClicked().equals(mouseEvent))
+            {
+                id886.setStyle("-fx-background-color: black");
+            }
+            else if (id887.getOnMouseClicked().equals(mouseEvent))
+            {
+                id887.setStyle("-fx-background-color: black");
+            }
+            else if (id888.getOnMouseClicked().equals(mouseEvent))
+            {
+                id888.setStyle("-fx-background-color: black");
+            }
+            else if (id889.getOnMouseClicked().equals(mouseEvent))
+            {
+                id889.setStyle("-fx-background-color: black");
+            }
+            else if (id890.getOnMouseClicked().equals(mouseEvent))
+            {
+                id890.setStyle("-fx-background-color: black");
+            }
+            else if (id891.getOnMouseClicked().equals(mouseEvent))
+            {
+                id891.setStyle("-fx-background-color: black");
+            }
+            else if (id892.getOnMouseClicked().equals(mouseEvent))
+            {
+                id892.setStyle("-fx-background-color: black");
+            }
+            else if (id893.getOnMouseClicked().equals(mouseEvent))
+            {
+                id893.setStyle("-fx-background-color: black");
+            }
+            else if (id894.getOnMouseClicked().equals(mouseEvent))
+            {
+                id894.setStyle("-fx-background-color: black");
+            }
+            else if (id895.getOnMouseClicked().equals(mouseEvent))
+            {
+                id895.setStyle("-fx-background-color: black");
+            }
+            else if (id896.getOnMouseClicked().equals(mouseEvent))
+            {
+                id896.setStyle("-fx-background-color: black");
+            }
+            else if (id897.getOnMouseClicked().equals(mouseEvent))
+            {
+                id897.setStyle("-fx-background-color: black");
+            }
+            else if (id898.getOnMouseClicked().equals(mouseEvent))
+            {
+                id898.setStyle("-fx-background-color: black");
+            }
+            else if (id899.getOnMouseClicked().equals(mouseEvent))
+            {
+                id899.setStyle("-fx-background-color: black");
+            }
+            else if (id900.getOnMouseClicked().equals(mouseEvent))
+            {
+                id900.setStyle("-fx-background-color: black");
+            }
+            else if (id901.getOnMouseClicked().equals(mouseEvent))
+            {
+                id901.setStyle("-fx-background-color: black");
+            }
+            else if (id902.getOnMouseClicked().equals(mouseEvent))
+            {
+                id902.setStyle("-fx-background-color: black");
+            }
+            else if (id903.getOnMouseClicked().equals(mouseEvent))
+            {
+                id903.setStyle("-fx-background-color: black");
+            }
+            else if (id904.getOnMouseClicked().equals(mouseEvent))
+            {
+                id904.setStyle("-fx-background-color: black");
+            }
+            else if (id905.getOnMouseClicked().equals(mouseEvent))
+            {
+                id905.setStyle("-fx-background-color: black");
+            }
+            else if (id906.getOnMouseClicked().equals(mouseEvent))
+            {
+                id906.setStyle("-fx-background-color: black");
+            }
+            else if (id907.getOnMouseClicked().equals(mouseEvent))
+            {
+                id907.setStyle("-fx-background-color: black");
+            }
+            else if (id908.getOnMouseClicked().equals(mouseEvent))
+            {
+                id908.setStyle("-fx-background-color: black");
+            }
+            else if (id909.getOnMouseClicked().equals(mouseEvent))
+            {
+                id909.setStyle("-fx-background-color: black");
+            }
+            else if (id910.getOnMouseClicked().equals(mouseEvent))
+            {
+                id910.setStyle("-fx-background-color: black");
+            }
+            else if (id911.getOnMouseClicked().equals(mouseEvent))
+            {
+                id911.setStyle("-fx-background-color: black");
+            }
+            else if (id912.getOnMouseClicked().equals(mouseEvent))
+            {
+                id912.setStyle("-fx-background-color: black");
+            }
+            else if (id913.getOnMouseClicked().equals(mouseEvent))
+            {
+                id913.setStyle("-fx-background-color: black");
+            }
+            else if (id914.getOnMouseClicked().equals(mouseEvent))
+            {
+                id914.setStyle("-fx-background-color: black");
+            }
+            else if (id915.getOnMouseClicked().equals(mouseEvent))
+            {
+                id915.setStyle("-fx-background-color: black");
+            }
+            else if (id916.getOnMouseClicked().equals(mouseEvent))
+            {
+                id916.setStyle("-fx-background-color: black");
+            }
+            else if (id917.getOnMouseClicked().equals(mouseEvent))
+            {
+                id917.setStyle("-fx-background-color: black");
+            }
+            else if (id918.getOnMouseClicked().equals(mouseEvent))
+            {
+                id918.setStyle("-fx-background-color: black");
+            }
+            else if (id919.getOnMouseClicked().equals(mouseEvent))
+            {
+                id919.setStyle("-fx-background-color: black");
+            }
+            else if (id920.getOnMouseClicked().equals(mouseEvent))
+            {
+                id920.setStyle("-fx-background-color: black");
+            }
+            else if (id921.getOnMouseClicked().equals(mouseEvent))
+            {
+                id921.setStyle("-fx-background-color: black");
+            }
+            else if (id922.getOnMouseClicked().equals(mouseEvent))
+            {
+                id922.setStyle("-fx-background-color: black");
+            }
+            else if (id923.getOnMouseClicked().equals(mouseEvent))
+            {
+                id923.setStyle("-fx-background-color: black");
+            }
+            else if (id924.getOnMouseClicked().equals(mouseEvent))
+            {
+                id924.setStyle("-fx-background-color: black");
+            }
+            else if (id925.getOnMouseClicked().equals(mouseEvent))
+            {
+                id925.setStyle("-fx-background-color: black");
+            }
+            else if (id926.getOnMouseClicked().equals(mouseEvent))
+            {
+                id926.setStyle("-fx-background-color: black");
+            }
+            else if (id927.getOnMouseClicked().equals(mouseEvent))
+            {
+                id927.setStyle("-fx-background-color: black");
+            }
+            else if (id928.getOnMouseClicked().equals(mouseEvent))
+            {
+                id928.setStyle("-fx-background-color: black");
+            }
+            else if (id929.getOnMouseClicked().equals(mouseEvent))
+            {
+                id929.setStyle("-fx-background-color: black");
+            }
+            else if (id930.getOnMouseClicked().equals(mouseEvent))
+            {
+                id930.setStyle("-fx-background-color: black");
+            }
+            else if (id931.getOnMouseClicked().equals(mouseEvent))
+            {
+                id931.setStyle("-fx-background-color: black");
+            }
+            else if (id932.getOnMouseClicked().equals(mouseEvent))
+            {
+                id932.setStyle("-fx-background-color: black");
+            }
+            else if (id933.getOnMouseClicked().equals(mouseEvent))
+            {
+                id933.setStyle("-fx-background-color: black");
+            }
+            else if (id934.getOnMouseClicked().equals(mouseEvent))
+            {
+                id934.setStyle("-fx-background-color: black");
+            }
+            else if (id935.getOnMouseClicked().equals(mouseEvent))
+            {
+                id935.setStyle("-fx-background-color: black");
+            }
+            else if (id936.getOnMouseClicked().equals(mouseEvent))
+            {
+                id936.setStyle("-fx-background-color: black");
+            }
+            else if (id937.getOnMouseClicked().equals(mouseEvent))
+            {
+                id937.setStyle("-fx-background-color: black");
+            }
+            else if (id938.getOnMouseClicked().equals(mouseEvent))
+            {
+                id938.setStyle("-fx-background-color: black");
+            }
+            else if (id939.getOnMouseClicked().equals(mouseEvent))
+            {
+                id939.setStyle("-fx-background-color: black");
+            }
+            else if (id940.getOnMouseClicked().equals(mouseEvent))
+            {
+                id940.setStyle("-fx-background-color: black");
+            }
+            else if (id941.getOnMouseClicked().equals(mouseEvent))
+            {
+                id941.setStyle("-fx-background-color: black");
+            }
+            else if (id942.getOnMouseClicked().equals(mouseEvent))
+            {
+                id942.setStyle("-fx-background-color: black");
+            }
+            else if (id943.getOnMouseClicked().equals(mouseEvent))
+            {
+                id943.setStyle("-fx-background-color: black");
+            }
+            else if (id944.getOnMouseClicked().equals(mouseEvent))
+            {
+                id944.setStyle("-fx-background-color: black");
+            }
+            else if (id945.getOnMouseClicked().equals(mouseEvent))
+            {
+                id945.setStyle("-fx-background-color: black");
+            }
+            else if (id946.getOnMouseClicked().equals(mouseEvent))
+            {
+                id946.setStyle("-fx-background-color: black");
+            }
+            else if (id947.getOnMouseClicked().equals(mouseEvent))
+            {
+                id947.setStyle("-fx-background-color: black");
+            }
+            else if (id948.getOnMouseClicked().equals(mouseEvent))
+            {
+                id948.setStyle("-fx-background-color: black");
+            }
+            else if (id949.getOnMouseClicked().equals(mouseEvent))
+            {
+                id949.setStyle("-fx-background-color: black");
+            }
+            else if (id950.getOnMouseClicked().equals(mouseEvent))
+            {
+                id950.setStyle("-fx-background-color: black");
+            }
+            else if (id951.getOnMouseClicked().equals(mouseEvent))
+            {
+                id951.setStyle("-fx-background-color: black");
+            }
+            else if (id952.getOnMouseClicked().equals(mouseEvent))
+            {
+                id952.setStyle("-fx-background-color: black");
+            }
+            else if (id953.getOnMouseClicked().equals(mouseEvent))
+            {
+                id953.setStyle("-fx-background-color: black");
+            }
+            else if (id954.getOnMouseClicked().equals(mouseEvent))
+            {
+                id954.setStyle("-fx-background-color: black");
+            }
+            else if (id955.getOnMouseClicked().equals(mouseEvent))
+            {
+                id955.setStyle("-fx-background-color: black");
+            }
+            else if (id956.getOnMouseClicked().equals(mouseEvent))
+            {
+                id956.setStyle("-fx-background-color: black");
+            }
+            else if (id957.getOnMouseClicked().equals(mouseEvent))
+            {
+                id957.setStyle("-fx-background-color: black");
+            }
+            else if (id958.getOnMouseClicked().equals(mouseEvent))
+            {
+                id958.setStyle("-fx-background-color: black");
+            }
+            else if (id959.getOnMouseClicked().equals(mouseEvent))
+            {
+                id959.setStyle("-fx-background-color: black");
+            }
+            else if (id960.getOnMouseClicked().equals(mouseEvent))
+            {
+                id960.setStyle("-fx-background-color: black");
+            }
+            else if (id961.getOnMouseClicked().equals(mouseEvent))
+            {
+                id961.setStyle("-fx-background-color: black");
+            }
+            else if (id962.getOnMouseClicked().equals(mouseEvent))
+            {
+                id962.setStyle("-fx-background-color: black");
+            }
+            else if (id963.getOnMouseClicked().equals(mouseEvent))
+            {
+                id963.setStyle("-fx-background-color: black");
+            }
+            else if (id964.getOnMouseClicked().equals(mouseEvent))
+            {
+                id964.setStyle("-fx-background-color: black");
+            }
+            else if (id965.getOnMouseClicked().equals(mouseEvent))
+            {
+                id965.setStyle("-fx-background-color: black");
+            }
+            else if (id966.getOnMouseClicked().equals(mouseEvent))
+            {
+                id966.setStyle("-fx-background-color: black");
+            }
+            else if (id967.getOnMouseClicked().equals(mouseEvent))
+            {
+                id967.setStyle("-fx-background-color: black");
+            }
+            else if (id968.getOnMouseClicked().equals(mouseEvent))
+            {
+                id968.setStyle("-fx-background-color: black");
+            }
+            else if (id969.getOnMouseClicked().equals(mouseEvent))
+            {
+                id969.setStyle("-fx-background-color: black");
+            }
+            else if (id970.getOnMouseClicked().equals(mouseEvent))
+            {
+                id970.setStyle("-fx-background-color: black");
+            }
+            else if (id971.getOnMouseClicked().equals(mouseEvent))
+            {
+                id971.setStyle("-fx-background-color: black");
+            }
+            else if (id972.getOnMouseClicked().equals(mouseEvent))
+            {
+                id972.setStyle("-fx-background-color: black");
+            }
+            else if (id973.getOnMouseClicked().equals(mouseEvent))
+            {
+                id973.setStyle("-fx-background-color: black");
+            }
+            else if (id974.getOnMouseClicked().equals(mouseEvent))
+            {
+                id974.setStyle("-fx-background-color: black");
+            }
+            else if (id975.getOnMouseClicked().equals(mouseEvent))
+            {
+                id975.setStyle("-fx-background-color: black");
+            }
+            else if (id976.getOnMouseClicked().equals(mouseEvent))
+            {
+                id976.setStyle("-fx-background-color: black");
+            }
+            else if (id977.getOnMouseClicked().equals(mouseEvent))
+            {
+                id977.setStyle("-fx-background-color: black");
+            }
+            else if (id978.getOnMouseClicked().equals(mouseEvent))
+            {
+                id978.setStyle("-fx-background-color: black");
+            }
+            else if (id979.getOnMouseClicked().equals(mouseEvent))
+            {
+                id979.setStyle("-fx-background-color: black");
+            }
+            else if (id980.getOnMouseClicked().equals(mouseEvent))
+            {
+                id980.setStyle("-fx-background-color: black");
+            }
+            else if (id981.getOnMouseClicked().equals(mouseEvent))
+            {
+                id981.setStyle("-fx-background-color: black");
+            }
+            else if (id982.getOnMouseClicked().equals(mouseEvent))
+            {
+                id982.setStyle("-fx-background-color: black");
+            }
+            else if (id983.getOnMouseClicked().equals(mouseEvent))
+            {
+                id983.setStyle("-fx-background-color: black");
+            }
+            else if (id984.getOnMouseClicked().equals(mouseEvent))
+            {
+                id984.setStyle("-fx-background-color: black");
+            }
+            else if (id985.getOnMouseClicked().equals(mouseEvent))
+            {
+                id985.setStyle("-fx-background-color: black");
+            }
+            else if (id986.getOnMouseClicked().equals(mouseEvent))
+            {
+                id986.setStyle("-fx-background-color: black");
+            }
+            else if (id987.getOnMouseClicked().equals(mouseEvent))
+            {
+                id987.setStyle("-fx-background-color: black");
+            }
+            else if (id988.getOnMouseClicked().equals(mouseEvent))
+            {
+                id988.setStyle("-fx-background-color: black");
+            }
+            else if (id989.getOnMouseClicked().equals(mouseEvent))
+            {
+                id989.setStyle("-fx-background-color: black");
+            }
+            else if (id990.getOnMouseClicked().equals(mouseEvent))
+            {
+                id990.setStyle("-fx-background-color: black");
+            }
+            else if (id991.getOnMouseClicked().equals(mouseEvent))
+            {
+                id991.setStyle("-fx-background-color: black");
+            }
+            else if (id992.getOnMouseClicked().equals(mouseEvent))
+            {
+                id992.setStyle("-fx-background-color: black");
+            }
+            else if (id993.getOnMouseClicked().equals(mouseEvent))
+            {
+                id993.setStyle("-fx-background-color: black");
+            }
+            else if (id994.getOnMouseClicked().equals(mouseEvent))
+            {
+                id994.setStyle("-fx-background-color: black");
+            }
+            else if (id995.getOnMouseClicked().equals(mouseEvent))
+            {
+                id995.setStyle("-fx-background-color: black");
+            }
+            else if (id996.getOnMouseClicked().equals(mouseEvent))
+            {
+                id996.setStyle("-fx-background-color: black");
+            }
+            else if (id997.getOnMouseClicked().equals(mouseEvent))
+            {
+                id997.setStyle("-fx-background-color: black");
+            }
+            else if (id998.getOnMouseClicked().equals(mouseEvent))
+            {
+                id998.setStyle("-fx-background-color: black");
+            }
+            else if (id999.getOnMouseClicked().equals(mouseEvent))
+            {
+                id999.setStyle("-fx-background-color: black");
+            }
+            else if (id1000.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1000.setStyle("-fx-background-color: black");
+            }
+            else if (id1001.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1001.setStyle("-fx-background-color: black");
+            }
+            else if (id1002.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1002.setStyle("-fx-background-color: black");
+            }
+            else if (id1003.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1003.setStyle("-fx-background-color: black");
+            }
+            else if (id1004.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1004.setStyle("-fx-background-color: black");
+            }
+            else if (id1005.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1005.setStyle("-fx-background-color: black");
+            }
+            else if (id1006.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1006.setStyle("-fx-background-color: black");
+            }
+            else if (id1007.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1007.setStyle("-fx-background-color: black");
+            }
+            else if (id1008.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1008.setStyle("-fx-background-color: black");
+            }
+            else if (id1009.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1009.setStyle("-fx-background-color: black");
+            }
+            else if (id1010.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1010.setStyle("-fx-background-color: black");
+            }
+            else if (id1011.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1011.setStyle("-fx-background-color: black");
+            }
+            else if (id1012.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1012.setStyle("-fx-background-color: black");
+            }
+            else if (id1013.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1013.setStyle("-fx-background-color: black");
+            }
+            else if (id1014.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1014.setStyle("-fx-background-color: black");
+            }
+            else if (id1015.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1015.setStyle("-fx-background-color: black");
+            }
+            else if (id1016.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1016.setStyle("-fx-background-color: black");
+            }
+            else if (id1017.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1017.setStyle("-fx-background-color: black");
+            }
+            else if (id1018.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1018.setStyle("-fx-background-color: black");
+            }
+            else if (id1019.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1019.setStyle("-fx-background-color: black");
+            }
+            else if (id1020.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1020.setStyle("-fx-background-color: black");
+            }
+            else if (id1021.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1021.setStyle("-fx-background-color: black");
+            }
+            else if (id1022.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1022.setStyle("-fx-background-color: black");
+            }
+            else if (id1023.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1023.setStyle("-fx-background-color: black");
+            }
+            else if (id1024.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1024.setStyle("-fx-background-color: black");
+            }
+            else if (id1025.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1025.setStyle("-fx-background-color: black");
+            }
+            else if (id1026.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1026.setStyle("-fx-background-color: black");
+            }
+            else if (id1027.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1027.setStyle("-fx-background-color: black");
+            }
+            else if (id1028.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1028.setStyle("-fx-background-color: black");
+            }
+            else if (id1029.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1029.setStyle("-fx-background-color: black");
+            }
+            else if (id1030.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1030.setStyle("-fx-background-color: black");
+            }
+            else if (id1031.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1031.setStyle("-fx-background-color: black");
+            }
+            else if (id1032.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1032.setStyle("-fx-background-color: black");
+            }
+            else if (id1033.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1033.setStyle("-fx-background-color: black");
+            }
+            else if (id1034.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1034.setStyle("-fx-background-color: black");
+            }
+            else if (id1035.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1035.setStyle("-fx-background-color: black");
+            }
+            else if (id1036.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1036.setStyle("-fx-background-color: black");
+            }
+            else if (id1037.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1037.setStyle("-fx-background-color: black");
+            }
+            else if (id1038.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1038.setStyle("-fx-background-color: black");
+            }
+            else if (id1039.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1039.setStyle("-fx-background-color: black");
+            }
+            else if (id1040.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1040.setStyle("-fx-background-color: black");
+            }
+            else if (id1041.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1041.setStyle("-fx-background-color: black");
+            }
+            else if (id1042.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1042.setStyle("-fx-background-color: black");
+            }
+            else if (id1043.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1043.setStyle("-fx-background-color: black");
+            }
+            else if (id1044.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1044.setStyle("-fx-background-color: black");
+            }
+            else if (id1045.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1045.setStyle("-fx-background-color: black");
+            }
+            else if (id1046.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1046.setStyle("-fx-background-color: black");
+            }
+            else if (id1047.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1047.setStyle("-fx-background-color: black");
+            }
+            else if (id1048.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1048.setStyle("-fx-background-color: black");
+            }
+            else if (id1049.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1049.setStyle("-fx-background-color: black");
+            }
+            else if (id1050.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1050.setStyle("-fx-background-color: black");
+            }
+            else if (id1051.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1051.setStyle("-fx-background-color: black");
+            }
+            else if (id1052.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1052.setStyle("-fx-background-color: black");
+            }
+            else if (id1053.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1053.setStyle("-fx-background-color: black");
+            }
+            else if (id1054.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1054.setStyle("-fx-background-color: black");
+            }
+            else if (id1055.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1055.setStyle("-fx-background-color: black");
+            }
+            else if (id1056.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1056.setStyle("-fx-background-color: black");
+            }
+            else if (id1057.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1057.setStyle("-fx-background-color: black");
+            }
+            else if (id1058.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1058.setStyle("-fx-background-color: black");
+            }
+            else if (id1059.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1059.setStyle("-fx-background-color: black");
+            }
+            else if (id1060.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1060.setStyle("-fx-background-color: black");
+            }
+            else if (id1061.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1061.setStyle("-fx-background-color: black");
+            }
+            else if (id1062.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1062.setStyle("-fx-background-color: black");
+            }
+            else if (id1063.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1063.setStyle("-fx-background-color: black");
+            }
+            else if (id1064.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1064.setStyle("-fx-background-color: black");
+            }
+            else if (id1065.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1065.setStyle("-fx-background-color: black");
+            }
+            else if (id1066.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1066.setStyle("-fx-background-color: black");
+            }
+            else if (id1067.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1067.setStyle("-fx-background-color: black");
+            }
+            else if (id1068.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1068.setStyle("-fx-background-color: black");
+            }
+            else if (id1069.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1069.setStyle("-fx-background-color: black");
+            }
+            else if (id1070.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1070.setStyle("-fx-background-color: black");
+            }
+            else if (id1071.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1071.setStyle("-fx-background-color: black");
+            }
+            else if (id1072.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1072.setStyle("-fx-background-color: black");
+            }
+            else if (id1073.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1073.setStyle("-fx-background-color: black");
+            }
+            else if (id1074.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1074.setStyle("-fx-background-color: black");
+            }
+            else if (id1075.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1075.setStyle("-fx-background-color: black");
+            }
+            else if (id1076.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1076.setStyle("-fx-background-color: black");
+            }
+            else if (id1077.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1077.setStyle("-fx-background-color: black");
+            }
+            else if (id1078.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1078.setStyle("-fx-background-color: black");
+            }
+            else if (id1079.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1079.setStyle("-fx-background-color: black");
+            }
+            else if (id1080.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1080.setStyle("-fx-background-color: black");
+            }
+            else if (id1081.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1081.setStyle("-fx-background-color: black");
+            }
+            else if (id1082.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1082.setStyle("-fx-background-color: black");
+            }
+            else if (id1083.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1083.setStyle("-fx-background-color: black");
+            }
+            else if (id1084.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1084.setStyle("-fx-background-color: black");
+            }
+            else if (id1085.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1085.setStyle("-fx-background-color: black");
+            }
+            else if (id1086.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1086.setStyle("-fx-background-color: black");
+            }
+            else if (id1087.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1087.setStyle("-fx-background-color: black");
+            }
+            else if (id1088.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1088.setStyle("-fx-background-color: black");
+            }
+            else if (id1089.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1089.setStyle("-fx-background-color: black");
+            }
+            else if (id1090.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1090.setStyle("-fx-background-color: black");
+            }
+            else if (id1091.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1091.setStyle("-fx-background-color: black");
+            }
+            else if (id1092.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1092.setStyle("-fx-background-color: black");
+            }
+            else if (id1093.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1093.setStyle("-fx-background-color: black");
+            }
+            else if (id1094.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1094.setStyle("-fx-background-color: black");
+            }
+            else if (id1095.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1095.setStyle("-fx-background-color: black");
+            }
+            else if (id1096.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1096.setStyle("-fx-background-color: black");
+            }
+            else if (id1097.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1097.setStyle("-fx-background-color: black");
+            }
+            else if (id1098.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1098.setStyle("-fx-background-color: black");
+            }
+            else if (id1099.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1099.setStyle("-fx-background-color: black");
+            }
+            else if (id1100.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1100.setStyle("-fx-background-color: black");
+            }
+            else if (id1101.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1101.setStyle("-fx-background-color: black");
+            }
+            else if (id1102.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1102.setStyle("-fx-background-color: black");
+            }
+            else if (id1103.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1103.setStyle("-fx-background-color: black");
+            }
+            else if (id1104.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1104.setStyle("-fx-background-color: black");
+            }
+            else if (id1105.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1105.setStyle("-fx-background-color: black");
+            }
+            else if (id1106.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1106.setStyle("-fx-background-color: black");
+            }
+            else if (id1107.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1107.setStyle("-fx-background-color: black");
+            }
+            else if (id1108.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1108.setStyle("-fx-background-color: black");
+            }
+            else if (id1109.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1109.setStyle("-fx-background-color: black");
+            }
+            else if (id1110.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1110.setStyle("-fx-background-color: black");
+            }
+            else if (id1111.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1111.setStyle("-fx-background-color: black");
+            }
+            else if (id1112.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1112.setStyle("-fx-background-color: black");
+            }
+            else if (id1113.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1113.setStyle("-fx-background-color: black");
+            }
+            else if (id1114.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1114.setStyle("-fx-background-color: black");
+            }
+            else if (id1115.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1115.setStyle("-fx-background-color: black");
+            }
+            else if (id1116.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1116.setStyle("-fx-background-color: black");
+            }
+            else if (id1117.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1117.setStyle("-fx-background-color: black");
+            }
+            else if (id1118.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1118.setStyle("-fx-background-color: black");
+            }
+            else if (id1119.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1119.setStyle("-fx-background-color: black");
+            }
+            else if (id1120.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1120.setStyle("-fx-background-color: black");
+            }
+            else if (id1121.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1121.setStyle("-fx-background-color: black");
+            }
+            else if (id1122.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1122.setStyle("-fx-background-color: black");
+            }
+            else if (id1123.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1123.setStyle("-fx-background-color: black");
+            }
+            else if (id1124.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1124.setStyle("-fx-background-color: black");
+            }
+            else if (id1125.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1125.setStyle("-fx-background-color: black");
+            }
+            else if (id1126.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1126.setStyle("-fx-background-color: black");
+            }
+            else if (id1127.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1127.setStyle("-fx-background-color: black");
+            }
+            else if (id1128.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1128.setStyle("-fx-background-color: black");
+            }
+            else if (id1129.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1129.setStyle("-fx-background-color: black");
+            }
+            else if (id1130.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1130.setStyle("-fx-background-color: black");
+            }
+            else if (id1131.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1131.setStyle("-fx-background-color: black");
+            }
+            else if (id1132.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1132.setStyle("-fx-background-color: black");
+            }
+            else if (id1133.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1133.setStyle("-fx-background-color: black");
+            }
+            else if (id1134.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1134.setStyle("-fx-background-color: black");
+            }
+            else if (id1135.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1135.setStyle("-fx-background-color: black");
+            }
+            else if (id1136.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1136.setStyle("-fx-background-color: black");
+            }
+            else if (id1137.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1137.setStyle("-fx-background-color: black");
+            }
+            else if (id1138.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1138.setStyle("-fx-background-color: black");
+            }
+            else if (id1139.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1139.setStyle("-fx-background-color: black");
+            }
+            else if (id1140.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1140.setStyle("-fx-background-color: black");
+            }
+            else if (id1141.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1141.setStyle("-fx-background-color: black");
+            }
+            else if (id1142.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1142.setStyle("-fx-background-color: black");
+            }
+            else if (id1143.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1143.setStyle("-fx-background-color: black");
+            }
+            else if (id1144.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1144.setStyle("-fx-background-color: black");
+            }
+            else if (id1145.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1145.setStyle("-fx-background-color: black");
+            }
+            else if (id1146.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1146.setStyle("-fx-background-color: black");
+            }
+            else if (id1147.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1147.setStyle("-fx-background-color: black");
+            }
+            else if (id1148.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1148.setStyle("-fx-background-color: black");
+            }
+            else if (id1149.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1149.setStyle("-fx-background-color: black");
+            }
+            else if (id1150.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1150.setStyle("-fx-background-color: black");
+            }
+            else if (id1151.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1151.setStyle("-fx-background-color: black");
+            }
+            else if (id1152.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1152.setStyle("-fx-background-color: black");
+            }
+            else if (id1153.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1153.setStyle("-fx-background-color: black");
+            }
+            else if (id1154.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1154.setStyle("-fx-background-color: black");
+            }
+            else if (id1155.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1155.setStyle("-fx-background-color: black");
+            }
+            else if (id1156.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1156.setStyle("-fx-background-color: black");
+            }
+            else if (id1157.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1157.setStyle("-fx-background-color: black");
+            }
+            else if (id1158.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1158.setStyle("-fx-background-color: black");
+            }
+            else if (id1159.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1159.setStyle("-fx-background-color: black");
+            }
+            else if (id1160.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1160.setStyle("-fx-background-color: black");
+            }
+            else if (id1161.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1161.setStyle("-fx-background-color: black");
+            }
+            else if (id1162.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1162.setStyle("-fx-background-color: black");
+            }
+            else if (id1163.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1163.setStyle("-fx-background-color: black");
+            }
+            else if (id1164.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1164.setStyle("-fx-background-color: black");
+            }
+            else if (id1165.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1165.setStyle("-fx-background-color: black");
+            }
+            else if (id1166.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1166.setStyle("-fx-background-color: black");
+            }
+            else if (id1167.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1167.setStyle("-fx-background-color: black");
+            }
+            else if (id1168.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1168.setStyle("-fx-background-color: black");
+            }
+            else if (id1169.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1169.setStyle("-fx-background-color: black");
+            }
+            else if (id1170.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1170.setStyle("-fx-background-color: black");
+            }
+            else if (id1171.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1171.setStyle("-fx-background-color: black");
+            }
+            else if (id1172.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1172.setStyle("-fx-background-color: black");
+            }
+            else if (id1173.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1173.setStyle("-fx-background-color: black");
+            }
+            else if (id1174.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1174.setStyle("-fx-background-color: black");
+            }
+            else if (id1175.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1175.setStyle("-fx-background-color: black");
+            }
+            else if (id1176.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1176.setStyle("-fx-background-color: black");
+            }
+            else if (id1177.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1177.setStyle("-fx-background-color: black");
+            }
+            else if (id1178.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1178.setStyle("-fx-background-color: black");
+            }
+            else if (id1179.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1179.setStyle("-fx-background-color: black");
+            }
+            else if (id1180.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1180.setStyle("-fx-background-color: black");
+            }
+            else if (id1181.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1181.setStyle("-fx-background-color: black");
+            }
+            else if (id1182.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1182.setStyle("-fx-background-color: black");
+            }
+            else if (id1183.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1183.setStyle("-fx-background-color: black");
+            }
+            else if (id1184.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1184.setStyle("-fx-background-color: black");
+            }
+            else if (id1185.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1185.setStyle("-fx-background-color: black");
+            }
+            else if (id1186.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1186.setStyle("-fx-background-color: black");
+            }
+            else if (id1187.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1187.setStyle("-fx-background-color: black");
+            }
+            else if (id1188.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1188.setStyle("-fx-background-color: black");
+            }
+            else if (id1189.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1189.setStyle("-fx-background-color: black");
+            }
+            else if (id1190.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1190.setStyle("-fx-background-color: black");
+            }
+            else if (id1191.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1191.setStyle("-fx-background-color: black");
+            }
+            else if (id1192.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1192.setStyle("-fx-background-color: black");
+            }
+            else if (id1193.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1193.setStyle("-fx-background-color: black");
+            }
+            else if (id1194.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1194.setStyle("-fx-background-color: black");
+            }
+            else if (id1195.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1195.setStyle("-fx-background-color: black");
+            }
+            else if (id1196.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1196.setStyle("-fx-background-color: black");
+            }
+            else if (id1197.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1197.setStyle("-fx-background-color: black");
+            }
+            else if (id1198.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1198.setStyle("-fx-background-color: black");
+            }
+            else if (id1199.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1199.setStyle("-fx-background-color: black");
+            }
+            else if (id1200.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1200.setStyle("-fx-background-color: black");
+            }
+            else if (id1201.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1201.setStyle("-fx-background-color: black");
+            }
+            else if (id1202.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1202.setStyle("-fx-background-color: black");
+            }
+            else if (id1203.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1203.setStyle("-fx-background-color: black");
+            }
+            else if (id1204.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1204.setStyle("-fx-background-color: black");
+            }
+            else if (id1205.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1205.setStyle("-fx-background-color: black");
+            }
+            else if (id1206.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1206.setStyle("-fx-background-color: black");
+            }
+            else if (id1207.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1207.setStyle("-fx-background-color: black");
+            }
+            else if (id1208.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1208.setStyle("-fx-background-color: black");
+            }
+            else if (id1209.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1209.setStyle("-fx-background-color: black");
+            }
+            else if (id1210.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1210.setStyle("-fx-background-color: black");
+            }
+            else if (id1211.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1211.setStyle("-fx-background-color: black");
+            }
+            else if (id1212.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1212.setStyle("-fx-background-color: black");
+            }
+            else if (id1213.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1213.setStyle("-fx-background-color: black");
+            }
+            else if (id1214.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1214.setStyle("-fx-background-color: black");
+            }
+            else if (id1215.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1215.setStyle("-fx-background-color: black");
+            }
+            else if (id1216.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1216.setStyle("-fx-background-color: black");
+            }
+            else if (id1217.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1217.setStyle("-fx-background-color: black");
+            }
+            else if (id1218.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1218.setStyle("-fx-background-color: black");
+            }
+            else if (id1219.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1219.setStyle("-fx-background-color: black");
+            }
+            else if (id1220.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1220.setStyle("-fx-background-color: black");
+            }
+            else if (id1221.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1221.setStyle("-fx-background-color: black");
+            }
+            else if (id1222.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1222.setStyle("-fx-background-color: black");
+            }
+            else if (id1223.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1223.setStyle("-fx-background-color: black");
+            }
+            else if (id1224.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1224.setStyle("-fx-background-color: black");
+            }
+            else if (id1225.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1225.setStyle("-fx-background-color: black");
+            }
+            else if (id1226.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1226.setStyle("-fx-background-color: black");
+            }
+            else if (id1227.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1227.setStyle("-fx-background-color: black");
+            }
+            else if (id1228.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1228.setStyle("-fx-background-color: black");
+            }
+            else if (id1229.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1229.setStyle("-fx-background-color: black");
+            }
+            else if (id1230.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1230.setStyle("-fx-background-color: black");
+            }
+            else if (id1231.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1231.setStyle("-fx-background-color: black");
+            }
+            else if (id1232.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1232.setStyle("-fx-background-color: black");
+            }
+            else if (id1233.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1233.setStyle("-fx-background-color: black");
+            }
+            else if (id1234.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1234.setStyle("-fx-background-color: black");
+            }
+            else if (id1235.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1235.setStyle("-fx-background-color: black");
+            }
+            else if (id1236.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1236.setStyle("-fx-background-color: black");
+            }
+            else if (id1237.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1237.setStyle("-fx-background-color: black");
+            }
+            else if (id1238.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1238.setStyle("-fx-background-color: black");
+            }
+            else if (id1239.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1239.setStyle("-fx-background-color: black");
+            }
+            else if (id1240.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1240.setStyle("-fx-background-color: black");
+            }
+            else if (id1241.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1241.setStyle("-fx-background-color: black");
+            }
+            else if (id1242.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1242.setStyle("-fx-background-color: black");
+            }
+            else if (id1243.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1243.setStyle("-fx-background-color: black");
+            }
+            else if (id1244.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1244.setStyle("-fx-background-color: black");
+            }
+            else if (id1245.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1245.setStyle("-fx-background-color: black");
+            }
+            else if (id1246.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1246.setStyle("-fx-background-color: black");
+            }
+            else if (id1247.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1247.setStyle("-fx-background-color: black");
+            }
+            else if (id1248.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1248.setStyle("-fx-background-color: black");
+            }
+            else if (id1249.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1249.setStyle("-fx-background-color: black");
+            }
+            else if (id1250.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1250.setStyle("-fx-background-color: black");
+            }
+            else if (id1251.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1251.setStyle("-fx-background-color: black");
+            }
+            else if (id1252.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1252.setStyle("-fx-background-color: black");
+            }
+            else if (id1253.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1253.setStyle("-fx-background-color: black");
+            }
+            else if (id1254.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1254.setStyle("-fx-background-color: black");
+            }
+            else if (id1255.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1255.setStyle("-fx-background-color: black");
+            }
+            else if (id1256.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1256.setStyle("-fx-background-color: black");
+            }
+            else if (id1257.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1257.setStyle("-fx-background-color: black");
+            }
+            else if (id1258.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1258.setStyle("-fx-background-color: black");
+            }
+            else if (id1259.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1259.setStyle("-fx-background-color: black");
+            }
+            else if (id1260.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1260.setStyle("-fx-background-color: black");
+            }
+            else if (id1261.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1261.setStyle("-fx-background-color: black");
+            }
+            else if (id1262.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1262.setStyle("-fx-background-color: black");
+            }
+            else if (id1263.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1263.setStyle("-fx-background-color: black");
+            }
+            else if (id1264.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1264.setStyle("-fx-background-color: black");
+            }
+            else if (id1265.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1265.setStyle("-fx-background-color: black");
+            }
+            else if (id1266.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1266.setStyle("-fx-background-color: black");
+            }
+            else if (id1267.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1267.setStyle("-fx-background-color: black");
+            }
+            else if (id1268.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1268.setStyle("-fx-background-color: black");
+            }
+            else if (id1269.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1269.setStyle("-fx-background-color: black");
+            }
+            else if (id1270.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1270.setStyle("-fx-background-color: black");
+            }
+            else if (id1271.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1271.setStyle("-fx-background-color: black");
+            }
+            else if (id1272.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1272.setStyle("-fx-background-color: black");
+            }
+            else if (id1273.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1273.setStyle("-fx-background-color: black");
+            }
+            else if (id1274.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1274.setStyle("-fx-background-color: black");
+            }
+            else if (id1275.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1275.setStyle("-fx-background-color: black");
+            }
+            else if (id1276.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1276.setStyle("-fx-background-color: black");
+            }
+            else if (id1277.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1277.setStyle("-fx-background-color: black");
+            }
+            else if (id1278.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1278.setStyle("-fx-background-color: black");
+            }
+            else if (id1279.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1279.setStyle("-fx-background-color: black");
+            }
+            else if (id1280.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1280.setStyle("-fx-background-color: black");
+            }
+            else if (id1281.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1281.setStyle("-fx-background-color: black");
+            }
+            else if (id1282.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1282.setStyle("-fx-background-color: black");
+            }
+            else if (id1283.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1283.setStyle("-fx-background-color: black");
+            }
+            else if (id1284.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1284.setStyle("-fx-background-color: black");
+            }
+            else if (id1285.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1285.setStyle("-fx-background-color: black");
+            }
+            else if (id1286.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1286.setStyle("-fx-background-color: black");
+            }
+            else if (id1287.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1287.setStyle("-fx-background-color: black");
+            }
+            else if (id1288.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1288.setStyle("-fx-background-color: black");
+            }
+            else if (id1289.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1289.setStyle("-fx-background-color: black");
+            }
+            else if (id1290.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1290.setStyle("-fx-background-color: black");
+            }
+            else if (id1291.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1291.setStyle("-fx-background-color: black");
+            }
+            else if (id1292.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1292.setStyle("-fx-background-color: black");
+            }
+            else if (id1293.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1293.setStyle("-fx-background-color: black");
+            }
+            else if (id1294.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1294.setStyle("-fx-background-color: black");
+            }
+            else if (id1295.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1295.setStyle("-fx-background-color: black");
+            }
+            else if (id1296.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1296.setStyle("-fx-background-color: black");
+            }
+            else if (id1297.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1297.setStyle("-fx-background-color: black");
+            }
+            else if (id1298.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1298.setStyle("-fx-background-color: black");
+            }
+            else if (id1299.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1299.setStyle("-fx-background-color: black");
+            }
+            else if (id1300.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1300.setStyle("-fx-background-color: black");
+            }
+            else if (id1301.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1301.setStyle("-fx-background-color: black");
+            }
+            else if (id1302.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1302.setStyle("-fx-background-color: black");
+            }
+            else if (id1303.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1303.setStyle("-fx-background-color: black");
+            }
+            else if (id1304.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1304.setStyle("-fx-background-color: black");
+            }
+            else if (id1305.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1305.setStyle("-fx-background-color: black");
+            }
+            else if (id1306.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1306.setStyle("-fx-background-color: black");
+            }
+            else if (id1307.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1307.setStyle("-fx-background-color: black");
+            }
+            else if (id1308.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1308.setStyle("-fx-background-color: black");
+            }
+            else if (id1309.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1309.setStyle("-fx-background-color: black");
+            }
+            else if (id1310.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1310.setStyle("-fx-background-color: black");
+            }
+            else if (id1311.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1311.setStyle("-fx-background-color: black");
+            }
+            else if (id1312.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1312.setStyle("-fx-background-color: black");
+            }
+            else if (id1313.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1313.setStyle("-fx-background-color: black");
+            }
+            else if (id1314.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1314.setStyle("-fx-background-color: black");
+            }
+            else if (id1315.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1315.setStyle("-fx-background-color: black");
+            }
+            else if (id1316.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1316.setStyle("-fx-background-color: black");
+            }
+            else if (id1317.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1317.setStyle("-fx-background-color: black");
+            }
+            else if (id1318.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1318.setStyle("-fx-background-color: black");
+            }
+            else if (id1319.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1319.setStyle("-fx-background-color: black");
+            }
+            else if (id1320.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1320.setStyle("-fx-background-color: black");
+            }
+            else if (id1321.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1321.setStyle("-fx-background-color: black");
+            }
+            else if (id1322.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1322.setStyle("-fx-background-color: black");
+            }
+            else if (id1323.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1323.setStyle("-fx-background-color: black");
+            }
+            else if (id1324.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1324.setStyle("-fx-background-color: black");
+            }
+            else if (id1325.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1325.setStyle("-fx-background-color: black");
+            }
+            else if (id1326.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1326.setStyle("-fx-background-color: black");
+            }
+            else if (id1327.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1327.setStyle("-fx-background-color: black");
+            }
+            else if (id1328.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1328.setStyle("-fx-background-color: black");
+            }
+            else if (id1329.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1329.setStyle("-fx-background-color: black");
+            }
+            else if (id1330.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1330.setStyle("-fx-background-color: black");
+            }
+            else if (id1331.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1331.setStyle("-fx-background-color: black");
+            }
+            else if (id1332.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1332.setStyle("-fx-background-color: black");
+            }
+            else if (id1333.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1333.setStyle("-fx-background-color: black");
+            }
+            else if (id1334.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1334.setStyle("-fx-background-color: black");
+            }
+            else if (id1335.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1335.setStyle("-fx-background-color: black");
+            }
+            else if (id1336.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1336.setStyle("-fx-background-color: black");
+            }
+            else if (id1337.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1337.setStyle("-fx-background-color: black");
+            }
+            else if (id1338.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1338.setStyle("-fx-background-color: black");
+            }
+            else if (id1339.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1339.setStyle("-fx-background-color: black");
+            }
+            else if (id1340.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1340.setStyle("-fx-background-color: black");
+            }
+            else if (id1341.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1341.setStyle("-fx-background-color: black");
+            }
+            else if (id1342.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1342.setStyle("-fx-background-color: black");
+            }
+            else if (id1343.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1343.setStyle("-fx-background-color: black");
+            }
+            else if (id1344.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1344.setStyle("-fx-background-color: black");
+            }
+            else if (id1345.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1345.setStyle("-fx-background-color: black");
+            }
+            else if (id1346.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1346.setStyle("-fx-background-color: black");
+            }
+            else if (id1347.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1347.setStyle("-fx-background-color: black");
+            }
+            else if (id1348.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1348.setStyle("-fx-background-color: black");
+            }
+            else if (id1349.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1349.setStyle("-fx-background-color: black");
+            }
+            else if (id1350.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1350.setStyle("-fx-background-color: black");
+            }
+            else if (id1351.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1351.setStyle("-fx-background-color: black");
+            }
+            else if (id1352.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1352.setStyle("-fx-background-color: black");
+            }
+            else if (id1353.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1353.setStyle("-fx-background-color: black");
+            }
+            else if (id1354.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1354.setStyle("-fx-background-color: black");
+            }
+            else if (id1355.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1355.setStyle("-fx-background-color: black");
+            }
+            else if (id1356.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1356.setStyle("-fx-background-color: black");
+            }
+            else if (id1357.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1357.setStyle("-fx-background-color: black");
+            }
+            else if (id1358.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1358.setStyle("-fx-background-color: black");
+            }
+            else if (id1359.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1359.setStyle("-fx-background-color: black");
+            }
+            else if (id1360.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1360.setStyle("-fx-background-color: black");
+            }
+            else if (id1361.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1361.setStyle("-fx-background-color: black");
+            }
+            else if (id1362.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1362.setStyle("-fx-background-color: black");
+            }
+            else if (id1363.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1363.setStyle("-fx-background-color: black");
+            }
+            else if (id1364.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1364.setStyle("-fx-background-color: black");
+            }
+            else if (id1365.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1365.setStyle("-fx-background-color: black");
+            }
+            else if (id1366.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1366.setStyle("-fx-background-color: black");
+            }
+            else if (id1367.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1367.setStyle("-fx-background-color: black");
+            }
+            else if (id1368.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1368.setStyle("-fx-background-color: black");
+            }
+            else if (id1369.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1369.setStyle("-fx-background-color: black");
+            }
+            else if (id1370.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1370.setStyle("-fx-background-color: black");
+            }
+            else if (id1371.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1371.setStyle("-fx-background-color: black");
+            }
+            else if (id1372.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1372.setStyle("-fx-background-color: black");
+            }
+            else if (id1373.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1373.setStyle("-fx-background-color: black");
+            }
+            else if (id1374.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1374.setStyle("-fx-background-color: black");
+            }
+            else if (id1375.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1375.setStyle("-fx-background-color: black");
+            }
+            else if (id1376.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1376.setStyle("-fx-background-color: black");
+            }
+            else if (id1377.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1377.setStyle("-fx-background-color: black");
+            }
+            else if (id1378.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1378.setStyle("-fx-background-color: black");
+            }
+            else if (id1379.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1379.setStyle("-fx-background-color: black");
+            }
+            else if (id1380.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1380.setStyle("-fx-background-color: black");
+            }
+            else if (id1381.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1381.setStyle("-fx-background-color: black");
+            }
+            else if (id1382.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1382.setStyle("-fx-background-color: black");
+            }
+            else if (id1383.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1383.setStyle("-fx-background-color: black");
+            }
+            else if (id1384.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1384.setStyle("-fx-background-color: black");
+            }
+            else if (id1385.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1385.setStyle("-fx-background-color: black");
+            }
+            else if (id1386.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1386.setStyle("-fx-background-color: black");
+            }
+            else if (id1387.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1387.setStyle("-fx-background-color: black");
+            }
+            else if (id1388.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1388.setStyle("-fx-background-color: black");
+            }
+            else if (id1389.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1389.setStyle("-fx-background-color: black");
+            }
+            else if (id1390.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1390.setStyle("-fx-background-color: black");
+            }
+            else if (id1391.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1391.setStyle("-fx-background-color: black");
+            }
+            else if (id1392.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1392.setStyle("-fx-background-color: black");
+            }
+            else if (id1393.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1393.setStyle("-fx-background-color: black");
+            }
+            else if (id1394.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1394.setStyle("-fx-background-color: black");
+            }
+            else if (id1395.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1395.setStyle("-fx-background-color: black");
+            }
+            else if (id1396.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1396.setStyle("-fx-background-color: black");
+            }
+            else if (id1397.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1397.setStyle("-fx-background-color: black");
+            }
+            else if (id1398.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1398.setStyle("-fx-background-color: black");
+            }
+            else if (id1399.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1399.setStyle("-fx-background-color: black");
+            }
+            else if (id1400.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1400.setStyle("-fx-background-color: black");
+            }
+            else if (id1401.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1401.setStyle("-fx-background-color: black");
+            }
+            else if (id1402.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1402.setStyle("-fx-background-color: black");
+            }
+            else if (id1403.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1403.setStyle("-fx-background-color: black");
+            }
+            else if (id1404.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1404.setStyle("-fx-background-color: black");
+            }
+            else if (id1405.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1405.setStyle("-fx-background-color: black");
+            }
+            else if (id1406.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1406.setStyle("-fx-background-color: black");
+            }
+            else if (id1407.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1407.setStyle("-fx-background-color: black");
+            }
+            else if (id1408.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1408.setStyle("-fx-background-color: black");
+            }
+            else if (id1409.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1409.setStyle("-fx-background-color: black");
+            }
+            else if (id1410.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1410.setStyle("-fx-background-color: black");
+            }
+            else if (id1411.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1411.setStyle("-fx-background-color: black");
+            }
+            else if (id1412.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1412.setStyle("-fx-background-color: black");
+            }
+            else if (id1413.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1413.setStyle("-fx-background-color: black");
+            }
+            else if (id1414.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1414.setStyle("-fx-background-color: black");
+            }
+            else if (id1415.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1415.setStyle("-fx-background-color: black");
+            }
+            else if (id1416.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1416.setStyle("-fx-background-color: black");
+            }
+            else if (id1417.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1417.setStyle("-fx-background-color: black");
+            }
+            else if (id1418.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1418.setStyle("-fx-background-color: black");
+            }
+            else if (id1419.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1419.setStyle("-fx-background-color: black");
+            }
+            else if (id1420.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1420.setStyle("-fx-background-color: black");
+            }
+            else if (id1421.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1421.setStyle("-fx-background-color: black");
+            }
+            else if (id1422.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1422.setStyle("-fx-background-color: black");
+            }
+            else if (id1423.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1423.setStyle("-fx-background-color: black");
+            }
+            else if (id1424.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1424.setStyle("-fx-background-color: black");
+            }
+            else if (id1425.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1425.setStyle("-fx-background-color: black");
+            }
+            else if (id1426.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1426.setStyle("-fx-background-color: black");
+            }
+            else if (id1427.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1427.setStyle("-fx-background-color: black");
+            }
+            else if (id1428.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1428.setStyle("-fx-background-color: black");
+            }
+            else if (id1429.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1429.setStyle("-fx-background-color: black");
+            }
+            else if (id1430.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1430.setStyle("-fx-background-color: black");
+            }
+            else if (id1431.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1431.setStyle("-fx-background-color: black");
+            }
+            else if (id1432.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1432.setStyle("-fx-background-color: black");
+            }
+            else if (id1433.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1433.setStyle("-fx-background-color: black");
+            }
+            else if (id1434.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1434.setStyle("-fx-background-color: black");
+            }
+            else if (id1435.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1435.setStyle("-fx-background-color: black");
+            }
+            else if (id1436.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1436.setStyle("-fx-background-color: black");
+            }
+            else if (id1437.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1437.setStyle("-fx-background-color: black");
+            }
+            else if (id1438.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1438.setStyle("-fx-background-color: black");
+            }
+            else if (id1439.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1439.setStyle("-fx-background-color: black");
+            }
+            else if (id1440.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1440.setStyle("-fx-background-color: black");
+            }
+            else if (id1441.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1441.setStyle("-fx-background-color: black");
+            }
+            else if (id1442.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1442.setStyle("-fx-background-color: black");
+            }
+            else if (id1443.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1443.setStyle("-fx-background-color: black");
+            }
+            else if (id1444.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1444.setStyle("-fx-background-color: black");
+            }
+            else if (id1445.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1445.setStyle("-fx-background-color: black");
+            }
+            else if (id1446.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1446.setStyle("-fx-background-color: black");
+            }
+            else if (id1447.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1447.setStyle("-fx-background-color: black");
+            }
+            else if (id1448.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1448.setStyle("-fx-background-color: black");
+            }
+            else if (id1449.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1449.setStyle("-fx-background-color: black");
+            }
+            else if (id1450.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1450.setStyle("-fx-background-color: black");
+            }
+            else if (id1451.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1451.setStyle("-fx-background-color: black");
+            }
+            else if (id1452.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1452.setStyle("-fx-background-color: black");
+            }
+            else if (id1453.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1453.setStyle("-fx-background-color: black");
+            }
+            else if (id1454.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1454.setStyle("-fx-background-color: black");
+            }
+            else if (id1455.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1455.setStyle("-fx-background-color: black");
+            }
+            else if (id1456.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1456.setStyle("-fx-background-color: black");
+            }
+            else if (id1457.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1457.setStyle("-fx-background-color: black");
+            }
+            else if (id1458.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1458.setStyle("-fx-background-color: black");
+            }
+            else if (id1459.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1459.setStyle("-fx-background-color: black");
+            }
+            else if (id1460.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1460.setStyle("-fx-background-color: black");
+            }
+            else if (id1461.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1461.setStyle("-fx-background-color: black");
+            }
+            else if (id1462.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1462.setStyle("-fx-background-color: black");
+            }
+            else if (id1463.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1463.setStyle("-fx-background-color: black");
+            }
+            else if (id1464.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1464.setStyle("-fx-background-color: black");
+            }
+            else if (id1465.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1465.setStyle("-fx-background-color: black");
+            }
+            else if (id1466.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1466.setStyle("-fx-background-color: black");
+            }
+            else if (id1467.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1467.setStyle("-fx-background-color: black");
+            }
+            else if (id1468.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1468.setStyle("-fx-background-color: black");
+            }
+            else if (id1469.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1469.setStyle("-fx-background-color: black");
+            }
+            else if (id1470.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1470.setStyle("-fx-background-color: black");
+            }
+            else if (id1471.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1471.setStyle("-fx-background-color: black");
+            }
+            else if (id1472.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1472.setStyle("-fx-background-color: black");
+            }
+            else if (id1473.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1473.setStyle("-fx-background-color: black");
+            }
+            else if (id1474.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1474.setStyle("-fx-background-color: black");
+            }
+            else if (id1475.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1475.setStyle("-fx-background-color: black");
+            }
+            else if (id1476.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1476.setStyle("-fx-background-color: black");
+            }
+            else if (id1477.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1477.setStyle("-fx-background-color: black");
+            }
+            else if (id1478.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1478.setStyle("-fx-background-color: black");
+            }
+            else if (id1479.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1479.setStyle("-fx-background-color: black");
+            }
+            else if (id1480.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1480.setStyle("-fx-background-color: black");
+            }
+            else if (id1481.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1481.setStyle("-fx-background-color: black");
+            }
+            else if (id1482.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1482.setStyle("-fx-background-color: black");
+            }
+            else if (id1483.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1483.setStyle("-fx-background-color: black");
+            }
+            else if (id1484.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1484.setStyle("-fx-background-color: black");
+            }
+            else if (id1485.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1485.setStyle("-fx-background-color: black");
+            }
+            else if (id1486.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1486.setStyle("-fx-background-color: black");
+            }
+            else if (id1487.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1487.setStyle("-fx-background-color: black");
+            }
+            else if (id1488.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1488.setStyle("-fx-background-color: black");
+            }
+            else if (id1489.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1489.setStyle("-fx-background-color: black");
+            }
+            else if (id1490.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1490.setStyle("-fx-background-color: black");
+            }
+            else if (id1491.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1491.setStyle("-fx-background-color: black");
+            }
+            else if (id1492.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1492.setStyle("-fx-background-color: black");
+            }
+            else if (id1493.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1493.setStyle("-fx-background-color: black");
+            }
+            else if (id1494.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1494.setStyle("-fx-background-color: black");
+            }
+            else if (id1495.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1495.setStyle("-fx-background-color: black");
+            }
+            else if (id1496.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1496.setStyle("-fx-background-color: black");
+            }
+            else if (id1497.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1497.setStyle("-fx-background-color: black");
+            }
+            else if (id1498.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1498.setStyle("-fx-background-color: black");
+            }
+            else if (id1499.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1499.setStyle("-fx-background-color: black");
+            }
+            else if (id1500.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1500.setStyle("-fx-background-color: black");
+            }
+            else if (id1501.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1501.setStyle("-fx-background-color: black");
+            }
+            else if (id1502.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1502.setStyle("-fx-background-color: black");
+            }
+            else if (id1503.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1503.setStyle("-fx-background-color: black");
+            }
+            else if (id1504.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1504.setStyle("-fx-background-color: black");
+            }
+            else if (id1505.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1505.setStyle("-fx-background-color: black");
+            }
+            else if (id1506.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1506.setStyle("-fx-background-color: black");
+            }
+            else if (id1507.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1507.setStyle("-fx-background-color: black");
+            }
+            else if (id1508.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1508.setStyle("-fx-background-color: black");
+            }
+            else if (id1509.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1509.setStyle("-fx-background-color: black");
+            }
+            else if (id1510.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1510.setStyle("-fx-background-color: black");
+            }
+            else if (id1511.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1511.setStyle("-fx-background-color: black");
+            }
+            else if (id1512.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1512.setStyle("-fx-background-color: black");
+            }
+            else if (id1513.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1513.setStyle("-fx-background-color: black");
+            }
+            else if (id1514.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1514.setStyle("-fx-background-color: black");
+            }
+            else if (id1515.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1515.setStyle("-fx-background-color: black");
+            }
+            else if (id1516.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1516.setStyle("-fx-background-color: black");
+            }
+            else if (id1517.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1517.setStyle("-fx-background-color: black");
+            }
+            else if (id1518.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1518.setStyle("-fx-background-color: black");
+            }
+            else if (id1519.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1519.setStyle("-fx-background-color: black");
+            }
+            else if (id1520.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1520.setStyle("-fx-background-color: black");
+            }
+            else if (id1521.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1521.setStyle("-fx-background-color: black");
+            }
+            else if (id1522.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1522.setStyle("-fx-background-color: black");
+            }
+            else if (id1523.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1523.setStyle("-fx-background-color: black");
+            }
+            else if (id1524.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1524.setStyle("-fx-background-color: black");
+            }
+            else if (id1525.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1525.setStyle("-fx-background-color: black");
+            }
+            else if (id1526.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1526.setStyle("-fx-background-color: black");
+            }
+            else if (id1527.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1527.setStyle("-fx-background-color: black");
+            }
+            else if (id1528.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1528.setStyle("-fx-background-color: black");
+            }
+            else if (id1529.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1529.setStyle("-fx-background-color: black");
+            }
+            else if (id1530.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1530.setStyle("-fx-background-color: black");
+            }
+            else if (id1531.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1531.setStyle("-fx-background-color: black");
+            }
+            else if (id1532.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1532.setStyle("-fx-background-color: black");
+            }
+            else if (id1533.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1533.setStyle("-fx-background-color: black");
+            }
+            else if (id1534.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1534.setStyle("-fx-background-color: black");
+            }
+            else if (id1535.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1535.setStyle("-fx-background-color: black");
+            }
+            else if (id1536.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1536.setStyle("-fx-background-color: black");
+            }
+            else if (id1537.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1537.setStyle("-fx-background-color: black");
+            }
+            else if (id1538.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1538.setStyle("-fx-background-color: black");
+            }
+            else if (id1539.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1539.setStyle("-fx-background-color: black");
+            }
+            else if (id1540.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1540.setStyle("-fx-background-color: black");
+            }
+            else if (id1541.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1541.setStyle("-fx-background-color: black");
+            }
+            else if (id1542.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1542.setStyle("-fx-background-color: black");
+            }
+            else if (id1543.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1543.setStyle("-fx-background-color: black");
+            }
+            else if (id1544.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1544.setStyle("-fx-background-color: black");
+            }
+            else if (id1545.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1545.setStyle("-fx-background-color: black");
+            }
+            else if (id1546.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1546.setStyle("-fx-background-color: black");
+            }
+            else if (id1547.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1547.setStyle("-fx-background-color: black");
+            }
+            else if (id1548.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1548.setStyle("-fx-background-color: black");
+            }
+            else if (id1549.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1549.setStyle("-fx-background-color: black");
+            }
+            else if (id1550.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1550.setStyle("-fx-background-color: black");
+            }
+            else if (id1551.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1551.setStyle("-fx-background-color: black");
+            }
+            else if (id1552.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1552.setStyle("-fx-background-color: black");
+            }
+            else if (id1553.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1553.setStyle("-fx-background-color: black");
+            }
+            else if (id1554.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1554.setStyle("-fx-background-color: black");
+            }
+            else if (id1555.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1555.setStyle("-fx-background-color: black");
+            }
+            else if (id1556.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1556.setStyle("-fx-background-color: black");
+            }
+            else if (id1557.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1557.setStyle("-fx-background-color: black");
+            }
+            else if (id1558.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1558.setStyle("-fx-background-color: black");
+            }
+            else if (id1559.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1559.setStyle("-fx-background-color: black");
+            }
+            else if (id1560.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1560.setStyle("-fx-background-color: black");
+            }
+            else if (id1561.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1561.setStyle("-fx-background-color: black");
+            }
+            else if (id1562.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1562.setStyle("-fx-background-color: black");
+            }
+            else if (id1563.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1563.setStyle("-fx-background-color: black");
+            }
+            else if (id1564.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1564.setStyle("-fx-background-color: black");
+            }
+            else if (id1565.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1565.setStyle("-fx-background-color: black");
+            }
+            else if (id1566.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1566.setStyle("-fx-background-color: black");
+            }
+            else if (id1567.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1567.setStyle("-fx-background-color: black");
+            }
+            else if (id1568.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1568.setStyle("-fx-background-color: black");
+            }
+            else if (id1569.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1569.setStyle("-fx-background-color: black");
+            }
+            else if (id1570.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1570.setStyle("-fx-background-color: black");
+            }
+            else if (id1571.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1571.setStyle("-fx-background-color: black");
+            }
+            else if (id1572.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1572.setStyle("-fx-background-color: black");
+            }
+            else if (id1573.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1573.setStyle("-fx-background-color: black");
+            }
+            else if (id1574.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1574.setStyle("-fx-background-color: black");
+            }
+            else if (id1575.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1575.setStyle("-fx-background-color: black");
+            }
+            else if (id1576.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1576.setStyle("-fx-background-color: black");
+            }
+            else if (id1577.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1577.setStyle("-fx-background-color: black");
+            }
+            else if (id1578.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1578.setStyle("-fx-background-color: black");
+            }
+            else if (id1579.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1579.setStyle("-fx-background-color: black");
+            }
+            else if (id1580.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1580.setStyle("-fx-background-color: black");
+            }
+            else if (id1581.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1581.setStyle("-fx-background-color: black");
+            }
+            else if (id1582.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1582.setStyle("-fx-background-color: black");
+            }
+            else if (id1583.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1583.setStyle("-fx-background-color: black");
+            }
+            else if (id1584.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1584.setStyle("-fx-background-color: black");
+            }
+            else if (id1585.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1585.setStyle("-fx-background-color: black");
+            }
+            else if (id1586.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1586.setStyle("-fx-background-color: black");
+            }
+            else if (id1587.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1587.setStyle("-fx-background-color: black");
+            }
+            else if (id1588.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1588.setStyle("-fx-background-color: black");
+            }
+            else if (id1589.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1589.setStyle("-fx-background-color: black");
+            }
+            else if (id1590.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1590.setStyle("-fx-background-color: black");
+            }
+            else if (id1591.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1591.setStyle("-fx-background-color: black");
+            }
+            else if (id1592.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1592.setStyle("-fx-background-color: black");
+            }
+            else if (id1593.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1593.setStyle("-fx-background-color: black");
+            }
+            else if (id1594.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1594.setStyle("-fx-background-color: black");
+            }
+            else if (id1595.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1595.setStyle("-fx-background-color: black");
+            }
+            else if (id1596.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1596.setStyle("-fx-background-color: black");
+            }
+            else if (id1597.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1597.setStyle("-fx-background-color: black");
+            }
+            else if (id1598.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1598.setStyle("-fx-background-color: black");
+            }
+            else if (id1599.getOnMouseClicked().equals(mouseEvent))
+            {
+                id1599.setStyle("-fx-background-color: black");
+            }
+            else
+            {
+                id1600.setStyle("-fx-background-color: black");
             }
         }
     }
