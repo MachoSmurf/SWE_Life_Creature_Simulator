@@ -671,7 +671,7 @@
                    <StackPane fx:id="id550" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="29" GridPane.rowIndex="13" />
                    <StackPane fx:id="id551" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="30" GridPane.rowIndex="13" />
                    <StackPane fx:id="id552" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="31" GridPane.rowIndex="13" />
-                   <StackPane fx:id="id553" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="32" GridPane.rowIndex="13" />
+                   <StackPane fx:id="id553" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="32" GridPane.rowIndex="13" />
                    <StackPane fx:id="id554" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="33" GridPane.rowIndex="13" />
                    <StackPane fx:id="id555" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="34" GridPane.rowIndex="13" />
                    <StackPane fx:id="id556" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="35" GridPane.rowIndex="13" />
@@ -1762,5 +1762,6 @@
       </RadioButton>
       <RadioButton fx:id="water" layoutX="818.0" layoutY="149.0" mnemonicParsing="false" text="Water" toggleGroup="$Tools" />
       <RadioButton layoutX="818.0" layoutY="176.0" mnemonicParsing="false" text="Obstacle" toggleGroup="$Tools" />
+      <Separator layoutX="820.0" layoutY="200.0" prefHeight="17.0" prefWidth="368.0" />
    </children>
 </AnchorPane>
