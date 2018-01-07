@@ -7,7 +7,9 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+//import static org.junit.Assert.assertEquals;
 
 public class CreatureTest {
 
@@ -59,14 +61,14 @@ public class CreatureTest {
 
     @Test
     public void testMateEnergy () {
-        assertEquals("energy beast1",550, beast1.getEnergy());
-        assertEquals("energy beast2", 450, beast2.getEnergy());
-        assertEquals("energy beast3",900, beast3.getEnergy());
+        assertEquals(550, beast1.getEnergy(), "energy beast1");
+        assertEquals(450, beast2.getEnergy(),"energy beast2");
+        assertEquals(900, beast3.getEnergy(), "energy beast3");
     }
 
     @Test
     public void testMateStrength () {
-        assertEquals("strength beast3", 1200, beast3.getStrength());
+        assertEquals(1200, beast3.getStrength(),"strength beast3");
     }
 
     @Test
