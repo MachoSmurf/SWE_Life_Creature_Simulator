@@ -56,14 +56,17 @@ public class Creature extends SimObject {
             weight = legs * 10 + (energy - strength);
         }
         int legSpeed;
-        if (legs - 5 >= 0) {
-            legSpeed = legs - 5;
+        if (legs - 5 > 0) {
+            legSpeed = legs - 5 ;
         }
-        else {
+        else if (legs - 5 < 0){
             legSpeed = 5 - legs;
         }
+        else {
+            legSpeed = 1;
+        }
         int minWeight = legs * 10;
-        speed = (100 - (weight - minWeight) - legSpeed) /10;
+        speed = ((weight - minWeight) / legSpeed) /10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
         status = new StatusObject(energy, getColor(), alive);
@@ -102,6 +105,10 @@ public class Creature extends SimObject {
 
         //move cost
         energy = energy - weight;
+        if (energy <= 0) {
+            energy = 0;
+            alive = false;
+        }
 
 
         //speed
@@ -113,7 +120,7 @@ public class Creature extends SimObject {
             legSpeed = 5 - legs;
         }
         int minWeight = legs * 10;
-        speed = (100 - (weight - minWeight) - legSpeed) /10;
+        speed = ((weight - minWeight) / legSpeed) /100;
 
         //hunger
         hunger = stamina - energy;
@@ -124,12 +131,14 @@ public class Creature extends SimObject {
             Point nextGridPoint = null;
         int whichStep = speed + stepsTaken;
         if (whichStep > nextSteps.size()) {
-            nextGridPoint = nextSteps.get(nextSteps.size());
+            //nextGridPoint = nextSteps.get(nextSteps.size());
             Point newTargetPoint = newTarget();
             try {
                 nextSteps = movement.findPath(point, newTargetPoint);
+                nextGridPoint = nextSteps.get(0);
             } catch (Exception e) {
                 System.out.println("No new targets available!");
+                nextGridPoint = new Point(12,4);
             }
 
         }
@@ -250,26 +259,32 @@ public class Creature extends SimObject {
 
         List<Point> workingArea = null;
         Point targetPoint = null;
+        boolean skipFirstList = true;
         for (List<Point> livingArea : livingAreas) {
-            for (Point livingPoint : livingArea) {
-                if (livingPoint.x == point.x && livingPoint.y == point.y) {
-                    workingArea = livingArea;
+            if (!skipFirstList) {
+                for (Point livingPoint : livingArea) {
+                    if (livingPoint.x == point.x && livingPoint.y == point.y) {
+                        workingArea = livingArea;
+                    }
                 }
+            }
+            else {
+                skipFirstList = false;
             }
         }
 
-        for (int i = 0; i == 100; i++) {
-            for (Point point : workingArea) {
-                Point victimPoint;
-                if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)){
-                    victimPoint = world.getNewTargetCreature();
-                }
-                else {
-                    victimPoint = world.getNewTargetPlant();
-                }
 
-                if (victimPoint.x == point.x && victimPoint.y == point.y) {
-                    return point;
+        for (int i=1; i<100; i++) {
+            Point victimPoint;
+            if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)){
+                victimPoint = world.getNewTargetCreature();
+            }
+            else {
+                victimPoint = world.getNewTargetPlant();
+            }
+            for (Point livingPoint : workingArea) {
+                if (livingPoint.x == victimPoint.x && victimPoint.y == livingPoint.y) {
+                    return victimPoint;
                 }
             }
         }
@@ -277,7 +292,7 @@ public class Creature extends SimObject {
         if (targetPoint == null) {
             for (List<Point> livingArea : livingAreas) {
                 for (Point livingPoint : livingArea) {
-                    Point victimPoint = new Point(0,0);   //world.getNewTargetCreature();
+                    Point victimPoint = world.getNewTargetCreature();
                     if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
                         return victimPoint;
                     }
