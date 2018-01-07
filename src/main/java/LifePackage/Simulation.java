@@ -9,6 +9,7 @@ import ViewPackage.FXMLSimulatorController;
  */
 public class Simulation implements ILifeController {
 
+    private static boolean simulationIsRunningStep;
     private int simulationSpeed;
     private World world;
     FileMediator fileMediator = new FileMediator();
@@ -26,6 +27,8 @@ public class Simulation implements ILifeController {
         energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore,
         simulationGrid);
         viewController = simController;
+
+        simulationIsRunningStep = false;
     }
 
     @Override
@@ -38,6 +41,7 @@ public class Simulation implements ILifeController {
     public void startSimulation()
     {
         //start the timer
+
     }
 
     @Override
@@ -74,8 +78,10 @@ public class Simulation implements ILifeController {
     }
 
     private void step(){
-        StepResult stepResult = world.doStep();
-        //push stepResult back to UIController
-        viewController.updateSimulationResults(stepResult);
+        if (!simulationIsRunningStep){
+            StepResult stepResult = world.doStep();
+            //push stepResult back to UIController
+            viewController.updateSimulationResults(stepResult);
+        }
     }
 }
