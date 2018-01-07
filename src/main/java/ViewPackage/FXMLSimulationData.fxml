@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLSimulationDataController">
+    <children>
+        <TitledPane animated="false" collapsible="false" text="Life - Simulation Data">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" />
+            </content>
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </TitledPane>
+        <AnchorPane layoutY="37.0" prefHeight="800.0" prefWidth="1200.0" />
+        <ImageView fitHeight="850.0" fitWidth="1400.0" layoutX="-198.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Background.jpg" />
+            </image></ImageView>
+        <Label layoutX="23.0" layoutY="58.0" text="Choose Simulation">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="92.0" text="Simulation:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox layoutX="96.0" layoutY="88.0" prefHeight="25.0" prefWidth="149.0" promptText="-- Select --" />
+        <Button layoutX="27.0" layoutY="123.0" mnemonicParsing="false" onAction="#onShowSimulationDataClick" prefHeight="30.0" prefWidth="218.0" text="Show Simulation Data">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="23.0" layoutY="161.0" text="Simulation Data">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextArea layoutX="23.0" layoutY="190.0" prefHeight="641.0" prefWidth="1159.0" />
+        <Button layoutX="1129.0" layoutY="45.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

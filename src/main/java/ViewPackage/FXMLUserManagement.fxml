@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLUserManagementController">
+   <children>
+      <TitledPane animated="false" collapsible="false" text="Life - User Management">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" />
+        </content>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TitledPane>
+      <AnchorPane layoutY="37.0" prefHeight="800.0" prefWidth="1200.0" />
+       <ImageView fitHeight="850.0" fitWidth="1400.0" layoutX="-198.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@Background.jpg" />
+           </image></ImageView>
+      <ListView layoutX="23.0" layoutY="235.0" prefHeight="596.0" prefWidth="1159.0" />
+      <Label layoutX="22.0" layoutY="214.0" text="Userslist ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="87.0" layoutY="88.0" />
+      <Label layoutX="23.0" layoutY="58.0" text="New User">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="87.0" layoutY="122.0" />
+      <PasswordField fx:id="passwordRepeat" layoutX="349.0" layoutY="88.0" />
+      <RadioButton fx:id="simUserYes" layoutX="349.0" layoutY="126.0" mnemonicParsing="false" selected="true" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="simUser" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="395.0" layoutY="126.0" mnemonicParsing="false" text="No" toggleGroup="$simUser" />
+      <Label layoutX="246.0" layoutY="126.0" text="Simulation User:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="92.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="126.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="92.0" text="Repeat Password: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="26.0" layoutY="163.0" mnemonicParsing="false" onAction="#onSaveUserClick" prefHeight="30.0" prefWidth="210.0" text="Save User">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="1129.0" layoutY="45.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
