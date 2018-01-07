@@ -19,21 +19,7 @@ public class WorldTest {
 
     @Test
     public void createWorld () throws Exception {
-        /**
-        movement = new MovementPlanner();
-        Point puntA = new Point(10,10);
-        Point puntB = new Point(20,20);
-        List<Point> next = movement.findPath(puntA, puntB);
-        Point puntC = new Point(10,10);
-        Point puntD = new Point(20,20);
-        List<Point> next1 = movement.findPath(puntC, puntD);
-        Point puntE = new Point(10,10);
-        Point puntF = new Point(20,20);
-        List<Point> next2 = movement.findPath(puntE, puntF);
-        Point puntG = new Point(10,10);
-        Point puntH = new Point(20,20);
-        List<Point> next3 = movement.findPath(puntG, puntH);
-         */
+
         int testGridWidth = 20;
         int testGridHeight = 20;
 
