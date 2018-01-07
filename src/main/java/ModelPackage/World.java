@@ -14,7 +14,7 @@ public class World implements Serializable, IWorld {
     private List<SimObject> plantList; //A List of all plants in this world
     protected List<SimObject> creatureList; // A list of all creatures in this world
     private List<StatusObject> objectList; // A List of all step items in this world.
-    private IGrid iGrid;
+    private IGrid grid;
     private int stepCount;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
@@ -29,7 +29,8 @@ public class World implements Serializable, IWorld {
     public World(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore,int digestionBalanceCarnivore,int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
                  int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
                  int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
-                 int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore){
+                 int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
+                 Grid simulationGrid){
 
         // parameters
         stepCount = 0;
@@ -37,15 +38,15 @@ public class World implements Serializable, IWorld {
         creatureList = new ArrayList<>();
         objectList = new ArrayList<>();
         movement = new MovementPlanner();
+        grid = simulationGrid;
 
-
-        boolean worked = movement.initializePlanner(iGrid);
+        boolean worked = movement.initializePlanner(grid);
         if (!worked) {
             System.out.println("Something went wrong while initialising the motionPlanner");
             return;
         }
-        int gridWidth = iGrid.getWidth();
-        int gridHeight = iGrid.getHeight();
+        int gridWidth = grid.getWidth();
+        int gridHeight = grid.getHeight();
         rnd = new Random();
         livingAreas = new ArrayList<ArrayList<Point>>();
         try {
@@ -58,25 +59,32 @@ public class World implements Serializable, IWorld {
          * If the random point is in a Living area and there is not another plant at that point, create a new plant
          *  do this until you have as many plants as described in "howManyPlants".
          */
-        for (int i = 1; i == howManyPlants; ) {
+        for (int i = 0; i < howManyPlants; ) {
             int x = rnd.nextInt(gridWidth);
             int y = rnd.nextInt(gridHeight);
             boolean alreadyAPlant = false;
+            boolean firstList = true; // first list is water. rest of lists is land.
             for (ArrayList<Point> livingArea : livingAreas) {
-                for (Point gridPoint : livingArea) {
-                    if (x == gridPoint.x && y == gridPoint.y) {
-                        for (SimObject sim : plantList) {
-                            if (sim.point.x == x && sim.point.y == y) {
-                                alreadyAPlant = true;
+                if (!firstList){
+                    for (Point gridPoint : livingArea) {
+                        if (x == gridPoint.x && y == gridPoint.y) {
+                            for (SimObject sim : plantList) {
+                                if (sim.point.x == x && sim.point.y == y) {
+                                    alreadyAPlant = true;
+                                }
                             }
-                        }
-                        if (!alreadyAPlant) {
-                            plantList.add(new Plant(new Point(x, y), energyPlant));
-                            i++;
-                        }
+                            if (!alreadyAPlant) {
+                                plantList.add(new Plant(new Point(x, y), energyPlant));
+                                i++;
+                            }
 
+                        }
                     }
                 }
+                else {
+                    firstList = false;
+                }
+
             }
         }
 
@@ -215,12 +223,12 @@ public class World implements Serializable, IWorld {
         stepCount++;
 
 
-        StepResult stepResult = new StepResult(iGrid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
+        StepResult stepResult = new StepResult(grid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
         return stepResult;
     }
 
     public IGrid getGrid () {
-        return iGrid;
+        return grid;
     }
 
     /**
@@ -242,54 +250,80 @@ public class World implements Serializable, IWorld {
      */
     private void createCreatures (int gridWidth, int gridHeight, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, int howManyCreatures) {
 
-        for (int i = 1; i == howManyCreatures;) {
+        for (int i = 0; i < howManyCreatures; ) {
             Random rnd = new Random();
             int x = rnd.nextInt(gridWidth);
             int y = rnd.nextInt(gridHeight);
+            boolean firstList = true;
             for (ArrayList<Point> livingArea : livingAreas) {
-                for (Point gridPoint : livingArea) {
-                    if (x == gridPoint.x && y == gridPoint.y) {
-                        Point startPoint = new Point(x, y);
-                        Point target = null;
-                        switch (digestion) {
-                            case Nonivore:
-                                int balance = rnd.nextInt(100);
-                                if (balance < 50 ) {
+                if (!firstList) {
+                    for (Point gridPoint : livingArea) {
+                        if (x == gridPoint.x && y == gridPoint.y) {
+                            Point startPoint = new Point(x, y);
+                            Point target = null;
+                            switch (digestion) {
+                                case Nonivore:
+
                                     target = findPlant(startPoint);
-                                }
-                                else {
-                                    target = findCreature(startPoint);
-                                }
-                                break;
-                            case Omnivore:
-                                if (digestionBalance < 50 ) {
+
+                                    break;
+                                case Omnivore:
+                                    if (digestionBalance < 50) {
+                                        target = findPlant(startPoint);
+                                    } else {
+                                        target = findCreature(startPoint);
+                                    }
+                                    break;
+                                case Herbivore:
                                     target = findPlant(startPoint);
-                                }
-                                else {
+                                    break;
+                                case Carnivore:
                                     target = findCreature(startPoint);
+                                    break;
+                            }
+                            if (target == null) {
+                                Point newTarget = new Point(0,0);
+                                newTarget.x = startPoint.x + 1;
+                                newTarget.y = startPoint.y + 1;
+                                if (newTarget.x >= 20){
+                                    newTarget.x = 18;
                                 }
-                                break;
-                            case Herbivore:
-                                target = findPlant(startPoint);
-                                break;
-                            case Carnivore:
-                                target = findCreature(startPoint);
-                                break;
+                                if (newTarget.y >= 20) {
+                                    newTarget.y = 18;
+                                }
+                                target = newTarget;
+                            }
+                            List<Point> path = null;
+                            try {
+                                path = movement.findPath(startPoint, target);
+                                if (path == null) {
+
+                                }
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
+                                System.out.println("Path was zero steps");
+                                Point newTarget = new Point(0,0);
+                                newTarget.x = target.x + 1;
+                                newTarget.y = target.y + 1;
+
+
+                                try {
+                                    path = movement.findPath(startPoint, newTarget);
+                                } catch (Exception ex) {
+                                    System.out.println("Second time error too");
+                                }
+                            }
+                            creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, this));
+                            i++;
+                            System.out.println("New creature made on location x=" + startPoint.x + " and y=" + startPoint.y );
                         }
-                        if (target == null) {
-                            //go swimming
-                        }
-                        List<Point> path = null;
-                        try {
-                            path = movement.findPath(startPoint, target);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path));
-                        i++;
                     }
                 }
+                else {
+                    firstList = false;
+                }
             }
+
         }
 
     }
@@ -303,25 +337,48 @@ public class World implements Serializable, IWorld {
      *
      */
     private Point findCreature (Point startPoint) {
-        List<Point> workingArea = null;
-        Point targetPoint = null;
-        boolean victimSelected = false;
-        if (workingArea == null) {
-            for (List<Point> livingArea : livingAreas) {
+        List<Point> workingArea = null; //living area of this creature
+        Point targetPoint = null; // target point of this creature
+        boolean firstList = true;
+        for (List<Point> livingArea : livingAreas) {
+            if (!firstList){
                 for (Point livingPoint : livingArea) {
-                    if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
-                        workingArea = livingArea;
+                    if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) { //if a point in the living area is the same point as the startpoint.
+                        workingArea = livingArea; //this living area is the living area of this creature.
                     }
                 }
             }
+            else {
+                firstList = false;
+            }
         }
-        for (int i = 1; i == 100; i++) {
-            int numberOfCreatures = creatureList.size();
-            int selectedCreature = rnd.nextInt(numberOfCreatures);
-            SimObject creature = creatureList.get(selectedCreature);
-            for (Point point : workingArea) {
-                if (creature.point.x == point.x && creature.point.y == point.y) {
-                    return point;
+
+        /**
+         * select a random creature from creatureList and compare the location.
+         * if the location is in the same livingArea as the original creature, return location else select another random creature
+         */
+        for (SimObject sim : creatureList) {
+            for (Point workingPoint: workingArea) {
+                if (sim.point.x == workingPoint.x && sim.point.y == workingPoint.y && sim.point.x != startPoint.x && sim.point.y != startPoint.y ) { //if sim is on a gridpoint of this livingArea And not on the same spot as The Creature.
+                    return sim.point;
+                }
+            }
+
+        }
+
+
+        /**
+         * if there are no target creatures in this area, find a random creature in the whole world.
+         */
+        if (targetPoint == null) {
+            for (List<Point> livingArea : livingAreas) {
+                int numberOfCreatures = creatureList.size();
+                int selectedCreature = rnd.nextInt(numberOfCreatures);
+                SimObject creature = creatureList.get(selectedCreature);
+                for (Point livingPoint : livingArea) {
+                    if (creature.point.x == livingPoint.x && creature.point.y == livingPoint.y){
+                        return creature.point;
+                    }
                 }
             }
         }
@@ -330,29 +387,36 @@ public class World implements Serializable, IWorld {
     }
 
     private Point findPlant (Point startPoint) {
-        List<Point> workingArea = null;
-        Point targetPoint = null;
+        List<Point> workingArea = null; // is livingarea of the creature from the parameters
+        Point targetPoint = null; // is the target point of the creature from the parameters
 
-        boolean plantSelected = false;
+        boolean firstList = true;
         if (workingArea == null) {
             for (List<Point> livingArea : livingAreas) {
-                for (Point livingPoint : livingArea) {
-                    if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
-                        workingArea = livingArea;
+                if (!firstList) {
+                    for (Point livingPoint : livingArea) {
+                        if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
+                            workingArea = livingArea;
+                            for (int i = 1; i > 100; i++) {
+                                int numberOfPlants = plantList.size();
+                                int selectedCreature = rnd.nextInt(numberOfPlants);
+                                SimObject plant = plantList.get(selectedCreature);
+                                for (Point workingPoint : workingArea) {
+                                    if (plant.point.x == workingPoint.x && plant.point.y == workingPoint.y && startPoint.x != plant.point.x && startPoint.y != plant.point.y) {
+                                        return workingPoint;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-            }
-        }
-        for (int i = 1; i == 100; i++) {
-            int numberOfPlants = plantList.size();
-            int selectedCreature = rnd.nextInt(numberOfPlants);
-            SimObject plant = creatureList.get(selectedCreature);
-            for (Point point : workingArea) {
-                if (plant.point.x == point.x && plant.point.y == point.y) {
-                    return point;
+                else {
+                    firstList = false;
                 }
+
             }
         }
+
         return targetPoint;
     }
 }

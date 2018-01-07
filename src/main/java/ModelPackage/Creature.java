@@ -236,4 +236,51 @@ public class Creature extends SimObject {
         }
         return point;
     }
+
+    /**
+     * Gets a new targetPoint.
+     *
+     * @return Point
+     */
+    private Point newTarget() {
+
+        List<Point> workingArea = null;
+        Point targetPoint = null;
+        for (List<Point> livingArea : livingAreas) {
+            for (Point livingPoint : livingArea) {
+                if (livingPoint.x == point.x && livingPoint.y == point.y) {
+                    workingArea = livingArea;
+                }
+            }
+        }
+
+        for (int i = 0; i == 100; i++) {
+            for (Point point : workingArea) {
+                Point victimPoint;
+                if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)){
+                    victimPoint = world.getNewTargetCreature();
+                }
+                else {
+                    victimPoint = world.getNewTargetPlant();
+                }
+
+                if (victimPoint.x == point.x && victimPoint.y == point.y) {
+                    return point;
+                }
+            }
+        }
+
+        if (targetPoint == null) {
+            for (List<Point> livingArea : livingAreas) {
+                for (Point livingPoint : livingArea) {
+                    Point victimPoint = world.getNewTargetCreature();
+                    if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
+                        return victimPoint;
+                    }
+                }
+            }
+        }
+        return targetPoint;
+    }
+
 }
