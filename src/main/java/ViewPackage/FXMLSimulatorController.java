@@ -11,7 +11,6 @@ import javafx.scene.control.Slider;
 
 import java.awt.*;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -68,26 +67,32 @@ public class FXMLSimulatorController extends UIController implements Initializab
     public Label lblTitleCreatures;
     public Label lblTitleplants;
 
+    public Label lblStepsDone;
+
     //fields for scorekeeping
     private int selectedSim;
 
     private int sim1Zoom;
     private int sim1Speed;
+    private int sim1LastShownStep;
     private StepResult sim1LastStep;
     private int sim2Zoom;
     private int sim2Speed;
+    private int sim2LastShownStep;
     private StepResult sim2LastStep;
     private int sim3Zoom;
     private int sim3Speed;
+    private int sim3LastShownStep;
     private StepResult sim3LastStep;
     private int sim4Zoom;
     private int sim4Speed;
+    private int sim4LastShownStep;
     private StepResult sim4LastStep;
 
-    private ArrayList<Thread> simulationThreads;
-    private ArrayList<Simulation> simulations;
+    private Thread[] simulationThreads;
+    private Simulation[] simulations;
 
-    public FXMLSimulatorController(){
+    public FXMLSimulatorController() {
         super();
         selectedSim = 1;
         sim1Zoom = 7;
@@ -98,8 +103,12 @@ public class FXMLSimulatorController extends UIController implements Initializab
         sim3Speed = 1;
         sim4Zoom = 7;
         sim4Speed = 1;
-        simulationThreads = new ArrayList<>(4);
-        simulations = new ArrayList<>(4);
+        simulationThreads = new Thread[4];
+        simulations = new Simulation[4];
+        sim1LastShownStep = 0;
+        sim2LastShownStep = 0;
+        sim3LastShownStep = 0;
+        sim4LastShownStep = 0;
     }
 
     @Override
@@ -108,27 +117,40 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     @Override
-    public void updateSimulationResults(StepResult simStatus) {
-        //drawGrid(simStatus.getCurrentGrid());
+    public void updateSimulationResults(StepResult simStatus, int simNumber) {
+        Canvas c = canvSimulation2;
+        switch(simNumber){
+            case 1:
+                c = canvSimulation1;
+                sim1LastStep = simStatus;
+                break;
+            case 2:
+                c = canvSimulation2;
+                sim1LastStep = simStatus;
+                break;
+            case 3:
+                c = canvSimulation3;
+                sim1LastStep = simStatus;
+                break;
+            case 4:
+                c = canvSimulation4;
+                sim1LastStep = simStatus;
+                break;
+        }
+
+        //TODO: make drawing GRID on FX Thread
+        drawGrid(simStatus.getCurrentGrid(), c);
+        updateSimDetails();
     }
 
-    public void onTestClick() {
-        ///!!!DEVELOPMENT ONLY!!!
-
-        Grid g = new Grid(100, 100);
-        g.setPointType(new Point(10, 10), GridPointType.Ground);
-
-        drawGrid(g);
-    }
-
-    private void drawGrid(IGrid g) {
+    private void drawGrid(IGrid g, Canvas canvas) {
 
         //spSim1.setPreferredSize(new Dimension(g.getWidth() * zoom, g.getHeight() * zoom));
-        canvSimulation1.setWidth(g.getWidth() * zoom);
-        canvSimulation1.setHeight(g.getHeight() * zoom);
+        canvas.setWidth(g.getWidth() * zoom);
+        canvas.setHeight(g.getHeight() * zoom);
 
-        GraphicsContext gc = canvSimulation1.getGraphicsContext2D();
-        gc.clearRect(0, 0, canvSimulation1.getWidth(), canvSimulation1.getHeight());
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         //gc.setFill(javafx.scene.paint.Color.BLACK);
 
         gc.setStroke(convertToJavaFXColor(Color.BLACK));
@@ -154,17 +176,18 @@ public class FXMLSimulatorController extends UIController implements Initializab
         lblSelectedSim.setText("Simulation " + selectedSim);
         switch (selectedSim) {
             case 1:
-                sldZoom1.setValue(sim1Speed);
-                lblZoomValue1.setText(Integer.toString(sim1Speed));
-                sldZoom1.setValue(sim1Zoom);
-                lblZoomValue1.setText(Integer.toString(sim1Zoom));
-                if (sim1LastStep == null){
-                    toggleVisible(false);
-                    lblTitleExtinction.setText("Simulation Not Running");
-                }
-                else{
+                if (sim1LastStep != null){
                     toggleVisible(true);
-                    lblTitleExtinction.setText("Simulation Not Running");
+                    lblTitleExtinction.setText("Mass Extincion countdown");
+                    if (sim1LastStep.getStepCount() > sim1LastShownStep){
+                        sim1LastShownStep = sim1LastStep.getStepCount();
+                        sldZoom1.setValue(sim1Speed);
+                        lblZoomValue1.setText(Integer.toString(sim1Speed));
+                        sldZoom1.setValue(sim1Zoom);
+                        lblZoomValue1.setText(Integer.toString(sim1Zoom));
+
+                        lblStepsDone.setText(Integer.toString(sim1LastStep.getStepCount()));
+                    }
                 }
                 break;
             case 2:
@@ -176,7 +199,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
         }
     }
 
-    private void toggleVisible(boolean visible){
+    private void toggleVisible(boolean visible) {
         lblExtinctionCountdown.setVisible(visible);
         btnExtinctionNow.setVisible(visible);
         btnExtinctionDisable.setVisible(visible);
@@ -196,65 +219,65 @@ public class FXMLSimulatorController extends UIController implements Initializab
         updateSimDetails();
     }
 
-    private Grid getTestingGrid(){
+    private Grid getTestingGrid() {
         int testGridWidth = 20;
         int testGridHeight = 20;
 
         Grid grid = new Grid(testGridWidth, testGridHeight);
 
         //island 1
-        grid.setPointType(new Point(2,2), GridPointType.Ground);
-        grid.setPointType(new Point(2,3), GridPointType.Ground);
-        grid.setPointType(new Point(2,4), GridPointType.Ground);
-        grid.setPointType(new Point(2,5), GridPointType.Ground);
-        grid.setPointType(new Point(3,2), GridPointType.Ground);
-        grid.setPointType(new Point(3,3), GridPointType.Ground);
-        grid.setPointType(new Point(3,4), GridPointType.Ground);
-        grid.setPointType(new Point(3,5), GridPointType.Ground);
-        grid.setPointType(new Point(4,2), GridPointType.Ground);
-        grid.setPointType(new Point(4,3), GridPointType.Ground);
-        grid.setPointType(new Point(4,4), GridPointType.Ground);
-        grid.setPointType(new Point(4,5), GridPointType.Ground);
-        grid.setPointType(new Point(5,2), GridPointType.Ground);
-        grid.setPointType(new Point(5,3), GridPointType.Ground);
-        grid.setPointType(new Point(5,4), GridPointType.Ground);
-        grid.setPointType(new Point(5,5), GridPointType.Ground);
+        grid.setPointType(new Point(2, 2), GridPointType.Ground);
+        grid.setPointType(new Point(2, 3), GridPointType.Ground);
+        grid.setPointType(new Point(2, 4), GridPointType.Ground);
+        grid.setPointType(new Point(2, 5), GridPointType.Ground);
+        grid.setPointType(new Point(3, 2), GridPointType.Ground);
+        grid.setPointType(new Point(3, 3), GridPointType.Ground);
+        grid.setPointType(new Point(3, 4), GridPointType.Ground);
+        grid.setPointType(new Point(3, 5), GridPointType.Ground);
+        grid.setPointType(new Point(4, 2), GridPointType.Ground);
+        grid.setPointType(new Point(4, 3), GridPointType.Ground);
+        grid.setPointType(new Point(4, 4), GridPointType.Ground);
+        grid.setPointType(new Point(4, 5), GridPointType.Ground);
+        grid.setPointType(new Point(5, 2), GridPointType.Ground);
+        grid.setPointType(new Point(5, 3), GridPointType.Ground);
+        grid.setPointType(new Point(5, 4), GridPointType.Ground);
+        grid.setPointType(new Point(5, 5), GridPointType.Ground);
 
         //island 2
-        grid.setPointType(new Point(10,2), GridPointType.Ground);
-        grid.setPointType(new Point(10,3), GridPointType.Ground);
-        grid.setPointType(new Point(10,4), GridPointType.Ground);
-        grid.setPointType(new Point(10,5), GridPointType.Ground);
-        grid.setPointType(new Point(11,2), GridPointType.Ground);
-        grid.setPointType(new Point(11,3), GridPointType.Ground);
-        grid.setPointType(new Point(11,4), GridPointType.Ground);
-        grid.setPointType(new Point(11,5), GridPointType.Obstacle);
-        grid.setPointType(new Point(12,2), GridPointType.Obstacle);
-        grid.setPointType(new Point(12,3), GridPointType.Ground);
-        grid.setPointType(new Point(12,4), GridPointType.Ground);
-        grid.setPointType(new Point(12,5), GridPointType.Ground);
-        grid.setPointType(new Point(13,2), GridPointType.Ground);
-        grid.setPointType(new Point(13,3), GridPointType.Ground);
-        grid.setPointType(new Point(13,4), GridPointType.Ground);
-        grid.setPointType(new Point(13,5), GridPointType.Ground);
+        grid.setPointType(new Point(10, 2), GridPointType.Ground);
+        grid.setPointType(new Point(10, 3), GridPointType.Ground);
+        grid.setPointType(new Point(10, 4), GridPointType.Ground);
+        grid.setPointType(new Point(10, 5), GridPointType.Ground);
+        grid.setPointType(new Point(11, 2), GridPointType.Ground);
+        grid.setPointType(new Point(11, 3), GridPointType.Ground);
+        grid.setPointType(new Point(11, 4), GridPointType.Ground);
+        grid.setPointType(new Point(11, 5), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 2), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 3), GridPointType.Ground);
+        grid.setPointType(new Point(12, 4), GridPointType.Ground);
+        grid.setPointType(new Point(12, 5), GridPointType.Ground);
+        grid.setPointType(new Point(13, 2), GridPointType.Ground);
+        grid.setPointType(new Point(13, 3), GridPointType.Ground);
+        grid.setPointType(new Point(13, 4), GridPointType.Ground);
+        grid.setPointType(new Point(13, 5), GridPointType.Ground);
 
         //island 3
-        grid.setPointType(new Point(10,10), GridPointType.Ground);
-        grid.setPointType(new Point(10,11), GridPointType.Ground);
-        grid.setPointType(new Point(10,12), GridPointType.Ground);
-        grid.setPointType(new Point(10,13), GridPointType.Ground);
-        grid.setPointType(new Point(11,10), GridPointType.Ground);
-        grid.setPointType(new Point(11,11), GridPointType.Ground);
-        grid.setPointType(new Point(11,12), GridPointType.Ground);
-        grid.setPointType(new Point(11,13), GridPointType.Ground);
-        grid.setPointType(new Point(12,10), GridPointType.Ground);
-        grid.setPointType(new Point(12,11), GridPointType.Ground);
-        grid.setPointType(new Point(12,12), GridPointType.Ground);
-        grid.setPointType(new Point(12,13), GridPointType.Ground);
-        grid.setPointType(new Point(13,10), GridPointType.Ground);
-        grid.setPointType(new Point(13,11), GridPointType.Ground);
-        grid.setPointType(new Point(13,12), GridPointType.Ground);
-        grid.setPointType(new Point(13,13), GridPointType.Ground);
+        grid.setPointType(new Point(10, 10), GridPointType.Ground);
+        grid.setPointType(new Point(10, 11), GridPointType.Ground);
+        grid.setPointType(new Point(10, 12), GridPointType.Ground);
+        grid.setPointType(new Point(10, 13), GridPointType.Ground);
+        grid.setPointType(new Point(11, 10), GridPointType.Ground);
+        grid.setPointType(new Point(11, 11), GridPointType.Ground);
+        grid.setPointType(new Point(11, 12), GridPointType.Ground);
+        grid.setPointType(new Point(11, 13), GridPointType.Ground);
+        grid.setPointType(new Point(12, 10), GridPointType.Ground);
+        grid.setPointType(new Point(12, 11), GridPointType.Ground);
+        grid.setPointType(new Point(12, 12), GridPointType.Ground);
+        grid.setPointType(new Point(12, 13), GridPointType.Ground);
+        grid.setPointType(new Point(13, 10), GridPointType.Ground);
+        grid.setPointType(new Point(13, 11), GridPointType.Ground);
+        grid.setPointType(new Point(13, 12), GridPointType.Ground);
+        grid.setPointType(new Point(13, 13), GridPointType.Ground);
 
         return grid;
     }
@@ -282,37 +305,34 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickPlaySim() {
-
     }
 
     public void onClickPauseSim() {
-
     }
 
     public void onClickOpenSim() {
-
     }
 
     public void onClickSaveSim() {
-
     }
 
     public void onClickNewSim() {
-
-
-        Simulation freshSim = new Simulation(500,40,
-                1500,Digestion.Carnivore,100,1500,4, 600, 500,900,400,300, 10,
+        Simulation freshSim = new Simulation(500, 40,
+                1500, Digestion.Carnivore, 100, 1500, 4, 600, 500, 900, 400, 300, 10,
                 1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 400, 300, 10,
                 2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 300, 200, 10,
-                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 30, getTestingGrid(), this);
-        simulations.set(selectedSim, freshSim);
-        Thread simThread = new Thread(String.valueOf(selectedSim)){
-            public void run(){
+                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 30, getTestingGrid(), this, selectedSim);
+        simulations[selectedSim - 1] = freshSim;
+        Thread simThread = new Thread(String.valueOf(selectedSim)) {
+            public void run() {
                 freshSim.setSimulationSpeed(sim1Speed);
                 freshSim.startSimulation();
             }
         };
-
+        //Thread simThread = new Thread(String.valueOf(selectedSim));
+        simulationThreads[selectedSim - 1] = simThread;
+        simThread.setDaemon(true);
+        simThread.start();
     }
 
     public void onZoomSlider1Finished() {

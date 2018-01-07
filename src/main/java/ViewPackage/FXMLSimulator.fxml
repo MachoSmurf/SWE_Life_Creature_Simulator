@@ -110,5 +110,10 @@
          </font>
       </Label>
       <Label fx:id="lblPlants" layoutX="947.0" layoutY="455.0" text="PlantsTotalInfo" />
+      <Label fx:id="lblStepsDone" layoutX="940.0" layoutY="480.0" text="Steps Done">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

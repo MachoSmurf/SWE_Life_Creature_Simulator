@@ -1,5 +1,7 @@
 package ModelPackage;
 
+import javafx.beans.InvalidationListener;
+
 /**
  * Provides all the information that has to be shown to any user. An instance of this object can also be used to show
  * the result of a simulation. Immutable Object
@@ -83,6 +85,4 @@ public class StepResult {
         this.energyPlants = energyPlants;
         this.stepCount = stepCount;
     }
-
-
 }
