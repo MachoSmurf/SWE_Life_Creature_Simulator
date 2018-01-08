@@ -214,7 +214,7 @@ public class MovementPlanner {
         //reset the grid, clearing all previous points
         resetPlannableGrid();
 
-        if ((startPoint.getX() == targetPoint.getX()) && (startPoint.getY() == targetPoint.getY())) {
+        if ((startPoint.getX() == targetPoint.getX()) && (startPoint.getY() == targetPoint.getY()) && (simulationGrid.getPointType(targetPoint) != GridPointType.Obstacle)) {
             return null;
         }
 
