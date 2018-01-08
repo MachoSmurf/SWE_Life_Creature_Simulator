@@ -275,9 +275,7 @@ public class World implements Serializable, IWorld {
                             Point target = null;
                             switch (digestion) {
                                 case Nonivore:
-
                                     target = findPlant(startPoint);
-
                                     break;
                                 case Omnivore:
                                     if (digestionBalance < 50) {
@@ -293,7 +291,9 @@ public class World implements Serializable, IWorld {
                                     target = findCreature(startPoint);
                                     break;
                             }
+
                             if (target == null) {
+                                System.out.println("Target is null");
                                 Point newTarget = new Point(0,0);
                                 newTarget.x = startPoint.x + 1;
                                 newTarget.y = startPoint.y + 1;
@@ -305,8 +305,10 @@ public class World implements Serializable, IWorld {
                                 }
                                 target = newTarget;
                             }
+
                             List<Point> path = null;
                             try {
+                                System.out.println("startpoint: " + startPoint.x + " " + startPoint.y + " and target: " + target.x + " " + target.y);
                                 path = movement.findPath(startPoint, target);
                                 if (path == null) {
 
@@ -375,6 +377,7 @@ public class World implements Serializable, IWorld {
         for (SimObject sim : creatureList) {
             for (Point workingPoint: workingArea) {
                 if (sim.point.x == workingPoint.x && sim.point.y == workingPoint.y && sim.point.x != startPoint.x && sim.point.y != startPoint.y ) { //if sim is on a gridpoint of this livingArea And not on the same spot as The Creature.
+                    System.out.println("Victim gevonden eerste manier");
                     return sim.point;
                 }
             }
@@ -392,6 +395,7 @@ public class World implements Serializable, IWorld {
                 SimObject creature = creatureList.get(selectedCreature);
                 for (Point livingPoint : livingArea) {
                     if (creature.point.x == livingPoint.x && creature.point.y == livingPoint.y){
+                        System.out.println("Victim gevonden tweede manier");
                         return creature.point;
                     }
                 }
@@ -407,15 +411,17 @@ public class World implements Serializable, IWorld {
 
         boolean firstList = true;
         if (workingArea == null) {
+            System.out.println("working area is null plant");
             for (List<Point> livingArea : livingAreas) {
                 if (!firstList) {
                     for (Point livingPoint : livingArea) {
                         if (livingPoint.x == startPoint.x && livingPoint.y == startPoint.y) {
                             workingArea = livingArea;
-                            for (int i = 1; i > 100; i++) {
+                            for (int i = 1; i < 100; i++) {
+                                System.out.println("aantal keren plant gezocht: " + i);
                                 int numberOfPlants = plantList.size();
-                                int selectedCreature = rnd.nextInt(numberOfPlants);
-                                SimObject plant = plantList.get(selectedCreature);
+                                int selectedPlant = rnd.nextInt(numberOfPlants);
+                                SimObject plant = plantList.get(selectedPlant);
                                 for (Point workingPoint : workingArea) {
                                     if (plant.point.x == workingPoint.x && plant.point.y == workingPoint.y && startPoint.x != plant.point.x && startPoint.y != plant.point.y) {
                                         return workingPoint;
