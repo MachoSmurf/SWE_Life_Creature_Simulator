@@ -155,9 +155,11 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
         for (GridPoint gp : g.getPointList()) {
             gc.setFill(convertToJavaFXColor(gp.getColor()));
-            gc.fillRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+            //gc.fillRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+            gc.fillRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             if (zoom > 5) {
-                gc.strokeRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+                //gc.strokeRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+                gc.strokeRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             }
         }
 
