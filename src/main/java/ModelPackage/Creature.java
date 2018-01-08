@@ -130,6 +130,7 @@ public class Creature extends SimObject {
         }
             Point nextGridPoint = null;
         int whichStep = speed + stepsTaken;
+        System.out.println("WhichStep: " + whichStep + " and nextStep: " + nextSteps.size());
         if (whichStep > nextSteps.size()) {
             //nextGridPoint = nextSteps.get(nextSteps.size());
             Point newTargetPoint = newTarget();

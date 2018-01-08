@@ -293,17 +293,7 @@ public class World implements Serializable, IWorld {
                             }
 
                             if (target == null) {
-                                System.out.println("Target is null");
-                                Point newTarget = new Point(0,0);
-                                newTarget.x = startPoint.x + 1;
-                                newTarget.y = startPoint.y + 1;
-                                if (newTarget.x >= 20){
-                                    newTarget.x = 18;
-                                }
-                                if (newTarget.y >= 20) {
-                                    newTarget.y = 18;
-                                }
-                                target = newTarget;
+                                target = startPoint;
                             }
 
                             List<Point> path = null;
@@ -311,7 +301,7 @@ public class World implements Serializable, IWorld {
                                 System.out.println("startpoint: " + startPoint.x + " " + startPoint.y + " and target: " + target.x + " " + target.y);
                                 path = movement.findPath(startPoint, target);
                                 if (path == null) {
-
+                                    path.add(target);
                                 }
                             } catch (Exception e) {
                                 System.out.println(e.getMessage());
