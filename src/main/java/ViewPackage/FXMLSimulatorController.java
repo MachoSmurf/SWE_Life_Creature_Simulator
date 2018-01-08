@@ -27,8 +27,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
     public Canvas canvSimulation3;
     public Canvas canvSimulation4;
 
-    private int zoom = 20;
-
     //Right menu Elements
     public Button btnSelectSim1;
     public Button btnSelectSim2;
@@ -352,7 +350,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     public void onZoomSlider1Finished() {
         simZoom[selectedSim - 1] = (int) sldZoom1.getValue();
-        lblZoomValue1.setText(Integer.toString(zoom));
+        lblZoomValue1.setText(Integer.toString(simZoom[selectedSim - 1]));
     }
 
     public void onSpeedSliderFinished() {

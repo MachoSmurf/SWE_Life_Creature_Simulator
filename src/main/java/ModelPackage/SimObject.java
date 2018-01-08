@@ -16,7 +16,6 @@ public abstract class SimObject implements Serializable {
     public SimObject(Point point, int energy) {
         this.point = point;
         this.energy = energy;
-
     }
 
     public Point getPoint() {
@@ -25,10 +24,6 @@ public abstract class SimObject implements Serializable {
 
     public int getEnergy() {
         return energy;
-    }
-
-    public void setEnergy(int energy) {
-        this.energy = energy;
     }
 
     public abstract StatusObject step();
