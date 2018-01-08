@@ -24,14 +24,14 @@ public interface IDataMediator {
      * @param gridName the name to use for reference
      * @return IGrid to access the grid contents
      */
-    IGrid loadGrid(String gridName);
+    GridClone loadGrid(String gridName);
 
     /**
      * Saves grid to the datasource, using a gridname for reference
      * @param grid The instance of the IGrid that has to be saved
      * @param gridName The name used to reference the IGrid
      */
-    void saveGrid(Grid grid, String gridName);
+    void saveGrid(GridClone grid, String gridName);
 
     /**
      * Load the result of a finished simulation

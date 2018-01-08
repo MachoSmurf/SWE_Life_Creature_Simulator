@@ -1,6 +1,7 @@
 package EditorPackage;
 
 import ModelPackage.Grid;
+import ModelPackage.GridClone;
 
 public interface IEditorController {
 
@@ -8,13 +9,13 @@ public interface IEditorController {
      * Loads a grid based on a given name
      * @param gridName Name of the grid that has to be loaded
      */
-    Grid loadGrid(String gridName);
+    GridClone loadGrid(String gridName);
 
     /**
      * Saves a grid using a given name
      * @param gridName Name of the grid that has to be saved
      */
-    void saveGrid(Grid grid, String gridName);
+    void saveGrid(GridClone grid, String gridName);
 
     /**
      * deletes a grid using a given name

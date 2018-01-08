@@ -29,15 +29,15 @@ public class FileMediator implements IDataMediator {
     }
 
     @Override
-    public Grid loadGrid(String gridName)
+    public GridClone loadGrid(String gridName)
     {
-        return this.<Grid>LoadFile(gridName);
+        return this.<GridClone>LoadFile(gridName);
     }
 
     @Override
-    public void saveGrid(Grid grid, String gridName)
+    public void saveGrid(GridClone grid, String gridName)
     {
-        this.<Grid>SaveFile(grid, gridName);
+        this.<GridClone>SaveFile(grid, gridName);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class FileMediator implements IDataMediator {
         try
         {
 
-            file = new File("C:\\Users\\Public\\Desktop" +name + ".txt");
+            file = new File("C:\\Users\\Public\\Documents\\" +name + ".txt");
             if (!file.exists()) {
                 file.createNewFile();
             }
@@ -79,6 +79,7 @@ public class FileMediator implements IDataMediator {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(obj);
             oos.close();
+            fos.close();
         }
         catch(Exception e)
         {
@@ -89,13 +90,11 @@ public class FileMediator implements IDataMediator {
 
     public static <T> T LoadFile (String name)
     {
-        String FileName = name + ".txt";
-        FileInputStream fin;
+        String FileName = "C:\\Users\\Public\\Documents\\" +name + ".txt";
         try
         {
-            fin = new FileInputStream(FileName);
-            ObjectInputStream ois;
-            ois = new ObjectInputStream(fin);
+            FileInputStream fin = new FileInputStream(FileName);
+            ObjectInputStream ois = new ObjectInputStream(fin);
 
             return (T) ois.readObject();
 
@@ -103,6 +102,7 @@ public class FileMediator implements IDataMediator {
         catch (Exception e)
         {
             e.printStackTrace();
+
         }
 
         return null;
