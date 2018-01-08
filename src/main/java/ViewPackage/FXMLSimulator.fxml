@@ -37,7 +37,7 @@
          </content>
       </ScrollPane>
         <Label layoutX="29.0" layoutY="47.0" text="Simulation 1:" />
-        <Slider fx:id="sldZoom1" layoutX="998.0" layoutY="157.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+        <Slider fx:id="sldZoom1" layoutX="998.0" layoutY="157.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="1.0" />
         <Label layoutX="949.0" layoutY="155.0" text="Zoom:" />
         <Label fx:id="lblZoomValue1" layoutX="1140.0" layoutY="155.0" text="10" />
       <ScrollPane hbarPolicy="ALWAYS" layoutX="454.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
@@ -76,7 +76,7 @@
       <Button fx:id="btnSimOpen" layoutX="1037.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickOpenSim" text="Open" />
       <Button fx:id="btnSimSave" layoutX="1093.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickSaveSim" text="Save" />
       <Button fx:id="btnSimNew" layoutX="1147.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickNewSim" text="New" />
-      <Slider fx:id="sldSimSpeed" layoutX="998.0" layoutY="187.0" min="1.0" onMouseReleased="#onSpeedSliderFinished" onZoomFinished="#onZoomSlider1Finished" value="10.0" />
+      <Slider fx:id="sldSimSpeed" layoutX="998.0" layoutY="187.0" min="1.0" onMouseReleased="#onSpeedSliderFinished" onZoomFinished="#onZoomSlider1Finished" value="1.0" />
       <Label layoutX="949.0" layoutY="185.0" text="Speed:" />
       <Label fx:id="lblSimSpeed" layoutX="1140.0" layoutY="185.0" text="10" />
       <Separator layoutX="949.0" layoutY="224.0" prefWidth="200.0" />

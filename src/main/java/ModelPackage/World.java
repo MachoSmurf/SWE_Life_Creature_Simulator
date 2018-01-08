@@ -161,6 +161,20 @@ public class World implements Serializable, IWorld {
             }
         }
 
+        //revert empty gridpoints to original color
+        for (GridPoint gridPoint : grid.getPointList()){
+            boolean occupied = false;
+            for (SimObject simObject : simObjects){
+                if ((simObject.getPoint().getX() == gridPoint.getX()) && (simObject.getPoint().getY() == gridPoint.getY())){
+                    occupied = true;
+                    break;
+                }
+            }
+            if(!occupied){
+                gridPoint.resetColor();
+            }
+        }
+
         //TODO: Return GridClone instead of this Grid
         return new StepResult(this.grid, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount);
     }
@@ -171,7 +185,7 @@ public class World implements Serializable, IWorld {
         }
 
         SimObject target = null;
-        int selectArea = 0;
+        int selectArea = -1;
         if(!wantsToSwim){
             //find out what livingarea the creature is in
             for (int i=0; i<livingAreas.size(); i++){

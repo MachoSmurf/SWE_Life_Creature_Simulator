@@ -233,6 +233,7 @@ public class MovementPlanner {
         ArrayList<Point> secondaySearchAreaBuffer = new ArrayList<>();
 
         for (ArrayList<MotionPoint> area : subGrids) {
+            //TODO: Only use a primary search area if the area is not the water!
             if (area.contains(getMotionPointByCoordinates(startPoint))) {
                 primarySearchArea = area;
             }

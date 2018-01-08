@@ -330,11 +330,11 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickNewSim() {
-        Simulation freshSim = new Simulation(500, 40,
-                1500, Digestion.Carnivore, 100, 1500, 4, 600, 500, 900, 400, 300, 10,
-                1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 400, 300, 10,
-                2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 300, 200, 10,
-                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 30, getTestingGrid(), this, selectedSim);
+        Simulation freshSim = new Simulation(500, 15,
+                1500, Digestion.Carnivore, 100, 1500, 4, 600, 500, 900, 3000, 300, 2,
+                1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 3000, 300, 2,
+                2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 3000, 200, 2,
+                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 3000, 300, 2, getTestingGrid(), this, selectedSim);
         simulations[selectedSim - 1] = freshSim;
         Thread simThread = new Thread(String.valueOf(selectedSim)) {
             public void run() {
