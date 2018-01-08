@@ -210,7 +210,7 @@ public class MovementPlanner {
      * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
      * the startpoint was the endpoint
      */
-    public ArrayList<Point> findPath(Point startPoint, Point targetPoint) throws Exception {
+    public ArrayList<Point> findPath(Point startPoint, Point targetPoint, Boolean useIslandOnlyNavigation) throws Exception {
         //reset the grid, clearing all previous points
         resetPlannableGrid();
 
@@ -239,20 +239,23 @@ public class MovementPlanner {
             }
         }*/
 
-        if (subGrids.get(0).contains(getMotionPointByCoordinates(startPoint))){
-            primarySearchArea = planableGrid;
-        }
-        else{
-            for (ArrayList<MotionPoint> area : subGrids) {
-                //TODO: Only use a primary search area if the area is not the water!
-                if (area.contains(getMotionPointByCoordinates(startPoint))) {
-                    primarySearchArea = area;
+        if (useIslandOnlyNavigation){
+            if (subGrids.get(0).contains(getMotionPointByCoordinates(startPoint))){
+                primarySearchArea = planableGrid;
+            }
+            else{
+                for (ArrayList<MotionPoint> area : subGrids) {
+                    //TODO: Only use a primary search area if the area is not the water!
+                    if (area.contains(getMotionPointByCoordinates(startPoint))) {
+                        primarySearchArea = area;
+                    }
                 }
             }
         }
-
-
-
+        else{
+            //creature wants to be able to swim. Make it do so.
+            primarySearchArea = planableGrid;
+        }
 
         //fetch the first set of adjacent points to the startpoint
         closedPoints.add(startPoint);

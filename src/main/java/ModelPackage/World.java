@@ -220,7 +220,7 @@ public class World implements Serializable, IWorld {
                 }
             }
             if (target != null){
-                return mPlanner.findPath(currentLocation, target.getPoint());
+                return mPlanner.findPath(currentLocation, target.getPoint(), !wantsToSwim);
             }
         }
         catch (Exception e)
