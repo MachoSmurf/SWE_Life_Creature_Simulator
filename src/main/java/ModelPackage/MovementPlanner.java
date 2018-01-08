@@ -18,7 +18,7 @@ import java.util.List;
 public class MovementPlanner {
 
     private IGrid simulationGrid;
-    private List<MotionPoint> planableGrid;
+    private ArrayList<MotionPoint> planableGrid;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -232,12 +232,27 @@ public class MovementPlanner {
         //Buffer for points not in the primarySearchArea
         ArrayList<Point> secondaySearchAreaBuffer = new ArrayList<>();
 
-        for (ArrayList<MotionPoint> area : subGrids) {
+        /*for (ArrayList<MotionPoint> area : subGrids) {
             //TODO: Only use a primary search area if the area is not the water!
             if (area.contains(getMotionPointByCoordinates(startPoint))) {
                 primarySearchArea = area;
             }
+        }*/
+
+        if (subGrids.get(0).contains(getMotionPointByCoordinates(startPoint))){
+            primarySearchArea = planableGrid;
         }
+        else{
+            for (ArrayList<MotionPoint> area : subGrids) {
+                //TODO: Only use a primary search area if the area is not the water!
+                if (area.contains(getMotionPointByCoordinates(startPoint))) {
+                    primarySearchArea = area;
+                }
+            }
+        }
+
+
+
 
         //fetch the first set of adjacent points to the startpoint
         closedPoints.add(startPoint);
