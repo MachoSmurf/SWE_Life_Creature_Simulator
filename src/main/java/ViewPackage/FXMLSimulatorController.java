@@ -390,9 +390,12 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickPlaySim() {
+        simulations[selectedSim-1].setSimulationSpeed(sldSimSpeed.getValue());
+        simulations[selectedSim-1].startSimulation();
     }
 
     public void onClickPauseSim() {
+        simulations[selectedSim-1].setSimulationSpeed(0);
     }
 
     public void onClickOpenSim() {

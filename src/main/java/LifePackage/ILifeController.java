@@ -9,7 +9,7 @@ public interface ILifeController {
      * Sets the speed of the simulation in steps per second
      * @param stepsPerSecond steps to be simulated per second
      */
-    void setSimulationSpeed(int stepsPerSecond);
+    void setSimulationSpeed(double stepsPerSecond);
 
     /**
      * Starts the simulation

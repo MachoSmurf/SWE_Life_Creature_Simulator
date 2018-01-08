@@ -1,4 +1,5 @@
 package LifePackage;
+
 import DataMediatorPackage.FileMediator;
 import ModelPackage.*;
 import ViewPackage.FXMLSimulatorController;
@@ -14,7 +15,7 @@ import java.util.TimerTask;
 public class Simulation implements ILifeController {
 
     private boolean simulationIsRunningStep;
-    private int simulationSpeed;
+    private double simulationSpeed;
     private World world;
     private FileMediator fileMediator = new FileMediator();
     private FXMLSimulatorController viewController;
@@ -27,8 +28,7 @@ public class Simulation implements ILifeController {
                       int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
                       int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
                       int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
-                      Grid simulationGrid, FXMLSimulatorController simController, int simNumber)
-    {
+                      Grid simulationGrid, FXMLSimulatorController simController, int simNumber) {
         /*world = new World(energyPlant, howManyPlants, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore,
         energyHerbivore, digestionHerbivore, digestionBalanceHerbivore, staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore, swimThresholdHerbivore, motionThresholdHerbivore, howManyHerbivore,
         energyNonivore, digestionNonivore, digestionBalanceNonivore, staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore, swimThresholdNonivore, motionThresholdNonivore, howManyNonivore,
@@ -44,82 +44,79 @@ public class Simulation implements ILifeController {
     }
 
     @Override
-    public void setSimulationSpeed(int stepsPerSecond)
-    {
-        this.simulationSpeed = stepsPerSecond;
+    public void setSimulationSpeed(double stepsPerSecond) {
+        if (stepsPerSecond == 0) {
+            this.simulationSpeed = 0;
+        } else {
+            this.simulationSpeed = (1 / stepsPerSecond) * 2500;
+        }
     }
 
     @Override
-    public void startSimulation()
-    {
+    public void startSimulation() {
         //start the timer
-        stepTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                step();
-            }
-        }, 2500);
+        if (simulationSpeed != 0) {
+            stepTimer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    step();
+                }
+            }, Math.round(simulationSpeed));
+        }
     }
 
     @Override
-    public void stopSimulation()
-    {
+    public void stopSimulation() {
         //stop the timer
         stopSimulation = true;
     }
 
 
     @Override
-    public void saveSimulation(String simName, World runningSimulation)
-    {
+    public void saveSimulation(String simName, World runningSimulation) {
         fileMediator.saveSimulation(runningSimulation, simName);
-
     }
 
     @Override
-    public void loadSimulation(String simName)
-    {
+    public void loadSimulation(String simName) {
         world = fileMediator.loadSimulation(simName);
     }
 
     @Override
-    public void saveStepResult(String resultName, StepResult finishedResult)
-    {
+    public void saveStepResult(String resultName, StepResult finishedResult) {
         fileMediator.saveSimulationResult(finishedResult, resultName);
     }
 
     @Override
-    public StepResult loadStepResult(String resultName)
-    {
+    public StepResult loadStepResult(String resultName) {
         return fileMediator.loadSimulationResult(resultName);
     }
 
-    private void step(){
-        stepCounter++;
+    private void step() {
+        //check if the simulation was paused while waiting for the next step
+        if (simulationSpeed != 0) {
+            stepCounter++;
         /*if (!simulationIsRunningStep){
             simulationIsRunningStep = true;
             StepResult stepResult = world.doStep();
             //push stepResult back to UIController
-            //TODO: Doe hier iets met observable zodat het threadsafe wordt
             viewController.updateSimulationResults(stepResult);
             simulationIsRunningStep = false;
-            if (!stopSimulation){
+        }*/
+            System.out.println("Did a step!");
+            viewController.updateSimulationResults(new StepResult(getTestingGrid(), 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, stepCounter), simNumber);
+
+            if (!stopSimulation) {
                 //start the timer for the next step
                 //TODO: Zorg dat dit telt vanaf het startpunt van de vorige, nu wordt de looptijd van één stap opgeteld bij de wachttijd. Dit is een quick-and-dirty implementatie
                 startSimulation();
             }
-        }*/
-        System.out.println("Did a step!");
-        viewController.updateSimulationResults(new StepResult(getTestingGrid(), 10,10,10,10,10,10,10,10,10,10,stepCounter), simNumber);
-
-        if (!stopSimulation){
-            //start the timer for the next step
-            //TODO: Zorg dat dit telt vanaf het startpunt van de vorige, nu wordt de looptijd van één stap opgeteld bij de wachttijd. Dit is een quick-and-dirty implementatie
-            startSimulation();
         }
     }
 
     private Grid getTestingGrid() {
+
+        ///DEBUG ONLY ZOLANG WORLD NIET WERKT
         int testGridWidth = 20;
         int testGridHeight = 20;
 
