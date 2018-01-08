@@ -1,17 +1,22 @@
 package ModelPackage;
 
-import javafx.scene.paint.Color;
+
+
+import java.awt.*;
 
 public class StatusObject {
 
     private int energy;
     private Color color;
     private boolean alive;
+    private Point location;
 
-    public StatusObject(int energy, Color color, boolean alive) {
+    public StatusObject(Point location, int energy, Color color, boolean alive) {
+
         this.energy = energy;
         this.color = color;
         this.alive = alive;
+        this.location = location;
 
     }
 
@@ -25,5 +30,9 @@ public class StatusObject {
 
     public Color getColor () {
         return color;
+    }
+
+    public Point getLocation() {
+        return location;
     }
 }

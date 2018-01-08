@@ -1,6 +1,6 @@
 package ModelPackage;
 
-import javafx.scene.paint.Color;
+
 
 import java.awt.*;
 
@@ -14,7 +14,7 @@ public class Plant extends SimObject {
 
     public Plant(Point point, int energy) {
         super(point, energy);
-        status = new StatusObject(energy, Color.GREEN, true);
+        status = new StatusObject(point, energy, Color.GREEN, true);
         deathCounter = 0;
         stepsFromTenthTimeKilled = 0;
     }
@@ -36,7 +36,7 @@ public class Plant extends SimObject {
             energy++;
         }
 
-        StatusObject status = new StatusObject(energy, Color.GREEN, alive);
+        StatusObject status = new StatusObject(point, energy, Color.GREEN, alive);
         return status;
     }
 
