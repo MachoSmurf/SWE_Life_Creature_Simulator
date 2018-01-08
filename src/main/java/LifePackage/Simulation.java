@@ -47,9 +47,13 @@ public class Simulation implements ILifeController {
     public void setSimulationSpeed(double stepsPerSecond) {
         if (stepsPerSecond == 0) {
             this.simulationSpeed = 0;
-        } else {
-            this.simulationSpeed = (1 / stepsPerSecond) * 2500;
+        } else if (stepsPerSecond == 100) {
+            this.simulationSpeed = 1;
         }
+        else{
+            this.simulationSpeed = (1 / stepsPerSecond) * 1000;
+        }
+
     }
 
     @Override
