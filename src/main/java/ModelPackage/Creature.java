@@ -92,9 +92,9 @@ public class Creature extends SimObject {
                 //move to next step
                 if (nextSteps.size() > 0){
                     try{
-                        point = nextSteps.get(0);
+                        point = nextSteps.get(nextSteps.size()-1);
                         if (nextSteps.size() > 1){
-                            nextSteps = nextSteps.subList(1, nextSteps.size() - 1);
+                            nextSteps = nextSteps.subList(0, nextSteps.size() - 1);
                         }
                         else{
                             nextSteps = null;
