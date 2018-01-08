@@ -12,6 +12,7 @@ import javafx.scene.control.Slider;
 
 import java.awt.*;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
@@ -20,7 +21,6 @@ import java.util.ResourceBundle;
  * @author Natascha Zorg-Wijnhoven
  */
 public class FXMLSimulatorController extends UIController implements Initializable, ILifeResult {
-
 
     public Canvas canvSimulation1;
     public Canvas canvSimulation2;
@@ -73,21 +73,34 @@ public class FXMLSimulatorController extends UIController implements Initializab
     //fields for scorekeeping
     private int selectedSim;
 
+    private int[] simLastShownStep;
+    private int[] simZoom;
+    private int[] simSpeed;
+    private StepResult[] stepResults;
+
+    @Deprecated
     private int sim1Zoom;
+    @Deprecated
     private int sim1Speed;
-    private int sim1LastShownStep;
+    @Deprecated
     private StepResult sim1LastStep;
+    @Deprecated
     private int sim2Zoom;
+    @Deprecated
     private int sim2Speed;
-    private int sim2LastShownStep;
+    @Deprecated
     private StepResult sim2LastStep;
+    @Deprecated
     private int sim3Zoom;
+    @Deprecated
     private int sim3Speed;
-    private int sim3LastShownStep;
+    @Deprecated
     private StepResult sim3LastStep;
+    @Deprecated
     private int sim4Zoom;
+    @Deprecated
     private int sim4Speed;
-    private int sim4LastShownStep;
+    @Deprecated
     private StepResult sim4LastStep;
 
     private AnimationTimer timer;
@@ -98,20 +111,16 @@ public class FXMLSimulatorController extends UIController implements Initializab
     public FXMLSimulatorController() {
         super();
         selectedSim = 1;
-        sim1Zoom = 7;
-        sim1Speed = 1;
-        sim2Zoom = 7;
-        sim2Speed = 1;
-        sim3Zoom = 7;
-        sim3Speed = 1;
-        sim4Zoom = 7;
-        sim4Speed = 1;
         simulationThreads = new Thread[4];
         simulations = new Simulation[4];
-        sim1LastShownStep = 0;
-        sim2LastShownStep = 0;
-        sim3LastShownStep = 0;
-        sim4LastShownStep = 0;
+
+        simLastShownStep = new int[4];
+        Arrays.fill(simLastShownStep, 0);
+        simZoom = new int[4];
+        Arrays.fill(simZoom, 7);
+        simSpeed = new int[4];
+        Arrays.fill(simSpeed, 1);
+        stepResults = new StepResult[4];
     }
 
     @Override
@@ -122,20 +131,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
     @Override
     public void updateSimulationResults(StepResult simStatus, int simNumber) {
         triggerAnimationTimer();
-        switch (simNumber) {
-            case 1:
-                sim1LastStep = simStatus;
-                break;
-            case 2:
-                sim2LastStep = simStatus;
-                break;
-            case 3:
-                sim3LastStep = simStatus;
-                break;
-            case 4:
-                sim4LastStep = simStatus;
-                break;
-        }
+        stepResults[simNumber - 1] = simStatus;
     }
 
     private void drawGrid(IGrid g, Canvas canvas, int zoom) {
@@ -171,18 +167,25 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
                 @Override
                 public void handle(long now) {
-                    //TODO: make drawing GRID on FX Thread
-                    if (sim1LastStep != null) {
-                        drawGrid(sim1LastStep.getCurrentGrid(), canvSimulation1, sim1Zoom);
-                    }
-                    if (sim2LastStep != null) {
-                        drawGrid(sim2LastStep.getCurrentGrid(), canvSimulation2, sim2Zoom);
-                    }
-                    if (sim3LastStep != null) {
-                        drawGrid(sim3LastStep.getCurrentGrid(), canvSimulation3, sim3Zoom);
-                    }
-                    if (sim4LastStep != null) {
-                        drawGrid(sim4LastStep.getCurrentGrid(), canvSimulation4, sim4Zoom);
+                    for (int i = 0; i < 4; i++) {
+                        if (stepResults[i] != null) {
+                            switch (i) {
+                                case 0:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation1, simZoom[i]);
+                                    break;
+                                case 1:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation2, simZoom[i]);
+                                    break;
+                                case 2:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation3, simZoom[i]);
+                                    break;
+                                case 3:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation4, simZoom[i]);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
                     }
                     updateSimDetails();
                 }
@@ -198,14 +201,22 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     private void updateSimDetails() {
         lblSelectedSim.setText("Simulation " + selectedSim);
+        if (stepResults[selectedSim - 1] != null) {
+            toggleVisible(true);
+            lblTitleExtinction.setText("Mass Extincion countdown");
+            if (stepResults[selectedSim - 1].getStepCount() > simLastShownStep[selectedSim - 1]) {
+                simLastShownStep[selectedSim - 1] = stepResults[selectedSim - 1].getStepCount();
+                setDetailValues(simZoom[selectedSim - 1], simSpeed[selectedSim - 1], stepResults[selectedSim - 1], simLastShownStep[selectedSim - 1]);
+            }
+        }/*
         switch (selectedSim) {
             case 1:
                 if (sim1LastStep != null) {
                     toggleVisible(true);
                     lblTitleExtinction.setText("Mass Extincion countdown");
                     if (sim1LastStep.getStepCount() > sim1LastShownStep) {
-                        sim1LastShownStep = sim1LastStep.getStepCount();
-                        setDetailValues(sim1Zoom, sim1Speed, sim1LastStep, sim1LastShownStep);
+                        simLastShownStep[selectedSim - 1] = sim1LastStep.getStepCount();
+                        setDetailValues(sim1Zoom, sim1Speed, sim1LastStep, simLastShownStep[selectedSim - 1]);
                     }
                 }
                 break;
@@ -214,8 +225,8 @@ public class FXMLSimulatorController extends UIController implements Initializab
                     toggleVisible(true);
                     lblTitleExtinction.setText("Mass Extincion countdown");
                     if (sim2LastStep.getStepCount() > sim2LastShownStep) {
-                        sim2LastShownStep = sim2LastStep.getStepCount();
-                        setDetailValues(sim2Zoom, sim2Speed, sim2LastStep, sim2LastShownStep);
+                        simLastShownStep[selectedSim - 1] = sim2LastStep.getStepCount();
+                        setDetailValues(sim2Zoom, sim2Speed, sim2LastStep, simLastShownStep[selectedSim - 1]);
                     }
                 }
                 break;
@@ -224,8 +235,8 @@ public class FXMLSimulatorController extends UIController implements Initializab
                     toggleVisible(true);
                     lblTitleExtinction.setText("Mass Extincion countdown");
                     if (sim3LastStep.getStepCount() > sim3LastShownStep) {
-                        sim3LastShownStep = sim3LastStep.getStepCount();
-                        setDetailValues(sim3Zoom, sim3Speed, sim3LastStep, sim3LastShownStep);
+                        simLastShownStep[selectedSim - 1] = sim3LastStep.getStepCount();
+                        setDetailValues(sim3Zoom, sim3Speed, sim3LastStep, simLastShownStep[selectedSim - 1]);
                     }
                 }
                 break;
@@ -234,12 +245,12 @@ public class FXMLSimulatorController extends UIController implements Initializab
                     toggleVisible(true);
                     lblTitleExtinction.setText("Mass Extincion countdown");
                     if (sim4LastStep.getStepCount() > sim4LastShownStep) {
-                        sim4LastShownStep = sim4LastStep.getStepCount();
-                        setDetailValues(sim4Zoom, sim4Speed, sim4LastStep, sim4LastShownStep);
+                        simLastShownStep[selectedSim - 1] = sim4LastStep.getStepCount();
+                        setDetailValues(sim4Zoom, sim4Speed, sim4LastStep, simLastShownStep[selectedSim - 1]);
                     }
                 }
                 break;
-        }
+        }*/
     }
 
     private void setDetailValues(int zoom, int speed, StepResult stepResult, int simSteps) {
@@ -249,7 +260,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
         sldZoom1.setValue(zoom);
         lblZoomValue1.setText(Integer.toString(zoom));
 
-        int totalCreatureCount = stepResult.getCarnivoreCount()+ stepResult.getHerbivoreCount() + stepResult.getNonivoreCount() + stepResult.getOmnivoreCount();
+        int totalCreatureCount = stepResult.getCarnivoreCount() + stepResult.getHerbivoreCount() + stepResult.getNonivoreCount() + stepResult.getOmnivoreCount();
         int totalCreatureEnergy = stepResult.getEnergyCarnivore() + stepResult.getEnergyHerbivore() + stepResult.getEnergyNonivore() + stepResult.getEnergyOmnivore();
 
         lblCreaturesTotal.setText(totalCreatureCount + " Creatures Total/" + totalCreatureEnergy + " Energy");
@@ -281,27 +292,8 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     private void changeSelectedSimulation(int simNumber) {
         selectedSim = simNumber;
-        switch (selectedSim){
-            case 1:
-                if (sim1LastStep == null){
-                    toggleVisible(false);
-                }
-                break;
-            case 2:
-                if (sim2LastStep == null){
-                    toggleVisible(false);
-                }
-                break;
-            case 3:
-                if (sim3LastStep == null){
-                    toggleVisible(false);
-                }
-                break;
-            case 4:
-                if (sim4LastStep == null){
-                    toggleVisible(false);
-                }
-                break;
+        if (stepResults[selectedSim - 1] != null) {
+            toggleVisible(true);
         }
         updateSimDetails();
     }
@@ -392,12 +384,12 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickPlaySim() {
-        simulations[selectedSim-1].setSimulationSpeed(sldSimSpeed.getValue());
-        simulations[selectedSim-1].startSimulation();
+        simulations[selectedSim - 1].setSimulationSpeed(sldSimSpeed.getValue());
+        simulations[selectedSim - 1].startSimulation();
     }
 
     public void onClickPauseSim() {
-        simulations[selectedSim-1].setSimulationSpeed(0);
+        simulations[selectedSim - 1].setSimulationSpeed(0);
     }
 
     public void onClickOpenSim() {
@@ -415,7 +407,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
         simulations[selectedSim - 1] = freshSim;
         Thread simThread = new Thread(String.valueOf(selectedSim)) {
             public void run() {
-                freshSim.setSimulationSpeed(sim1Speed);
+                freshSim.setSimulationSpeed(sldSimSpeed.getValue());
                 freshSim.startSimulation();
             }
         };
@@ -426,20 +418,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onZoomSlider1Finished() {
-        switch (selectedSim) {
-            case 1:
-                sim1Zoom = (int) sldZoom1.getValue();
-                break;
-            case 2:
-                sim2Zoom = (int) sldZoom1.getValue();
-                break;
-            case 3:
-                sim3Zoom = (int) sldZoom1.getValue();
-                break;
-            case 4:
-                sim4Zoom = (int) sldZoom1.getValue();
-                break;
-        }
+        simZoom[selectedSim - 1] = (int) sldZoom1.getValue();
         lblZoomValue1.setText(Integer.toString(zoom));
     }
 
