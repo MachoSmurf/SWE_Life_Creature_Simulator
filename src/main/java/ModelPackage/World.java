@@ -306,7 +306,7 @@ public class World implements Serializable, IWorld {
                             } catch (Exception e) {
                                 System.out.println(e.getMessage());
                                 System.out.println("Path was zero steps");
-                                Point newTarget = new Point(0,0);
+                                /*Point newTarget = new Point(0,0);
                                 newTarget.x = target.x + 1;
                                 newTarget.y = target.y + 1;
 
@@ -315,7 +315,7 @@ public class World implements Serializable, IWorld {
                                     path = movement.findPath(startPoint, newTarget);
                                 } catch (Exception ex) {
                                     System.out.println("Second time error too");
-                                }
+                                }*/
                             }
                             creatureList.add(new Creature(startPoint, energy, digestion, digestionBalance, stamina, legs, reproductionThreshold, reproductionCost, strength, swimThreshold, motionThreshold, path, movement, this));
                             i++;

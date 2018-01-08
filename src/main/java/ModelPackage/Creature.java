@@ -51,22 +51,19 @@ public class Creature extends SimObject {
         this.world = world;
         if (energy < strength) {
             weight = legs * 10;
-        }
-        else {
+        } else {
             weight = legs * 10 + (energy - strength);
         }
         int legSpeed;
         if (legs - 5 > 0) {
-            legSpeed = legs - 5 ;
-        }
-        else if (legs - 5 < 0){
+            legSpeed = legs - 5;
+        } else if (legs - 5 < 0) {
             legSpeed = 5 - legs;
-        }
-        else {
+        } else {
             legSpeed = 1;
         }
         int minWeight = legs * 10;
-        speed = ((weight - minWeight) / legSpeed) /10;
+        speed = ((weight - minWeight) / legSpeed) / 10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
         status = new StatusObject(energy, getColor(), alive);
@@ -83,14 +80,18 @@ public class Creature extends SimObject {
 
     public StatusObject step() {
         Color gridColor = Color.ORANGE;
-        switch (digestion){
-            case Carnivore: gridColor = Color.RED;
+        switch (digestion) {
+            case Carnivore:
+                gridColor = Color.RED;
                 break;
-            case Herbivore: gridColor = Color.BROWN;
+            case Herbivore:
+                gridColor = Color.BROWN;
                 break;
-            case Omnivore: gridColor = Color.YELLOW;
+            case Omnivore:
+                gridColor = Color.YELLOW;
                 break;
-            case Nonivore: gridColor = Color.PURPLE;
+            case Nonivore:
+                gridColor = Color.PURPLE;
                 break;
         }
         StatusObject status = new StatusObject(energy, gridColor, alive);
@@ -98,8 +99,7 @@ public class Creature extends SimObject {
 
         if (energy < strength) {
             weight = legs * 10;
-        }
-        else {
+        } else {
             weight = legs * 10 + (energy - strength);
         }
 
@@ -115,44 +115,47 @@ public class Creature extends SimObject {
         int legSpeed;
         if (legs - 5 >= 0) {
             legSpeed = legs - 5;
-        }
-        else {
+        } else {
             legSpeed = 5 - legs;
         }
         int minWeight = legs * 10;
-        speed = ((weight - minWeight) / legSpeed) /100;
+        speed = ((weight - minWeight) / legSpeed) / 100;
 
         //hunger
         hunger = stamina - energy;
 
-        if (energy <= 0 ) {
+        if (energy <= 0) {
             alive = false;
         }
-            Point nextGridPoint = null;
+        Point nextGridPoint = null;
         int whichStep = speed + stepsTaken;
-        System.out.println("WhichStep: " + whichStep + " and nextStep: " + nextSteps.size());
-        if (whichStep > nextSteps.size()) {
-            //nextGridPoint = nextSteps.get(nextSteps.size());
-            Point newTargetPoint = newTarget();
-            try {
-                nextSteps = movement.findPath(point, newTargetPoint);
-                nextGridPoint = nextSteps.get(0);
-            } catch (Exception e) {
-                System.out.println("No new targets available!");
-                nextGridPoint = new Point(12,4);
-            }
+        if (nextSteps != null) {
+            //System.out.println("WhichStep: " + whichStep + " and nextStep: " + nextSteps.size());
+            if (whichStep > nextSteps.size()) {
+                //nextGridPoint = nextSteps.get(nextSteps.size());
+                Point newTargetPoint = newTarget();
+                try {
+                    nextSteps = movement.findPath(point, newTargetPoint);
+                    nextGridPoint = nextSteps.get(0);
+                } catch (Exception e) {
+                    System.out.println("No new targets available!");
+                    nextGridPoint = new Point(12, 4);
+                }
 
-        }
-        else {
-            nextGridPoint = nextSteps.get(whichStep);
-        }
+            } else {
+                if (whichStep >= nextSteps.size()) {
+                    nextGridPoint = nextSteps.get(nextSteps.size() - 1);
+                } else {
+                    nextGridPoint = nextSteps.get(whichStep);
+                }
+            }
             point.x = nextGridPoint.x;
             point.y = nextGridPoint.y;
-
+        }
         return status;
     }
 
-    public Creature mate (Creature otherParent) {
+    public Creature mate(Creature otherParent) {
 
         //energy
         int energyChild;
@@ -160,52 +163,51 @@ public class Creature extends SimObject {
 
         //Strength
         int diffStrength = Math.abs(strength - otherParent.strength) / 10;
-        int minStrength = (strength + otherParent.strength) /2 - diffStrength;
-        int maxStrength = (strength + otherParent.strength) /2 + diffStrength;
-        int strengthChild = ThreadLocalRandom.current().nextInt(minStrength, maxStrength +1);
+        int minStrength = (strength + otherParent.strength) / 2 - diffStrength;
+        int maxStrength = (strength + otherParent.strength) / 2 + diffStrength;
+        int strengthChild = ThreadLocalRandom.current().nextInt(minStrength, maxStrength + 1);
 
 
         //digestion balance
         int diffDigestionBalance = Math.abs(digestionBalance - otherParent.digestionBalance) / 10;
-        int minDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 - diffDigestionBalance;
-        int maxDigestionBalance = (digestionBalance + otherParent.digestionBalance) /2 + diffDigestionBalance;
+        int minDigestionBalance = (digestionBalance + otherParent.digestionBalance) / 2 - diffDigestionBalance;
+        int maxDigestionBalance = (digestionBalance + otherParent.digestionBalance) / 2 + diffDigestionBalance;
         int digestionBalanceChild = ThreadLocalRandom.current().nextInt(minDigestionBalance, maxDigestionBalance + 1);
 
         //Stamina
         int diffStamina = Math.abs(stamina - otherParent.stamina) / 10;
-        int minStamina = (stamina + otherParent.stamina) /2 - diffStamina;
-        int maxStamina = (stamina + otherParent.stamina) /2 + diffStamina;
+        int minStamina = (stamina + otherParent.stamina) / 2 - diffStamina;
+        int maxStamina = (stamina + otherParent.stamina) / 2 + diffStamina;
         int staminaChild = ThreadLocalRandom.current().nextInt(minStamina, maxStamina + 1);
 
-        int diffReproductionThreshold = Math.abs(reproductionThreshold - otherParent.reproductionThreshold) /10;
+        int diffReproductionThreshold = Math.abs(reproductionThreshold - otherParent.reproductionThreshold) / 10;
         int minReproductionThreshold = reproductionThreshold + otherParent.reproductionThreshold - diffReproductionThreshold;
         int maxReproductionThreshold = reproductionThreshold + otherParent.reproductionThreshold + diffReproductionThreshold;
-        int reproductionThresholdChild = ThreadLocalRandom.current().nextInt(minReproductionThreshold, maxReproductionThreshold +1);
+        int reproductionThresholdChild = ThreadLocalRandom.current().nextInt(minReproductionThreshold, maxReproductionThreshold + 1);
 
         int diffReproductionCost = Math.abs(reproductionCost - otherParent.reproductionCost) / 10;
-        int minReproductionCost = (reproductionCost + otherParent.reproductionCost) /2 - diffReproductionCost;
-        int maxReproductionCost = (reproductionCost + otherParent.reproductionCost) /2 + diffReproductionCost;
+        int minReproductionCost = (reproductionCost + otherParent.reproductionCost) / 2 - diffReproductionCost;
+        int maxReproductionCost = (reproductionCost + otherParent.reproductionCost) / 2 + diffReproductionCost;
         int reproductionCostChild = ThreadLocalRandom.current().nextInt(minReproductionCost, maxReproductionCost + 1);
 
         int diffSwimThreshold = Math.abs(swimThreshold - otherParent.swimThreshold) / 10;
-        int minSwimThreshold = (swimThreshold + otherParent.swimThreshold) /2 - diffSwimThreshold;
-        int maxSwimThreshold = (swimThreshold + otherParent.swimThreshold) /2 + diffSwimThreshold;
+        int minSwimThreshold = (swimThreshold + otherParent.swimThreshold) / 2 - diffSwimThreshold;
+        int maxSwimThreshold = (swimThreshold + otherParent.swimThreshold) / 2 + diffSwimThreshold;
         int swimThresholdChild = ThreadLocalRandom.current().nextInt(minSwimThreshold, maxSwimThreshold + 1);
 
         int diffMotionThreshold = Math.abs(motionThreshold - otherParent.motionThreshold) / 10;
-        int minMotionThreshold = (motionThreshold + otherParent.motionThreshold) /2 - diffMotionThreshold;
-        int maxMotionThreshold = (motionThreshold + otherParent.motionThreshold) /2 + diffMotionThreshold;
+        int minMotionThreshold = (motionThreshold + otherParent.motionThreshold) / 2 - diffMotionThreshold;
+        int maxMotionThreshold = (motionThreshold + otherParent.motionThreshold) / 2 + diffMotionThreshold;
         int motionThresholdChild = ThreadLocalRandom.current().nextInt(minMotionThreshold, maxMotionThreshold + 1);
-
 
 
         return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, movement, world);
     }
 
-    private int getReproductionCost () {
+    private int getReproductionCost() {
         int costReproduction = stamina / 100 * reproductionCost;
         energy = energy - costReproduction;
-        return  costReproduction;
+        return costReproduction;
     }
 
     public int getReproductionThreshold() {
@@ -220,7 +222,7 @@ public class Creature extends SimObject {
         return hunger = stamina - energy;
     }
 
-    public StatusObject eaten (int energyEaten) {
+    public StatusObject eaten(int energyEaten) {
         energy = energy - energyEaten;
         if (energy == 0) {
             alive = false;
@@ -229,7 +231,7 @@ public class Creature extends SimObject {
         return status;
     }
 
-    public StatusObject eat (int energyAdded) {
+    public StatusObject eat(int energyAdded) {
         energy = energy + energyAdded;
 
         status = new StatusObject(energy, getColor(), alive);
@@ -238,14 +240,18 @@ public class Creature extends SimObject {
 
     private Color getColor() {
         Color point = Color.ORANGE;
-        switch (digestion){
-            case Carnivore: point = Color.RED;
+        switch (digestion) {
+            case Carnivore:
+                point = Color.RED;
                 break;
-            case Herbivore: point = Color.BROWN;
+            case Herbivore:
+                point = Color.BROWN;
                 break;
-            case Omnivore: point = Color.YELLOW;
+            case Omnivore:
+                point = Color.YELLOW;
                 break;
-            case Nonivore: point = Color.PURPLE;
+            case Nonivore:
+                point = Color.PURPLE;
                 break;
         }
         return point;
@@ -268,19 +274,17 @@ public class Creature extends SimObject {
                         workingArea = livingArea;
                     }
                 }
-            }
-            else {
+            } else {
                 skipFirstList = false;
             }
         }
 
 
-        for (int i=1; i<100; i++) {
+        for (int i = 1; i < 100; i++) {
             Point victimPoint;
-            if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)){
+            if (digestion == Digestion.Carnivore || (digestion == Digestion.Omnivore && digestionBalance >= 50)) {
                 victimPoint = world.getNewTargetCreature();
-            }
-            else {
+            } else {
                 victimPoint = world.getNewTargetPlant();
             }
             for (Point livingPoint : workingArea) {
@@ -294,7 +298,7 @@ public class Creature extends SimObject {
             for (List<Point> livingArea : livingAreas) {
                 for (Point livingPoint : livingArea) {
                     Point victimPoint = world.getNewTargetCreature();
-                    if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y){
+                    if (victimPoint.x == livingPoint.x && victimPoint.y == livingPoint.y) {
                         return victimPoint;
                     }
                 }
