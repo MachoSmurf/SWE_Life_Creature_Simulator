@@ -29,11 +29,11 @@ public class Simulation implements ILifeController {
                       int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
                       int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
                       Grid simulationGrid, FXMLSimulatorController simController, int simNumber) {
-        /*world = new World(energyPlant, howManyPlants, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore,
+        world = new World(energyPlant, howManyPlants, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore,
         energyHerbivore, digestionHerbivore, digestionBalanceHerbivore, staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore, swimThresholdHerbivore, motionThresholdHerbivore, howManyHerbivore,
         energyNonivore, digestionNonivore, digestionBalanceNonivore, staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore, swimThresholdNonivore, motionThresholdNonivore, howManyNonivore,
         energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore,
-        simulationGrid);*/
+        simulationGrid);
         viewController = simController;
 
         simulationIsRunningStep = false;
@@ -100,15 +100,15 @@ public class Simulation implements ILifeController {
         //check if the simulation was paused while waiting for the next step
         if (simulationSpeed != 0) {
             stepCounter++;
-        /*if (!simulationIsRunningStep){
+        if (!simulationIsRunningStep){
             simulationIsRunningStep = true;
             StepResult stepResult = world.doStep();
             //push stepResult back to UIController
-            viewController.updateSimulationResults(stepResult);
+            viewController.updateSimulationResults(stepResult, simNumber);
             simulationIsRunningStep = false;
-        }*/
+        }
             System.out.println("Did a step!");
-            viewController.updateSimulationResults(new StepResult(getTestingGrid(), 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, stepCounter), simNumber);
+            //viewController.updateSimulationResults(new StepResult(getTestingGrid(), 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, stepCounter), simNumber);
 
             if (!stopSimulation) {
                 //start the timer for the next step
