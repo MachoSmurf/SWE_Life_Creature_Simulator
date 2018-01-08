@@ -33,6 +33,7 @@ public class CreatureTest {
                 600,
                 400,
                 null,
+                null,
                 null);
         beast2 = new Creature(
                 new Point(20,20),
@@ -46,6 +47,7 @@ public class CreatureTest {
                 1200,
                 600,
                 400,
+                null,
                 null,
                 null);
 

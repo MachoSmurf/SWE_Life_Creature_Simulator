@@ -80,10 +80,10 @@ public class WorldTest {
         grid.setPointType(new Point(13,13), GridPointType.Ground);
 
         World world = new World(500,40,
-                1500,Digestion.Carnivore,100,1500,4, 600, 500,900,400,300, 10,
-                1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 400, 300, 10,
-                2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 300, 200, 10,
-                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 30,
+                1500,Digestion.Carnivore,100,1500,4, 600, 500,900,400,300, 5,
+                1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 400, 300, 5,
+                2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 500, 300, 200, 5,
+                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 600, 300, 5,
                 grid);
         world.doStep();
     }
