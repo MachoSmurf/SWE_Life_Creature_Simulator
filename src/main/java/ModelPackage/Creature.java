@@ -1,7 +1,7 @@
 package ModelPackage;
 
 
-import javafx.scene.paint.Color;
+
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class Creature extends SimObject {
         speed = ((weight - minWeight) / legSpeed) / 10;
         this.hunger = hunger;
         this.nextSteps = nextSteps;
-        status = new StatusObject(energy, getColor(), alive);
+        status = new StatusObject(point, energy, getColor(), alive);
 
 
         livingAreas = new ArrayList<>();
@@ -85,16 +85,17 @@ public class Creature extends SimObject {
                 gridColor = Color.RED;
                 break;
             case Herbivore:
-                gridColor = Color.BROWN;
+                Color brown = new Color(139,69,19);
+                gridColor = brown;
                 break;
             case Omnivore:
-                gridColor = Color.YELLOW;
+               gridColor = Color.YELLOW;
                 break;
             case Nonivore:
-                gridColor = Color.PURPLE;
+                gridColor = new Color(255,0,255);
                 break;
         }
-        StatusObject status = new StatusObject(energy, gridColor, alive);
+        StatusObject status = new StatusObject(point, energy, gridColor, alive);
         if (!alive) return (status);
 
         if (energy < strength) {
@@ -152,6 +153,7 @@ public class Creature extends SimObject {
             point.x = nextGridPoint.x;
             point.y = nextGridPoint.y;
         }
+        status = new StatusObject(point, energy, gridColor, alive);
         return status;
     }
 
@@ -160,6 +162,7 @@ public class Creature extends SimObject {
         //energy
         int energyChild;
         energyChild = getReproductionCost() + otherParent.getReproductionCost();
+        energy = energy - getReproductionCost();
 
         //Strength
         int diffStrength = Math.abs(strength - otherParent.strength) / 10;
@@ -204,14 +207,18 @@ public class Creature extends SimObject {
         return new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, nextSteps, movement, world);
     }
 
+    public void mated() {
+        energy = energy - getReproductionCost();
+    }
     private int getReproductionCost() {
         int costReproduction = stamina / 100 * reproductionCost;
-        energy = energy - costReproduction;
+        //energy = energy - costReproduction;
         return costReproduction;
     }
 
     public int getReproductionThreshold() {
-        return reproductionThreshold;
+        int hitsigheid = stamina / 100 * reproductionThreshold ;
+        return hitsigheid;
     }
 
     public int getStrength() {
@@ -224,17 +231,17 @@ public class Creature extends SimObject {
 
     public StatusObject eaten(int energyEaten) {
         energy = energy - energyEaten;
-        if (energy == 0) {
+        if (energy <= 0) {
             alive = false;
         }
-        status = new StatusObject(energy, getColor(), alive);
+        status = new StatusObject(point, energy, getColor(), alive);
         return status;
     }
 
     public StatusObject eat(int energyAdded) {
         energy = energy + energyAdded;
 
-        status = new StatusObject(energy, getColor(), alive);
+        status = new StatusObject(point, energy, getColor(), alive);
         return status;
     }
 
@@ -245,13 +252,13 @@ public class Creature extends SimObject {
                 point = Color.RED;
                 break;
             case Herbivore:
-                point = Color.BROWN;
+                point = new Color(139,69,19);
                 break;
             case Omnivore:
                 point = Color.YELLOW;
                 break;
             case Nonivore:
-                point = Color.PURPLE;
+                point = new Color(255,0,255);
                 break;
         }
         return point;

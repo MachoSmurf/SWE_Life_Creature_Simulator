@@ -14,7 +14,7 @@ public class World implements Serializable, IWorld {
     private List<SimObject> plantList; //A List of all plants in this world
     protected List<SimObject> creatureList; // A list of all creatures in this world
     private List<StatusObject> objectList; // A List of all step items in this world.
-    private IGrid grid;
+    private Grid grid;
     private int stepCount;
     MovementPlanner movement;
     List<ArrayList<Point>> livingAreas;
@@ -121,6 +121,21 @@ public class World implements Serializable, IWorld {
         StatusObject object = null;
         int simCount = 0;
 
+        for (SimObject sim : creatureList) {
+            grid.resetColor(sim.point);
+        }
+
+        for (SimObject sim : plantList) {
+            grid.resetColor(sim.point);
+        }
+
+        for (SimObject sim : plantList) {
+            Plant plant = (Plant) sim;
+            object = plant.step();
+            newPlantList.add(plant);
+            newObjectList.add(object);
+        }
+
         for(SimObject sim1 : creatureList) { // compare each creature in the CreatureList.
 
             boolean didThing = false;
@@ -146,6 +161,7 @@ public class World implements Serializable, IWorld {
                     else  {
                         if (sim.getReproductionThreshold() < sim.getStrength() && otherCreature.getReproductionThreshold() < otherCreature.getStrength()) { // Same spicies => check is they want to mate
                             Creature child = sim.mate(otherCreature);
+                            otherCreature.mated();
                             System.out.println("Mated");
                             Children.add(child);
                             didThing = true;
@@ -196,12 +212,7 @@ public class World implements Serializable, IWorld {
 
 
 
-        for (SimObject sim : plantList) {
-            Plant plant = (Plant) sim;
-            object = plant.step();
-            newPlantList.add(plant);
-            newObjectList.add(object);
-        }
+
 
         // fill stepResult
         for (SimObject sim : newCreatureList) {
@@ -228,14 +239,29 @@ public class World implements Serializable, IWorld {
             plants++;
             energyPlants = energyPlants + plant.getEnergy();
         }
-        stepCount++;
+
         System.out.println("Voeg de children bij alle creatures.");
         for (SimObject child : Children) {
-            creatureList.add(child);
+            newCreatureList.add(child);
+        }
+
+        for (StatusObject statusObject : newObjectList) {
+            if (statusObject.getAlive()){
+                grid.setColor(statusObject.getLocation(), statusObject.getColor());
+            }
+
         }
 
 
         StepResult stepResult = new StepResult(grid, nonivores, carnivores, herbivores, omnivores,plants, energyNonivores, energyCarnivores, energyHerbivores, energyOmnivores, energyPlants, stepCount);
+        creatureList = null;
+        creatureList = newCreatureList;
+        plantList = null;
+        plantList = newPlantList;
+        objectList = null;
+        objectList = newObjectList;
+        stepCount++;
+        System.out.println("Step: " + stepCount );
         return stepResult;
     }
 
@@ -366,6 +392,7 @@ public class World implements Serializable, IWorld {
          */
         for (SimObject sim : creatureList) {
             for (Point workingPoint: workingArea) {
+
                 if (sim.point.x == workingPoint.x && sim.point.y == workingPoint.y && sim.point.x != startPoint.x && sim.point.y != startPoint.y ) { //if sim is on a gridpoint of this livingArea And not on the same spot as The Creature.
                     System.out.println("Victim gevonden eerste manier");
                     return sim.point;
