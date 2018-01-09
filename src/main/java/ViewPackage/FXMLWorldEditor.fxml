@@ -31,7 +31,7 @@
                <Image url="@Background.jpg" />
            </image>
        </ImageView>
-      <StackPane layoutX="8.0" layoutY="46.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #BDBDBD;">
+      <StackPane layoutX="8.0" layoutY="46.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: blue;">
          <children>
              <GridPane gridLinesVisible="true" layoutY="46.0" prefHeight="800.0" prefWidth="800.0">
                  <columnConstraints>
@@ -778,11 +778,11 @@
                    <StackPane fx:id="id657" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.rowIndex="16" />
                    <StackPane fx:id="id658" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="17" GridPane.rowIndex="16" />
                    <StackPane fx:id="id659" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="18" GridPane.rowIndex="16" />
-                   <StackPane fx:id="id660" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="19" GridPane.rowIndex="16" />
-                   <StackPane fx:id="id661" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="20" GridPane.rowIndex="16" />
-                   <StackPane fx:id="id662" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="21" GridPane.rowIndex="16" />
-                   <StackPane fx:id="id663" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="22" GridPane.rowIndex="16" />
-                   <StackPane fx:id="id664" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="23" GridPane.rowIndex="16" />
+                   <StackPane fx:id="id660" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="19" GridPane.rowIndex="16" />
+                   <StackPane fx:id="id661" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="20" GridPane.rowIndex="16" />
+                   <StackPane fx:id="id662" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="21" GridPane.rowIndex="16" />
+                   <StackPane fx:id="id663" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="22" GridPane.rowIndex="16" />
+                   <StackPane fx:id="id664" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="23" GridPane.rowIndex="16" />
                    <StackPane fx:id="id665" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="24" GridPane.rowIndex="16" />
                    <StackPane fx:id="id666" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="25" GridPane.rowIndex="16" />
                    <StackPane fx:id="id667" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="26" GridPane.rowIndex="16" />
@@ -818,11 +818,11 @@
                    <StackPane fx:id="id697" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.rowIndex="17" />
                    <StackPane fx:id="id698" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="17" GridPane.rowIndex="17" />
                    <StackPane fx:id="id699" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="18" GridPane.rowIndex="17" />
-                   <StackPane fx:id="id700" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="19" GridPane.rowIndex="17" />
-                   <StackPane fx:id="id701" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="20" GridPane.rowIndex="17" />
-                   <StackPane fx:id="id702" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="21" GridPane.rowIndex="17" />
-                   <StackPane fx:id="id703" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="22" GridPane.rowIndex="17" />
-                   <StackPane fx:id="id704" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="23" GridPane.rowIndex="17" />
+                   <StackPane fx:id="id700" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="19" GridPane.rowIndex="17" />
+                   <StackPane fx:id="id701" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="20" GridPane.rowIndex="17" />
+                   <StackPane fx:id="id702" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="21" GridPane.rowIndex="17" />
+                   <StackPane fx:id="id703" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="22" GridPane.rowIndex="17" />
+                   <StackPane fx:id="id704" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="23" GridPane.rowIndex="17" />
                    <StackPane fx:id="id705" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="24" GridPane.rowIndex="17" />
                    <StackPane fx:id="id706" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="25" GridPane.rowIndex="17" />
                    <StackPane fx:id="id707" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="26" GridPane.rowIndex="17" />
@@ -858,11 +858,11 @@
                    <StackPane fx:id="id737" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.rowIndex="18" />
                    <StackPane fx:id="id738" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="17" GridPane.rowIndex="18" />
                    <StackPane fx:id="id739" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="18" GridPane.rowIndex="18" />
-                   <StackPane fx:id="id740" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="19" GridPane.rowIndex="18" />
-                   <StackPane fx:id="id741" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="20" GridPane.rowIndex="18" />
-                   <StackPane fx:id="id742" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="21" GridPane.rowIndex="18" />
-                   <StackPane fx:id="id743" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="22" GridPane.rowIndex="18" />
-                   <StackPane fx:id="id744" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="23" GridPane.rowIndex="18" />
+                   <StackPane fx:id="id740" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="19" GridPane.rowIndex="18" />
+                   <StackPane fx:id="id741" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="20" GridPane.rowIndex="18" />
+                   <StackPane fx:id="id742" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="21" GridPane.rowIndex="18" />
+                   <StackPane fx:id="id743" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="22" GridPane.rowIndex="18" />
+                   <StackPane fx:id="id744" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="23" GridPane.rowIndex="18" />
                    <StackPane fx:id="id745" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="24" GridPane.rowIndex="18" />
                    <StackPane fx:id="id746" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="25" GridPane.rowIndex="18" />
                    <StackPane fx:id="id747" onMouseClicked="#ChangeColor" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="26" GridPane.rowIndex="18" />

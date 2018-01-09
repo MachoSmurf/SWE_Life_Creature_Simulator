@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLHomepageController">
    <children>
-      <TitledPane animated="false" collapsible="false" text="Life - Main Menu">
+      <TitledPane animated="false" collapsible="false" layoutX="-140.0" text="Life - Main Menu">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" />
         </content>
@@ -44,11 +44,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="364.0" mnemonicParsing="false" onAction="#onSettingsClick" prefHeight="25.0" prefWidth="146.0" text="Settings">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="246.0" mnemonicParsing="false" onAction="#onUserManagementClick" prefHeight="25.0" prefWidth="146.0" text="User Management">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -59,7 +54,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="364.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="25.0" prefWidth="146.0" text="Logout">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="527.0" layoutY="364.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="25.0" prefWidth="146.0" text="Logout">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -37,16 +37,6 @@ public class FXMLHomepageController extends UIController implements Initializabl
         }
     }
 
-    public void onSettingsClick(ActionEvent actionEvent) {
-        try{
-            FXMLSettingsController se = (FXMLSettingsController) changeScreen("/ViewPackage/FXMLSettings.fxml", null);
-        }
-        catch(IOException ioe){
-            System.out.println(ioe);
-            showWarning("Fout", "Het scherm kon niet worden geladen.");
-        }
-    }
-
     public void onUserManagementClick(ActionEvent actionEvent) {
         try{
             FXMLUserManagementController u = (FXMLUserManagementController) changeScreen("/ViewPackage/FXMLUserManagement.fxml", null);
