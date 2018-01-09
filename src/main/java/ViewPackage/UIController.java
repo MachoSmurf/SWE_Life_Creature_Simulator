@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Responsible for controlling the switch between pages and storing some general UI functions and data
  */
-public abstract class UIController implements ILifeResult{
+public abstract class UIController{
     protected ILifeController simulation1;
     protected ILifeController simulation2;
     protected ILifeController simulation3;
@@ -76,7 +76,4 @@ public abstract class UIController implements ILifeResult{
         alert.show();
     }
 
-    @Override
-    public void updateSimulationResults(StepResult simStatus) {
-    }
 }

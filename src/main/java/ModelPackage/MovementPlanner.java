@@ -1,23 +1,26 @@
 package ModelPackage;
 
 import javax.imageio.ImageIO;
-import javax.lang.model.type.ArrayType;
-import java.awt.*;
+import java.awt.Point;
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Uses a simplified version of Dijkstra's pathfinding algorithm to find the shortest path to a certain position.
- * Also provides information on where to navigate to.
+ * Also provides information on where to navigate to. Assumes the following Grid setup:
+ *
+ * 6 7 8
+ * 3 4 5
+ * 0 1 2
  */
 public class MovementPlanner {
 
     private IGrid simulationGrid;
-    private ArrayList<MotionPoint> plannableGrid;
-    private ArrayList<Obstacle> obstacleList;
-    private ArrayList<Point> pathFound;
+    private List<MotionPoint> planableGrid;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -26,15 +29,12 @@ public class MovementPlanner {
 
     /**
      * Initializes the planner with the correct data and triggers the generation of a complete plannable grid.
-     * @param obstacles ArrayList containing obstacles. Can't change once the simulation has started!
      * @param simulationGrid The simulation Grid used to generate a plannable grid
      * @return true if the generation of the plannable grid was successful, false otherwise.
      */
-    public boolean initializePlanner(ArrayList<Obstacle> obstacles, IGrid simulationGrid){
-        this.obstacleList = obstacles;
+    public boolean initializePlanner(IGrid simulationGrid){
         this.simulationGrid = simulationGrid;
-        this.plannableGrid = new ArrayList<>();
-        this.pathFound = new ArrayList<>();
+        this.planableGrid = new ArrayList<>();
 
         try{
             generatePlannableGrid();
@@ -61,35 +61,44 @@ public class MovementPlanner {
         subGrids = new ArrayList<>();
 
         ArrayList<MotionPoint> waterList = new ArrayList<>();
-        for (MotionPoint motionPoint : plannableGrid){
-            if (motionPoint.getWater()){
+        //waterlist is always element 0 in the subgrid list
+        subGrids.add(waterList);
+        for (MotionPoint motionPoint : planableGrid){
+            if (motionPoint.getType() == GridPointType.Water){
                 waterList.add(motionPoint);
             }
-            else
-            {
+            else{
+                if (motionPoint.getType() == GridPointType.Obstacle){
+                    continue;
+                }
                 //we found a living area, check if we found this one already
                 boolean found = false;
                 for (ArrayList<MotionPoint> area : subGrids){
                     if (area.contains(motionPoint)){
                         found = true;
+                        break;
                     }
                 }
-                if (!found){
-                    //new living area, find adjacent points
+
+                if (!found) {
                     ArrayList<MotionPoint> livingArea = new ArrayList<>();
                     livingArea.add(motionPoint);
                     ArrayList<Point> openPoints = new ArrayList<>();
-                    for (Point adjacent : motionPoint.getAdjacentPoints()){
-                        openPoints.add(adjacent);
+                    for (Point adjacent : motionPoint.getAdjacentPoints()) {
+                        if (getMotionPointByCoordinates(adjacent).getType() != GridPointType.Obstacle) {
+                            openPoints.add(adjacent);
+                        }
                     }
+
                     ArrayList<Point> pointBuffer = new ArrayList<>();
-                    while (openPoints.size() > 0){
-                        for (Point p : openPoints){
-                            MotionPoint currentPoint = getMotionPointByCoordinates((int)p.getX(), (int)p.getY());
-                            if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
+                    while (openPoints.size() > 0) {
+                        for (Point p : openPoints) {
+                            MotionPoint currentPoint = getMotionPointByCoordinates(p);
+                            //if ((!livingArea.contains(currentPoint)) && (!currentPoint.getWater())){
+                            if ((!livingArea.contains(currentPoint)) && (currentPoint.getType() == GridPointType.Ground)) {
                                 livingArea.add(currentPoint);
-                                for (Point nextPoint : currentPoint.getAdjacentPoints()){
-                                    if (!pointBuffer.contains(nextPoint)){
+                                for (Point nextPoint : currentPoint.getAdjacentPoints()) {
+                                    if (!pointBuffer.contains(nextPoint)) {
                                         pointBuffer.add(nextPoint);
                                     }
                                 }
@@ -110,42 +119,23 @@ public class MovementPlanner {
     }
 
     /**
-     * used to generate the plannable grid. If this fails the motionplanner can't properly function.
+     * Used to generate the plannable grid, consisting of MotionPoints and the points adjacent to them. If this fails the motionplanner can't properly function.
      */
     private void generatePlannableGrid(){
         if (simulationGrid != null){
             int pointCount = simulationGrid.getWidth() * simulationGrid.getHeight();
             for(int i=0; i<pointCount; i++){
-                plannableGrid.add(null);
+                planableGrid.add(null);
             }
             //create a MotionPoint for each GridPoint
             for (GridPoint gridPoint : simulationGrid.getPointList()){
                 int gridPointNumber = getPointNumber(new Point(gridPoint.getX(), gridPoint.getY()));
-                plannableGrid.set(gridPointNumber, new MotionPoint(gridPoint));
 
-                /*
-                boolean newMotionPoint = true;
-                //TODO: Implement obstacles correctly, maintaining the point location formula
-                /*for (Obstacle o : obstacleList){
-                    //check if this gridpoint is an obstacle. If so this won't be a motionpoint
-                    if (((o.getX() == gridPoint.getX()) && (o.getY() == gridPoint.getY()))){
-                        newMotionPoint = false;
-                    }
-                }*//*
-                if (newMotionPoint){
-                    plannableGrid.add(new MotionPoint(gridPoint));
-                }*/
+                MotionPoint freshMotionPoint = new MotionPoint(gridPoint);
+                planableGrid.set(gridPointNumber, freshMotionPoint);
             }
 
-            for (MotionPoint currentPoint : plannableGrid){
-                for (Obstacle o : obstacleList){
-                    if ((o.getX() == currentPoint.getX()) && (o.getY() == currentPoint.getY())) {
-                        currentPoint.setObstacle(true);
-                    }
-                }
-            }
-
-            for (MotionPoint currentPoint : plannableGrid){
+            for (MotionPoint currentPoint : planableGrid){
                 getAdjacentPoints(currentPoint);
             }
         }
@@ -154,13 +144,21 @@ public class MovementPlanner {
         }
     }
 
+    /**
+     * Gets the total count of MotionPoints in the planableGrid.
+     * @return int containing the MotionPoint count
+     */
     public int getTotalMotionPoints(){
-        return plannableGrid.size();
+        return planableGrid.size();
     }
 
+    /**
+     * Gets the total adjacent points found in the plannable grid
+     * @return int containing the adjacent point count
+     */
     public int getTotalAdjacentCount(){
         int counter = 0;
-        for (MotionPoint mp : plannableGrid){
+        for (MotionPoint mp : planableGrid){
             counter += mp.adjacentPoints.size();
         }
         return counter;
@@ -197,8 +195,7 @@ public class MovementPlanner {
                 }
                 //add this point to the adjacentpoints, only if the point is not itself (x+0 && y+0)
                 if (!((neighbourX == x) && (neighbourY == y))){
-                    if (!getMotionPointByCoordinates(neighbourX, neighbourY).getObstacle()){
-                        //currentPoint.addAdjacentPoint(new Point(neighbourY, neighbourX));
+                    if (getMotionPointByCoordinates(new Point(neighbourX, neighbourY)).getType() != GridPointType.Obstacle){
                         currentPoint.addAdjacentPoint(new Point(neighbourX, neighbourY));
                     }
                 }
@@ -209,90 +206,142 @@ public class MovementPlanner {
 
     /**
      * Generate a path towards the endpoint
-     * @param startX X-coordinate of startpoint
-     * @param startY Y-coordinate of startpoint
-     * @param targetX X-coordinate of endpoint
-     * @param targetY Y-coordinate of endpoint
+     * @param startPoint First point of the path
+     * @param targetPoint Last point of the path
      * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
      * the startpoint was the endpoint
      */
-    public ArrayList<Point> findPath(int startX, int startY, int targetX, int targetY) throws Exception {
+    public ArrayList<Point> findPath(Point startPoint, Point targetPoint) throws Exception {
         //reset the grid, clearing all previous points
         resetPlannableGrid();
 
-        if ((startX == targetX) && (startY == targetY)){
+        if ((startPoint.getX() == targetPoint.getX()) && (startPoint.getY() == targetPoint.getY())){
             return null;
         }
 
         long startTime = System.nanoTime();
 
+        //points to be checked in this iteration
         ArrayList<Point> openPoints = new ArrayList<>();
+        //points to be checked in the next iteration
         ArrayList<Point> pointBuffer = new ArrayList<>();
+        //points already checked
         ArrayList<Point> closedPoints = new ArrayList<>();
-        //fetch the first set of adjacent points to the startpoint
-        Point startPoint = new Point(startX, startY);
-        closedPoints.add(startPoint);
-        for (Point adjacentPoint : getMotionPointByCoordinates(startX, startY).getAdjacentPoints()){
-            getMotionPointByCoordinates((int)adjacentPoint.getX(), (int)adjacentPoint.getY()).setPreviousPoint(startPoint);
-            openPoints.add(adjacentPoint);
+        //Livingarea for the startpoint
+        ArrayList<MotionPoint> primarySearchArea = new ArrayList<>();
+        //Buffer for points not in the primarySearchArea
+        ArrayList<Point> secondaySearchAreaBuffer = new ArrayList<>();
+
+        for(ArrayList<MotionPoint> area : subGrids){
+            if (area.contains(getMotionPointByCoordinates(startPoint))){
+                primarySearchArea = area;
+            }
         }
-        //reset previouspoint for startpoint (DEBUG)
-        getMotionPointByCoordinates(startX, startY).setPreviousPoint(null);
+
+        //fetch the first set of adjacent points to the startpoint
+        closedPoints.add(startPoint);
+        for (Point adjacentPoint : getMotionPointByCoordinates(startPoint).getAdjacentPoints()){
+            MotionPoint freshPoint = getMotionPointByCoordinates(adjacentPoint);
+            freshPoint.setPreviousPoint(startPoint);
+            if(primarySearchArea.contains(freshPoint)){
+                openPoints.add(adjacentPoint);
+            }
+            else{
+                secondaySearchAreaBuffer.add(adjacentPoint);
+            }
+        }
 
         int distanceCounter = 0;
-        debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+        //output debug image for start situation
+        debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
         MotionPoint endPoint = null;
+        boolean searchInPrimary = true;
+
         while (endPoint == null){
-            //start counting loops for debug
-            if (openPoints.size() == 0){
+            if ((openPoints.size() == 0) && (secondaySearchAreaBuffer.size() == 0)){
                 return null;
             }
 
             //check the open points for the endpoint
-            for (Point currentPoint : openPoints){
-                if ((currentPoint.getX() == targetX) && (currentPoint.getY() == targetY)){
-                    endPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
-                    System.out.println("Found target. Steps required: " + distanceCounter);
-                    debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
-                    break;
-                }
+            endPoint = checkForTarget(openPoints, targetPoint);
+            if (endPoint!=null){
+                System.out.println("Found target. Steps required: " + distanceCounter);
+                //output debug image for endstate
+                debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
             }
-
-            if (endPoint == null){
+            else{
                 //point not found, move current points into closed points and fill buffer with new points
                 for (Point currentPoint : openPoints){
-                    MotionPoint motionPoint = getMotionPointByCoordinates((int)currentPoint.getX(), (int)currentPoint.getY());
+                    MotionPoint motionPoint = getMotionPointByCoordinates(currentPoint);
                     for(Point freshOpenPoint : motionPoint.getAdjacentPoints()){
-
-                        if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint))){
-                            MotionPoint freshMP = getMotionPointByCoordinates((int) freshOpenPoint.getX(), (int)freshOpenPoint.getY());
+                        //only add to pointbuffer if not already in other list
+                        if ((!closedPoints.contains(freshOpenPoint)) && (!openPoints.contains(freshOpenPoint)) && (!pointBuffer.contains(freshOpenPoint)) && (!secondaySearchAreaBuffer.contains(freshOpenPoint))){
+                            MotionPoint freshMP = getMotionPointByCoordinates(freshOpenPoint);
                             if ((freshMP.getPreviousPoint() == null)) {
                                 freshMP.setPreviousPoint(currentPoint);
+                            }
+                            if(primarySearchArea.contains(freshMP)){
                                 pointBuffer.add(freshOpenPoint);
+                            }
+                            else{
+                                secondaySearchAreaBuffer.add(freshOpenPoint);
                             }
                         }
                     }
                 }
             }
 
-
-            //target not found, move all open points to closed points and move the buffer into the open points
             for(Point openPoint : openPoints){
                 if (!closedPoints.contains(openPoint)){
                     closedPoints.add(openPoint);
                 }
             }
-            openPoints = new ArrayList<>(pointBuffer);
+
+            if (pointBuffer.size() == 0){
+                //no new points in primary area, start getting points from secondary area
+                searchInPrimary = false;
+            }
+            //target not found, move all open points to closed points and move the buffer into the open points
+            if (searchInPrimary){
+                openPoints = new ArrayList<>(pointBuffer);
+            }
+            else{
+                openPoints = new ArrayList<>(secondaySearchAreaBuffer);
+            }
             pointBuffer.clear();
-
-
             distanceCounter++;
-            //debugGrid(distanceCounter, startPoint, new Point(targetX, targetY), openPoints, closedPoints);
+            debugGrid(distanceCounter, startPoint, targetPoint, openPoints, closedPoints);
         }
 
         long endTime = System.nanoTime();
         System.out.println("Pathfinding completed in " + ((endTime - startTime) / 1000000) + "ms");
 
+        return getPathFound(endPoint);
+    }
+
+    /**
+     * check if a certain motionPoint is the target for this motionfinding round
+     * @param openPoints List of points to be checked
+     * @param targetPoint target location of the motionplanner
+     * @return MotionPoint if found, null if not found
+     */
+    private MotionPoint checkForTarget(ArrayList<Point> openPoints, Point targetPoint) {
+        for (Point currentPoint : openPoints){
+            if ((currentPoint.getX() == targetPoint.getX()) && (currentPoint.getY() == targetPoint.getY())){
+                MotionPoint found = getMotionPointByCoordinates(currentPoint);
+                return found;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * calulates the path back from the endpoint to the startpoint
+     * @param endPoint MotionPoint that represents the last point in the pathfinding sequence
+     * @return ArrayList cointainting the path back from the endpoint to the startpoint, including both
+     */
+    private ArrayList<Point> getPathFound(MotionPoint endPoint){
+        ArrayList<Point> pathFound = new ArrayList<>();
         MotionPoint parentPoint = endPoint;
         int infiniteProtection = 0;
         while((parentPoint != null) && (infiniteProtection < 100)){
@@ -300,32 +349,31 @@ public class MovementPlanner {
 
             pathFound.add(new Point(parentPoint.getX(), parentPoint.getY()));
             if (parentPoint.getPreviousPoint() != null){
-                MotionPoint newParent = getMotionPointByCoordinates((int)parentPoint.getPreviousPoint().getX(), (int)parentPoint.getPreviousPoint().getY());
-                parentPoint = newParent;
+                parentPoint = getMotionPointByCoordinates(parentPoint.getPreviousPoint());
             }
             else
             {
                 break;
             }
         }
-
-
-        /*
-        for (Point step : pathFound){
-            System.out.println("(" + step.getX() + "," + step.getY() + ")");
-        }
-        */
-
         return pathFound;
     }
 
+    /**
+     * Resets the pathFound and previousPoint references so the plannable grid can be reused, reducing the time needed
+     * for pathfinding
+     */
     private void resetPlannableGrid() {
-        pathFound.clear();
-        for (MotionPoint mp : plannableGrid){
+        for (MotionPoint mp : planableGrid){
             mp.setPreviousPoint(null);
         }
     }
 
+    /**
+     * Gets the element number corresponding to this points coordinates.
+     * @param p Point to be used
+     * @return int element number in the pointList
+     */
     private int getPointNumber(Point p){
         int gridWidth = simulationGrid.getWidth();
         int x = (int)p.getX();
@@ -335,10 +383,15 @@ public class MovementPlanner {
         return number;
     }
 
-    private MotionPoint getMotionPointByCoordinates(int x, int y){
-       if (plannableGrid!=null){
+    /**
+     * Gets the MotionPoint corresponding to a coordinate
+     * @param p Point to fetch the associated MotionPoint of
+     * @return MotionPoint corresponding to the point
+     */
+    private MotionPoint getMotionPointByCoordinates(Point p){
+       if (planableGrid !=null){
             //point element number (n) in array can be calculated by formula: (width * (y+1)) + (x - width). Width being the grid width
-            return plannableGrid.get(((simulationGrid.getWidth() * (y+1)) + (x - simulationGrid.getWidth())));
+            return planableGrid.get(((simulationGrid.getWidth() * ((int)p.getY() +1)) + ((int)p.getX() - simulationGrid.getWidth())));
         }
         else
         {
@@ -346,7 +399,37 @@ public class MovementPlanner {
         }
     }
 
-    private void debugGrid(int stepNumber,Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
+    /**
+     * Returns the livingareas found by the motionplanner so the world can randomly place the creatures as defined
+     * in the requirements. Item 0 in the returned list is always the surrounding water.
+     * DO NOT CALL BEFORE CALLING intializePlanner()!
+     * @return
+     */
+    public ArrayList<ArrayList<Point>> getLivingAreas() throws Exception {
+        if (!(subGrids.size() > 0)){
+            throw new Exception("Planner not properly initialized");
+        }
+        ArrayList pointAreas = new ArrayList();
+        for (ArrayList<MotionPoint> area : subGrids){
+            //convert motionpoints to regular points since MotionPoint is an Inner class that World is unaware of
+            ArrayList<Point> pointArea = new ArrayList();
+            for (MotionPoint motionPoint : area){
+                pointArea.add(new Point(motionPoint.getX(), motionPoint.getY()));
+            }
+            pointAreas.add(pointArea);
+        }
+        return pointAreas;
+    }
+
+    /**
+     * Debugging method for generating a visual image of the planableGrid.
+     * @param stepNumber int representing the number of steps in the motionplanning so far
+     * @param startPoint Point representing the start position of the motionplanning
+     * @param endPoint Point representing the end position (not to be confused with the endpoint used internally in the findPath method!)
+     * @param openPoints ArrayList of points containing the open Points
+     * @param closedPoints ArrayList of points containing the closed Points
+     */
+    private void debugGrid(int stepNumber, Point startPoint, Point endPoint, ArrayList<Point> openPoints, ArrayList<Point> closedPoints){
         int factor = 20;
         int size = 5;
 
@@ -355,6 +438,7 @@ public class MovementPlanner {
 
         BufferedImage img = new BufferedImage(canvasWidth, canvasHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = img.createGraphics();
+        g2.setBackground(Color.lightGray);
 
 
         //draw grid
@@ -362,17 +446,19 @@ public class MovementPlanner {
         int gridHeight = simulationGrid.getHeight();
         for (int i = 0; i<gridWidth; i++){
             for (int j = 0; j<gridHeight; j++){
-                //MotionPoint mp = getMotionPointByCoordinates(i, j);
+                switch(getMotionPointByCoordinates(new Point(i, j)).getType()){
+                    case Obstacle:
+                        g2.setColor(Color.MAGENTA);
 
-
-                if (getMotionPointByCoordinates(i, j).getObstacle()){
-                    g2.setColor(Color.MAGENTA);
-                    g2.fillOval(i*factor, j*factor, size, size);
+                        break;
+                    case Water:
+                        g2.setColor(Color.CYAN);
+                        break;
+                    case Ground:
+                        g2.setColor(Color.ORANGE);
+                        break;
                 }
-                else{
-                    g2.setColor(Color.WHITE);
-                    g2.drawOval(i*factor, j*factor, size, size);
-                }
+                g2.fillOval(i*factor, j*factor, size, size);
             }
         }
 
@@ -390,7 +476,7 @@ public class MovementPlanner {
             g2.setColor(Color.BLUE);
             //if ((closedPoint.getX() != (int)startPoint.getX()) && (closedPoint.getY() != (int)startPoint.getY())){
             try{
-                Point previousPoint = getMotionPointByCoordinates((int)closedPoint.getX(), (int)closedPoint.getY()).getPreviousPoint();
+                Point previousPoint = getMotionPointByCoordinates(closedPoint).getPreviousPoint();
                 g2.drawLine((int)closedPoint.getX()*factor, (int)closedPoint.getY()*factor, (int)previousPoint.getX() * factor, (int)previousPoint.getY()*factor);
             }
             catch(NullPointerException ne){
@@ -403,7 +489,8 @@ public class MovementPlanner {
 
 
         try{
-            ImageIO.write(img, "PNG", new File("buffer_output"+stepNumber+".png"));
+            //ImageIO.write(img, "PNG", new File("/out/buffer_output"+stepNumber+".png"));
+            ImageIO.write(img, "PNG", new File(System.getProperty("user.dir") + File.separator + "out" + File.separator + "buffer_output"+stepNumber+".png"));
             //System.out.println("Wrote img to disk");
         }
         catch(Exception e){
@@ -421,8 +508,6 @@ public class MovementPlanner {
 
         private GridPoint gridPoint;
         private Point previousPoint;
-        //private MotionPoint previousPoint;
-        //private ArrayList<MotionPoint> adjacentPoints;
         private ArrayList<Point> adjacentPoints;
 
         public MotionPoint(GridPoint gridPoint) {
@@ -444,6 +529,7 @@ public class MovementPlanner {
          * returns whether or not the point is an obstacle
          * @return boolean whether or not this is an obstacle
          */
+        @Deprecated
         public boolean getObstacle(){
             return this.isObstacle;
         }
@@ -499,8 +585,13 @@ public class MovementPlanner {
             return gridPoint.getY();
         }
 
-        public boolean getWater(){
-            return gridPoint.getWater();
+         /**
+         * Gets the type of gridPoint
+         * @return gridPointType enum
+         */
+        public GridPointType getType(){
+            return gridPoint.getType();
         }
     }
+
 }

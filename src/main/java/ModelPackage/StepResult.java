@@ -6,14 +6,14 @@ package ModelPackage;
  */
 public class StepResult {
 
-    private GridClone currentGrid;
+    private IGrid currentGrid;
     private int nonivoreCount;
     private int herbivoreCount;
     private int carnivoreCount;
     private int omnivoreCount;
     private int plantCount;
 
-    public GridClone getCurrentGrid() {
+    public IGrid getCurrentGrid() {
         return currentGrid;
     }
 
@@ -69,7 +69,7 @@ public class StepResult {
     private int stepCount;
 
 
-    public StepResult(GridClone currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount) {
+    public StepResult(IGrid currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount) {
         this.currentGrid = currentGrid;
         this.nonivoreCount = nonivoreCount;
         this.herbivoreCount = herbivoreCount;
