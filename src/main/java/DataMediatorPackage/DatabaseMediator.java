@@ -13,6 +13,24 @@ public class DatabaseMediator implements IDataMediator {
     private String databaseUsername = "";
     private String databasePassword = "";
     private boolean databaseSimUser = false;
+    private String dbPort;
+    private String dbUser;
+    private String dbPassword;
+
+
+    public DatabaseMediator()
+    {
+        this.dbPort = "3306";
+        this.dbUser = "root";
+        this.dbPassword = "root";
+    }
+
+    public DatabaseMediator(String dbPort, String dbUser, String dbPassword)
+    {
+        this.dbPort = dbPort;
+        this.dbUser = dbUser;
+        this.dbPassword = dbPassword;
+    }
 
     @Override
     public User loadUser(String username, String password)
@@ -20,7 +38,7 @@ public class DatabaseMediator implements IDataMediator {
         Connection con;
         try {
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
             Statement st = con.createStatement();
             String sql = ("SELECT * FROM users WHERE DBusername = username and DBpassword = password");
 
