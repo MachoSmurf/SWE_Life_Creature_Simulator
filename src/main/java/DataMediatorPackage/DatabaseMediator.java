@@ -38,16 +38,19 @@ public class DatabaseMediator implements IDataMediator {
         Connection con;
         try {
 
+            String driver = "com.mysql.jdbc.Driver";
+            Class.forName(driver);
             con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
-            Statement st = con.createStatement();
-            String sql = ("SELECT * FROM users WHERE DBusername = username and DBpassword = password");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? and DBpassword = ?");
+            ps.setObject(1, username);
+            ps.setObject(2, password);
 
-            ResultSet rs = st.executeQuery(sql);
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                databaseUsername = rs.getString("username");
-                databasePassword = rs.getString("password");
-                databaseSimUser = rs.getBoolean("simUser");
+                databaseUsername = rs.getString("DBusername");
+                databasePassword = rs.getString("DBpassword");
+                databaseSimUser = rs.getBoolean("DBsimUser");
             }
 
             User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
@@ -61,10 +64,11 @@ public class DatabaseMediator implements IDataMediator {
         } catch (SQLException e) {
             System.out.println("Oops, something went wrong while loading user!");
             e.printStackTrace();
+            return null;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
         }
-
-
-        return null;
     }
 
     @Override

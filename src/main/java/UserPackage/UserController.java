@@ -20,7 +20,11 @@ public class UserController extends User implements IUserController
 
         try
         {
-            databaseMediator.loadUser(username, password);
+            if(databaseMediator.loadUser(username, password) == null)
+            {
+                return isLoggedIn = false;
+            }
+
             isLoggedIn = true;
             return isLoggedIn;
         }
