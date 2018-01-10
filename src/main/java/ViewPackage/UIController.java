@@ -75,5 +75,4 @@ public abstract class UIController{
         alert.setContentText(text);
         alert.show();
     }
-
 }

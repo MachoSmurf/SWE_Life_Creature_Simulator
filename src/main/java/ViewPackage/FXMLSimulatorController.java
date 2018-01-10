@@ -1,6 +1,8 @@
 package ViewPackage;
 
+import LifePackage.Simulation;
 import ModelPackage.*;
+import javafx.animation.AnimationTimer;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -10,7 +12,7 @@ import javafx.scene.control.Slider;
 
 import java.awt.*;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
@@ -20,13 +22,10 @@ import java.util.ResourceBundle;
  */
 public class FXMLSimulatorController extends UIController implements Initializable, ILifeResult {
 
-
     public Canvas canvSimulation1;
     public Canvas canvSimulation2;
     public Canvas canvSimulation3;
     public Canvas canvSimulation4;
-
-    private int zoom = 20;
 
     //Right menu Elements
     public Button btnSelectSim1;
@@ -67,36 +66,34 @@ public class FXMLSimulatorController extends UIController implements Initializab
     public Label lblTitleCreatures;
     public Label lblTitleplants;
 
+    public Label lblStepsDone;
+
     //fields for scorekeeping
     private int selectedSim;
 
-    private int sim1Zoom;
-    private int sim1Speed;
-    private StepResult sim1LastStep;
-    private int sim2Zoom;
-    private int sim2Speed;
-    private StepResult sim2LastStep;
-    private int sim3Zoom;
-    private int sim3Speed;
-    private StepResult sim3LastStep;
-    private int sim4Zoom;
-    private int sim4Speed;
-    private StepResult sim4LastStep;
+    private int[] simLastShownStep;
+    private int[] simZoom;
+    private double[] simSpeed;
+    private StepResult[] stepResults;
 
-    private ArrayList<Thread> simulationThreads;
+    private AnimationTimer timer;
 
-    public FXMLSimulatorController(){
+    private Thread[] simulationThreads;
+    private Simulation[] simulations;
+
+    public FXMLSimulatorController() {
         super();
         selectedSim = 1;
-        sim1Zoom = 7;
-        sim1Speed = 1;
-        sim2Zoom = 7;
-        sim2Speed = 1;
-        sim3Zoom = 7;
-        sim3Speed = 1;
-        sim4Zoom = 7;
-        sim4Speed = 1;
-        simulationThreads = new ArrayList<>();
+        simulationThreads = new Thread[4];
+        simulations = new Simulation[4];
+
+        simLastShownStep = new int[4];
+        Arrays.fill(simLastShownStep, 0);
+        simZoom = new int[4];
+        Arrays.fill(simZoom, 7);
+        simSpeed = new double[4];
+        Arrays.fill(simSpeed, 1);
+        stepResults = new StepResult[4];
     }
 
     @Override
@@ -105,27 +102,19 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     @Override
-    public void updateSimulationResults(StepResult simStatus) {
-        //drawGrid(simStatus.getCurrentGrid());
+    public void updateSimulationResults(StepResult simStatus, int simNumber) {
+        triggerAnimationTimer();
+        stepResults[simNumber - 1] = simStatus;
     }
 
-    public void onTestClick() {
-        ///!!!DEVELOPMENT ONLY!!!
-
-        Grid g = new Grid(100, 100);
-        g.setPointType(new Point(10, 10), GridPointType.Ground);
-
-        drawGrid(g);
-    }
-
-    private void drawGrid(IGrid g) {
+    private void drawGrid(IGrid g, Canvas canvas, int zoom) {
 
         //spSim1.setPreferredSize(new Dimension(g.getWidth() * zoom, g.getHeight() * zoom));
-        canvSimulation1.setWidth(g.getWidth() * zoom);
-        canvSimulation1.setHeight(g.getHeight() * zoom);
+        canvas.setWidth(g.getWidth() * zoom);
+        canvas.setHeight(g.getHeight() * zoom);
 
-        GraphicsContext gc = canvSimulation1.getGraphicsContext2D();
-        gc.clearRect(0, 0, canvSimulation1.getWidth(), canvSimulation1.getHeight());
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         //gc.setFill(javafx.scene.paint.Color.BLACK);
 
         gc.setStroke(convertToJavaFXColor(Color.BLACK));
@@ -135,13 +124,49 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
         for (GridPoint gp : g.getPointList()) {
             gc.setFill(convertToJavaFXColor(gp.getColor()));
-            gc.fillRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+            //gc.fillRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+            gc.fillRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             if (zoom > 5) {
-                gc.strokeRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+                //gc.strokeRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
+                gc.strokeRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             }
         }
 
     }
+
+    private void triggerAnimationTimer() {
+        if (timer == null) {
+            timer = new AnimationTimer() {
+
+                @Override
+                public void handle(long now) {
+                    for (int i = 0; i < 4; i++) {
+                        if (stepResults[i] != null) {
+                            switch (i) {
+                                case 0:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation1, simZoom[i]);
+                                    break;
+                                case 1:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation2, simZoom[i]);
+                                    break;
+                                case 2:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation3, simZoom[i]);
+                                    break;
+                                case 3:
+                                    drawGrid(stepResults[i].getCurrentGrid(), canvSimulation4, simZoom[i]);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    updateSimDetails();
+                }
+            };
+            timer.start();
+        }
+    }
+
 
     private javafx.scene.paint.Color convertToJavaFXColor(Color c) {
         return javafx.scene.paint.Color.rgb(c.getRed(), c.getGreen(), c.getBlue());
@@ -149,31 +174,38 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     private void updateSimDetails() {
         lblSelectedSim.setText("Simulation " + selectedSim);
-        switch (selectedSim) {
-            case 1:
-                sldZoom1.setValue(sim1Speed);
-                lblZoomValue1.setText(Integer.toString(sim1Speed));
-                sldZoom1.setValue(sim1Zoom);
-                lblZoomValue1.setText(Integer.toString(sim1Zoom));
-                if (sim1LastStep == null){
-                    toggleVisible(false);
-                    lblTitleExtinction.setText("Simulation Not Running");
-                }
-                else{
-                    toggleVisible(true);
-                    lblTitleExtinction.setText("Simulation Not Running");
-                }
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
+        if (stepResults[selectedSim - 1] != null) {
+            toggleVisible(true);
+            lblTitleExtinction.setText("Mass Extincion countdown");
+            if (stepResults[selectedSim - 1].getStepCount() > simLastShownStep[selectedSim - 1]) {
+                simLastShownStep[selectedSim - 1] = stepResults[selectedSim - 1].getStepCount();
+                setDetailValues(simZoom[selectedSim - 1], simSpeed[selectedSim - 1], stepResults[selectedSim - 1], simLastShownStep[selectedSim - 1]);
+            }
         }
     }
 
-    private void toggleVisible(boolean visible){
+    private void setDetailValues(int zoom, double speed, StepResult stepResult, int simSteps) {
+
+        sldZoom1.setValue(speed);
+        lblZoomValue1.setText(Double.toString(speed));
+        sldZoom1.setValue(zoom);
+        lblZoomValue1.setText(Integer.toString(zoom));
+
+        int totalCreatureCount = stepResult.getCarnivoreCount() + stepResult.getHerbivoreCount() + stepResult.getNonivoreCount() + stepResult.getOmnivoreCount();
+        int totalCreatureEnergy = stepResult.getEnergyCarnivore() + stepResult.getEnergyHerbivore() + stepResult.getEnergyNonivore() + stepResult.getEnergyOmnivore();
+
+        lblCreaturesTotal.setText(totalCreatureCount + " Creatures Total/" + totalCreatureEnergy + " Energy");
+        lblCreaturesCarnivores.setText(stepResult.getCarnivoreCount() + " Carnivores Total/" + stepResult.getEnergyCarnivore() + " Energy");
+        lblCreaturesHerbivores.setText(stepResult.getHerbivoreCount() + " Herbivores Total/" + stepResult.getEnergyHerbivore() + " Energy");
+        lblCreaturesNonivores.setText(stepResult.getNonivoreCount() + " Nonivores Total/" + stepResult.getEnergyNonivore() + " Energy");
+        lblCreaturesOmnivores.setText(stepResult.getOmnivoreCount() + " Omnivores Total/" + stepResult.getEnergyNonivore() + " Energy");
+
+        lblPlants.setText(stepResult.getPlantCount() + "Plants Total/" + stepResult.getEnergyPlants() + " Energy in plants");
+
+        lblStepsDone.setText(Integer.toString(simSteps) + " Steps done");
+    }
+
+    private void toggleVisible(boolean visible) {
         lblExtinctionCountdown.setVisible(visible);
         btnExtinctionNow.setVisible(visible);
         btnExtinctionDisable.setVisible(visible);
@@ -186,11 +218,78 @@ public class FXMLSimulatorController extends UIController implements Initializab
         lblPlants.setVisible(visible);
         lblTitleCreatures.setVisible(visible);
         lblTitleplants.setVisible(visible);
+        lblStepsDone.setVisible(visible);
     }
 
     private void changeSelectedSimulation(int simNumber) {
         selectedSim = simNumber;
+        if (stepResults[selectedSim - 1] != null) {
+            toggleVisible(true);
+        }
         updateSimDetails();
+    }
+
+    private Grid getTestingGrid() {
+        int testGridWidth = 20;
+        int testGridHeight = 20;
+
+        Grid grid = new Grid(testGridWidth, testGridHeight);
+
+        //island 1
+        grid.setPointType(new Point(2, 2), GridPointType.Ground);
+        grid.setPointType(new Point(2, 3), GridPointType.Ground);
+        grid.setPointType(new Point(2, 4), GridPointType.Ground);
+        grid.setPointType(new Point(2, 5), GridPointType.Ground);
+        grid.setPointType(new Point(3, 2), GridPointType.Ground);
+        grid.setPointType(new Point(3, 3), GridPointType.Ground);
+        grid.setPointType(new Point(3, 4), GridPointType.Ground);
+        grid.setPointType(new Point(3, 5), GridPointType.Ground);
+        grid.setPointType(new Point(4, 2), GridPointType.Ground);
+        grid.setPointType(new Point(4, 3), GridPointType.Ground);
+        grid.setPointType(new Point(4, 4), GridPointType.Ground);
+        grid.setPointType(new Point(4, 5), GridPointType.Ground);
+        grid.setPointType(new Point(5, 2), GridPointType.Ground);
+        grid.setPointType(new Point(5, 3), GridPointType.Ground);
+        grid.setPointType(new Point(5, 4), GridPointType.Ground);
+        grid.setPointType(new Point(5, 5), GridPointType.Ground);
+
+        //island 2
+        grid.setPointType(new Point(10, 2), GridPointType.Ground);
+        grid.setPointType(new Point(10, 3), GridPointType.Ground);
+        grid.setPointType(new Point(10, 4), GridPointType.Ground);
+        grid.setPointType(new Point(10, 5), GridPointType.Ground);
+        grid.setPointType(new Point(11, 2), GridPointType.Ground);
+        grid.setPointType(new Point(11, 3), GridPointType.Ground);
+        grid.setPointType(new Point(11, 4), GridPointType.Ground);
+        grid.setPointType(new Point(11, 5), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 2), GridPointType.Obstacle);
+        grid.setPointType(new Point(12, 3), GridPointType.Ground);
+        grid.setPointType(new Point(12, 4), GridPointType.Ground);
+        grid.setPointType(new Point(12, 5), GridPointType.Ground);
+        grid.setPointType(new Point(13, 2), GridPointType.Ground);
+        grid.setPointType(new Point(13, 3), GridPointType.Ground);
+        grid.setPointType(new Point(13, 4), GridPointType.Ground);
+        grid.setPointType(new Point(13, 5), GridPointType.Ground);
+
+        //island 3
+        grid.setPointType(new Point(10, 10), GridPointType.Ground);
+        grid.setPointType(new Point(10, 11), GridPointType.Ground);
+        grid.setPointType(new Point(10, 12), GridPointType.Ground);
+        grid.setPointType(new Point(10, 13), GridPointType.Ground);
+        grid.setPointType(new Point(11, 10), GridPointType.Ground);
+        grid.setPointType(new Point(11, 11), GridPointType.Ground);
+        grid.setPointType(new Point(11, 12), GridPointType.Ground);
+        grid.setPointType(new Point(11, 13), GridPointType.Ground);
+        grid.setPointType(new Point(12, 10), GridPointType.Ground);
+        grid.setPointType(new Point(12, 11), GridPointType.Ground);
+        grid.setPointType(new Point(12, 12), GridPointType.Ground);
+        grid.setPointType(new Point(12, 13), GridPointType.Ground);
+        grid.setPointType(new Point(13, 10), GridPointType.Ground);
+        grid.setPointType(new Point(13, 11), GridPointType.Ground);
+        grid.setPointType(new Point(13, 12), GridPointType.Ground);
+        grid.setPointType(new Point(13, 13), GridPointType.Ground);
+
+        return grid;
     }
 
     //////////////////////////////////////////////////////////////
@@ -216,43 +315,64 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickPlaySim() {
-
+        simulations[selectedSim - 1].setSimulationSpeed(sldSimSpeed.getValue());
+        simulations[selectedSim - 1].startSimulation();
     }
 
     public void onClickPauseSim() {
-
+        simulations[selectedSim - 1].setSimulationSpeed(0);
     }
 
     public void onClickOpenSim() {
-
     }
 
     public void onClickSaveSim() {
-
     }
 
     public void onClickNewSim() {
-
+        Simulation freshSim = new Simulation(500, 15,
+                1500, Digestion.Carnivore, 100, 1500, 4, 600, 500, 900, 3000, 300, 2,
+                1400, Digestion.Herbivore, 100, 1400, 6, 700, 500, 750, 3000, 300, 2,
+                2000, Digestion.Nonivore, 0, 1750, 8, 1000, 800, 100, 3000, 200, 2,
+                1750, Digestion.Omnivore, 45, 2500, 2, 500, 400, 1500, 3000, 300, 2, getTestingGrid(), this, selectedSim);
+        simulations[selectedSim - 1] = freshSim;
+        Thread simThread = new Thread(String.valueOf(selectedSim)) {
+            public void run() {
+                freshSim.setSimulationSpeed(sldSimSpeed.getValue());
+                freshSim.startSimulation();
+            }
+        };
+        //Thread simThread = new Thread(String.valueOf(selectedSim));
+        simulationThreads[selectedSim - 1] = simThread;
+        simThread.setDaemon(true);
+        simThread.start();
     }
 
     public void onZoomSlider1Finished() {
-        zoom = (int) sldZoom1.getValue();
-        lblZoomValue1.setText(Integer.toString(zoom));
+        simZoom[selectedSim - 1] = (int) sldZoom1.getValue();
+        lblZoomValue1.setText(Integer.toString(simZoom[selectedSim - 1]));
     }
 
     public void onSpeedSliderFinished() {
-
+        simSpeed[selectedSim-1] = sldSimSpeed.getValue();
+        if (sldSimSpeed.getValue() == 100){
+            lblSimSpeed.setText("Unlimited");
+        }
+        else{
+            lblSimSpeed.setText(Double.toString(sldSimSpeed.getValue()));
+        }
+        simulations[selectedSim-1].setSimulationSpeed(simSpeed[selectedSim-1]);
     }
 
     public void onClickExtinctionNow() {
-
+        showWarning("Notice", "Extinction events not implemented yet.");
     }
 
     public void onClickExtinctionReset() {
-
+        showWarning("Notice", "Extinction events not implemented yet.");
     }
 
     public void onClickExtinctionDisable() {
-
+        showWarning("Notice", "Extinction events not implemented yet.");
     }
 }

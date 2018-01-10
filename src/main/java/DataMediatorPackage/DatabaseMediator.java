@@ -1,56 +1,117 @@
 package DataMediatorPackage;
 
-import ModelPackage.IGrid;
-import ModelPackage.IWorld;
-import ModelPackage.StepResult;
+import ModelPackage.*;
 import UserPackage.User;
+
+import java.sql.*;
 
 /**
  * Responsible for writing and reading data to and from a MySQL Database
  */
 public class DatabaseMediator implements IDataMediator {
 
-    public DatabaseMediator(){
-        
-    }
+    private String databaseUsername = "";
+    private String databasePassword = "";
+    private boolean databaseSimUser = false;
 
     @Override
-    public User loadUser(String username, String password) {
+    public User loadUser(String username, String password)
+    {
+        Connection con;
+        try {
+
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
+            Statement st = con.createStatement();
+            String sql = ("SELECT * FROM users WHERE DBusername = username and DBpassword = password");
+
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next()) {
+                databaseUsername = rs.getString("username");
+                databasePassword = rs.getString("password");
+                databaseSimUser = rs.getBoolean("simUser");
+            }
+
+            User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
+
+            con.close();
+
+            System.out.println("Successful login!");
+            return dbUser;
+
+
+        } catch (SQLException e) {
+            System.out.println("Oops, something went wrong while loading user!");
+            e.printStackTrace();
+        }
+
+
         return null;
     }
 
     @Override
-    public void saveUser(User user) {
+    public void saveUser(User user)
+    {
+        String username = user.getUsername();
+        String password = user.getPassword();
+        boolean isSimuser = user.isSimUser();
+
+
+        Connection con;
+
+        try
+        {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
+            Statement st = con.createStatement();
+            String sql = ("INSERT INTO users VALUES username, password, isSimuser");
+        }
+        catch (SQLException e)
+        {
+            System.out.println("Oops, something went wrong while saving user!");
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public IGrid loadGrid(String gridName) {
+    public GridClone loadGrid(String gridName)
+    {
+        // FileMediator
         return null;
     }
 
     @Override
-    public void saveGrid(IGrid grid, String gridName) {
+    public void saveGrid(GridClone grid, String gridName)
+    {
+        // FileMediator
 
     }
 
     @Override
-    public StepResult loadSimulationResult(String simResultName) {
+    public StepResult loadSimulationResult(String simResultName)
+    {
+        // FileMediator
         return null;
     }
 
     @Override
-    public void saveSimulationResult(StepResult resultFrame, String simResultName) {
+    public void saveSimulationResult(StepResult resultFrame, String simResultName)
+    {
+        // FileMediator
 
     }
 
     @Override
-    public IWorld loadUnfinishedSimulation(String simulationName) {
+    public World loadSimulation(String simulationName)
+    {
+        // FileMediator
         return null;
     }
 
     @Override
-    public void saveUnfinishedSimulation(IWorld unfinishedSimulation, String simulationName) {
+    public void saveSimulation(World Simulation, String simulationName)
+    {
+        // FileMediator
 
     }
 }
