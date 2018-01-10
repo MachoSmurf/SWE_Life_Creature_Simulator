@@ -18,7 +18,7 @@ import java.util.List;
 public class MovementPlanner {
 
     private IGrid simulationGrid;
-    private List<MotionPoint> planableGrid;
+    private ArrayList<MotionPoint> planableGrid;
 
     private ArrayList<ArrayList<MotionPoint>> subGrids;
 
@@ -210,7 +210,7 @@ public class MovementPlanner {
      * @return ArrayList of points, in the right order that lead to the endpoint. Returns null if no path was found or
      * the startpoint was the endpoint
      */
-    public ArrayList<Point> findPath(Point startPoint, Point targetPoint) throws Exception {
+    public ArrayList<Point> findPath(Point startPoint, Point targetPoint, Boolean useIslandOnlyNavigation) throws Exception {
         //reset the grid, clearing all previous points
         resetPlannableGrid();
 
@@ -232,10 +232,29 @@ public class MovementPlanner {
         //Buffer for points not in the primarySearchArea
         ArrayList<Point> secondaySearchAreaBuffer = new ArrayList<>();
 
-        for (ArrayList<MotionPoint> area : subGrids) {
+        /*for (ArrayList<MotionPoint> area : subGrids) {
+            //TODO: Only use a primary search area if the area is not the water!
             if (area.contains(getMotionPointByCoordinates(startPoint))) {
                 primarySearchArea = area;
             }
+        }*/
+
+        if (useIslandOnlyNavigation){
+            if (subGrids.get(0).contains(getMotionPointByCoordinates(startPoint))){
+                primarySearchArea = planableGrid;
+            }
+            else{
+                for (ArrayList<MotionPoint> area : subGrids) {
+                    //TODO: Only use a primary search area if the area is not the water!
+                    if (area.contains(getMotionPointByCoordinates(startPoint))) {
+                        primarySearchArea = area;
+                    }
+                }
+            }
+        }
+        else{
+            //creature wants to be able to swim. Make it do so.
+            primarySearchArea = planableGrid;
         }
 
         //fetch the first set of adjacent points to the startpoint

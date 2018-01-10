@@ -1,7 +1,5 @@
 package ModelPackage;
 
-import javafx.scene.paint.Color;
-
 import java.awt.*;
 
 /**
@@ -21,46 +19,7 @@ public class Plant extends SimObject {
 
     public StatusObject step () {
 
-        Boolean alive = true;
-        if (deathCounter >= 10) {
-            if (stepsFromTenthTimeKilled < 100) {
-                stepsFromTenthTimeKilled ++;
-                alive = false;
-            }
-            else {
-                deathCounter = 0;
-                energy++;
-            }
-        }
-        else {
-            energy++;
-        }
-
-        StatusObject status = new StatusObject(energy, Color.GREEN, alive);
-        return status;
+        return new StatusObject(energy, Color.GREEN, true);
     }
 
-    public int eaten (int hunger) {
-        int resultHunger = 0;
-        if ((energy - hunger) <= 0) {
-            // plant dies
-            resultHunger = hunger - energy;
-            energy = 0;
-            deathCounter++;
-        }
-        else {
-            // Hunger is gone
-            energy = energy - hunger;
-        }
-        return resultHunger;
-    }
-
-    public Boolean isAlive () {
-        if (energy == 0) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
 }
