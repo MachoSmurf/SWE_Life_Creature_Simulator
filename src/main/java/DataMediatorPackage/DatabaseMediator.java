@@ -20,7 +20,7 @@ public class DatabaseMediator implements IDataMediator {
         Connection con;
         try {
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SweLifeCreature", "Admin", "Admin");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
             Statement st = con.createStatement();
             String sql = ("SELECT * FROM users WHERE DBusername = username and DBpassword = password");
 
@@ -56,13 +56,14 @@ public class DatabaseMediator implements IDataMediator {
         String password = user.getPassword();
         boolean isSimuser = user.isSimUser();
 
+
         Connection con;
 
         try
         {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SweLifeCreature", "Admin", "Admin");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
             Statement st = con.createStatement();
-            String sql = ("INSERT INTO users VALUES username, password, isSimUser");
+            String sql = ("INSERT INTO users VALUES username, password, isSimuser");
         }
         catch (SQLException e)
         {
@@ -73,14 +74,14 @@ public class DatabaseMediator implements IDataMediator {
     }
 
     @Override
-    public Grid loadGrid(String gridName)
+    public GridClone loadGrid(String gridName)
     {
         // FileMediator
         return null;
     }
 
     @Override
-    public void saveGrid(Grid grid, String gridName)
+    public void saveGrid(GridClone grid, String gridName)
     {
         // FileMediator
 

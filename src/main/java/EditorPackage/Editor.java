@@ -2,6 +2,7 @@ package EditorPackage;
 
 import DataMediatorPackage.FileMediator;
 import ModelPackage.Grid;
+import ModelPackage.GridClone;
 
 
 import java.io.*;
@@ -20,13 +21,13 @@ public class Editor extends FileMediator implements IEditorController{
     }
 
     @Override
-    public Grid loadGrid(String gridName)
+    public GridClone loadGrid(String gridName)
     {
         return fileMediator.loadGrid(gridName);
     }
 
     @Override
-    public void saveGrid(Grid grid, String gridName)
+    public void saveGrid(GridClone grid, String gridName)
     {
 
         fileMediator.saveGrid(grid, gridName);
@@ -36,13 +37,16 @@ public class Editor extends FileMediator implements IEditorController{
     public void deleteGrid(String gridName)
     {
         String gridFile = gridName + ".txt";
-        File file = new File(gridFile);
+        File file = new File("C:\\Users\\Public\\Documents\\" +gridFile );
 
         try
         {
-            Files.deleteIfExists(file.toPath());
+            if(file.exists())
+            {
+                file.delete();
+            }
         }
-        catch (IOException e)
+        catch (Exception e)
         {
             e.printStackTrace();
         }
