@@ -13,7 +13,7 @@ public interface IUserController {
     /**
      * Logs the user out of the system
      */
-    public void Logout();
+    public boolean Logout();
 
     /**
      * Gets the rights for the user currently logged in

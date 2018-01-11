@@ -9,40 +9,86 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserControllerTest {
     private User testUser;
-    private UserController userController;
-    private boolean result;
+    private User testUser2;
+    private UserController testUserController;
+    private UserController testUserController2;
+    private boolean testResult;
+    private boolean expResult;
 
 
     @BeforeEach
     void setUp() {
+
+        // Create a test user and a testUserController
         testUser = new User("Imke", "Test", true);
-        userController = new UserController("Imke", "Test", true);
+        testUser2 = new User("Natascha", "Test2", false);
+        testUserController = new UserController("Imke", "Test", true);
+        testUserController2 = new UserController("Natascha", "Test2", false);
 
     }
 
     @Test
     void loginTrue() {
-        result = userController.Login("Imke", "Test");
-        boolean expResult = true;
+        // Login with username and password of the testUser
+        testResult = testUserController.Login("Imke", "Test");
+        // Expected result
+        expResult = true;
 
-
-        Assert.assertEquals(expResult, result);
+        // check or expResult and testResult are equal
+        Assert.assertEquals(expResult, testResult);
     }
 
     @Test
     void loginFalse() {
-        result = userController.Login("Imke2", "test2");
+        // login with false username and password.
+        testResult = testUserController.Login("Imke2", "test2");
 
-        boolean expResult = false;
+        // expected result
+        expResult = false;
 
-        Assert.assertEquals(expResult, result);
+        //check or expResult and testResult are equal
+        Assert.assertEquals(expResult, testResult);
     }
 
     @Test
     void logout() {
+        // login with username and password of the testUser
+        testUserController.Login("Imke", "Test");
+
+        // Logout the testUser
+        testResult = testUserController.Logout();
+
+        // expected result
+        expResult = false;
+
+        // check of expectedResult and testResult are equal
+        Assert.assertEquals(expResult, testResult);
+
     }
 
     @Test
-    void getRights() {
+    void getRightsTrue() {
+        // get rights of de user
+        testResult = testUserController.getRights();
+
+        //expected result
+        expResult = true;
+
+        // check or expResult and testResult are equal
+        Assert.assertEquals(expResult, testResult);
+
+    }
+
+    @Test
+    void getRightsFalse() {
+        // get rights of de user
+        testResult = testUserController2.getRights();
+
+        //expected result
+        expResult = false;
+
+        // check or expResult and testResult are equal
+        Assert.assertEquals(expResult, testResult);
+
     }
 }

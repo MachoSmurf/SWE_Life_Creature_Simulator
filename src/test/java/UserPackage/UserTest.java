@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserTest
-{
+class UserTest {
     User testUser;
     User testUser2;
     String testUsername;
@@ -16,15 +15,13 @@ class UserTest
 
 
     @BeforeEach
-    void setUp()
-    {
+    void setUp() {
         testUser = new User("Imke", "test", true);
         testUser2 = new User();
     }
 
     @Test
-    void setUsername()
-    {
+    void setUsername() {
         // create a username
         String username = "Natascha";
 
@@ -32,25 +29,22 @@ class UserTest
         testUser.setUsername(username);
 
         // check if testUsername and username are equal
-        Assert.assertEquals(username,testUser.getUsername());
+        Assert.assertEquals(username, testUser.getUsername());
 
     }
 
     @Test
-    void getUsername()
-    {
+    void getUsername() {
         // tested in method: setUsername().
     }
 
     @Test
-    void getPassword()
-    {
+    void getPassword() {
         // tested in method: setPassword().
     }
 
     @Test
-    void setPassword()
-    {
+    void setPassword() {
         // Create a password
         String password = "Life";
 
@@ -62,8 +56,7 @@ class UserTest
     }
 
     @Test
-    void setSimUser()
-    {
+    void setSimUser() {
         // create simUser
         boolean simUser = false;
 
@@ -75,8 +68,7 @@ class UserTest
     }
 
     @Test
-    void isSimUser()
-    {
+    void isSimUser() {
         // tested in method: setSimUser().
     }
 }

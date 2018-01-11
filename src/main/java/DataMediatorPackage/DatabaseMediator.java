@@ -54,7 +54,7 @@ public class DatabaseMediator implements IDataMediator {
                 User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
 
                 con.close();
-                System.out.println("Successful login!");
+
                 return dbUser;
 
             } else {

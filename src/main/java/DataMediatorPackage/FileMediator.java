@@ -10,68 +10,59 @@ import java.io.*;
  */
 public class FileMediator implements IDataMediator {
 
-    public FileMediator(){
+    public FileMediator() {
 
     }
 
     @Override
-    public User loadUser(String username, String password)
-    {
+    public User loadUser(String username, String password) {
         // DatabaseMediator
         return null;
     }
 
     @Override
-    public void saveUser(User user)
-    {
+    public void saveUser(User user) {
         // DatabaseMediator
 
     }
 
+
     @Override
-    public GridClone loadGrid(String gridName)
-    {
+    public GridClone loadGrid(String gridName) {
         return this.<GridClone>LoadFile(gridName);
     }
 
     @Override
-    public void saveGrid(GridClone grid, String gridName)
-    {
+    public void saveGrid(GridClone grid, String gridName) {
         this.<GridClone>SaveFile(grid, gridName);
     }
 
     @Override
-    public StepResult loadSimulationResult(String simResultName)
-    {
-      return this.<StepResult>LoadFile(simResultName);
+    public StepResult loadSimulationResult(String simResultName) {
+        return this.<StepResult>LoadFile(simResultName);
     }
 
     @Override
-    public void saveSimulationResult(StepResult resultFrame, String simResultName)
-    {
+    public void saveSimulationResult(StepResult resultFrame, String simResultName) {
         this.<StepResult>SaveFile(resultFrame, simResultName);
     }
 
     @Override
-    public World loadSimulation(String simulationName)
-    {
+    public World loadSimulation(String simulationName) {
         return this.<World>LoadFile(simulationName);
     }
 
     @Override
-    public void saveSimulation(World simulation, String simulationName)
-    {
+    public void saveSimulation(World simulation, String simulationName) {
         this.<World>SaveFile(simulation, simulationName);
     }
 
-    public static <T> void SaveFile(T obj, String name)
-    {
+    public static <T> void SaveFile(T obj, String name) {
         File file;
 
-        try
-        {
+        try {
 
-            file = new File("C:\\Users\\Public\\Documents\\" +name + ".txt");
+            file = new File("C:\\Users\\Public\\Documents\\" + name + ".txt");
             if (!file.exists()) {
                 file.createNewFile();
             }
@@ -80,27 +71,21 @@ public class FileMediator implements IDataMediator {
             oos.writeObject(obj);
             oos.close();
             fos.close();
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Error while saving simulation result");
         }
 
     }
 
-    public static <T> T LoadFile (String name)
-    {
-        String FileName = "C:\\Users\\Public\\Documents\\" +name + ".txt";
-        try
-        {
+    public static <T> T LoadFile(String name) {
+        String FileName = "C:\\Users\\Public\\Documents\\" + name + ".txt";
+        try {
             FileInputStream fin = new FileInputStream(FileName);
             ObjectInputStream ois = new ObjectInputStream(fin);
 
             return (T) ois.readObject();
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
         }
