@@ -2,7 +2,6 @@ package ViewPackage;
 
 import java.io.IOException;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
@@ -27,9 +26,6 @@ public class LifeCreatureSimulator extends Application{
 
             primaryStage.show();
 
-            //if (controllerLogin == null){
-                //controllerLogin.showConnectionError();
-            //}
             controllerLogin.setStage(primaryStage);
         }
         catch(IOException e){

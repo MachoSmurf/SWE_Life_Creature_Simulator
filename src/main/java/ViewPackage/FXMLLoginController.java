@@ -1,12 +1,12 @@
 package ViewPackage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 /**
  * FXML Controller class
@@ -31,11 +31,11 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            boolean loginResult = user.Login(userName.getText(), password.getText());
+            boolean loginResult = user1.Login(userName.getText(), password.getText());
 
             if (loginResult)
             {
-                if (String.valueOf(user.getRights()).equals(true))
+                if (String.valueOf(user1.getRights()).equals(true))
                 {
                     try{
                         FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
