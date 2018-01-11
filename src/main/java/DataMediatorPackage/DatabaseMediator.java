@@ -18,23 +18,20 @@ public class DatabaseMediator implements IDataMediator {
     private String dbPassword;
 
 
-    public DatabaseMediator()
-    {
+    public DatabaseMediator() {
         this.dbPort = "3306";
         this.dbUser = "root";
         this.dbPassword = "root";
     }
 
-    public DatabaseMediator(String dbPort, String dbUser, String dbPassword)
-    {
+    public DatabaseMediator(String dbPort, String dbUser, String dbPassword) {
         this.dbPort = dbPort;
         this.dbUser = dbUser;
         this.dbPassword = dbPassword;
     }
 
     @Override
-    public User loadUser(String username, String password)
-    {
+    public User loadUser(String username, String password) {
         Connection con;
         try {
 
@@ -53,12 +50,17 @@ public class DatabaseMediator implements IDataMediator {
                 databaseSimUser = rs.getBoolean("DBsimUser");
             }
 
-            User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
+            if (databaseUsername.contentEquals(username) && databasePassword.contentEquals(password)) {
+                User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
 
-            con.close();
+                con.close();
+                System.out.println("Successful login!");
+                return dbUser;
 
-            System.out.println("Successful login!");
-            return dbUser;
+            } else {
+                con.close();
+                return null;
+            }
 
 
         } catch (SQLException e) {
@@ -72,8 +74,7 @@ public class DatabaseMediator implements IDataMediator {
     }
 
     @Override
-    public void saveUser(User user)
-    {
+    public void saveUser(User user) {
         String username = user.getUsername();
         String password = user.getPassword();
         boolean isSimuser = user.isSimUser();
@@ -81,14 +82,13 @@ public class DatabaseMediator implements IDataMediator {
 
         Connection con;
 
-        try
-        {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/life", "root", "root");
-            Statement st = con.createStatement();
-            String sql = ("INSERT INTO users VALUES username, password, isSimuser");
-        }
-        catch (SQLException e)
-        {
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? and DBpassword = ?");
+            ps.setObject(1, username);
+            ps.setObject(2, password);
+
+        } catch (SQLException e) {
             System.out.println("Oops, something went wrong while saving user!");
             e.printStackTrace();
         }
@@ -96,43 +96,37 @@ public class DatabaseMediator implements IDataMediator {
     }
 
     @Override
-    public GridClone loadGrid(String gridName)
-    {
+    public GridClone loadGrid(String gridName) {
         // FileMediator
         return null;
     }
 
     @Override
-    public void saveGrid(GridClone grid, String gridName)
-    {
+    public void saveGrid(GridClone grid, String gridName) {
         // FileMediator
 
     }
 
     @Override
-    public StepResult loadSimulationResult(String simResultName)
-    {
+    public StepResult loadSimulationResult(String simResultName) {
         // FileMediator
         return null;
     }
 
     @Override
-    public void saveSimulationResult(StepResult resultFrame, String simResultName)
-    {
+    public void saveSimulationResult(StepResult resultFrame, String simResultName) {
         // FileMediator
 
     }
 
     @Override
-    public World loadSimulation(String simulationName)
-    {
+    public World loadSimulation(String simulationName) {
         // FileMediator
         return null;
     }
 
     @Override
-    public void saveSimulation(World Simulation, String simulationName)
-    {
+    public void saveSimulation(World Simulation, String simulationName) {
         // FileMediator
 
     }

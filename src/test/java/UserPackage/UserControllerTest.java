@@ -7,32 +7,30 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserControllerTest
-{
+class UserControllerTest {
     private User testUser;
     private UserController userController;
     private boolean result;
 
 
     @BeforeEach
-    void setUp()
-    {
-        testUser = new User("Imke", "test", true);
-        userController = new UserController("Imke", "test", true);
+    void setUp() {
+        testUser = new User("Imke", "Test", true);
+        userController = new UserController("Imke", "Test", true);
 
     }
+
     @Test
-    void loginTrue()
-    {
-        result = userController.Login("Imke", "test");
+    void loginTrue() {
+        result = userController.Login("Imke", "Test");
         boolean expResult = true;
+
 
         Assert.assertEquals(expResult, result);
     }
 
     @Test
-    void loginFalse()
-    {
+    void loginFalse() {
         result = userController.Login("Imke2", "test2");
 
         boolean expResult = false;
