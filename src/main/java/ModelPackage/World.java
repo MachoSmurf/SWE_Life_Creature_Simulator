@@ -18,6 +18,7 @@ public class World implements Serializable, IWorld {
     private boolean worldInitialized;
     private Random rnd;
     private int stepCount;
+    protected List<SimObject> newSimObjectList; // to know which SimObject we already had when trying to eat or mate, without always choosing yourself
 
     /**
      * Create a world with the parameters we get from LifePackage.
@@ -25,10 +26,10 @@ public class World implements Serializable, IWorld {
      * sets the initial start and target point of the creature.
      * gets the route to go to the target from the class motionplanner.
      */
-    public World(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore, int digestionBalanceCarnivore, int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
-                 int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
-                 int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
-                 int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
+    public World(int energyPlant, int howManyPlants, int energyCarnivore, int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
+                 int energyHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
+                 int energyNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
+                 int energyOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
                  Grid simulationGrid) {
 
         if (digestionBalanceOmnivore > 100){
@@ -81,17 +82,17 @@ public class World implements Serializable, IWorld {
 
         //add creatures
         for (int i = 0; i<howManyCarnivore; i++){
-            simObjects.add(new Creature(findAvailableSpawnPoint(), energyCarnivore, Digestion.Carnivore, digestionBalanceCarnivore,
+            simObjects.add(new Creature(findAvailableSpawnPoint(), energyCarnivore, Digestion.Carnivore, 100,
                     staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore,
                     swimThresholdCarnivore, motionThresholdCarnivore, this));
         }
         for (int i = 0; i<howManyHerbivore; i++){
-            simObjects.add(new Creature(findAvailableSpawnPoint(), energyHerbivore, Digestion.Herbivore, digestionBalanceHerbivore,
+            simObjects.add(new Creature(findAvailableSpawnPoint(), energyHerbivore, Digestion.Herbivore, 0,
                     staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore,
                     swimThresholdHerbivore, motionThresholdHerbivore, this));
         }
         for (int i = 0; i<howManyNonivore; i++){
-            simObjects.add(new Creature(findAvailableSpawnPoint(), energyNonivore, Digestion.Nonivore, digestionBalanceNonivore,
+            simObjects.add(new Creature(findAvailableSpawnPoint(), energyNonivore, Digestion.Nonivore, 0,
                     staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore,
                     swimThresholdNonivore, motionThresholdNonivore, this));
         }
@@ -117,7 +118,10 @@ public class World implements Serializable, IWorld {
         int carnivoreCount = 0;
         int omnivoreCount = 0;
         int plantCount = 0;
+        newSimObjectList = new ArrayList<SimObject>();
+
         stepCount++;
+
 
         for (SimObject so : simObjects){
             StatusObject statusObject = so.step();
@@ -159,6 +163,7 @@ public class World implements Serializable, IWorld {
                     energyPlants += statusObject.getEnergy();
                 }
             }
+            newSimObjectList.add(so);
         }
 
         //revert empty gridpoints to original color
@@ -177,6 +182,21 @@ public class World implements Serializable, IWorld {
 
         //TODO: Return GridClone instead of this Grid
         return new StepResult(this.grid, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount);
+    }
+
+    @Override
+    public void resetExtinction() {
+
+    }
+
+    @Override
+    public void disableExtinction() {
+
+    }
+
+    @Override
+    public void activateExtinctionNow() {
+
     }
 
     public List<Point> findSimObjectTarget(Point currentLocation, Digestion searcherDigestion, boolean wantsToSwim){
@@ -240,6 +260,10 @@ public class World implements Serializable, IWorld {
         //include all points
         int pointNumber = rnd.nextInt(area.size() - 1);
         return area.get(pointNumber);
+    }
+
+    public Color getColor(Point point) {
+      return grid.getColor(point);
     }
 
 }
