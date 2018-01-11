@@ -1,7 +1,5 @@
 package ViewPackage;
 
-import DataMediatorPackage.IDataMediator;
-import UserPackage.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,6 +22,7 @@ public class FXMLUserManagementController extends UIController implements Initia
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Hier de lijst met reeds bestaande users ophalen...
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
@@ -55,7 +54,15 @@ public class FXMLUserManagementController extends UIController implements Initia
             password2 = password2.trim();
             passwordRepeat2 = passwordRepeat2.trim();
 
-            //Nog verder uitwerken
+            if (!password2.equals(passwordRepeat2))
+            {
+                showWarning("Fout", "Wachtwoorden zijn niet aan elkaar gelijk. Voer a.u.b. 2 gelijke wachtwoorden in.");
+            }
+            else
+            {
+                //user1.databaseMediator.saveUser(User(userName2, password2, simUser));
+                //Er moet iets aan de kant van Imke worden aangepast, zodat ik een user kan opslaan en een lijst van users kan inladen...
+            }
         }
     }
 }

@@ -31,11 +31,11 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            boolean loginResult = user1.Login(userName.getText(), password.getText());
+            boolean loginResult = iUser1.Login(userName.getText(), password.getText());
 
             if (loginResult)
             {
-                if (String.valueOf(user1.getRights()).equals(true))
+                if (String.valueOf(iUser1.getRights()).equals(true))
                 {
                     try{
                         FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
