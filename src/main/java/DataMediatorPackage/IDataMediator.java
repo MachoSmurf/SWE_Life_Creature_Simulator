@@ -21,12 +21,11 @@ public interface IDataMediator {
      */
     void saveUser(User user);
 
-
     /**
-     * Loads an IGrid from the datasource containing a map layout
+     * Loads an GridClone from the datasource containing a map layout
      *
      * @param gridName the name to use for reference
-     * @return IGrid to access the grid contents
+     * @return GridClone to access the grid contents
      */
     GridClone loadGrid(String gridName);
 
@@ -58,15 +57,15 @@ public interface IDataMediator {
      * Loads an unfinished simulation
      *
      * @param simulationName The name used to reference the unfinished sumulation
-     * @return IWorld object containing all a grid and the simulation objects in it
+     * @return World object containing all a grid and the simulation objects in it
      */
     World loadSimulation(String simulationName);
 
     /**
      * Saves an unfinished simulation to the relevant data source
      *
-     * @param unfinishedSimulation The IWorld object that needs to be saved
+     * @param simulation The World object that needs to be saved
      * @param simulationName       The name used to reference the unsaved simulation
      */
-    void saveSimulation(World unfinishedSimulation, String simulationName);
+    void saveSimulation(World simulation, String simulationName);
 }

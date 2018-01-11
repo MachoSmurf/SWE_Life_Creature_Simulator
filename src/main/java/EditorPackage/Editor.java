@@ -19,10 +19,21 @@ public class Editor extends FileMediator implements IEditorController {
 
     }
 
+    /**
+     * Loads a grid based on a given name
+     *
+     * @param gridName Name of the grid that has to be loaded
+     */
     @Override
     public GridClone loadGrid(String gridName) {
         return fileMediator.loadGrid(gridName);
     }
+
+    /**
+     * Saves a grid using a given name
+     *
+     * @param gridName Name of the grid that has to be saved
+     */
 
     @Override
     public void saveGrid(GridClone grid, String gridName) {
@@ -30,6 +41,11 @@ public class Editor extends FileMediator implements IEditorController {
         fileMediator.saveGrid(grid, gridName);
     }
 
+    /**
+     * deletes a grid using a given name
+     *
+     * @param gridName Name of the grid that has to be deleted
+     */
     @Override
     public void deleteGrid(String gridName) {
         String gridFile = gridName + ".txt";
@@ -42,9 +58,5 @@ public class Editor extends FileMediator implements IEditorController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
-
-
 }
