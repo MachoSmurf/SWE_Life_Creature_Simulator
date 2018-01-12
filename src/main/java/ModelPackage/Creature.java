@@ -23,21 +23,18 @@ public class Creature extends SimObject {
     private int swimThreshold;
     private int motionThreshold;
     private int weight;
-    private int speed;
     private int hunger;
     private boolean alive;
     private List<Point> nextSteps;
-    private int stepsTaken;
-    List<ArrayList<Point>> livingAreas;
-    MovementPlanner movement;
-    World world;
-    Color myColor;
+    private MovementPlanner movement;
+    private World world;
+    private Color myColor;
 
 
     public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, World world) {
         super(point, energy);
         alive = true;
-        stepsTaken = 0;
+
         this.digestion = digestion;
         this.digestionBalance = digestionBalance;
         this.stamina = stamina;
@@ -54,16 +51,6 @@ public class Creature extends SimObject {
         } else {
             weight = legs * 10 + (energy - strength);
         }
-        int legSpeed;
-        if (legs - 5 > 0) {
-            legSpeed = legs - 5;
-        } else if (legs - 5 < 0) {
-            legSpeed = 5 - legs;
-        } else {
-            legSpeed = 1;
-        }
-        int minWeight = legs * 10;
-        speed = ((weight - minWeight) / legSpeed) / 10;
         this.hunger = stamina - energy;
         this.nextSteps = nextSteps;
 
@@ -140,7 +127,7 @@ public class Creature extends SimObject {
                 }
                 nextSteps = world.findSimObjectTarget(this.getPoint(), digestionToUse, wantToSwim);
 
-            } else if (nextSteps != null && nextSteps.size() > getSpeed()) {
+            } else if (nextSteps.size() > getSpeed()) {
                 //int numberOfSteps = nextSteps.size();
                 point = nextSteps.get(1);
                 nextSteps = null;
@@ -181,8 +168,18 @@ public class Creature extends SimObject {
     }
 
     private int getSpeed() {
+        int legSpeed;
+        if (legs - 5 > 0) {
+            legSpeed = legs - 5;
+        } else if (legs - 5 < 0) {
+            legSpeed = 5 - legs;
+        } else {
+            legSpeed = 1;
+        }
+        legSpeed = legSpeed + 1;
+        int minWeight = legs * 10;
+        return (5 * (minWeight / weight) / legSpeed);
 
-        return speed;
     }
 
     private void MovementCost(){
@@ -203,72 +200,78 @@ public class Creature extends SimObject {
     }
 
     private boolean eatMeat () {
-        List<SimObject> ThingToSelect = world.newSimObjectList;
-        for (SimObject sim : ThingToSelect) {
-            if (sim instanceof Creature) {
-                if (sim.point.x == point.x && sim.point.y == point.y){
-                    if (((Creature) sim).getDigestion() != digestion){
-                        if (strength > ((Creature) sim).stamina){
-                            int eaten = strength - ((Creature) sim).stamina;
-                            if (sim.energy >= eaten && getHunger() >= eaten) {
-                                energy = energy + eaten;
-                                sim.energy = sim.energy - eaten;
-                                System.out.println("Did eat meat nr 0");
-                                return true;
-                            }
-                            else if (getHunger() < eaten && sim.energy >= eaten) {
-                                energy = energy + getHunger();
-                                sim.energy = sim.energy - getHunger();
-                                System.out.println("Did eat meat nr 1");
-                                return true;
-                            }
-                            else if (sim.energy >= eaten && getHunger() < eaten) {
-                                energy = energy + sim.energy;
-                                sim.energy = sim.energy - sim.energy;
-                                System.out.println("Did eat meat nr 2");
-                                return true;
-                            }
-                            else if (sim.energy < getHunger()) {
-                                energy = energy + sim.energy;
-                                sim.energy = sim.energy - sim.energy;
-                                System.out.println("Did eat meat nr 3");
-                                return true;
-                            }
-                            else {
-                                energy = energy + getHunger();
-                                sim.energy = sim.energy - getHunger();
-                                System.out.println("Did eat meat nr 4");
-                                return true;
+        if (world.getColor(point) != Color.blue) {
+            List<SimObject> ThingToSelect = world.newSimObjectList;
+            for (SimObject sim : ThingToSelect) {
+                if (sim instanceof Creature) {
+                    if (sim.point.x == point.x && sim.point.y == point.y){
+                        if (((Creature) sim).getDigestion() != digestion){
+                            if (strength > ((Creature) sim).stamina){
+                                int eaten = strength - ((Creature) sim).stamina;
+                                if (sim.energy >= eaten && getHunger() >= eaten) {
+                                    energy = energy + eaten;
+                                    sim.energy = sim.energy - eaten;
+                                    System.out.println("Did eat meat nr 0");
+                                    return true;
+                                }
+                                else if (getHunger() < eaten && sim.energy >= eaten) {
+                                    energy = energy + getHunger();
+                                    sim.energy = sim.energy - getHunger();
+                                    System.out.println("Did eat meat nr 1");
+                                    return true;
+                                }
+                                else if (sim.energy >= eaten && getHunger() < eaten) {
+                                    energy = energy + sim.energy;
+                                    sim.energy = 0;
+                                    System.out.println("Did eat meat nr 2");
+                                    return true;
+                                }
+                                else if (sim.energy < getHunger()) {
+                                    energy = energy + sim.energy;
+                                    sim.energy = 0;
+                                    System.out.println("Did eat meat nr 3");
+                                    return true;
+                                }
+                                else {
+                                    energy = energy + getHunger();
+                                    sim.energy = sim.energy - getHunger();
+                                    System.out.println("Did eat meat nr 4");
+                                    return true;
+                                }
                             }
                         }
                     }
-                }
 
+                }
             }
         }
+
         return false;
     }
 
     private boolean eatPlant() {
-        List<SimObject> ThingToSelect = world.newSimObjectList;
-        for (SimObject sim : ThingToSelect) {
-            if (sim instanceof Plant) {
-                if (sim.point.x == point.x && sim.point.y == point.y){
-                    if (getHunger() > sim.getEnergy()){
-                        energy = energy + sim.getEnergy();
-                        sim.energy = 0;
-                        System.out.println("ate a whole plant");
-                        return true;
-                    }
-                    else {
-                        energy = energy + getHunger();
-                        sim.energy = sim.energy - getHunger();
-                        System.out.println("ate a plant til no hungry anymore");
-                        return true;
+        if (world.getColor(point) != Color.blue) {
+            List<SimObject> ThingToSelect = world.newSimObjectList;
+            for (SimObject sim : ThingToSelect) {
+                if (sim instanceof Plant) {
+                    if (sim.point.x == point.x && sim.point.y == point.y){
+                        if (getHunger() > sim.getEnergy()){
+                            energy = energy + sim.getEnergy();
+                            sim.energy = 0;
+                            System.out.println("ate a whole plant");
+                            return true;
+                        }
+                        else {
+                            energy = energy + getHunger();
+                            sim.energy = sim.energy - getHunger();
+                            System.out.println("ate a plant til no hungry anymore");
+                            return true;
+                        }
                     }
                 }
             }
         }
+
         return false;
 
     }

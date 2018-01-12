@@ -18,6 +18,8 @@ public class World implements Serializable, IWorld {
     private boolean worldInitialized;
     private Random rnd;
     private int stepCount;
+    private int extinctionTimer;
+    private boolean extinctionEnabled;
     protected List<SimObject> newSimObjectList; // to know which SimObject we already had when trying to eat or mate, without always choosing yourself
 
     /**
@@ -32,6 +34,8 @@ public class World implements Serializable, IWorld {
                  int energyOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
                  Grid simulationGrid) {
 
+        extinctionEnabled = true;
+        extinctionTimer = 100;
         if (digestionBalanceOmnivore > 100){
             throw new IllegalArgumentException("DigestionBalanceOmnivore is out of range (must be <=100)");
         }
@@ -118,9 +122,17 @@ public class World implements Serializable, IWorld {
         int carnivoreCount = 0;
         int omnivoreCount = 0;
         int plantCount = 0;
-        newSimObjectList = new ArrayList<SimObject>();
+        newSimObjectList = new ArrayList<>();
 
         stepCount++;
+
+        if (extinctionEnabled && extinctionTimer == 0) {
+            exctinction();
+            extinctionTimer = 100;
+        }
+        if (!extinctionEnabled) {
+            extinctionTimer--;
+        }
 
 
         for (SimObject so : simObjects){
@@ -181,22 +193,22 @@ public class World implements Serializable, IWorld {
         }
 
         //TODO: Return GridClone instead of this Grid
-        return new StepResult(this.grid, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount);
+        return new StepResult(this.grid, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount, extinctionTimer);
     }
 
     @Override
     public void resetExtinction() {
-
+        extinctionTimer = 100;
     }
 
     @Override
     public void disableExtinction() {
-
+        extinctionTimer = 0;
     }
 
     @Override
     public void activateExtinctionNow() {
-
+        extinctionTimer = 0;
     }
 
     public List<Point> findSimObjectTarget(Point currentLocation, Digestion searcherDigestion, boolean wantsToSwim){
@@ -264,6 +276,10 @@ public class World implements Serializable, IWorld {
 
     public Color getColor(Point point) {
       return grid.getColor(point);
+    }
+
+    private void exctinction() {
+        System.out.println("Boom Everyone is dead!");
     }
 
 }

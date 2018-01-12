@@ -230,8 +230,8 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     private Grid getTestingGrid() {
-        int testGridWidth = 20;
-        int testGridHeight = 20;
+        int testGridWidth = 40;
+        int testGridHeight = 40;
 
         Grid grid = new Grid(testGridWidth, testGridHeight);
 
@@ -252,42 +252,90 @@ public class FXMLSimulatorController extends UIController implements Initializab
         grid.setPointType(new Point(5, 3), GridPointType.Ground);
         grid.setPointType(new Point(5, 4), GridPointType.Ground);
         grid.setPointType(new Point(5, 5), GridPointType.Ground);
+        grid.setPointType(new Point(6, 2), GridPointType.Ground);
+        grid.setPointType(new Point(6, 3), GridPointType.Ground);
+        grid.setPointType(new Point(6, 4), GridPointType.Ground);
+        grid.setPointType(new Point(6, 5), GridPointType.Ground);
+        grid.setPointType(new Point(7, 2), GridPointType.Ground);
+        grid.setPointType(new Point(7, 3), GridPointType.Ground);
+        grid.setPointType(new Point(7, 4), GridPointType.Ground);
+        grid.setPointType(new Point(7, 5), GridPointType.Ground);
+        grid.setPointType(new Point(8, 2), GridPointType.Ground);
+        grid.setPointType(new Point(8, 3), GridPointType.Ground);
+        grid.setPointType(new Point(8, 4), GridPointType.Ground);
+        grid.setPointType(new Point(8, 5), GridPointType.Ground);
+        grid.setPointType(new Point(9, 2), GridPointType.Ground);
+        grid.setPointType(new Point(9, 3), GridPointType.Ground);
+        grid.setPointType(new Point(9, 4), GridPointType.Ground);
+        grid.setPointType(new Point(9, 5), GridPointType.Ground);
 
         //island 2
-        grid.setPointType(new Point(10, 2), GridPointType.Ground);
-        grid.setPointType(new Point(10, 3), GridPointType.Ground);
-        grid.setPointType(new Point(10, 4), GridPointType.Ground);
-        grid.setPointType(new Point(10, 5), GridPointType.Ground);
-        grid.setPointType(new Point(11, 2), GridPointType.Ground);
-        grid.setPointType(new Point(11, 3), GridPointType.Ground);
-        grid.setPointType(new Point(11, 4), GridPointType.Ground);
-        grid.setPointType(new Point(11, 5), GridPointType.Obstacle);
-        grid.setPointType(new Point(12, 2), GridPointType.Obstacle);
-        grid.setPointType(new Point(12, 3), GridPointType.Ground);
-        grid.setPointType(new Point(12, 4), GridPointType.Ground);
-        grid.setPointType(new Point(12, 5), GridPointType.Ground);
-        grid.setPointType(new Point(13, 2), GridPointType.Ground);
-        grid.setPointType(new Point(13, 3), GridPointType.Ground);
-        grid.setPointType(new Point(13, 4), GridPointType.Ground);
-        grid.setPointType(new Point(13, 5), GridPointType.Ground);
+        grid.setPointType(new Point(20, 2), GridPointType.Ground);
+        grid.setPointType(new Point(20, 3), GridPointType.Ground);
+        grid.setPointType(new Point(20, 4), GridPointType.Ground);
+        grid.setPointType(new Point(20, 5), GridPointType.Ground);
+        grid.setPointType(new Point(21, 2), GridPointType.Ground);
+        grid.setPointType(new Point(21, 3), GridPointType.Ground);
+        grid.setPointType(new Point(21, 4), GridPointType.Ground);
+        grid.setPointType(new Point(21, 5), GridPointType.Obstacle);
+        grid.setPointType(new Point(22, 2), GridPointType.Obstacle);
+        grid.setPointType(new Point(22, 3), GridPointType.Ground);
+        grid.setPointType(new Point(22, 4), GridPointType.Ground);
+        grid.setPointType(new Point(22, 5), GridPointType.Ground);
+        grid.setPointType(new Point(23, 2), GridPointType.Ground);
+        grid.setPointType(new Point(23, 3), GridPointType.Ground);
+        grid.setPointType(new Point(23, 4), GridPointType.Ground);
+        grid.setPointType(new Point(23, 5), GridPointType.Ground);
+        grid.setPointType(new Point(20, 6), GridPointType.Ground);
+        grid.setPointType(new Point(20, 7), GridPointType.Ground);
+        grid.setPointType(new Point(20, 8), GridPointType.Ground);
+        grid.setPointType(new Point(20, 9), GridPointType.Ground);
+        grid.setPointType(new Point(21, 6), GridPointType.Ground);
+        grid.setPointType(new Point(21, 7), GridPointType.Ground);
+        grid.setPointType(new Point(21, 8), GridPointType.Ground);
+        grid.setPointType(new Point(21, 9), GridPointType.Obstacle);
+        grid.setPointType(new Point(22, 6), GridPointType.Obstacle);
+        grid.setPointType(new Point(22, 7), GridPointType.Ground);
+        grid.setPointType(new Point(22, 8), GridPointType.Ground);
+        grid.setPointType(new Point(22, 9), GridPointType.Ground);
+        grid.setPointType(new Point(23, 6), GridPointType.Ground);
+        grid.setPointType(new Point(23, 7), GridPointType.Ground);
+        grid.setPointType(new Point(23, 8), GridPointType.Ground);
+        grid.setPointType(new Point(23, 9), GridPointType.Ground);
 
         //island 3
-        grid.setPointType(new Point(10, 10), GridPointType.Ground);
-        grid.setPointType(new Point(10, 11), GridPointType.Ground);
-        grid.setPointType(new Point(10, 12), GridPointType.Ground);
-        grid.setPointType(new Point(10, 13), GridPointType.Ground);
-        grid.setPointType(new Point(11, 10), GridPointType.Ground);
-        grid.setPointType(new Point(11, 11), GridPointType.Ground);
-        grid.setPointType(new Point(11, 12), GridPointType.Ground);
-        grid.setPointType(new Point(11, 13), GridPointType.Ground);
-        grid.setPointType(new Point(12, 10), GridPointType.Ground);
-        grid.setPointType(new Point(12, 11), GridPointType.Ground);
-        grid.setPointType(new Point(12, 12), GridPointType.Ground);
-        grid.setPointType(new Point(12, 13), GridPointType.Ground);
-        grid.setPointType(new Point(13, 10), GridPointType.Ground);
-        grid.setPointType(new Point(13, 11), GridPointType.Ground);
-        grid.setPointType(new Point(13, 12), GridPointType.Ground);
-        grid.setPointType(new Point(13, 13), GridPointType.Ground);
+        grid.setPointType(new Point(15, 10), GridPointType.Ground);
+        grid.setPointType(new Point(15, 11), GridPointType.Ground);
+        grid.setPointType(new Point(15, 12), GridPointType.Ground);
+        grid.setPointType(new Point(15, 13), GridPointType.Ground);
+        grid.setPointType(new Point(16, 10), GridPointType.Ground);
+        grid.setPointType(new Point(16, 11), GridPointType.Ground);
+        grid.setPointType(new Point(16, 12), GridPointType.Ground);
+        grid.setPointType(new Point(16, 13), GridPointType.Ground);
+        grid.setPointType(new Point(17, 10), GridPointType.Ground);
+        grid.setPointType(new Point(17, 11), GridPointType.Ground);
+        grid.setPointType(new Point(17, 12), GridPointType.Ground);
+        grid.setPointType(new Point(17, 13), GridPointType.Ground);
+        grid.setPointType(new Point(18, 10), GridPointType.Ground);
+        grid.setPointType(new Point(18, 11), GridPointType.Ground);
+        grid.setPointType(new Point(18, 12), GridPointType.Ground);
+        grid.setPointType(new Point(18, 13), GridPointType.Ground);
+        grid.setPointType(new Point(15, 14), GridPointType.Ground);
+        grid.setPointType(new Point(15, 15), GridPointType.Ground);
+        grid.setPointType(new Point(15, 16), GridPointType.Ground);
+        grid.setPointType(new Point(15, 17), GridPointType.Ground);
+        grid.setPointType(new Point(16, 14), GridPointType.Ground);
+        grid.setPointType(new Point(16, 15), GridPointType.Ground);
+        grid.setPointType(new Point(16, 16), GridPointType.Ground);
+        grid.setPointType(new Point(16, 17), GridPointType.Ground);
+        grid.setPointType(new Point(17, 14), GridPointType.Ground);
+        grid.setPointType(new Point(17, 15), GridPointType.Ground);
+        grid.setPointType(new Point(17, 16), GridPointType.Ground);
+        grid.setPointType(new Point(17, 17), GridPointType.Ground);
+        grid.setPointType(new Point(18, 14), GridPointType.Ground);
+        grid.setPointType(new Point(18, 15), GridPointType.Ground);
+        grid.setPointType(new Point(18, 16), GridPointType.Ground);
+        grid.setPointType(new Point(18, 17), GridPointType.Ground);
 
         return grid;
     }
@@ -331,10 +379,10 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     public void onClickNewSim() {
         Simulation freshSim = new Simulation(500, 15,
-                1500,  1500, 4, 600, 500, 500, 3000, 300, 2,
-                1400,  1400, 6, 700, 500, 250, 3000, 300, 2,
-                2000,1750, 8, 1000, 800, 100, 3000, 200, 2,
-                1750, 45, 2500, 2, 500, 400, 500, 3000, 300, 2, getTestingGrid(), this, selectedSim);
+                3000,  3500, 4, 60, 500, 2000, 3000, 300, 5,
+                2500,  2500, 6, 70, 500, 250, 3000, 300, 5,
+                2500,2750, 8, 30, 800, 100, 3000, 200, 5,
+                2000, 45, 2500, 2, 50, 400, 2500, 3000, 300, 5, getTestingGrid(), this, selectedSim);
         simulations[selectedSim - 1] = freshSim;
         Thread simThread = new Thread(String.valueOf(selectedSim)) {
             public void run() {
