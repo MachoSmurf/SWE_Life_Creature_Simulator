@@ -69,9 +69,10 @@ public class StepResult {
     private int energyHerbivore;
     private int energyPlants;
     private int stepCount;
+    private int exctinctionTimer;
 
 
-    public StepResult(IGrid currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount) {
+    public StepResult(IGrid currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount, int exctinctionTimer) {
         this.currentGrid = currentGrid;
         this.nonivoreCount = nonivoreCount;
         this.herbivoreCount = herbivoreCount;
@@ -84,5 +85,6 @@ public class StepResult {
         this.energyHerbivore = energyHerbivore;
         this.energyPlants = energyPlants;
         this.stepCount = stepCount;
+        this.exctinctionTimer = exctinctionTimer;
     }
 }
