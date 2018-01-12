@@ -4,6 +4,7 @@ import ModelPackage.*;
 import UserPackage.User;
 
 import java.io.*;
+import java.util.List;
 
 /**
  * Responsible for writing and reading data to and from flatfiles, if necessary using some form of encoding
@@ -104,6 +105,12 @@ public class FileMediator implements IDataMediator {
         this.<World>SaveFile(simulation, simulationName);
     }
 
+    @Override
+    public List<User> getUsers() {
+        // DatabaseMediator
+        return null;
+    }
+
     /**
      * Help generic method to save files to the relevant data source
      *
@@ -136,7 +143,7 @@ public class FileMediator implements IDataMediator {
      * Help generic method to save files to the relevant data source
      *
      * @param name The name used to reference the given object
-     * @param <T> The type of the return object
+     * @param <T>  The type of the return object
      * @return Object and content of that object
      */
     public static <T> T LoadFile(String name) {

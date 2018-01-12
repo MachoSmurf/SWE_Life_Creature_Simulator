@@ -2,6 +2,9 @@ package UserPackage;
 
 import DataMediatorPackage.DatabaseMediator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Controls the login/logout procedure and stores the user object
  */
@@ -12,6 +15,7 @@ public class UserController extends User implements IUserController {
     private boolean isSimUser;
     private boolean isLoggedIn;
     private DatabaseMediator databaseMediator;
+    private List<User> allUsers;
 
     public UserController(String username, String password, boolean simUser) {
         super(username, password, simUser);
@@ -63,6 +67,21 @@ public class UserController extends User implements IUserController {
             System.out.println("user is not a simulation user!");
             return false;
         }
+
+    }
+
+    @Override
+    public List<User> getUsers() {
+        databaseMediator = new DatabaseMediator();
+        allUsers = new ArrayList<User>();
+
+        if (!databaseMediator.getUsers().isEmpty()) {
+            allUsers.addAll(databaseMediator.getUsers());
+            return allUsers;
+        } else {
+            return null;
+        }
+
 
     }
 }

@@ -4,6 +4,8 @@ import ModelPackage.*;
 import UserPackage.User;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Responsible for writing and reading data to and from a MySQL Database
@@ -177,5 +179,32 @@ public class DatabaseMediator implements IDataMediator {
     public void saveSimulation(World simulation, String simulationName) {
         // FileMediator
 
+    }
+
+    @Override
+    public List<User> getUsers() {
+        List<User> allUsers = new ArrayList<User>();
+        Connection con;
+
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users ");
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                databaseUsername = rs.getString("DBusername");
+                databasePassword = rs.getString("DBpassword");
+                databaseSimUser = rs.getBoolean("DBsimUser");
+                User dbUser = new User(databaseUsername, databasePassword, databaseSimUser);
+
+                allUsers.add(dbUser);
+            }
+            return allUsers;
+
+        } catch (SQLException e) {
+            System.out.println("Oops, something went wrong while get users!");
+            e.printStackTrace();
+        }
+        return null;
     }
 }

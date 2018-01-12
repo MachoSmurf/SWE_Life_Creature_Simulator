@@ -5,6 +5,9 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserControllerTest {
@@ -14,6 +17,8 @@ class UserControllerTest {
     private UserController testUserController2;
     private boolean testResult;
     private boolean expResult;
+    private List<User> testAllUsers;
+    private List<User> testResultList;
 
 
     @BeforeEach
@@ -24,6 +29,10 @@ class UserControllerTest {
         testUser2 = new User("Natascha", "Test2", false);
         testUserController = new UserController("Imke", "Test", true);
         testUserController2 = new UserController("Natascha", "Test2", false);
+        testAllUsers = new ArrayList<User>();
+
+        testAllUsers.add(testUser);
+        testAllUsers.add(testUser2);
 
     }
 
@@ -91,4 +100,23 @@ class UserControllerTest {
         Assert.assertEquals(expResult, testResult);
 
     }
+
+
+    @Test
+    void getUsers() {
+        // get all users of the simulation
+        testResultList = testUserController.getUsers();
+        boolean areEqual;
+
+        // Check or testAllUsers and testResultList are equal
+        if (testResultList.containsAll(testAllUsers)) {
+            areEqual = true;
+            Assert.assertTrue(areEqual);
+
+        } else {
+            areEqual = false;
+            Assert.assertFalse(areEqual);
+        }
+    }
+
 }

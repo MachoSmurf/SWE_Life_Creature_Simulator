@@ -3,6 +3,8 @@ package DataMediatorPackage;
 import ModelPackage.*;
 import UserPackage.User;
 
+import java.util.List;
+
 public interface IDataMediator {
 
     /**
@@ -68,4 +70,10 @@ public interface IDataMediator {
      * @param simulationName       The name used to reference the unsaved simulation
      */
     void saveSimulation(World simulation, String simulationName);
+
+    /**
+     * return a list of users of the simulation
+     */
+
+    List<User> getUsers();
 }
