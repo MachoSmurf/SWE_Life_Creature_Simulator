@@ -1,10 +1,11 @@
 package ModelPackage;
 
+
+
 import java.awt.*;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Acts as a mediator between the outside of the model and the inside. Keeps track of the motionplanner and communicates it to the simobjects
@@ -109,6 +110,14 @@ public class World implements Serializable, IWorld {
         System.out.println(simObjects.size() + " objects added to simobjects");
     }
 
+    /**
+     * is called from the LifePackage
+     * first checks if there is an extinction
+     * if no extinction, do a step for each SimObject in the List SimObjects.
+     * after step, fill the lists we return with stepresult.
+     *
+     * @return
+     */
     @Override
     public StepResult doStep() {
         //collect data
@@ -130,8 +139,9 @@ public class World implements Serializable, IWorld {
             exctinction();
             extinctionTimer = 100;
         }
-        if (!extinctionEnabled) {
+        if (extinctionEnabled) {
             extinctionTimer--;
+            System.out.println(extinctionTimer);
         }
 
 
@@ -280,6 +290,53 @@ public class World implements Serializable, IWorld {
 
     private void exctinction() {
         System.out.println("Boom Everyone is dead!");
+        List<SimObject> carnivores = new ArrayList<>();
+        List<SimObject> herbivores = new ArrayList<>();
+        List<SimObject> omnivores = new ArrayList<>();
+        List<SimObject> nonivores = new ArrayList<>();
+        List<SimObject> survivors = new ArrayList<>();
+        for (SimObject so : simObjects)
+        if (so instanceof Creature){
+            switch (((Creature) so).getDigestion()){
+                case Carnivore:
+                    carnivores.add(so);
+                    break;
+                case Omnivore:
+                    omnivores.add(so);
+                    break;
+                case Herbivore:
+                    herbivores.add(so);
+                    break;
+                case Nonivore:
+                    nonivores.add(so);
+                    break;
+            }
+        }
+        else {
+            survivors.add(so);
+        }
+        survivors.addAll(SurviveExtinction(carnivores));
+        survivors.addAll(SurviveExtinction(herbivores));
+        survivors.addAll(SurviveExtinction(omnivores));
+        survivors.addAll(SurviveExtinction(nonivores));
+    }
+
+    private List<SimObject> SurviveExtinction (List<SimObject> creatures) {
+        Collections.sort(creatures, new Comparator<SimObject>() {
+            @Override
+            public int compare(SimObject o1, SimObject o2) {
+                return Integer.compare(o1.energy, o2.energy);
+                //o1.energy > o2.energy ? -1 : (o1.energy < o2.energy) ? 1 : 0;
+            }
+        });
+        int size = creatures.size();
+        List<SimObject> newCreatureList = new ArrayList<>();
+        size = size / 2;
+        for (int i = 0; i > size; i++) {
+
+            newCreatureList.add(creatures.get(i));
+        }
+        return newCreatureList;
     }
 
 }

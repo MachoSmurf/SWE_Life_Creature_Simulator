@@ -30,6 +30,22 @@ public class Creature extends SimObject {
     private World world;
     private Color myColor;
 
+    /**
+     * Create a Creature with the parameters we get from World.
+     *
+     * @param point
+     * @param energy
+     * @param digestion
+     * @param digestionBalance
+     * @param stamina
+     * @param legs
+     * @param reproductionThreshold
+     * @param reproductionCost
+     * @param strength
+     * @param swimThreshold
+     * @param motionThreshold
+     * @param world
+     */
 
     public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, World world) {
         super(point, energy);
@@ -70,6 +86,15 @@ public class Creature extends SimObject {
         }
     }
 
+    /**
+     * Take a step.
+     * check if the creature wants to eat?
+     * if not does it want to mate?,
+     * if not does it want to move?
+     *
+     *
+     * @return StatusObject.
+     */
     public StatusObject step() {
         boolean didThing = false;
 
@@ -168,6 +193,7 @@ public class Creature extends SimObject {
     }
 
     private int getSpeed() {
+        //5 legs is ideal
         int legSpeed;
         if (legs - 5 > 0) {
             legSpeed = legs - 5;
@@ -177,8 +203,9 @@ public class Creature extends SimObject {
             legSpeed = 1;
         }
         legSpeed = legSpeed + 1;
+
         int minWeight = legs * 10;
-        return (5 * (minWeight / weight) / legSpeed);
+        return (5 * (minWeight / weight) / legSpeed); // max 2,5 gridpoints per step. if is too heavy does not walk at all.
 
     }
 
@@ -199,6 +226,16 @@ public class Creature extends SimObject {
 
     }
 
+    /**
+     * if the creature is not in water,
+     * do for each simObject in the list of objects that already did a step:
+     * if the other creature is on the same gridpoint
+     * if it is another species
+     * if the strength of the creature is more then the strength of the other creature.
+     * eat Creature
+     *
+     * @return the answer to the question did it eat?
+     */
     private boolean eatMeat () {
         if (world.getColor(point) != Color.blue) {
             List<SimObject> ThingToSelect = world.newSimObjectList;
@@ -206,8 +243,8 @@ public class Creature extends SimObject {
                 if (sim instanceof Creature) {
                     if (sim.point.x == point.x && sim.point.y == point.y){
                         if (((Creature) sim).getDigestion() != digestion){
-                            if (strength > ((Creature) sim).stamina){
-                                int eaten = strength - ((Creature) sim).stamina;
+                            if (strength > ((Creature) sim).strength){
+                                int eaten = strength - ((Creature) sim).strength;
                                 if (sim.energy >= eaten && getHunger() >= eaten) {
                                     energy = energy + eaten;
                                     sim.energy = sim.energy - eaten;
@@ -249,6 +286,13 @@ public class Creature extends SimObject {
         return false;
     }
 
+    /**
+     * if not in water
+     * do for each simObject in the list of objects that already did a step:
+     * if the creatures are in the vicinity of eachother
+     * eat Plant
+     * @return the answer to the question did it eat?
+     */
     private boolean eatPlant() {
         if (world.getColor(point) != Color.blue) {
             List<SimObject> ThingToSelect = world.newSimObjectList;
