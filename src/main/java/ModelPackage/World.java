@@ -36,7 +36,7 @@ public class World implements Serializable, IWorld {
                  Grid simulationGrid) {
 
         extinctionEnabled = true;
-        extinctionTimer = 100;
+        extinctionTimer = 25;
         if (digestionBalanceOmnivore > 100){
             throw new IllegalArgumentException("DigestionBalanceOmnivore is out of range (must be <=100)");
         }
@@ -136,7 +136,8 @@ public class World implements Serializable, IWorld {
         stepCount++;
 
         if (extinctionEnabled && extinctionTimer == 0) {
-            exctinction();
+           exctinction();
+
             extinctionTimer = 100;
         }
         if (extinctionEnabled) {
@@ -319,6 +320,7 @@ public class World implements Serializable, IWorld {
         survivors.addAll(SurviveExtinction(herbivores));
         survivors.addAll(SurviveExtinction(omnivores));
         survivors.addAll(SurviveExtinction(nonivores));
+        simObjects = survivors;
     }
 
     private List<SimObject> SurviveExtinction (List<SimObject> creatures) {
