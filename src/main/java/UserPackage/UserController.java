@@ -24,7 +24,13 @@ public class UserController extends User implements IUserController {
         this.isLoggedIn = simUser;
     }
 
-
+    /**
+     * Checks the login credentials of the user
+     *
+     * @param username The users login name
+     * @param password The users Password
+     * @return True if credentials correct, false if incorrect or if the login process failed for some other reason
+     */
     @Override
     public boolean Login(String username, String password) {
         databaseMediator = new DatabaseMediator();
@@ -43,6 +49,9 @@ public class UserController extends User implements IUserController {
         }
     }
 
+    /**
+     * Logs the user out of the system
+     */
     @Override
     public boolean Logout() {
         System.out.println("Logout Successful!");
@@ -70,6 +79,11 @@ public class UserController extends User implements IUserController {
 
     }
 
+    /**
+     * return a list of users of the simulation
+     *
+     * @return a list of all users of the simulation
+     */
     @Override
     public List<User> getUsers() {
         databaseMediator = new DatabaseMediator();

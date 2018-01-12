@@ -76,8 +76,8 @@ public class Simulation implements ILifeController {
 
 
     @Override
-    public void saveSimulation(String simName, World runningSimulation) {
-        fileMediator.saveSimulation(runningSimulation, simName);
+    public void saveSimulation(String simName) {
+        fileMediator.saveSimulation(world, simName);
     }
 
     @Override

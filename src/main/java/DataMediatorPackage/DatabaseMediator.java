@@ -181,6 +181,11 @@ public class DatabaseMediator implements IDataMediator {
 
     }
 
+    /**
+     * return a list of users of the simulation
+     *
+     * @return a list of all users of the simulation
+     */
     @Override
     public List<User> getUsers() {
         List<User> allUsers = new ArrayList<User>();

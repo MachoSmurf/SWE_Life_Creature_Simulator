@@ -66,14 +66,15 @@ public interface IDataMediator {
     /**
      * Saves an unfinished simulation to the relevant data source
      *
-     * @param simulation The World object that needs to be saved
-     * @param simulationName       The name used to reference the unsaved simulation
+     * @param simulation     The World object that needs to be saved
+     * @param simulationName The name used to reference the unsaved simulation
      */
     void saveSimulation(World simulation, String simulationName);
 
     /**
      * return a list of users of the simulation
+     *
+     * @return a list of all users of the simulation
      */
-
     List<User> getUsers();
 }

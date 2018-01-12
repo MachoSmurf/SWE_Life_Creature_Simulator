@@ -27,7 +27,7 @@ public interface IUserController {
 
     /**
      * return a list of users of the simulation
+     * @return a list of all users of the simulation
      */
-
     List<User> getUsers();
 }
