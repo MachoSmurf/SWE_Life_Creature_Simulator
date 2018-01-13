@@ -32,41 +32,34 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            //setIUserController(new UserController("username", "password", false));
-            //boolean loginResult = iUser1.Login(userName2, password2);
+            if (userName2.equals("testuser1") && password2.equals("testuser1"))
+            {
+                try{
 
-            //if (loginResult == true)
-            //{
-                //if (iUser1.getRights() == true)
-                if (userName2.equals("testuser1") && password2.equals("testuser1"))
-                {
-                    try{
-                        FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
-                    }
-                    catch(IOException ioe) {
-                        System.out.println(ioe);
-                        showWarning("Fout", "Het scherm kon niet worden geladen.");
-                    }
+                    FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
                 }
-                else if (userName2.equals("testuser2") && password2.equals("testuser2"))
-                {
-                    try{
-                        FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
-                    }
-                    catch(IOException ioe) {
-                        System.out.println(ioe);
-                        showWarning("Fout", "Het scherm kon niet worden geladen.");
-                    }
+                catch(IOException ioe) {
+
+                    System.out.println(ioe);
+
+                    showWarning("Fout", "Het scherm kon niet worden geladen.");
                 }
-                else
-                {
-                    showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
+            }
+            else if (userName2.equals("testuser2") && password2.equals("testuser2"))
+            {
+                try{
+                    FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
                 }
-            //}
-            //else
-            //{
-                //showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
-            //}
+                catch(IOException ioe) {
+                    System.out.println(ioe);
+
+                    showWarning("Fout", "Het scherm kon niet worden geladen.");
+                }
+            }
+            else
+            {
+                showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
+            }
         }
     }
 }
