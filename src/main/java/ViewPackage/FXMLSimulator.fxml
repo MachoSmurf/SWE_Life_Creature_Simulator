@@ -2,7 +2,6 @@
 
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -14,9 +13,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLSimulatorController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLSimulatorController">
     <children>
-        <TitledPane animated="false" collapsible="false" text="Life - Simulator">
+        <TitledPane animated="false" collapsible="false" layoutY="-1.0" prefHeight="839.0" prefWidth="1203.0" text="Life - Simulator">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" />
             </content>
@@ -25,95 +24,124 @@
             </font>
         </TitledPane>
         <AnchorPane layoutY="37.0" prefHeight="800.0" prefWidth="1200.0" />
-        <ImageView fitHeight="850.0" fitWidth="1400.0" layoutX="-198.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="817.0" fitWidth="1399.0" layoutX="-197.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Background.jpg" />
             </image>
-      </ImageView>
-      <DialogPane layoutX="935.0" layoutY="72.0" prefHeight="783.0" prefWidth="267.0" />
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="21.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
-         <content>
-              <Canvas fx:id="canvSimulation1" height="285.0" width="395.0" />
-         </content>
-      </ScrollPane>
-        <Label layoutX="29.0" layoutY="47.0" text="Simulation 1:" />
+        </ImageView>
+        <ScrollPane hbarPolicy="ALWAYS" layoutX="21.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+           <content>
+                <Canvas fx:id="canvSimulation1" height="285.0" width="395.0" />
+           </content>
+        </ScrollPane>
+        <Label layoutX="18.0" layoutY="56.0" text="Simulation 1:">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font></Label>
         <Slider fx:id="sldZoom1" layoutX="998.0" layoutY="157.0" min="1.0" onMouseReleased="#onZoomSlider1Finished" onZoomFinished="#onZoomSlider1Finished" value="1.0" />
         <Label layoutX="949.0" layoutY="155.0" text="Zoom:" />
         <Label fx:id="lblZoomValue1" layoutX="1140.0" layoutY="155.0" text="10" />
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="454.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
-         <content>
-            <Canvas fx:id="canvSimulation2" height="200.0" width="200.0" />
-         </content>
-      </ScrollPane>
-      <Label layoutX="468.0" layoutY="47.0" text="Simulation 2:" />
-      <Label layoutX="29.0" layoutY="437.0" text="Simulation 3:" />
-      <Label layoutX="468.0" layoutY="446.0" text="Simulation 4:" />
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="18.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
-         <content>
-            <Canvas fx:id="canvSimulation3" height="200.0" width="200.0" />
-         </content>
-      </ScrollPane>
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="448.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
-         <content>
-            <Canvas fx:id="canvSimulation4" height="200.0" width="200.0" />
-         </content>
-      </ScrollPane>
-      <ToolBar layoutX="935.0" layoutY="36.0" prefHeight="40.0" prefWidth="267.0">
-        <items>
-          <Button fx:id="btnSelectSim1" mnemonicParsing="false" onMouseClicked="#onClickToSim1" text="Sim 1" />
-            <Button fx:id="btnSelectSim2" mnemonicParsing="false" onMouseClicked="#onClickToSim2" text="Sim2" />
-            <Button fx:id="btnSelectSim3" mnemonicParsing="false" onMouseClicked="#onClickToSim3" text="Sim3" />
-            <Button fx:id="btnSelectSim4" mnemonicParsing="false" onMouseClicked="#onClickToSim4" text="Sim4" />
-        </items>
-      </ToolBar>
-      <Label fx:id="lblSelectedSim" layoutX="947.0" layoutY="77.0" text="Simulation1">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnSimPlay" layoutX="935.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickPlaySim" text="Play" />
-      <Button fx:id="btnSimPause" layoutX="986.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickPauseSim" text="Pause" />
-      <Button fx:id="btnSimOpen" layoutX="1037.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickOpenSim" text="Open" />
-      <Button fx:id="btnSimSave" layoutX="1093.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickSaveSim" text="Save" />
-      <Button fx:id="btnSimNew" layoutX="1147.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onClickNewSim" text="New" />
-      <Slider fx:id="sldSimSpeed" layoutX="998.0" layoutY="187.0" min="1.0" onMouseReleased="#onSpeedSliderFinished" onZoomFinished="#onZoomSlider1Finished" value="1.0" />
-      <Label layoutX="949.0" layoutY="185.0" text="Speed:" />
-      <Label fx:id="lblSimSpeed" layoutX="1140.0" layoutY="185.0" text="10" />
-      <Separator layoutX="949.0" layoutY="224.0" prefWidth="200.0" />
-      <Label layoutX="944.0" layoutY="234.0" text="Details">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblTitleExtinction" layoutX="947.0" layoutY="261.0" text="Mass Extincion countdown">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblExtinctionCountdown" layoutX="949.0" layoutY="284.0" text="xxx Steps" />
-      <Button fx:id="btnExtinctionNow" layoutX="1011.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionNow" text="Now" />
-      <Button fx:id="btnExtinctionReset" layoutX="1063.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionReset" text="Reset" />
-      <Button fx:id="btnExtinctionDisable" layoutX="1116.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionDisable" text="Disable" />
-      <Label fx:id="lblTitleCreatures" layoutX="947.0" layoutY="305.0" text="Creatures">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblCreaturesTotal" layoutX="949.0" layoutY="333.0" text="CreaturesTotalInfo" />
-      <Label fx:id="lblCreaturesCarnivores" layoutX="947.0" layoutY="350.0" text="CreaturesCarnivoresInfo" />
-      <Label fx:id="lblCreaturesHerbivores" layoutX="947.0" layoutY="369.0" text="CreaturesHerbivoresInfo" />
-      <Label fx:id="lblCreaturesNonivores" layoutX="946.0" layoutY="392.0" text="CreaturesNonivoresInfo" />
-      <Label fx:id="lblCreaturesOmnivores" layoutX="946.0" layoutY="411.0" text="CreaturesOmnivoresInfo" />
-      <Label fx:id="lblTitleplants" layoutX="946.0" layoutY="438.0" text="Plants">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblPlants" layoutX="947.0" layoutY="455.0" text="PlantsTotalInfo" />
-      <Label fx:id="lblStepsDone" layoutX="940.0" layoutY="480.0" text="Steps Done">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
+        <ScrollPane hbarPolicy="ALWAYS" layoutX="454.0" layoutY="77.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+           <content>
+              <Canvas fx:id="canvSimulation2" height="200.0" width="200.0" />
+           </content>
+        </ScrollPane>
+        <Label layoutX="454.0" layoutY="56.0" text="Simulation 2:">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font></Label>
+        <Label layoutX="18.0" layoutY="438.0" text="Simulation 3:">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font></Label>
+        <Label layoutX="454.0" layoutY="438.0" text="Simulation 4:">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font></Label>
+        <ScrollPane hbarPolicy="ALWAYS" layoutX="21.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+           <content>
+              <Canvas fx:id="canvSimulation3" height="200.0" width="200.0" />
+           </content>
+        </ScrollPane>
+        <ScrollPane hbarPolicy="ALWAYS" layoutX="454.0" layoutY="463.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" vbarPolicy="ALWAYS">
+           <content>
+              <Canvas fx:id="canvSimulation4" height="200.0" width="200.0" />
+           </content>
+        </ScrollPane>
+        <ToolBar layoutX="935.0" layoutY="38.0" prefHeight="43.0" prefWidth="267.0">
+          <items>
+            <Button fx:id="btnSelectSim1" mnemonicParsing="false" onMouseClicked="#onClickToSim1" text="Sim 1">
+                 <font>
+                    <Font name="System Bold" size="12.0" />
+                 </font></Button>
+            <Button fx:id="btnSelectSim2" mnemonicParsing="false" onMouseClicked="#onClickToSim2" text="Sim 2">
+                 <font>
+                    <Font name="System Bold" size="12.0" />
+                 </font></Button>
+            <Button fx:id="btnSelectSim3" mnemonicParsing="false" onMouseClicked="#onClickToSim3" text="Sim 3">
+                 <font>
+                    <Font name="System Bold" size="12.0" />
+                 </font></Button>
+            <Button fx:id="btnSelectSim4" mnemonicParsing="false" onMouseClicked="#onClickToSim4" text="Sim 4">
+                 <font>
+                    <Font name="System Bold" size="12.0" />
+                 </font></Button>
+          </items>
+        </ToolBar>
+        <Label fx:id="lblSelectedSim" layoutX="947.0" layoutY="81.0" text="Simulation 1">
+           <font>
+              <Font name="System Bold" size="18.0" />
+           </font>
+        </Label>
+        <Button fx:id="btnSimPlay" layoutX="940.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#onClickPlaySim" prefHeight="25.0" prefWidth="48.0" text="Play" />
+        <Button fx:id="btnSimPause" layoutX="993.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#onClickPauseSim" prefHeight="25.0" prefWidth="48.0" text="Pause" />
+        <Button fx:id="btnSimOpen" layoutX="1045.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#onClickOpenSim" text="Open" />
+        <Button fx:id="btnSimSave" layoutX="1096.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#onClickSaveSim" prefHeight="25.0" prefWidth="48.0" text="Save" />
+        <Button fx:id="btnSimNew" layoutX="1148.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#onClickNewSim" text="New" />
+        <Slider fx:id="sldSimSpeed" layoutX="998.0" layoutY="187.0" min="1.0" onMouseReleased="#onSpeedSliderFinished" onZoomFinished="#onZoomSlider1Finished" value="1.0" />
+        <Label layoutX="949.0" layoutY="185.0" text="Speed:" />
+        <Label fx:id="lblSimSpeed" layoutX="1140.0" layoutY="185.0" text="10" />
+        <Separator layoutX="935.0" layoutY="224.0" prefHeight="0.0" prefWidth="267.0" />
+        <Label layoutX="944.0" layoutY="234.0" text="Details">
+           <font>
+              <Font name="System Bold" size="18.0" />
+           </font>
+        </Label>
+        <Label fx:id="lblTitleExtinction" layoutX="947.0" layoutY="261.0" text="Mass Extinction Countdown">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font>
+        </Label>
+        <Label fx:id="lblExtinctionCountdown" layoutX="949.0" layoutY="284.0" text="xxx Steps" />
+        <Button fx:id="btnExtinctionNow" layoutX="1004.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionNow" prefHeight="25.0" prefWidth="58.0" text="Now" />
+        <Button fx:id="btnExtinctionReset" layoutX="1067.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionReset" prefHeight="25.0" prefWidth="58.0" text="Reset" />
+        <Button fx:id="btnExtinctionDisable" layoutX="1131.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onClickExtinctionDisable" prefHeight="25.0" prefWidth="58.0" text="Disable" />
+        <Label fx:id="lblTitleCreatures" layoutX="947.0" layoutY="310.0" text="Creatures">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font>
+        </Label>
+        <Label fx:id="lblCreaturesTotal" layoutX="948.0" layoutY="333.0" text="CreaturesTotalInfo" />
+        <Label fx:id="lblCreaturesCarnivores" layoutX="948.0" layoutY="350.0" text="CreaturesCarnivoresInfo" />
+        <Label fx:id="lblCreaturesHerbivores" layoutX="948.0" layoutY="369.0" text="CreaturesHerbivoresInfo" />
+        <Label fx:id="lblCreaturesNonivores" layoutX="948.0" layoutY="392.0" text="CreaturesNonivoresInfo" />
+        <Label fx:id="lblCreaturesOmnivores" layoutX="948.0" layoutY="411.0" text="CreaturesOmnivoresInfo" />
+        <Label fx:id="lblTitlePlants" layoutX="947.0" layoutY="438.0" text="Plants">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font>
+        </Label>
+        <Label fx:id="lblPlants" layoutX="948.0" layoutY="461.0" text="PlantsTotalInfo" />
+        <Label fx:id="lblStepsDone" layoutX="947.0" layoutY="488.0" text="Steps Done">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font>
+        </Label>
+        <Separator layoutX="932.0" layoutY="38.0" orientation="VERTICAL" prefHeight="817.0" prefWidth="0.0" />
+        <Button layoutX="1141.0" layoutY="816.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel">
+           <font>
+              <Font name="System Bold" size="12.0" />
+           </font>
+        </Button>
     </children>
 </AnchorPane>

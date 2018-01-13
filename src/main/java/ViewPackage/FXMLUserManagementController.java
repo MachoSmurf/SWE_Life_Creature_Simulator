@@ -29,14 +29,14 @@ public class FXMLUserManagementController extends UIController implements Initia
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userList = FXCollections.observableArrayList();
-        users = iUser1.getUsers();
-        if (!users.isEmpty()) {
-            users.forEach((user) -> {
-                userList.add(user.getUsername());
-        });
-            userOverview.setItems(userList);
-        }
+        //userList = FXCollections.observableArrayList();
+        //users = iUser1.getUsers();
+        //if (!users.isEmpty()) {
+            //users.forEach((user) -> {
+                //userList.add(user.getUsername());
+        //});
+            //userOverview.setItems(userList);
+        //}
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
