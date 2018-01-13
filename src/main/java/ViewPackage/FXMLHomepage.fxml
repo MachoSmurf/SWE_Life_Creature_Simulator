@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLHomepageController">
    <children>
-      <TitledPane animated="false" collapsible="false" layoutX="-140.0" text="Life - Main Menu">
+      <TitledPane animated="false" collapsible="false" layoutY="-2.0" prefHeight="840.0" prefWidth="1202.0" text="Life - Main Menu">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" />
         </content>
@@ -20,7 +20,7 @@
          </font>
       </TitledPane>
       <AnchorPane layoutY="37.0" prefHeight="800.0" prefWidth="1200.0" />
-       <ImageView fitHeight="850.0" fitWidth="1400.0" layoutX="-198.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+       <ImageView fitHeight="818.0" fitWidth="1400.0" layoutX="-198.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
            <image>
                <Image url="@Background.jpg" />
            </image></ImageView>
@@ -49,12 +49,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="304.0" mnemonicParsing="false" onAction="#onWorldEditorClick" prefHeight="25.0" prefWidth="146.0" text="World Editor">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="527.0" layoutY="364.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="25.0" prefWidth="146.0" text="Logout">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="627.0" layoutY="304.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="25.0" prefWidth="146.0" text="Logout">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
