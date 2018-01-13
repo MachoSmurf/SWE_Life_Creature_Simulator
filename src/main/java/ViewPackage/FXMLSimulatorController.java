@@ -817,6 +817,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickExtinctionNow() {
+
         showWarning("Notice", "Extinction events not implemented yet.");
     }
 
