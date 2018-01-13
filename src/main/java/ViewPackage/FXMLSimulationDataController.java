@@ -5,8 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -38,6 +41,20 @@ public class FXMLSimulationDataController extends UIController implements Initia
             showWarning("Fout", "Het scherm kon niet worden geladen.");
         }
     }
+
+    public void onUploadenClick(ActionEvent actionEvent) {
+        String filepath = "";
+        List<String> filesentences = new ArrayList<>();
+    }
+
+    //public boolean FileUpload()
+    //{
+        //String text = "";
+
+        //JFileChooser fcrFileOpen = new JFileChooser();
+
+        //int returnVal = fcrFileOpen.showDialog()
+    //}
 }
 
 

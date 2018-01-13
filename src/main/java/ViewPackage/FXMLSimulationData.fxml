@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
@@ -35,12 +34,6 @@
                 <Font name="System Bold" size="12.0" />
             </font>
         </Label>
-        <ComboBox fx:id="simulations" layoutX="96.0" layoutY="88.0" prefHeight="25.0" prefWidth="149.0" promptText="-- Select --" />
-        <Button layoutX="27.0" layoutY="123.0" mnemonicParsing="false" onAction="#onShowSimulationDataClick" prefHeight="30.0" prefWidth="218.0" text="Show Simulation Data">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Button>
         <Label layoutX="23.0" layoutY="161.0" text="Simulation Data">
             <font>
                 <Font name="System Bold" size="14.0" />
@@ -52,5 +45,10 @@
                 <Font name="System Bold" size="12.0" />
             </font>
         </Button>
+      <Button fx:id="uploaden" layoutX="103.0" layoutY="88.0" mnemonicParsing="false" onAction="#onUploadenClick" text="Bestand uploaden">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

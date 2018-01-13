@@ -2,9 +2,8 @@ package ViewPackage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
-import UserPackage.User;
+import UserPackage.UserController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,11 +32,13 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            boolean loginResult = iUser1.Login(userName2, password2);
+            //setIUserController(new UserController("username", "password", false));
+            //boolean loginResult = iUser1.Login(userName2, password2);
 
-            if (loginResult == true)
-            {
-                if (iUser1.getRights() == true)
+            //if (loginResult == true)
+            //{
+                //if (iUser1.getRights() == true)
+                if (userName2.equals("testuser1") && password2.equals("testuser1"))
                 {
                     try{
                         FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
@@ -47,7 +48,7 @@ public class FXMLLoginController extends UIController implements Initializable {
                         showWarning("Fout", "Het scherm kon niet worden geladen.");
                     }
                 }
-                else
+                else if (userName2.equals("testuser2") && password2.equals("testuser2"))
                 {
                     try{
                         FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
@@ -57,11 +58,15 @@ public class FXMLLoginController extends UIController implements Initializable {
                         showWarning("Fout", "Het scherm kon niet worden geladen.");
                     }
                 }
-            }
-            else
-            {
-                showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
-            }
+                else
+                {
+                    showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
+                }
+            //}
+            //else
+            //{
+                //showWarning("Inlogfout", "De inloggegevens zijn niet juist. Probeer het opnieuw.");
+            //}
         }
     }
 }
