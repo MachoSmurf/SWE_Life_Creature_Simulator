@@ -202,9 +202,9 @@ public class World implements Serializable, IWorld {
                 gridPoint.resetColor();
             }
         }
+        GridClone gridClone = new GridClone(grid.getPointList());
 
-        //TODO: Return GridClone instead of this Grid
-        return new StepResult(this.grid, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount, extinctionTimer);
+        return new StepResult(gridClone, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount, extinctionTimer);
     }
 
     @Override
