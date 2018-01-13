@@ -331,6 +331,7 @@ public class World implements Serializable, IWorld {
                 //o1.energy > o2.energy ? -1 : (o1.energy < o2.energy) ? 1 : 0;
             }
         });
+        Collections.sort(creatures, Collections.reverseOrder());
         int size = creatures.size();
         List<SimObject> newCreatureList = new ArrayList<>();
         size = size / 2;
