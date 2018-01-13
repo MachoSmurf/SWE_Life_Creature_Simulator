@@ -23,6 +23,7 @@ public class Simulation implements ILifeController {
     private boolean stopSimulation;
     private int simNumber;
     private int stepCounter;
+    private StepResult stepResult;
 
     public Simulation(int energyPlant, int howManyPlants, int energyCarnivore, int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
                       int energyHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
@@ -76,18 +77,8 @@ public class Simulation implements ILifeController {
 
 
     @Override
-    public void saveSimulation(String simName, World runningSimulation) {
-        fileMediator.saveSimulation(runningSimulation, simName);
-    }
-
-    @Override
-    public void loadSimulation(String simName) {
-        world = fileMediator.loadSimulation(simName);
-    }
-
-    @Override
-    public void saveStepResult(String resultName, StepResult finishedResult) {
-        fileMediator.saveSimulationResult(finishedResult, resultName);
+    public void saveStepResult(String resultName) {
+        fileMediator.saveSimulationResult(stepResult, resultName);
     }
 
     @Override
@@ -95,14 +86,14 @@ public class Simulation implements ILifeController {
         return fileMediator.loadSimulationResult(resultName);
     }
 
-    private void step() {
+    protected void step() {
 
         //check if the simulation was paused while waiting for the next step
         if (simulationSpeed != 0) {
             stepCounter++;
             if (!simulationIsRunningStep) {
                 simulationIsRunningStep = true;
-                StepResult stepResult = world.doStep();
+                stepResult = world.doStep();
                 //push stepResult back to UIController
                 viewController.updateSimulationResults(stepResult, simNumber);
                 simulationIsRunningStep = false;
