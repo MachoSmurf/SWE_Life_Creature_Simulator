@@ -327,14 +327,15 @@ public class World implements Serializable, IWorld {
         Collections.sort(creatures, new Comparator<SimObject>() {
             @Override
             public int compare(SimObject o1, SimObject o2) {
-                return Integer.compare(o1.energy, o2.energy);
+                return Integer.compare(o2.energy, o1.energy);
                 //o1.energy > o2.energy ? -1 : (o1.energy < o2.energy) ? 1 : 0;
             }
         });
+
         int size = creatures.size();
         List<SimObject> newCreatureList = new ArrayList<>();
         size = size / 2;
-        for (int i = 0; i > size; i++) {
+        for (int i = 0; i < size; i++) {
 
             newCreatureList.add(creatures.get(i));
         }
