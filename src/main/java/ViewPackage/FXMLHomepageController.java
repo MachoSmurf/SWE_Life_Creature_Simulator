@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 /**
- * FXML Controller class
+ * FXML Controller class responsible for all functionalities behind the Homepage-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */

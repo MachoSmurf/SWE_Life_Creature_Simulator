@@ -9,14 +9,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-
 import java.awt.*;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
- * FXML Controller class
+ * FXML Controller class responsible for all functionalities behind the Simulator-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */
