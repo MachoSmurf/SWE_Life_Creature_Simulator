@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * FXML Controller class
+ * FXML Controller class responsible for all functionalities behind the Homepage2-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */

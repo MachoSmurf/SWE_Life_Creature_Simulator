@@ -2,12 +2,12 @@ package ViewPackage;
 
 import java.io.IOException;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
 
 /**
+ * Responsible for running the application and making sure, that the user starts on the Login-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */
@@ -27,9 +27,6 @@ public class LifeCreatureSimulator extends Application{
 
             primaryStage.show();
 
-            //if (controllerLogin == null){
-                //controllerLogin.showConnectionError();
-            //}
             controllerLogin.setStage(primaryStage);
         }
         catch(IOException e){
