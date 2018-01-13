@@ -51,6 +51,8 @@ class SimulationTest {
         testGrid.setPointType(new Point(5, 4), GridPointType.Ground);
         testGrid.setPointType(new Point(5, 5), GridPointType.Ground);
 
+        testSimController = new FXMLSimulatorController();
+
         testSimulation = new Simulation(500, 25,
                 1500, 1500, 4, 600, 500, 900, 400, 300, 5,
                 1400, 1400, 6, 700, 500, 750, 400, 300, 5,
@@ -67,7 +69,6 @@ class SimulationTest {
 
     @Test
     void setSimulationSpeed() {
-
     }
 
     @Test
@@ -78,51 +79,26 @@ class SimulationTest {
     void stopSimulation() {
     }
 
-    @Test
-    void saveSimulation() {
-        // create a file name
-        String simulationName = "TestSimulationName";
-
-        // Save the testSimulation with simulationName that contains the filename.
-        testSimulation.saveSimulation(simulationName);
-
-        // Load the file stated above and put it in result. I used the method loadSimulation()
-        World result = testDataMediator.loadSimulation(simulationName);
-        World expResult = testWorld;
-
-        boolean areEqual;
-
-        // Check of result and expResult are equal
-        if (result.equals(expResult)) {
-            areEqual = true;
-            Assert.assertTrue(areEqual);
-        } else {
-            areEqual = false;
-            Assert.assertFalse(areEqual);
-        }
-
-    }
-
-    @Test
-    void loadSimulation() {
-        // method test in method: saveSimulation().
-    }
 
     @Test
     void saveStepResult() {
         // Create a filename
         String stepResult = "TestStepResultName";
 
+        testSimulation.setSimulationSpeed(1.5);
+
+        testSimulation.step();
+
         // Save the testSimulation with simulationName that contains the filename.
-        testSimulation.saveSimulation(stepResult);
+        testSimulation.saveStepResult(stepResult);
 
         // load the file stated above and put it in result. I used the method loadStepResult()
         StepResult result = testSimulation.loadStepResult(stepResult);
-        StepResult expResult = testWorld.doStep();
+        testStepResult = testWorld.doStep();
 
         boolean areEqual;
         // Check of result and expResult are equal
-        if (result.equals(expResult)) {
+        if (result.equals(testStepResult)) {
             areEqual = true;
             Assert.assertTrue(areEqual);
         } else {

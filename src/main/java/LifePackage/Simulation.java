@@ -77,16 +77,6 @@ public class Simulation implements ILifeController {
 
 
     @Override
-    public void saveSimulation(String simName) {
-        fileMediator.saveSimulation(world, simName);
-    }
-
-    @Override
-    public void loadSimulation(String simName) {
-        world = fileMediator.loadSimulation(simName);
-    }
-
-    @Override
     public void saveStepResult(String resultName) {
         fileMediator.saveSimulationResult(stepResult, resultName);
     }
@@ -96,7 +86,7 @@ public class Simulation implements ILifeController {
         return fileMediator.loadSimulationResult(resultName);
     }
 
-    private void step() {
+    protected void step() {
 
         //check if the simulation was paused while waiting for the next step
         if (simulationSpeed != 0) {

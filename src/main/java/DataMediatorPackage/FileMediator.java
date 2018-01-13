@@ -83,27 +83,6 @@ public class FileMediator implements IDataMediator {
         this.<StepResult>SaveFile(resultFrame, simResultName);
     }
 
-    /**
-     * Loads an unfinished simulation
-     *
-     * @param simulationName The name used to reference the unfinished sumulation
-     * @return World object containing all a grid and the simulation objects in it
-     */
-    @Override
-    public World loadSimulation(String simulationName) {
-        return this.<World>LoadFile(simulationName);
-    }
-
-    /**
-     * Saves an unfinished simulation to the relevant data source
-     *
-     * @param simulation     The World object that needs to be saved
-     * @param simulationName The name used to reference the unsaved simulation
-     */
-    @Override
-    public void saveSimulation(World simulation, String simulationName) {
-        this.<World>SaveFile(simulation, simulationName);
-    }
 
     @Override
     public List<User> getUsers() {

@@ -55,21 +55,6 @@ public interface IDataMediator {
      */
     void saveSimulationResult(StepResult resultFrame, String simResultName);
 
-    /**
-     * Loads an unfinished simulation
-     *
-     * @param simulationName The name used to reference the unfinished sumulation
-     * @return World object containing all a grid and the simulation objects in it
-     */
-    World loadSimulation(String simulationName);
-
-    /**
-     * Saves an unfinished simulation to the relevant data source
-     *
-     * @param simulation     The World object that needs to be saved
-     * @param simulationName The name used to reference the unsaved simulation
-     */
-    void saveSimulation(World simulation, String simulationName);
 
     /**
      * return a list of users of the simulation

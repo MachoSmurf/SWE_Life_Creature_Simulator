@@ -26,12 +26,6 @@ public class DatabaseMediator implements IDataMediator {
         this.dbPassword = "root";
     }
 
-    public DatabaseMediator(String dbPort, String dbUser, String dbPassword) {
-        this.dbPort = dbPort;
-        this.dbUser = dbUser;
-        this.dbPassword = dbPassword;
-    }
-
     /**
      * Loads a user from the datasource using the given credentials
      *
@@ -157,29 +151,6 @@ public class DatabaseMediator implements IDataMediator {
 
     }
 
-    /**
-     * Loads an unfinished simulation
-     *
-     * @param simulationName The name used to reference the unfinished sumulation
-     * @return World object containing all a grid and the simulation objects in it
-     */
-    @Override
-    public World loadSimulation(String simulationName) {
-        // FileMediator
-        return null;
-    }
-
-    /**
-     * Saves an unfinished simulation to the relevant data source
-     *
-     * @param simulation     The World object that needs to be saved
-     * @param simulationName The name used to reference the unsaved simulation
-     */
-    @Override
-    public void saveSimulation(World simulation, String simulationName) {
-        // FileMediator
-
-    }
 
     /**
      * return a list of users of the simulation

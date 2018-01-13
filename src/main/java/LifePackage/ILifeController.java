@@ -22,26 +22,6 @@ public interface ILifeController {
      */
     void stopSimulation();
 
-    /**
-     * Saves the unfinished simulations
-     *
-     * @param simName The reference name
-     */
-    void saveSimulation(String simName);
-
-    /**
-     * Loads an unfinished simulation
-     *
-     * @param simName the name used to reference the simulation
-     */
-    void loadSimulation(String simName);
-
-    /**
-     * Saves the result of a finished simulation
-     *
-     * @param resultName     The name used to reference the simulation result
-     *
-     */
     void saveStepResult(String resultName);
 
     /**
