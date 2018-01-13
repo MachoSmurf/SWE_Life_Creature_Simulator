@@ -19,7 +19,8 @@ class SimulationTest {
     FXMLSimulatorController testSimController;
     DatabaseMediator testDataMediator;
     World testWorld;
-    StepResult testStepResult;
+    StepResult expResult;
+    double stepsPerSecond;
 
 
     @BeforeEach
@@ -69,6 +70,8 @@ class SimulationTest {
 
     @Test
     void setSimulationSpeed() {
+
+
     }
 
     @Test
@@ -85,20 +88,22 @@ class SimulationTest {
         // Create a filename
         String stepResult = "TestStepResultName";
 
+        // set setSimulationSpeed. necessay for step();
         testSimulation.setSimulationSpeed(1.5);
 
+        // set testStepResult. that happens in the method step()
         testSimulation.step();
 
-        // Save the testSimulation with simulationName that contains the filename.
+        // Save testStepResult with Name that contains the filename.
         testSimulation.saveStepResult(stepResult);
 
         // load the file stated above and put it in result. I used the method loadStepResult()
         StepResult result = testSimulation.loadStepResult(stepResult);
-        testStepResult = testWorld.doStep();
+        expResult = testWorld.doStep();
 
         boolean areEqual;
         // Check of result and expResult are equal
-        if (result.equals(testStepResult)) {
+        if (result.equals(expResult)) {
             areEqual = true;
             Assert.assertTrue(areEqual);
         } else {

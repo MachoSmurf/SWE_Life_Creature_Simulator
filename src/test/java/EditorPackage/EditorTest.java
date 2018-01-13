@@ -26,22 +26,28 @@ class EditorTest {
         testEditor = new Editor();
 
         // create a testGrid
-        testGrid = new Grid(20, 20);
+        int testGridWidth = 20;
+        int testGridHeight = 20;
 
-        //populate with obstacles
-        testGrid.setPointType(new Point(1, 1), GridPointType.Obstacle);
-        testGrid.setPointType(new Point(19, 19), GridPointType.Obstacle);
+        testGrid = new Grid(testGridWidth, testGridHeight);
 
-        //populate with ground
+        //island 1
         testGrid.setPointType(new Point(2, 2), GridPointType.Ground);
-        testGrid.setPointType(new Point(18, 18), GridPointType.Ground);
-
-        //try to override obstacle color (should fail)
-        testGrid.setColor(new Point(1, 1), Color.RED);
-        //try to override ground color (should pass)
-        testGrid.setColor(new Point(2, 2), Color.GREEN);
-        //try to override water color (should pass)
-        testGrid.setColor(new Point(3, 3), new Color(100, 100, 100));
+        testGrid.setPointType(new Point(2, 3), GridPointType.Ground);
+        testGrid.setPointType(new Point(2, 4), GridPointType.Ground);
+        testGrid.setPointType(new Point(2, 5), GridPointType.Ground);
+        testGrid.setPointType(new Point(3, 2), GridPointType.Ground);
+        testGrid.setPointType(new Point(3, 3), GridPointType.Ground);
+        testGrid.setPointType(new Point(3, 4), GridPointType.Ground);
+        testGrid.setPointType(new Point(3, 5), GridPointType.Ground);
+        testGrid.setPointType(new Point(4, 2), GridPointType.Ground);
+        testGrid.setPointType(new Point(4, 3), GridPointType.Ground);
+        testGrid.setPointType(new Point(4, 4), GridPointType.Ground);
+        testGrid.setPointType(new Point(4, 5), GridPointType.Ground);
+        testGrid.setPointType(new Point(5, 2), GridPointType.Ground);
+        testGrid.setPointType(new Point(5, 3), GridPointType.Ground);
+        testGrid.setPointType(new Point(5, 4), GridPointType.Ground);
+        testGrid.setPointType(new Point(5, 5), GridPointType.Ground);
 
         // Create a testGridClone
         testGridClone = new GridClone(testGrid.getPointList());
@@ -68,8 +74,19 @@ class EditorTest {
         GridClone result = testEditor.loadGrid(gridName);
 
         // Compare the pointLists of the two gridClones. if the boolean returns true the test passed, else the test is false.
-        boolean equalGridClone = testGridClone.getPointList().size() == result.getPointList().size();
-        Assert.assertTrue(equalGridClone);
+        boolean areEqual;
+
+        if (result.equals(testGridClone))
+        {
+            areEqual = true;
+            Assert.assertTrue(areEqual);
+
+        }
+        else{
+            areEqual = false;
+            Assert.assertFalse(areEqual);
+        };
+
 
 
     }
