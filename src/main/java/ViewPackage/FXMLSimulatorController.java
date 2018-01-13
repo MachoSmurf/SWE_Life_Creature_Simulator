@@ -4,17 +4,24 @@ import LifePackage.Simulation;
 import ModelPackage.*;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
+import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+
+import javax.swing.*;
+import java.io.File;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+
 
 /**
  * FXML Controller class responsible for all functionalities behind the Simulator-screen
@@ -22,6 +29,8 @@ import java.util.ResourceBundle;
  * @author Natascha Zorg-Wijnhoven
  */
 public class FXMLSimulatorController extends UIController implements Initializable, ILifeResult {
+
+    @FXML private Pane component;
 
     public Canvas canvSimulation1;
     public Canvas canvSimulation2;
@@ -99,7 +108,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
     @Override
@@ -121,7 +129,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
         gc.setStroke(convertToJavaFXColor(Color.BLACK));
         gc.setFill(null);
         gc.setLineWidth(1);
-
 
         for (GridPoint gp : g.getPointList()) {
             gc.setFill(convertToJavaFXColor(gp.getColor()));
@@ -166,7 +173,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
             timer.start();
         }
     }
-
 
     private javafx.scene.paint.Color convertToJavaFXColor(Color c) {
         return javafx.scene.paint.Color.rgb(c.getRed(), c.getGreen(), c.getBlue());
@@ -721,6 +727,17 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickOpenSim() {
+        //Create a new instance of JFileChooser class
+        FileChooser fileChooser = new FileChooser();
+
+        //Set current directory
+        //fileChooser.setCurrentDirectory(new File(System.getProperty("C:\\Users\\Public\\Documents")));
+
+        //Show up the dialog
+
+        File result = fileChooser.showOpenDialog(component.getScene().getWindow());
+
+        //int returnVal = fc.showOpenDialog(component);
     }
 
     public void onClickSaveSim() {
