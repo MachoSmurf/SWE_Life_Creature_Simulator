@@ -40,9 +40,9 @@ public interface ILifeController {
      * Saves the result of a finished simulation
      *
      * @param resultName     The name used to reference the simulation result
-     * @param finishedResult A StepResult containing the data of the finished result
+     *
      */
-    void saveStepResult(String resultName, StepResult finishedResult);
+    void saveStepResult(String resultName);
 
     /**
      * Loads a saved result of a finished simulation

@@ -1,11 +1,9 @@
 package LifePackage;
 
 import DataMediatorPackage.DatabaseMediator;
-import ModelPackage.Grid;
-import ModelPackage.GridClone;
-import ModelPackage.GridPointType;
-import ModelPackage.World;
+import ModelPackage.*;
 import ViewPackage.FXMLSimulatorController;
+import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,6 +19,7 @@ class SimulationTest {
     FXMLSimulatorController testSimController;
     DatabaseMediator testDataMediator;
     World testWorld;
+    StepResult testStepResult;
 
 
     @BeforeEach
@@ -84,10 +83,10 @@ class SimulationTest {
         // create a file name
         String simulationName = "TestSimulationName";
 
-        // Save the testGridClone with gridName that contains the filename.
+        // Save the testSimulation with simulationName that contains the filename.
         testSimulation.saveSimulation(simulationName);
 
-        // Load the file stated above and put it in result. I used the method loadGrid()
+        // Load the file stated above and put it in result. I used the method loadSimulation()
         World result = testDataMediator.loadSimulation(simulationName);
         World expResult = testWorld;
 
@@ -102,18 +101,39 @@ class SimulationTest {
             Assert.assertFalse(areEqual);
         }
 
-
     }
 
     @Test
     void loadSimulation() {
+        // method test in method: saveSimulation().
     }
 
     @Test
     void saveStepResult() {
+        // Create a filename
+        String stepResult = "TestStepResultName";
+
+        // Save the testSimulation with simulationName that contains the filename.
+        testSimulation.saveSimulation(stepResult);
+
+        // load the file stated above and put it in result. I used the method loadStepResult()
+        StepResult result = testSimulation.loadStepResult(stepResult);
+        StepResult expResult = testWorld.doStep();
+
+        boolean areEqual;
+        // Check of result and expResult are equal
+        if (result.equals(expResult)) {
+            areEqual = true;
+            Assert.assertTrue(areEqual);
+        } else {
+            areEqual = false;
+            Assert.assertFalse(areEqual);
+        }
+
     }
 
     @Test
     void loadStepResult() {
+        // method test in method: saveStepResult().
     }
 }
