@@ -65,6 +65,10 @@ public class StepResult implements Serializable {
         return stepCount;
     }
 
+    public int getExctinctionTimer() {
+        return exctinctionTimer;
+    }
+
     private int energyNonivore;
     private int energyCarnivore;
     private int energyOmnivore;
