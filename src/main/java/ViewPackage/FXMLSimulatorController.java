@@ -132,7 +132,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
                 gc.strokeRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             }
         }
-
     }
 
     private void triggerAnimationTimer() {
@@ -218,7 +217,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
         lblCreaturesTotal.setVisible(visible);
         lblPlants.setVisible(visible);
         lblTitleCreatures.setVisible(visible);
-        lblTitleplants.setVisible(visible);
+        lblTitlePlants.setVisible(visible);
         lblStepsDone.setVisible(visible);
     }
 
