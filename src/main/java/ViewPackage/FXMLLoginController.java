@@ -1,15 +1,17 @@
 package ViewPackage;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import UserPackage.UserController;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+
 /**
- * FXML Controller class
+ * FXML Controller class responsible for all functionalities behind the Login-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */
@@ -31,11 +33,11 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            boolean loginResult = user.Login(userName.getText(), password.getText());
+            boolean loginResult = iUser1.Login(userName2, password2);
 
-            if (loginResult)
+            if (loginResult == true)
             {
-                if (String.valueOf(user.getRights()).equals(true))
+                if (iUser1.getRights() == true)
                 {
                     try{
                         FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);

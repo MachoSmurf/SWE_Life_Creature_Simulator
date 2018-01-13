@@ -23,16 +23,17 @@ public class Simulation implements ILifeController {
     private boolean stopSimulation;
     private int simNumber;
     private int stepCounter;
+    private StepResult stepResult;
 
-    public Simulation(int energyPlant, int howManyPlants, int energyCarnivore, Digestion digestionCarnivore, int digestionBalanceCarnivore, int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
-                      int energyHerbivore, Digestion digestionHerbivore, int digestionBalanceHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
-                      int energyNonivore, Digestion digestionNonivore, int digestionBalanceNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
-                      int energyOmnivore, Digestion digestionOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
+    public Simulation(int energyPlant, int howManyPlants, int energyCarnivore, int staminaCarnivore, int legsCarnivore, int reproductionThresholdCarnivore, int reproductionCostCarnivore, int strengthCarnivore, int swimThresholdCarnivore, int motionThresholdCarnivore, int howManyCarnivore,
+                      int energyHerbivore, int staminaHerbivore, int legsHerbivore, int reproductionThresholdHerbivore, int reproductionCostHerbivore, int strengthHerbivore, int swimThresholdHerbivore, int motionThresholdHerbivore, int howManyHerbivore,
+                      int energyNonivore, int staminaNonivore, int legsNonivore, int reproductionThresholdNonivore, int reproductionCostNonivore, int strengthNonivore, int swimThresholdNonivore, int motionThresholdNonivore, int howManyNonivore,
+                      int energyOmnivore, int digestionBalanceOmnivore, int staminaOmnivore, int legsOmnivore, int reproductionThresholdOmnivore, int reproductionCostOmnivore, int strengthOmnivore, int swimThresholdOmnivore, int motionThresholdOmnivore, int howManyOmnivore,
                       Grid simulationGrid, FXMLSimulatorController simController, int simNumber) {
-        world = new World(energyPlant, howManyPlants, energyCarnivore, digestionCarnivore, digestionBalanceCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore,
-                energyHerbivore, digestionHerbivore, digestionBalanceHerbivore, staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore, swimThresholdHerbivore, motionThresholdHerbivore, howManyHerbivore,
-                energyNonivore, digestionNonivore, digestionBalanceNonivore, staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore, swimThresholdNonivore, motionThresholdNonivore, howManyNonivore,
-                energyOmnivore, digestionOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore,
+        world = new World(energyPlant, howManyPlants, energyCarnivore, staminaCarnivore, legsCarnivore, reproductionThresholdCarnivore, reproductionCostCarnivore, strengthCarnivore, swimThresholdCarnivore, motionThresholdCarnivore, howManyCarnivore,
+                energyHerbivore, staminaHerbivore, legsHerbivore, reproductionThresholdHerbivore, reproductionCostHerbivore, strengthHerbivore, swimThresholdHerbivore, motionThresholdHerbivore, howManyHerbivore,
+                energyNonivore, staminaNonivore, legsNonivore, reproductionThresholdNonivore, reproductionCostNonivore, strengthNonivore, swimThresholdNonivore, motionThresholdNonivore, howManyNonivore,
+                energyOmnivore, digestionBalanceOmnivore, staminaOmnivore, legsOmnivore, reproductionThresholdOmnivore, reproductionCostOmnivore, strengthOmnivore, swimThresholdOmnivore, motionThresholdOmnivore, howManyOmnivore,
                 simulationGrid);
         viewController = simController;
 
@@ -76,18 +77,8 @@ public class Simulation implements ILifeController {
 
 
     @Override
-    public void saveSimulation(String simName, World runningSimulation) {
-        fileMediator.saveSimulation(runningSimulation, simName);
-    }
-
-    @Override
-    public void loadSimulation(String simName) {
-        world = fileMediator.loadSimulation(simName);
-    }
-
-    @Override
-    public void saveStepResult(String resultName, StepResult finishedResult) {
-        fileMediator.saveSimulationResult(finishedResult, resultName);
+    public void saveStepResult(String resultName) {
+        fileMediator.saveSimulationResult(stepResult, resultName);
     }
 
     @Override
@@ -95,13 +86,14 @@ public class Simulation implements ILifeController {
         return fileMediator.loadSimulationResult(resultName);
     }
 
-    private void step() {
+    protected void step() {
+
         //check if the simulation was paused while waiting for the next step
         if (simulationSpeed != 0) {
             stepCounter++;
             if (!simulationIsRunningStep) {
                 simulationIsRunningStep = true;
-                StepResult stepResult = world.doStep();
+                stepResult = world.doStep();
                 //push stepResult back to UIController
                 viewController.updateSimulationResults(stepResult, simNumber);
                 simulationIsRunningStep = false;

@@ -2,20 +2,22 @@ package ModelPackage;
 
 import javafx.beans.InvalidationListener;
 
+import java.io.Serializable;
+
 /**
  * Provides all the information that has to be shown to any user. An instance of this object can also be used to show
  * the result of a simulation. Immutable Object
  */
-public class StepResult {
+public class StepResult implements Serializable {
 
-    private IGrid currentGrid;
+    private GridClone currentGrid;
     private int nonivoreCount;
     private int herbivoreCount;
     private int carnivoreCount;
     private int omnivoreCount;
     private int plantCount;
 
-    public IGrid getCurrentGrid() {
+    public GridClone getCurrentGrid() {
         return currentGrid;
     }
 
@@ -69,9 +71,10 @@ public class StepResult {
     private int energyHerbivore;
     private int energyPlants;
     private int stepCount;
+    private int exctinctionTimer;
 
 
-    public StepResult(IGrid currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount) {
+    public StepResult(GridClone currentGrid, int nonivoreCount, int herbivoreCount, int carnivoreCount, int omnivoreCount, int plantCount, int energyNonivore, int energyCarnivore, int energyOmnivore, int energyHerbivore, int energyPlants, int stepCount, int exctinctionTimer) {
         this.currentGrid = currentGrid;
         this.nonivoreCount = nonivoreCount;
         this.herbivoreCount = herbivoreCount;
@@ -84,5 +87,6 @@ public class StepResult {
         this.energyHerbivore = energyHerbivore;
         this.energyPlants = energyPlants;
         this.stepCount = stepCount;
+        this.exctinctionTimer = exctinctionTimer;
     }
 }
