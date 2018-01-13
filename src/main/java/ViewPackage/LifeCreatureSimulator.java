@@ -7,6 +7,7 @@ import javafx.scene.*;
 import javafx.stage.*;
 
 /**
+ * Responsible for running the application and making sure, that the user starts on the Login-screen
  *
  * @author Natascha Zorg-Wijnhoven
  */

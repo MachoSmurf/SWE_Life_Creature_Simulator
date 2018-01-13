@@ -2,14 +2,12 @@ package ViewPackage;
 
 import java.io.IOException;
 
-//import DataMediatorPackage.DatabaseMediator;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import LifePackage.ILifeController;
 import UserPackage.IUserController;
-//import UserPackage.UserController;
 import java.awt.event.ActionEvent;
 
 /**
@@ -23,7 +21,6 @@ public abstract class UIController{
     protected ILifeController simulation3;
     protected ILifeController simulation4;
     protected IUserController iUser1;
-    //protected UserController user1;
     protected static Stage mainStage;
 
     public void setIlifeController1(ILifeController simulation1){
@@ -42,13 +39,7 @@ public abstract class UIController{
         this.simulation4 = simulation4;
     }
 
-    public void setIUserController(IUserController iUser1){
-        this.iUser1 = iUser1;
-    }
-
-    //public void setUserController(UserController user1){
-        //this.user1 = user1;
-    //}
+    public void setIUserController(IUserController iUser1){ this.iUser1 = iUser1; }
 
     protected UIController changeScreen(String fxmlPath, ActionEvent event) throws IOException{
 
@@ -74,7 +65,6 @@ public abstract class UIController{
         controller.setIlifeController3(simulation3);
         controller.setIlifeController4(simulation4);
         controller.setIUserController(iUser1);
-        //controller.setUserController(user1);
 
         app_stage.hide();
         app_stage.setScene(current_scene);

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -19,10 +20,11 @@ public class FXMLUserManagementController extends UIController implements Initia
     @FXML private PasswordField password;
     @FXML private PasswordField passwordRepeat;
     @FXML private RadioButton simUserYes;
+    @FXML private TextArea userOverview;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //Hier de lijst met reeds bestaande users ophalen...
+        //userOverview.= iUser1.getUsers();
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
