@@ -35,7 +35,7 @@
                 <Font name="System Bold" size="12.0" />
             </font>
         </Label>
-        <ComboBox layoutX="96.0" layoutY="88.0" prefHeight="25.0" prefWidth="149.0" promptText="-- Select --" />
+        <ComboBox fx:id="simulations" layoutX="96.0" layoutY="88.0" prefHeight="25.0" prefWidth="149.0" promptText="-- Select --" />
         <Button layoutX="27.0" layoutY="123.0" mnemonicParsing="false" onAction="#onShowSimulationDataClick" prefHeight="30.0" prefWidth="218.0" text="Show Simulation Data">
             <font>
                 <Font name="System Bold" size="12.0" />
