@@ -11,48 +11,52 @@ import java.nio.file.Files;
 /**
  * Controls the in and output of a editor instance. Also responsible for passing data to and from an IDataMediator instance
  */
-public class Editor extends FileMediator implements IEditorController{
+public class Editor extends FileMediator implements IEditorController {
 
     FileMediator fileMediator = new FileMediator();
 
-    public Editor()
-    {
+    public Editor() {
 
     }
 
+    /**
+     * Loads a grid based on a given name
+     *
+     * @param gridName Name of the grid that has to be loaded
+     */
     @Override
-    public GridClone loadGrid(String gridName)
-    {
+    public GridClone loadGrid(String gridName) {
         return fileMediator.loadGrid(gridName);
     }
 
+    /**
+     * Saves a grid using a given name
+     *
+     * @param gridName Name of the grid that has to be saved
+     */
+
     @Override
-    public void saveGrid(GridClone grid, String gridName)
-    {
+    public void saveGrid(GridClone grid, String gridName) {
 
         fileMediator.saveGrid(grid, gridName);
     }
 
+    /**
+     * deletes a grid using a given name
+     *
+     * @param gridName Name of the grid that has to be deleted
+     */
     @Override
-    public void deleteGrid(String gridName)
-    {
+    public void deleteGrid(String gridName) {
         String gridFile = gridName + ".txt";
-        File file = new File("C:\\Users\\Public\\Documents\\" +gridFile );
+        File file = new File("C:\\Users\\Public\\Documents\\" + gridFile);
 
-        try
-        {
-            if(file.exists())
-            {
+        try {
+            if (file.exists()) {
                 file.delete();
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
-
-
 }
