@@ -75,15 +75,6 @@ class SimulationTest {
     }
 
     @Test
-    void startSimulation() {
-    }
-
-    @Test
-    void stopSimulation() {
-    }
-
-
-    @Test
     void saveStepResult() {
         // Create a filename
         String stepResult = "TestStepResultName";
