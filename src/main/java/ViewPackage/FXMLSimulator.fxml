@@ -124,15 +124,15 @@
         </Label>
         <Label fx:id="lblCreaturesTotal" layoutX="948.0" layoutY="333.0" text="CreaturesTotalInfo" />
         <Label fx:id="lblCreaturesCarnivores" layoutX="948.0" layoutY="350.0" text="CreaturesCarnivoresInfo" />
-        <Label fx:id="lblCreaturesHerbivores" layoutX="948.0" layoutY="369.0" text="CreaturesHerbivoresInfo" />
-        <Label fx:id="lblCreaturesNonivores" layoutX="948.0" layoutY="392.0" text="CreaturesNonivoresInfo" />
-        <Label fx:id="lblCreaturesOmnivores" layoutX="948.0" layoutY="411.0" text="CreaturesOmnivoresInfo" />
-        <Label fx:id="lblTitlePlants" layoutX="947.0" layoutY="438.0" text="Plants">
+        <Label fx:id="lblCreaturesHerbivores" layoutX="948.0" layoutY="367.0" text="CreaturesHerbivoresInfo" />
+        <Label fx:id="lblCreaturesNonivores" layoutX="948.0" layoutY="384.0" text="CreaturesNonivoresInfo" />
+        <Label fx:id="lblCreaturesOmnivores" layoutX="948.0" layoutY="401.0" text="CreaturesOmnivoresInfo" />
+        <Label fx:id="lblTitlePlants" layoutX="947.0" layoutY="429.0" text="Plants">
            <font>
               <Font name="System Bold" size="12.0" />
            </font>
         </Label>
-        <Label fx:id="lblPlants" layoutX="948.0" layoutY="461.0" text="PlantsTotalInfo" />
+        <Label fx:id="lblPlants" layoutX="948.0" layoutY="452.0" text="PlantsTotalInfo" />
         <Label fx:id="lblStepsDone" layoutX="947.0" layoutY="488.0" text="Steps Done">
            <font>
               <Font name="System Bold" size="12.0" />
@@ -150,12 +150,23 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="948.0" layoutY="556.0" text="Choose total number of elements:" />
-      <TextField layoutX="948.0" layoutY="573.0" prefHeight="25.0" prefWidth="180.0" promptText="Optional..." />
-      <Button layoutX="1142.0" layoutY="573.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Save">
+      <Label layoutX="947.0" layoutY="556.0" text="Choose total number of elements:" />
+      <TextField fx:id="proportionsNumber" layoutX="947.0" layoutY="573.0" prefHeight="25.0" prefWidth="180.0" promptText="Optional..." />
+      <Button layoutX="1142.0" layoutY="573.0" mnemonicParsing="false" onAction="#onSaveClick" prefHeight="25.0" prefWidth="53.0" text="Save">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label layoutX="947.0" layoutY="605.0" text="Your chosen proportions: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="creaturesTotal" layoutX="948.0" layoutY="622.0" text="Creatures Total" />
+      <Label fx:id="creaturesCarnivors" layoutX="948.0" layoutY="639.0" text="Creatures Carnivores" />
+      <Label fx:id="creaturesHerbivores" layoutX="948.0" layoutY="656.0" text="Creatures Herbivores" />
+      <Label fx:id="creaturesNonivores" layoutX="948.0" layoutY="673.0" text="Creatures Nonivores" />
+      <Label fx:id="creaturesOmnivors" layoutX="948.0" layoutY="690.0" text="Creatures Omnivores" />
+      <Label fx:id="plantsTotal" layoutX="948.0" layoutY="707.0" text="Plants Total" />
     </children>
 </AnchorPane>

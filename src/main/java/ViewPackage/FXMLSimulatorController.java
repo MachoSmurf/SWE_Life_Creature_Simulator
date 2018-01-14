@@ -11,6 +11,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import java.awt.*;
@@ -18,7 +19,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
-
 
 /**
  * FXML Controller class responsible for all functionalities behind the Simulator-screen
@@ -28,6 +28,9 @@ import java.util.ResourceBundle;
 public class FXMLSimulatorController extends UIController implements Initializable, ILifeResult {
 
     @FXML private AnchorPane component;
+
+    //Prefered proportions Element
+    @FXML private TextField proportionsNumber;
 
     public Canvas canvSimulation1;
     public Canvas canvSimulation2;
@@ -75,6 +78,14 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     public Label lblStepsDone;
 
+    //Prefered proportions Elements
+    public Label creaturesTotal;
+    public Label creaturesCarnivores;
+    public Label creaturesHerbivores;
+    public Label creaturesNonivores;
+    public Label creaturesOmnivores;
+    public Label plantsTotal;
+
     //fields for scorekeeping
     private int selectedSim;
 
@@ -87,6 +98,8 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
     private Thread[] simulationThreads;
     private Simulation[] simulations;
+
+    private int preferedProportionsNumber;
 
     public FXMLSimulatorController() {
         super();
@@ -114,25 +127,19 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     private void drawGrid(IGrid g, Canvas canvas, int zoom) {
-
-        //spSim1.setPreferredSize(new Dimension(g.getWidth() * zoom, g.getHeight() * zoom));
         canvas.setWidth(g.getWidth() * zoom);
         canvas.setHeight(g.getHeight() * zoom);
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-        //gc.setFill(javafx.scene.paint.Color.BLACK);
-
         gc.setStroke(convertToJavaFXColor(Color.BLACK));
         gc.setFill(null);
         gc.setLineWidth(1);
 
         for (GridPoint gp : g.getPointList()) {
             gc.setFill(convertToJavaFXColor(gp.getColor()));
-            //gc.fillRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
             gc.fillRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             if (zoom > 5) {
-                //gc.strokeRect(gp.getX() + (zoom * gp.getX()), gp.getY() + (zoom * gp.getY()), zoom, zoom);
                 gc.strokeRect((zoom * gp.getX()), (zoom * gp.getY()), zoom, zoom);
             }
         }
@@ -184,6 +191,30 @@ public class FXMLSimulatorController extends UIController implements Initializab
                 simLastShownStep[selectedSim - 1] = stepResults[selectedSim - 1].getStepCount();
                 setDetailValues(simZoom[selectedSim - 1], simSpeed[selectedSim - 1], stepResults[selectedSim - 1], simLastShownStep[selectedSim - 1]);
             }
+        }
+    }
+
+    private void updatePreferedProportions() {
+        String chosenProportions = proportionsNumber.getText();
+        if (!chosenProportions.equals("")){
+            try {
+                preferedProportionsNumber = Integer.parseInt(chosenProportions);
+            } catch (NumberFormatException e) {
+                System.out.println(e);
+                showWarning("Fout", "De door u ingevulde waarde is geen nummer. Vul a.u.b. een nummer in.");
+            }
+
+            //lblSelectedSim.setText("Simulation " + selectedSim);
+            //if (stepResults[selectedSim - 1] != null) {
+            //toggleVisible(true);
+            //lblTitleExtinction.setText("Mass Extincion countdown");
+            //if (stepResults[selectedSim - 1].getStepCount() > simLastShownStep[selectedSim - 1]) {
+            //simLastShownStep[selectedSim - 1] = stepResults[selectedSim - 1].getStepCount();
+            //setDetailValues(simZoom[selectedSim - 1], simSpeed[selectedSim - 1], stepResults[selectedSim - 1], simLastShownStep[selectedSim - 1]);
+        }
+        else
+        {
+            showWarning("Fout", "U heeft niets ingevuld. Vul a.u.b. een nummer in.");
         }
     }
 
@@ -849,5 +880,9 @@ public class FXMLSimulatorController extends UIController implements Initializab
             System.out.println(ioe);
             showWarning("Fout", "Het scherm kon niet worden geladen.");
         }
+    }
+
+    public void onSaveClick(ActionEvent actionEvent) {
+        updatePreferedProportions();
     }
 }
