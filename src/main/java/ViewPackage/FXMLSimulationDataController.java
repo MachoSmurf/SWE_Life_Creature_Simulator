@@ -1,16 +1,12 @@
 package ViewPackage;
 
-import ModelPackage.World;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-
-import javax.swing.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -20,16 +16,13 @@ import java.util.ResourceBundle;
  */
 public class FXMLSimulationDataController extends UIController implements Initializable {
 
-    @FXML private ComboBox simulations;
-    private List<World> users;
+    @FXML private AnchorPane component;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //simulations.setItems(FXCollections.observableArrayList(ColorHair.values()));
     }
 
     public void onShowSimulationDataClick(ActionEvent actionEvent) {
-
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
@@ -43,18 +36,18 @@ public class FXMLSimulationDataController extends UIController implements Initia
     }
 
     public void onUploadenClick(ActionEvent actionEvent) {
-        String filepath = "";
-        List<String> filesentences = new ArrayList<>();
+        //String filepath = "";
+        //List<String> filesentences = new ArrayList<>();
+
+        //Create a new instance of FileChooser class
+        FileChooser fileChooser = new FileChooser();
+
+        //Set dialog title
+        fileChooser.setTitle("Open Simulation");
+
+        //Show up the dialog
+        fileChooser.showOpenDialog(component.getScene().getWindow());
     }
-
-    //public boolean FileUpload()
-    //{
-        //String text = "";
-
-        //JFileChooser fcrFileOpen = new JFileChooser();
-
-        //int returnVal = fcrFileOpen.showDialog()
-    //}
 }
 
 

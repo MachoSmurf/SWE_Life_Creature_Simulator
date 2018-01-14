@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-import java.io.File;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
@@ -728,15 +727,11 @@ public class FXMLSimulatorController extends UIController implements Initializab
         //Create a new instance of FileChooser class
         FileChooser fileChooser = new FileChooser();
 
-        //Set initial directory
-        fileChooser.setInitialDirectory(new File(System.getProperty("C:\\Users\\Public\\Documents")));
+        //Set dialog title
+        fileChooser.setTitle("Open Simulation");
 
         //Show up the dialog
         fileChooser.showOpenDialog(component.getScene().getWindow());
-        //File result = fileChooser.showOpenDialog(component.getScene().getWindow());
-        //if (result == FileChooser..APPROVE_OPTION) {
-            //File selectedFile = fileChooser.getSelectedFile();
-            //System.out.println("Selected file: " + selectedFile.getAbsolutePath());
     }
 
     public void onClickSaveSim() {

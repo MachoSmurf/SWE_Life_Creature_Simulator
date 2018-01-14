@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -107,7 +108,7 @@
               <Font name="System Bold" size="18.0" />
            </font>
         </Label>
-        <Label fx:id="lblTitleExtinction" layoutX="947.0" layoutY="261.0" text="Mass Extinction Countdown">
+        <Label fx:id="lblTitleExtinction" layoutX="947.0" layoutY="261.0" text="Mass Extinction Countdown Creatures">
            <font>
               <Font name="System Bold" size="12.0" />
            </font>
@@ -143,5 +144,18 @@
               <Font name="System Bold" size="12.0" />
            </font>
         </Button>
+      <Separator layoutX="935.0" layoutY="519.0" prefHeight="3.0" prefWidth="267.0" />
+      <Label layoutX="944.0" layoutY="529.0" text="Prefered proportions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="948.0" layoutY="556.0" text="Choose total number of elements:" />
+      <TextField layoutX="948.0" layoutY="573.0" prefHeight="25.0" prefWidth="180.0" promptText="Optional..." />
+      <Button layoutX="1142.0" layoutY="573.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
