@@ -66,6 +66,7 @@ public abstract class UIController{
         controller.setIlifeController4(simulation4);
         controller.setIUserController(iUser1);
 
+
         app_stage.hide();
         app_stage.setScene(current_scene);
         app_stage.show();

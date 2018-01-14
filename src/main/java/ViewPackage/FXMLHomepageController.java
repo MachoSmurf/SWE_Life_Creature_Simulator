@@ -17,17 +17,7 @@ public class FXMLHomepageController extends UIController implements Initializabl
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    public void onLoadSimulationClick(ActionEvent actionEvent) {
-        try{
-            FXMLSimulatorController si = (FXMLSimulatorController) changeScreen("/ViewPackage/FXMLSimulator.fxml", null);
-        }
-        catch(IOException ioe){
-            System.out.println(ioe);
-            showWarning("Fout", "Het scherm kon niet worden geladen.");
-        }
-    }
-
-    public void onNewSimulationClick(ActionEvent actionEvent) {
+    public void onSimulationClick(ActionEvent actionEvent) {
         try{
             FXMLSimulatorController si = (FXMLSimulatorController) changeScreen("/ViewPackage/FXMLSimulator.fxml", null);
         }

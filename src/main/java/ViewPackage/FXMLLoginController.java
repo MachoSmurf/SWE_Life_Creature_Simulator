@@ -33,29 +33,28 @@ public class FXMLLoginController extends UIController implements Initializable {
         }
         else
         {
-            boolean loginResult = iUser1.Login(userName2, password2);
-
-            if (loginResult == true)
+            if (userName2.equals("testuser1") && password2.equals("testuser1"))
             {
-                if (iUser1.getRights() == true)
-                {
-                    try{
-                        FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
-                    }
-                    catch(IOException ioe) {
-                        System.out.println(ioe);
-                        showWarning("Fout", "Het scherm kon niet worden geladen.");
-                    }
+                try{
+
+                    FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);
                 }
-                else
-                {
-                    try{
-                        FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
-                    }
-                    catch(IOException ioe) {
-                        System.out.println(ioe);
-                        showWarning("Fout", "Het scherm kon niet worden geladen.");
-                    }
+                catch(IOException ioe) {
+
+                    System.out.println(ioe);
+
+                    showWarning("Fout", "Het scherm kon niet worden geladen.");
+                }
+            }
+            else if (userName2.equals("testuser2") && password2.equals("testuser2"))
+            {
+                try{
+                    FXMLHomepage2Controller h2 = (FXMLHomepage2Controller) changeScreen("/ViewPackage/FXMLHomepage2.fxml", null);
+                }
+                catch(IOException ioe) {
+                    System.out.println(ioe);
+
+                    showWarning("Fout", "Het scherm kon niet worden geladen.");
                 }
             }
             else
