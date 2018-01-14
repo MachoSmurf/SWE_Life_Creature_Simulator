@@ -50,8 +50,8 @@ class EditorTest {
         testGrid.setPointType(new Point(5, 5), GridPointType.Ground);
 
         // Create a testGridClone
-        testGridClone = new GridClone(testGrid.getPointList());
-        testGridCloneDelete = new GridClone(testGrid.getPointList());
+        testGridClone = new GridClone(testGrid.getPointList(), testGridHeight, testGridWidth);
+        testGridCloneDelete = new GridClone(testGrid.getPointList(), testGridHeight, testGridWidth);
 
 
     }

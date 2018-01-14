@@ -10,19 +10,23 @@ import java.util.ArrayList;
 public class GridClone implements Serializable, IGrid {
 
     ArrayList<GridPoint> pointList;
+    int height;
+    int width;
 
-    public GridClone(ArrayList<GridPoint> pointList) {
+    public GridClone(ArrayList<GridPoint> pointList, int height, int width) {
         this.pointList = pointList;
+        this.height = height;
+        this.width = width;
     }
 
     @Override
     public int getWidth() {
-        return 0;
+        return width;
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return height;
     }
 
     @Override

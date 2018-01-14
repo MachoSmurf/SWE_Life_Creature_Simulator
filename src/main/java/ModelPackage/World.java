@@ -198,7 +198,7 @@ public class World implements Serializable, IWorld {
                 gridPoint.resetColor();
             }
         }
-        GridClone gridClone = new GridClone(grid.getPointList());
+        GridClone gridClone = new GridClone(grid.getPointList(), grid.getHeight(), grid.getWidth());
         simObjects = newSimObjectList;
         return new StepResult(gridClone, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount, extinctionTimer);
     }

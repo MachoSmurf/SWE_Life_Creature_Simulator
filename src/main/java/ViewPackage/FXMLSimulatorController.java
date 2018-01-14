@@ -127,8 +127,15 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     private void drawGrid(IGrid g, Canvas canvas, int zoom) {
+        System.out.println("Width: " + g.getWidth());
+        System.out.println("Height: " + g.getHeight());
+        System.out.println("Zoom: " + zoom);
+
         canvas.setWidth(g.getWidth() * zoom);
         canvas.setHeight(g.getHeight() * zoom);
+
+        System.out.println("Canvas Width: " + canvas.getWidth());
+        System.out.println("Canvas Height:: " + canvas.getHeight());
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
