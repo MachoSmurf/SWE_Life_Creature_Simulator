@@ -68,6 +68,10 @@ public class World implements Serializable, IWorld {
                 //check if a plant is already present at this position
                 boolean found = true;
                 while(found){
+                    if (simObjects.size() == 0) {
+                        found = false;
+                        break;
+                    }
                     for (SimObject so : simObjects){
                         if ((so.getPoint().getX() != spawnPoint.getX()) | (so.getPoint().getY() != spawnPoint.getY())){
                             found = false;
@@ -195,7 +199,7 @@ public class World implements Serializable, IWorld {
             }
         }
         GridClone gridClone = new GridClone(grid.getPointList());
-
+        simObjects = newSimObjectList;
         return new StepResult(gridClone, nonivoreCount, herbivoreCount, carnivoreCount, omnivoreCount, plantCount, energyNonivore, energyCarnivore, energyOmnivore, energyHerbivore, energyPlants, stepCount, extinctionTimer);
     }
 

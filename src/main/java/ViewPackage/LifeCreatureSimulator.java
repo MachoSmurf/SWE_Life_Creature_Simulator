@@ -2,6 +2,8 @@ package ViewPackage;
 
 import java.io.IOException;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
@@ -15,6 +17,14 @@ public class LifeCreatureSimulator extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent e) {
+                Platform.exit();
+                System.exit(0);
+            }
+        });
+
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ViewPackage/FXMLLogin.fxml"));
 
