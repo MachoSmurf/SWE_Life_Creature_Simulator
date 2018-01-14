@@ -16,7 +16,6 @@ public class World implements Serializable, IWorld {
     private MovementPlanner mPlanner;
     private List<SimObject> simObjects;
     private List<ArrayList<Point>> livingAreas;
-    private boolean worldInitialized;
     private Random rnd;
     private int stepCount;
     private int extinctionTimer;
@@ -36,7 +35,7 @@ public class World implements Serializable, IWorld {
                  Grid simulationGrid) {
 
         extinctionEnabled = true;
-        extinctionTimer = 25;
+        extinctionTimer = 100;
         if (digestionBalanceOmnivore > 100){
             throw new IllegalArgumentException("DigestionBalanceOmnivore is out of range (must be <=100)");
         }
@@ -49,7 +48,7 @@ public class World implements Serializable, IWorld {
             }
             livingAreas = mPlanner.getLivingAreas();
         } catch (Exception e) {
-            System.out.println("Failed to generate grid");
+            //System.out.println("Failed to generate grid");
             e.printStackTrace();
         }
 
@@ -69,10 +68,6 @@ public class World implements Serializable, IWorld {
                 //check if a plant is already present at this position
                 boolean found = true;
                 while(found){
-                    if (simObjects.size() == 0) {
-                        found = false;
-                        break;
-                    }
                     for (SimObject so : simObjects){
                         if ((so.getPoint().getX() != spawnPoint.getX()) | (so.getPoint().getY() != spawnPoint.getY())){
                             found = false;
@@ -116,7 +111,7 @@ public class World implements Serializable, IWorld {
      * if no extinction, do a step for each SimObject in the List SimObjects.
      * after step, fill the lists we return with stepresult.
      *
-     * @return
+     * @return StepResult
      */
     @Override
     public StepResult doStep() {
@@ -136,21 +131,18 @@ public class World implements Serializable, IWorld {
         stepCount++;
 
         if (extinctionEnabled && extinctionTimer == 0) {
-           exctinction();
+           extinction();
 
             extinctionTimer = 100;
         }
         if (extinctionEnabled) {
             extinctionTimer--;
-            System.out.println(extinctionTimer);
+            //System.out.println(extinctionTimer);
         }
 
 
         for (SimObject so : simObjects){
             StatusObject statusObject = so.step();
-            if (statusObject.getColor() == null){
-                System.out.println("hierzo null");
-            }
             grid.setColor(so.getPoint(), statusObject.getColor());
             if (so instanceof Creature){
                 switch (((Creature) so).getDigestion()){
@@ -258,8 +250,21 @@ public class World implements Serializable, IWorld {
                         }
                         break;
                     case Omnivore:
-                        //eats both, but should decide what to eat in the creature
-                        throw new Exception("Omnivore Creature should decide what it wants to eat");
+                        Creature omnivore = (Creature) simObject;
+                        Random rnd = new Random();
+                        int whatToEat = rnd.nextInt(100);
+                        if ( omnivore.getDigestionBalance() < whatToEat) {
+                            if (simObject instanceof Plant){
+                                target = simObject;
+                            }
+                            break;
+                        }
+                        else {
+                            if (simObject instanceof Creature){
+                                target = simObject;
+                            }
+                            break;
+                        }
                 }
             }
             if (target != null){
@@ -273,7 +278,6 @@ public class World implements Serializable, IWorld {
         }
     return null;
     }
-
 
     private Point findAvailableSpawnPoint() {
         //exclude area 1 (water)
@@ -289,7 +293,7 @@ public class World implements Serializable, IWorld {
       return grid.getColor(point);
     }
 
-    private void exctinction() {
+    private void extinction() {
         System.out.println("Boom Everyone is dead!");
         List<SimObject> carnivores = new ArrayList<>();
         List<SimObject> herbivores = new ArrayList<>();

@@ -26,25 +26,24 @@ public class Creature extends SimObject {
     private int hunger;
     private boolean alive;
     private List<Point> nextSteps;
-    private MovementPlanner movement;
     private World world;
     private Color myColor;
 
     /**
      * Create a Creature with the parameters we get from World.
      *
-     * @param point
-     * @param energy
-     * @param digestion
-     * @param digestionBalance
-     * @param stamina
-     * @param legs
-     * @param reproductionThreshold
-     * @param reproductionCost
-     * @param strength
-     * @param swimThreshold
-     * @param motionThreshold
-     * @param world
+     * @param point => location of the Creature in the Grid
+     * @param energy => the energy of the Creature
+     * @param digestion => The spiecies of the Creature
+     * @param digestionBalance => thus it prefer meat or Plant?
+     * @param stamina => the max energy of the creature
+     * @param legs => how many legs does the creature have
+     * @param reproductionThreshold => at which energy does the Creature wants to mate in %
+     * @param reproductionCost => how much energy does re reproduction cost.
+     * @param strength => how strong is the creature
+     * @param swimThreshold => under which threshold does a creature want to swim
+     * @param motionThreshold => under which threshold does a creature stop moving.
+     * @param world an instance of this world.
      */
 
     public Creature(Point point, int energy, Digestion digestion, int digestionBalance, int stamina, int legs, int reproductionThreshold, int reproductionCost, int strength, int swimThreshold, int motionThreshold, World world) {
@@ -60,7 +59,6 @@ public class Creature extends SimObject {
         this.strength = strength;
         this.swimThreshold = swimThreshold;
         this.motionThreshold = motionThreshold;
-        this.movement = movement;
         this.world = world;
         if (energy < strength) {
             weight = legs * 10;
@@ -68,7 +66,6 @@ public class Creature extends SimObject {
             weight = legs * 10 + (energy - strength);
         }
         this.hunger = stamina - energy;
-        this.nextSteps = nextSteps;
 
         switch (digestion) {
             case Carnivore:
@@ -130,6 +127,7 @@ public class Creature extends SimObject {
         // does it want to move?
         if (energy > motionThreshold && !didThing) {
             MovementCost();
+            //System.out.println("Take a step");
             if (nextSteps == null){
 
                 //fetch new target list or stand still
@@ -153,7 +151,6 @@ public class Creature extends SimObject {
                 nextSteps = world.findSimObjectTarget(this.getPoint(), digestionToUse, wantToSwim);
 
             } else if (nextSteps.size() > getSpeed()) {
-                //int numberOfSteps = nextSteps.size();
                 point = nextSteps.get(1);
                 nextSteps = null;
             } else {
@@ -209,6 +206,13 @@ public class Creature extends SimObject {
 
     }
 
+    /**
+     * If we move it costs energy.
+     * How much energy depends on:
+     * the legs of the creature, the closer to 5 the faster we go.
+     * we get more slow if we weigh more.
+     *
+     */
     private void MovementCost(){
         Color color = world.getColor(point);
         if (color == Color.blue){
@@ -229,9 +233,9 @@ public class Creature extends SimObject {
     /**
      * if the creature is not in water,
      * do for each simObject in the list of objects that already did a step:
-     * if the other creature is on the same gridpoint
-     * if it is another species
-     * if the strength of the creature is more then the strength of the other creature.
+     *  if the other creature is on the same gridpoint
+     *  if it is another species
+     *  if the strength of the creature is more then the strength of the other creature.
      * eat Creature
      *
      * @return the answer to the question did it eat?
@@ -248,31 +252,31 @@ public class Creature extends SimObject {
                                 if (sim.energy >= eaten && getHunger() >= eaten) {
                                     energy = energy + eaten;
                                     sim.energy = sim.energy - eaten;
-                                    System.out.println("Did eat meat nr 0");
+                                    //System.out.println("Did eat meat nr 0");
                                     return true;
                                 }
                                 else if (getHunger() < eaten && sim.energy >= eaten) {
                                     energy = energy + getHunger();
                                     sim.energy = sim.energy - getHunger();
-                                    System.out.println("Did eat meat nr 1");
+                                    //System.out.println("Did eat meat nr 1");
                                     return true;
                                 }
                                 else if (sim.energy >= eaten && getHunger() < eaten) {
                                     energy = energy + sim.energy;
                                     sim.energy = 0;
-                                    System.out.println("Did eat meat nr 2");
+                                    //System.out.println("Did eat meat nr 2");
                                     return true;
                                 }
                                 else if (sim.energy < getHunger()) {
                                     energy = energy + sim.energy;
                                     sim.energy = 0;
-                                    System.out.println("Did eat meat nr 3");
+                                    //System.out.println("Did eat meat nr 3");
                                     return true;
                                 }
                                 else {
                                     energy = energy + getHunger();
                                     sim.energy = sim.energy - getHunger();
-                                    System.out.println("Did eat meat nr 4");
+                                    //System.out.println("Did eat meat nr 4");
                                     return true;
                                 }
                             }
@@ -289,7 +293,7 @@ public class Creature extends SimObject {
     /**
      * if not in water
      * do for each simObject in the list of objects that already did a step:
-     * if the creatures are in the vicinity of eachother
+     * if the plant is on the same gridpoint
      * eat Plant
      * @return the answer to the question did it eat?
      */
@@ -302,13 +306,13 @@ public class Creature extends SimObject {
                         if (getHunger() > sim.getEnergy()){
                             energy = energy + sim.getEnergy();
                             sim.energy = 0;
-                            System.out.println("ate a whole plant");
+                            //System.out.println("ate a whole plant");
                             return true;
                         }
                         else {
                             energy = energy + getHunger();
                             sim.energy = sim.energy - getHunger();
-                            System.out.println("ate a plant til no hungry anymore");
+                            //System.out.println("ate a plant til no hungry anymore");
                             return true;
                         }
                     }
@@ -320,6 +324,16 @@ public class Creature extends SimObject {
 
     }
 
+    /**
+     * if the creature is not in water,
+     * do for each simObject in the list of objects that already did a step:
+     *  if the other creature is on the same gridPoint or max 1 gridPoint away
+     *  if it is the same species
+     *  if the reproductionThreshold of the other creature is met.
+     * Mate.
+     *
+     * @return the answer to the question: "did it mate?"
+     */
     private boolean mate () {
 
         List<SimObject> ThingToSelect = world.newSimObjectList;
@@ -373,6 +387,7 @@ public class Creature extends SimObject {
 
                             Creature child = new Creature(point, energyChild, digestion, digestionBalanceChild, staminaChild, legs, reproductionThresholdChild, reproductionCostChild, strengthChild, swimThresholdChild, motionThresholdChild, world);
                             world.newSimObjectList.add(child);
+                            System.out.println("Mated!!!!!");
                             return true;
                         }
                     }
@@ -380,6 +395,9 @@ public class Creature extends SimObject {
             }
         }
         return false;
+    }
 
+    public int getDigestionBalance() {
+        return digestionBalance;
     }
 }
