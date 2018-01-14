@@ -11,10 +11,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-
-import javax.swing.*;
 import java.io.File;
 import java.awt.*;
 import java.io.IOException;
@@ -30,7 +28,7 @@ import java.util.ResourceBundle;
  */
 public class FXMLSimulatorController extends UIController implements Initializable, ILifeResult {
 
-    @FXML private Pane component;
+    @FXML private AnchorPane component;
 
     public Canvas canvSimulation1;
     public Canvas canvSimulation2;
@@ -234,7 +232,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
         }
         updateSimDetails();
     }
-    
+
     private Grid getGrid1() {
         int Grid1Width = 40;
         int Grid1Height = 40;
@@ -694,7 +692,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
 
         return grid;
     }
-    
+
     //////////////////////////////////////////////////////////////
     //                                                          //
     //                  UI EVENTS                               //
@@ -727,17 +725,18 @@ public class FXMLSimulatorController extends UIController implements Initializab
     }
 
     public void onClickOpenSim() {
-        //Create a new instance of JFileChooser class
+        //Create a new instance of FileChooser class
         FileChooser fileChooser = new FileChooser();
 
-        //Set current directory
-        //fileChooser.setCurrentDirectory(new File(System.getProperty("C:\\Users\\Public\\Documents")));
+        //Set initial directory
+        fileChooser.setInitialDirectory(new File(System.getProperty("C:\\Users\\Public\\Documents")));
 
         //Show up the dialog
-
-        File result = fileChooser.showOpenDialog(component.getScene().getWindow());
-
-        //int returnVal = fc.showOpenDialog(component);
+        fileChooser.showOpenDialog(component.getScene().getWindow());
+        //File result = fileChooser.showOpenDialog(component.getScene().getWindow());
+        //if (result == FileChooser..APPROVE_OPTION) {
+            //File selectedFile = fileChooser.getSelectedFile();
+            //System.out.println("Selected file: " + selectedFile.getAbsolutePath());
     }
 
     public void onClickSaveSim() {
@@ -846,7 +845,7 @@ public class FXMLSimulatorController extends UIController implements Initializab
     public void onClickExtinctionDisable() {
         showWarning("Notice", "Extinction events not implemented yet.");
     }
-    
+
     public void onCancelClick(ActionEvent actionEvent) {
         try{
             FXMLHomepageController h1 = (FXMLHomepageController) changeScreen("/ViewPackage/FXMLHomepage.fxml", null);

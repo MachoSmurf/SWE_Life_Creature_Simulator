@@ -11,10 +11,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLSimulatorController">
+<AnchorPane fx:id="component" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.FXMLSimulatorController">
     <children>
         <TitledPane animated="false" collapsible="false" layoutY="-1.0" prefHeight="839.0" prefWidth="1203.0" text="Life - Simulator">
             <content>
@@ -144,6 +143,5 @@
               <Font name="System Bold" size="12.0" />
            </font>
         </Button>
-      <Pane fx:id="component" prefHeight="855.0" prefWidth="1203.0" />
     </children>
 </AnchorPane>
