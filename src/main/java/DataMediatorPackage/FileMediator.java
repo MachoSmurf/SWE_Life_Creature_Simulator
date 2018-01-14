@@ -31,12 +31,13 @@ public class FileMediator implements IDataMediator {
     /**
      * Saves a user object to the datasource
      *
-     * @param user User object containing credentials
+     * @param username String containing username
+     * @param password String containing password
+     * @param isSimUer boolean containing is simUser
      */
     @Override
-    public void saveUser(User user) {
+    public void saveUser(String username, String password, boolean isSimUer) {
         // DatabaseMediator
-
     }
 
     /**
