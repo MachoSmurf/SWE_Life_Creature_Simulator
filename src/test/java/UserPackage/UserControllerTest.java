@@ -15,10 +15,12 @@ class UserControllerTest {
     private User testUser2;
     private UserController testUserController;
     private UserController testUserController2;
+    private UserController testUserController3;
     private boolean testResult;
     private boolean expResult;
     private List<User> testAllUsers;
     private List<User> testResultList;
+    private DatabaseMediator testdatabaseMediator;
 
 
     @BeforeEach
@@ -29,6 +31,7 @@ class UserControllerTest {
         testUser2 = new User("Natascha", "Test2", false);
         testUserController = new UserController("Imke", "Test", true);
         testUserController2 = new UserController("Natascha", "Test2", false);
+        testUserController3 = new UserController("Kai", "Test3", true);
         testAllUsers = new ArrayList<User>();
 
         testAllUsers.add(testUser);
@@ -119,4 +122,26 @@ class UserControllerTest {
         }
     }
 
+    @Test
+    void saveUser() {
+        String testUsername = "Kai";
+        String testPassword = "Test3";
+        boolean testIsSimUser = true;
+        User testUser3 = new User(testUsername, testPassword, testIsSimUser);
+
+        testdatabaseMediator = new DatabaseMediator();
+
+        testUserController3.saveUser(testUsername, testPassword, testIsSimUser);
+        boolean areEqual;
+        User dbUser = testdatabaseMediator.loadUser(testUsername, testPassword);
+        if (testUser3.equals(dbUser)) {
+            areEqual = true;
+            Assert.assertTrue(areEqual);
+        } else {
+            areEqual = false;
+            Assert.assertFalse(areEqual);
+        }
+
+
+    }
 }

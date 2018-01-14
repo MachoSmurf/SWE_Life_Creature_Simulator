@@ -55,6 +55,7 @@ public class UserController extends User implements IUserController {
     @Override
     public boolean Logout() {
         System.out.println("Logout Successful!");
+
         return isLoggedIn = false;
 
     }
@@ -76,6 +77,19 @@ public class UserController extends User implements IUserController {
             System.out.println("user is not a simulation user!");
             return false;
         }
+
+    }
+
+    /**
+     * Saves a user object to the datasource
+     *
+     * @param username String containing username
+     * @param password String containing password
+     * @param isSimUer boolean containing is simUser
+     */
+    public void saveUser(String username, String password, boolean isSimUer) {
+        databaseMediator = new DatabaseMediator();
+        databaseMediator.saveUser(username, password, isSimUer);
 
     }
 

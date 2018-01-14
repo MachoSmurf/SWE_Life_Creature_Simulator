@@ -41,7 +41,7 @@ public class DatabaseMediator implements IDataMediator {
             String driver = "com.mysql.jdbc.Driver";
             Class.forName(driver);
             con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? and DBpassword = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? AND DBpassword = ?");
             ps.setObject(1, username);
             ps.setObject(2, password);
 
@@ -79,27 +79,59 @@ public class DatabaseMediator implements IDataMediator {
     /**
      * Saves a user object to the datasource
      *
-     * @param user User object containing credentials
+     * @param username String containing username
+     * @param password String containing password
+     * @param isSimUer boolean containing is simUser
      */
     @Override
-    public void saveUser(User user) {
-        String username = user.getUsername();
-        String password = user.getPassword();
-        boolean isSimuser = user.isSimUser();
-
+    public void saveUser(String username, String password, boolean isSimUer) {
 
         Connection con;
 
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:" + dbPort + "/life", dbUser, dbPassword);
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? and DBpassword = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE DBusername = ? AND DBpassword = ? AND DBsimUser = ?");
             ps.setObject(1, username);
             ps.setObject(2, password);
+            ps.setObject(3, isSimUer);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                databaseUsername = rs.getString("DBusername");
+                databasePassword = rs.getString("DBpassword");
+                databaseSimUser = rs.getBoolean("DBsimUser");
+            }
+
+            if (databaseUsername.contentEquals(username) && databasePassword.contentEquals(password)) {
+                PreparedStatement ps1 = con.prepareStatement("UPDATE `life`.`users` SET DBusername =  ?, DBpassword = ?, DBsimUser  = ? WHERE DBusername = ? ");
+                ps1.setObject(1, databaseUsername);
+                ps1.setObject(2, databasePassword);
+                ps1.setObject(3, databaseSimUser);
+                ps1.setObject(4, databaseUsername);
+
+                ps.executeUpdate();
+
+                con.close();
+
+
+            } else {
+                PreparedStatement ps2 = con.prepareStatement(" INSERT INTO `life`.`users`(`DBusername`,`DBpassword`,`DBsimUser`) VALUES (?, ?, ?)");
+                ps2.setObject(1, username);
+                ps2.setObject(2, password);
+                ps2.setObject(3, isSimUer);
+
+                ps2.executeUpdate();
+
+                con.close();
+
+            }
 
         } catch (SQLException e) {
             System.out.println("Oops, something went wrong while saving user!");
             e.printStackTrace();
         }
+
 
     }
 
