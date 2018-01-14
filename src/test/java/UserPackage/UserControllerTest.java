@@ -123,10 +123,33 @@ class UserControllerTest {
     }
 
     @Test
-    void saveUser() {
+    void saveUserNew() {
         String testUsername = "Kai";
         String testPassword = "Test3";
         boolean testIsSimUser = true;
+        User testUser3 = new User(testUsername, testPassword, testIsSimUser);
+
+        testdatabaseMediator = new DatabaseMediator();
+
+        testUserController3.saveUser(testUsername, testPassword, testIsSimUser);
+        boolean areEqual;
+        User dbUser = testdatabaseMediator.loadUser(testUsername, testPassword);
+        if (testUser3.equals(dbUser)) {
+            areEqual = true;
+            Assert.assertTrue(areEqual);
+        } else {
+            areEqual = false;
+            Assert.assertFalse(areEqual);
+        }
+
+
+    }
+
+    @Test
+    void saveUserUpdate() {
+        String testUsername = "Kai";
+        String testPassword = "Test4";
+        boolean testIsSimUser = false;
         User testUser3 = new User(testUsername, testPassword, testIsSimUser);
 
         testdatabaseMediator = new DatabaseMediator();
