@@ -5,6 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
+import javafx.scene.control.TextArea;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,12 +21,10 @@ import java.util.ResourceBundle;
 public class FXMLSimulationDataController extends UIController implements Initializable {
 
     @FXML private AnchorPane component;
+    @FXML private TextArea textArea;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-    }
-
-    public void onShowSimulationDataClick(ActionEvent actionEvent) {
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
@@ -46,7 +48,21 @@ public class FXMLSimulationDataController extends UIController implements Initia
         fileChooser.setTitle("Open Simulation");
 
         //Show up the dialog
-        fileChooser.showOpenDialog(component.getScene().getWindow());
+        File file = fileChooser.showOpenDialog(component.getScene().getWindow());
+
+        //Add extension filters
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("TXT", "*.txt")
+        );
+
+        //Show file in TextArea
+        BufferedReader buff = null;
+        try {
+            buff = new BufferedReader(new FileReader(file));
+        } catch (IOException e) {
+        } finally {
+            try { buff.close(); } catch (Exception ex) { }
+        }
     }
 }
 

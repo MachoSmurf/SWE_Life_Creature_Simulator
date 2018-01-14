@@ -39,7 +39,7 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TextArea layoutX="23.0" layoutY="190.0" prefHeight="641.0" prefWidth="1159.0" />
+        <TextArea fx:id="textArea" layoutX="23.0" layoutY="190.0" prefHeight="641.0" prefWidth="1159.0" />
         <Button layoutX="1129.0" layoutY="45.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel">
             <font>
                 <Font name="System Bold" size="12.0" />

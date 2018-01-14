@@ -203,14 +203,6 @@ public class FXMLSimulatorController extends UIController implements Initializab
                 System.out.println(e);
                 showWarning("Fout", "De door u ingevulde waarde is geen nummer. Vul a.u.b. een nummer in.");
             }
-
-            //lblSelectedSim.setText("Simulation " + selectedSim);
-            //if (stepResults[selectedSim - 1] != null) {
-            //toggleVisible(true);
-            //lblTitleExtinction.setText("Mass Extincion countdown");
-            //if (stepResults[selectedSim - 1].getStepCount() > simLastShownStep[selectedSim - 1]) {
-            //simLastShownStep[selectedSim - 1] = stepResults[selectedSim - 1].getStepCount();
-            //setDetailValues(simZoom[selectedSim - 1], simSpeed[selectedSim - 1], stepResults[selectedSim - 1], simLastShownStep[selectedSim - 1]);
         }
         else
         {

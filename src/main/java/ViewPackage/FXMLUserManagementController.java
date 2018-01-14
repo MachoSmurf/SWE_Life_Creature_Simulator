@@ -8,9 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import UserPackage.User;
 
 /**
  * FXML Controller class responsible for all functionalities behind the UserManagement-screen
@@ -24,19 +24,20 @@ public class FXMLUserManagementController extends UIController implements Initia
     @FXML private PasswordField passwordRepeat;
     @FXML private RadioButton simUserYes;
     @FXML private ListView userOverview;
-    private List<User> users;
+    private List<String> users;
     private ObservableList userList;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //userList = FXCollections.observableArrayList();
-        //users = iUser1.getUsers();
-        //if (!users.isEmpty()) {
-            //users.forEach((user) -> {
-                //userList.add(user.getUsername());
-        //});
-            //userOverview.setItems(userList);
-        //}
+        users = new ArrayList<>();
+        userList = FXCollections.observableArrayList();
+
+        users.add("testuser1");
+        users.add("testuser2");
+        userList.add("testuser1");
+        userList.add("testuser2");
+
+        userOverview.setItems(userList);
     }
 
     public void onCancelClick(ActionEvent actionEvent) {
@@ -74,20 +75,10 @@ public class FXMLUserManagementController extends UIController implements Initia
             }
             else
             {
-                //Er moet iets aan de kant van Imke worden aangepast, zodat ik de methode saveUser van IDataMediator via IUserController kan gebruiken
+                users.add(userName2);
+                userList.add(userName2);
 
-                userOverview.getItems().clear();
-                users.clear();
-                userList.clear();
-
-                userList = FXCollections.observableArrayList();
-                users = iUser1.getUsers();
-                if (!users.isEmpty()) {
-                    users.forEach((user) -> {
-                        userList.add(user.getUsername());
-                });
-                    userOverview.setItems(userList);
-                }
+                userOverview.setItems(userList);
             }
         }
     }
